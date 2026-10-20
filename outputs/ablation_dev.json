@@ -1,0 +1,98 @@
+{
+  "all features": {
+    "n": 1088,
+    "log_loss": 0.6246730525905212,
+    "brier": 0.21610087748401638,
+    "accuracy": 0.6648199445983379
+  },
+  "without roster ratings (rs_*)": {
+    "n": 1088,
+    "log_loss": 0.6259884986768073,
+    "brier": 0.21680213410518304,
+    "accuracy": 0.6611265004616805
+  },
+  "without QB features (qb_*)": {
+    "n": 1088,
+    "log_loss": 0.6280757119856348,
+    "brier": 0.21757625461878566,
+    "accuracy": 0.6583564173591875
+  },
+  "without power ratings (pr_/prm_)": {
+    "n": 1088,
+    "log_loss": 0.6244751587436244,
+    "brier": 0.21603065004842847,
+    "accuracy": 0.6666666666666666
+  },
+  "without Elo": {
+    "n": 1088,
+    "log_loss": 0.6246380755249286,
+    "brier": 0.21608226708999215,
+    "accuracy": 0.6620498614958449
+  },
+  "without momentum (short window, trend, streak, last3)": {
+    "n": 1088,
+    "log_loss": 0.6254938362788962,
+    "brier": 0.21645775463553169,
+    "accuracy": 0.6537396121883656
+  },
+  "without long-window team form (l_*)": {
+    "n": 1088,
+    "log_loss": 0.6267260501797935,
+    "brier": 0.21700222261728275,
+    "accuracy": 0.6537396121883656
+  },
+  "without playoff stakes": {
+    "n": 1088,
+    "log_loss": 0.6247163939738141,
+    "brier": 0.21612048184227703,
+    "accuracy": 0.6638965835641736
+  },
+  "only roster ratings (rs_*)": {
+    "n": 1088,
+    "log_loss": 0.6736365937196149,
+    "brier": 0.23929528992315063,
+    "accuracy": 0.5863342566943675
+  },
+  "only QB features (qb_*)": {
+    "n": 1088,
+    "log_loss": 0.6589478952152642,
+    "brier": 0.23197206565834555,
+    "accuracy": 0.6334256694367497
+  },
+  "only power ratings (pr_/prm_)": {
+    "n": 1088,
+    "log_loss": 0.6413892660299688,
+    "brier": 0.22378725003247968,
+    "accuracy": 0.6306555863342567
+  },
+  "only Elo": {
+    "n": 1088,
+    "log_loss": 0.6616207774470193,
+    "brier": 0.2332612233636264,
+    "accuracy": 0.6334256694367497
+  },
+  "only momentum (short window, trend, streak, last3)": {
+    "n": 1088,
+    "log_loss": 0.6403153846299956,
+    "brier": 0.2233229022250308,
+    "accuracy": 0.6481994459833795
+  },
+  "only long-window team form (l_*)": {
+    "n": 1088,
+    "log_loss": 0.6319263094487115,
+    "brier": 0.2194585278868614,
+    "accuracy": 0.6481994459833795
+  },
+  "only playoff stakes": {
+    "n": 1088,
+    "log_loss": 0.6843592837529081,
+    "brier": 0.24443728149850288,
+    "accuracy": 0.5623268698060941
+  },
+  "without rest/travel/body-clock": {
+    "n": 1088,
+    "log_loss": 0.6245678328575683,
+    "brier": 0.21602508606249626,
+    "accuracy": 0.6574330563250231
+  }
+}

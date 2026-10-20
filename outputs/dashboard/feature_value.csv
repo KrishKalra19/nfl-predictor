@@ -1,0 +1,9 @@
+feature_group,log_loss_increase,accuracy_without
+Starting QB rating & changes,0.0034,0.6584
+Season-long team form,0.0021,0.6537
+Pregame roster ratings,0.0013,0.6611
+Momentum (last 2-3 games),0.0008,0.6537
+Playoff stakes,0.0,0.6639
+Elo rating,-0.0,0.662
+"Rest, travel & body clock",-0.0001,0.6574
+Ridge power ratings,-0.0002,0.6667

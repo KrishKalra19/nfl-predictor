@@ -1,0 +1,399 @@
+<style>
+  .nfl { font-family: var(--font-anthropic-sans); display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-variant-numeric: tabular-nums; }
+  .nfl h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .nfl h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .nfl h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .nfl p { margin: 0; max-width: 70ch; }
+  .nfl .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .nfl .head { display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+  .nfl .lede { color: var(--color-fg-muted); }
+  .nfl .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: var(--cds-gap-md); }
+  .nfl .tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+  .nfl .tile .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.1; }
+  .nfl .tile .sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .nfl section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .nfl .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .nfl .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+  .nfl .chart { position: relative; min-height: 15rem; }
+  .nfl .chart svg { display: block; overflow: visible; }
+  .nfl .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .nfl .tip .k { color: var(--cds-text-secondary); }
+  .nfl .seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; align-self: flex-start; flex-wrap: wrap; }
+  .nfl .seg button { font: inherit; font-size: var(--cds-font-size-caption); background: transparent; color: var(--color-fg-muted); border: 0; padding: var(--cds-pad-xs) var(--cds-pad-sm); cursor: pointer; }
+  .nfl .seg button[aria-pressed="true"] { background: var(--color-bg); color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .nfl .seg button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: -2px; }
+  .nfl .controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); }
+  .nfl .tablebox { overflow-x: auto; }
+  .nfl table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-body); }
+  .nfl th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .nfl td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: middle; }
+  .nfl td.num, .nfl th.num { text-align: right; }
+  .nfl .pick { font-weight: var(--cds-font-weight-medium); }
+  .nfl .bar { display: flex; align-items: center; gap: var(--cds-gap-sm); min-width: 8rem; }
+  .nfl .bar .track { flex: 1; height: 0.5rem; border-radius: 999px; background: var(--cds-chart-grid); overflow: hidden; }
+  .nfl .bar .fill { height: 100%; border-radius: 999px; }
+  .nfl .chip { display: inline-block; font-size: var(--cds-font-size-caption); padding: 0 var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); white-space: nowrap; }
+  .nfl .chip.diff { color: var(--color-warn); border-color: currentColor; }
+  .nfl .note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .nfl .hide-narrow { }
+  @media (max-width: 40rem) { .nfl .hide-narrow { display: none; } }
+  .nfl .method { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--cds-gap-md); }
+  .nfl .method p { font-size: var(--cds-font-size-body); }
+  .nfl [data-dash-source-state=empty] { color: transparent; }
+  .nfl [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  .nfl .fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: inherit; }
+  .nfl .fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+</style>
+
+<div class="nfl">
+  <header class="head" id="top">
+    <h1>NFL Win Predictor</h1>
+    <p class="lede" id="takeaway">On <span data-source="model_scores" data-field="games" data-where="phase=test&amp;model=Ensemble (5 models)" class="dash-skeleton">—</span> held-out games from 2022 to 2026, the ensemble picked <span data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=Ensemble (5 models)" class="dash-skeleton">—</span> of winners. Vegas picked <span data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=Vegas moneyline" class="dash-skeleton">—</span>. Vegas lines are only a benchmark here, never a model input.</p>
+  </header>
+
+  <div class="tiles" id="kpis">
+    <div class="tile"><span class="muted">Ensemble accuracy · held-out 2022–26</span><span class="big dash-skeleton" data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=Ensemble (5 models)">—</span><span class="sub">share of decided games picked right</span></div>
+    <div class="tile"><span class="muted">Best neural net (MLP)</span><span class="big dash-skeleton" data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=MLP neural net">—</span><span class="sub">same held-out games</span></div>
+    <div class="tile"><span class="muted">Vegas moneyline</span><span class="big dash-skeleton" data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=Vegas moneyline">—</span><span class="sub">the bar to beat</span></div>
+    <div class="tile"><span class="muted">Elo rating</span><span class="big dash-skeleton" data-source="model_scores" data-field="accuracy" data-where="phase=test&amp;model=Elo rating">—</span><span class="sub">classic rating baseline</span></div>
+    <div class="tile"><span class="muted">When 75%+ confident</span><span class="big dash-skeleton" data-source="confidence_tiers" data-field="accuracy" data-where="tier=75%25+">—</span><span class="sub"><span data-source="confidence_tiers" data-field="games" data-where="tier=75%25+">—</span> games, ensemble</span></div>
+  </div>
+
+  <section id="picks">
+    <div class="head">
+      <h2>2026 week 6 picks</h2>
+      <p class="muted">Sorted by confidence. Bars show the model's win probability for its pick. Games marked "Differs" are ones where the model and Vegas favor different teams. When they disagreed in past seasons, Vegas was right more often.</p>
+    </div>
+    <div class="card">
+      <div class="tablebox">
+        <table id="picks-table" data-source="week6_picks" data-row-key="matchup">
+          <thead><tr>
+            <th data-field="matchup">Game</th>
+            <th data-field="gameday" class="hide-narrow">Date</th>
+            <th data-field="pick">Pick</th>
+            <th data-field="confidence">Confidence</th>
+            <th data-field="model_home_pct" class="num hide-narrow">Model: home wins</th>
+            <th data-field="vegas_home_pct" class="num">Vegas: home wins</th>
+            <th data-field="pick_vegas">vs Vegas</th>
+            <th data-field="qb_note" class="hide-narrow">QB note</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="performance">
+    <div class="head">
+      <h2>How the models did</h2>
+      <p class="muted">Walk-forward test: each season is predicted by models trained only on earlier seasons. Models were tuned on 2018–21 (dev) and scored once on 2022–26 (held out).</p>
+    </div>
+    <div class="grid">
+      <div class="card" id="models-card">
+        <h3>Every model vs the baselines</h3>
+        <div class="controls">
+          <div class="seg" role="group" aria-label="Metric">
+            <button type="button" id="m-acc" aria-pressed="true">Accuracy</button>
+            <button type="button" id="m-ll" aria-pressed="false">Log-loss (lower is better)</button>
+          </div>
+          <div class="seg" role="group" aria-label="Seasons">
+            <button type="button" id="p-test" aria-pressed="true">Held out 2022–26</button>
+            <button type="button" id="p-dev" aria-pressed="false">Dev 2018–21</button>
+          </div>
+        </div>
+        <div class="chart" id="models-chart" data-source="model_scores"></div>
+      </div>
+      <div class="card" id="season-card">
+        <h3>Accuracy by season</h3>
+        <p class="note">The shaded seasons were used for tuning; the rest were never seen during model selection. 2026 covers weeks 1–5 only.</p>
+        <div class="chart" id="season-chart" data-source="season_scores"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="confidence">
+    <div class="head">
+      <h2>Can you trust the confidence?</h2>
+      <p class="muted">The network is trained with log-loss, so it is rewarded for being confident when right and penalized heavily for being confident when wrong. If that works, a 70% pick should win about 70% of the time.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Accuracy by confidence level</h3>
+        <p class="note">Held-out games. The tick on each bar marks the average confidence in that group.</p>
+        <div class="chart" id="tiers-chart" data-source="confidence_tiers"></div>
+      </div>
+      <div class="card">
+        <h3>Calibration</h3>
+        <p class="note">Predicted home-win probability vs how often the home team actually won. Points on the dashed line are perfectly calibrated; dot size is game count.</p>
+        <div class="chart" id="calib-chart" data-source="calibration"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="head">
+      <h2>What the model leans on</h2>
+      <p class="muted">How much worse log-loss gets on the dev seasons when each feature group is removed. A bigger number means more unique information; near zero means other features already cover it.</p>
+    </div>
+    <div class="card">
+      <div class="chart" id="feat-chart" data-source="feature_value"></div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>How it works</h2>
+    <div class="method">
+      <div class="card"><h3>Pregame only</h3><p class="muted">Every input is something known before kickoff: past play-by-play, the week's 53-man roster, Friday injury designations and the announced starting QB.</p></div>
+      <div class="card"><h3>Roster ratings</h3><p class="muted">Each player is rated by his recency-weighted snap share, with draft position as a talent prior. Team strength is summed by unit (OL, WR, DL, DB and so on) over available players, and regulars who are missing are counted against the team.</p></div>
+      <div class="card"><h3>Team form &amp; QB</h3><p class="muted">Opponent-adjusted EPA, success rate and margin on short and long windows. Ridge power ratings and Elo, plus a shrunk QB EPA rating that carries across teams and seasons.</p></div>
+      <div class="card"><h3>Models</h3><p class="muted">An MLP and a Siamese matchup network, both trained on win/loss plus point margin, ensembled with logistic regression, ridge margin and gradient boosting. Every model sees each game from both sides so it can't favor one slot.</p></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const pct = d3.format('.1%');
+  const pct0 = d3.format('.0%');
+  const num = d3.format(',');
+  const dec = d3.format('.3f');
+  const state = { metric: 'accuracy', phase: 'test' };
+
+  const fail = (el) => { el.innerHTML = ''; const d = document.createElement('div'); d.className = 'fail'; d.textContent = 'Failed to load'; el.appendChild(d); };
+  const fillMarks = (id, fmt) => {
+    const r = dash.data(id);
+    document.querySelectorAll(`[data-source="${id}"][data-field][data-where]`).forEach((el) => {
+      if (r.status !== 'ok') { el.textContent = '—'; if (r.status !== 'loading') el.classList.remove('dash-skeleton'); return; }
+      const cond = new URLSearchParams(el.getAttribute('data-where').replace(/\+/g, '%2B'));
+      const row = r.data.find((x) => [...cond].every(([k, v]) => String(x[k]) === v));
+      const f = el.getAttribute('data-field');
+      el.textContent = row ? (fmt[f] || String)(row[f]) : '—';
+      el.classList.remove('dash-skeleton');
+    });
+  };
+
+  function tipBox(chart) {
+    let t = chart.querySelector('.tip');
+    if (!t) { t = document.createElement('div'); t.className = 'tip'; t.hidden = true; chart.appendChild(t); }
+    return t;
+  }
+  function placeTip(chart, tip, x, y) {
+    const w = chart.clientWidth, tw = tip.offsetWidth;
+    tip.style.left = Math.max(0, Math.min(w - tw, x + 12)) + 'px';
+    tip.style.top = Math.max(0, y - tip.offsetHeight - 8) + 'px';
+  }
+  function tipRows(tip, head, lines) {
+    tip.innerHTML = '';
+    const h = document.createElement('div'); h.className = 'k'; h.textContent = head; tip.appendChild(h);
+    lines.forEach(([color, label, value]) => {
+      const l = document.createElement('div');
+      if (color) { const s = document.createElement('span'); s.style.cssText = `display:inline-block;width:.5rem;height:.5rem;border-radius:2px;margin-right:.35rem;background:${color}`; l.appendChild(s); }
+      l.appendChild(document.createTextNode(`${label} ${value}`));
+      tip.appendChild(l);
+    });
+  }
+  const tickStyle = (g) => g.attr('font-size', null).attr('font-family', null)
+    .call((s) => s.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'))
+    .call((s) => s.selectAll('line').attr('stroke', 'var(--cds-chart-grid)'))
+    .call((s) => s.select('.domain').attr('stroke', 'var(--cds-chart-axis)'));
+
+  // ---------- picks table
+  function drawPicks() {
+    const r = dash.data('week6_picks');
+    const tb = document.querySelector('#picks-table tbody');
+    tb.innerHTML = '';
+    if (r.status !== 'ok') {
+      const tr = tb.insertRow(); const td = tr.insertCell(); td.colSpan = 8;
+      if (r.status === 'loading') { td.className = 'dash-skeleton'; td.textContent = ''; } else fail(td);
+      return;
+    }
+    const rows = r.data.map((d) => ({ ...d, confidence: +d.confidence, model_home_pct: +d.model_home_pct, vegas_home_pct: d.vegas_home_pct === '' ? NaN : +d.vegas_home_pct }))
+      .sort((a, b) => b.confidence - a.confidence);
+    rows.forEach((d) => {
+      const tr = tb.insertRow();
+      tr.insertCell().textContent = d.matchup;
+      const dt = tr.insertCell(); dt.className = 'hide-narrow muted'; dt.textContent = d3.utcFormat('%a %b %-d')(new Date(d.gameday));
+      const pk = tr.insertCell(); pk.className = 'pick'; pk.textContent = d.pick;
+      const c = tr.insertCell(); const bar = document.createElement('div'); bar.className = 'bar';
+      const track = document.createElement('div'); track.className = 'track';
+      const fill = document.createElement('div'); fill.className = 'fill';
+      fill.style.width = (Math.max(0, d.confidence - 0.5) / 0.5 * 100) + '%';
+      fill.style.background = d.confidence >= 0.7 ? dash.colors[0] : 'var(--cds-chart-muted)';
+      track.appendChild(fill); const lab = document.createElement('span'); lab.textContent = pct(d.confidence);
+      bar.appendChild(track); bar.appendChild(lab); c.appendChild(bar);
+      const mh = tr.insertCell(); mh.className = 'num hide-narrow'; mh.textContent = pct0(d.model_home_pct);
+      const vh = tr.insertCell(); vh.className = 'num'; vh.textContent = isNaN(d.vegas_home_pct) ? '—' : pct0(d.vegas_home_pct);
+      const ag = tr.insertCell(); const chip = document.createElement('span'); chip.className = 'chip' + (d.pick_vegas === 'Differs' ? ' diff' : ''); chip.textContent = d.pick_vegas; ag.appendChild(chip);
+      const q = tr.insertCell(); q.className = 'hide-narrow muted'; q.textContent = d.qb_note || '';
+    });
+  }
+
+  // ---------- model comparison bars
+  function drawModels() {
+    const el = document.getElementById('models-chart');
+    const r = dash.data('model_scores');
+    el.querySelector('svg')?.remove(); el.querySelector('.fail')?.remove();
+    if (r.status !== 'ok') { if (r.status !== 'loading') fail(el); return; }
+    const key = state.metric;
+    const rows = r.data.filter((d) => d.phase === state.phase).map((d) => ({ ...d, v: +d[key] }))
+      .sort((a, b) => key === 'accuracy' ? b.v - a.v : a.v - b.v);
+    const W = el.clientWidth, rowH = 28, m = { t: 4, r: 56, b: 24 };
+    const svg = d3.select(el).append('svg').attr('width', '100%');
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    const labW = d3.max(rows, (d) => { probe.text(d.model); return probe.node().getComputedTextLength(); }) + 10;
+    probe.remove();
+    m.l = labW;
+    const H = m.t + rows.length * rowH + m.b;
+    svg.attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    const lo = key === 'accuracy' ? 0.5 : d3.min(rows, (d) => d.v) - 0.01;
+    const hi = key === 'accuracy' ? Math.max(0.7, d3.max(rows, (d) => d.v)) : d3.max(rows, (d) => d.v) + 0.005;
+    const x = d3.scaleLinear([lo, hi], [m.l, W - m.r]);
+    const y = d3.scaleBand(rows.map((d) => d.model), [m.t, H - m.b]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l) / 80))).tickFormat(key === 'accuracy' ? pct0 : d3.format('.2f')).tickSizeOuter(0)).call(tickStyle);
+    const color = (d) => d.kind === 'Baseline' ? (d.model.startsWith('Vegas') ? dash.colors[1] : 'var(--cds-chart-muted)') : (d.kind === 'Neural' ? dash.colors[2] : dash.colors[0]);
+    const tip = tipBox(el);
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', x(lo)).attr('y', (d) => y(d.model)).attr('height', y.bandwidth()).attr('rx', 4)
+      .attr('width', (d) => Math.max(2, x(d.v) - x(lo))).attr('fill', color)
+      .on('mousemove', (ev, d) => { tipRows(tip, d.model, [[null, 'Accuracy', pct(+d.accuracy)], [null, 'Log-loss', dec(+d.log_loss)], [null, 'Games', num(+d.games)]]); tip.hidden = false; const [px, py] = d3.pointer(ev, el); placeTip(el, tip, px, py); })
+      .on('mouseleave', () => { tip.hidden = true; });
+    g.append('text').attr('x', m.l - 8).attr('y', (d) => y(d.model) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
+      .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((d) => d.model);
+    g.append('text').attr('x', (d) => x(d.v) + 6).attr('y', (d) => y(d.model) + y.bandwidth() / 2).attr('dy', '0.35em')
+      .attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((d) => key === 'accuracy' ? pct(d.v) : dec(d.v));
+  }
+
+  // ---------- season lines
+  function drawSeasons() {
+    const el = document.getElementById('season-chart');
+    const r = dash.data('season_scores');
+    el.querySelector('svg')?.remove(); el.querySelector('.fail')?.remove();
+    if (r.status !== 'ok') { if (r.status !== 'loading') fail(el); return; }
+    const rows = r.data.map((d) => ({ ...d, season: +d.season, accuracy: +d.accuracy }));
+    const series = ['Ensemble', 'Vegas', 'Elo'];
+    const col = { Ensemble: dash.colors[0], Vegas: dash.colors[1], Elo: 'var(--cds-chart-muted)' };
+    const W = el.clientWidth, H = 240, m = { t: 12, r: 76, b: 24, l: 40 };
+    const seasons = [...new Set(rows.map((d) => d.season))].sort();
+    const x = d3.scaleLinear(d3.extent(seasons), [m.l, W - m.r]);
+    const y = d3.scaleLinear([0.58, 0.74], [H - m.b, m.t]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    const devMax = d3.max(rows.filter((d) => d.phase === 'dev'), (d) => d.season);
+    svg.append('rect').attr('x', x(seasons[0]) - 6).attr('y', m.t).attr('width', x(devMax + 0.5) - x(seasons[0]) + 6).attr('height', H - m.b - m.t).attr('fill', 'var(--cds-chart-grid)').attr('opacity', 0.5);
+    svg.append('text').attr('x', x(seasons[0])).attr('y', m.t + 12).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('dev');
+    svg.append('text').attr('x', x(devMax + 0.5) + 6).attr('y', m.t + 12).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('held out');
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues(seasons.filter((s, i) => W > 520 || i % 2 === 0)).tickFormat(d3.format('d')).tickSizeOuter(0)).call(tickStyle);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(pct0).tickSize(-(W - m.l - m.r))).call(tickStyle).call((g) => g.select('.domain').remove());
+    const line = d3.line().x((d) => x(d.season)).y((d) => y(d.accuracy));
+    const ends = [];
+    series.forEach((s) => {
+      const d = rows.filter((r) => r.series === s).sort((a, b) => a.season - b.season);
+      svg.append('path').datum(d).attr('fill', 'none').attr('stroke', col[s]).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', line);
+      svg.append('g').selectAll('circle').data(d).join('circle').attr('cx', (p) => x(p.season)).attr('cy', (p) => y(p.accuracy)).attr('r', 3).attr('fill', col[s]);
+      const last = d[d.length - 1];
+      ends.push({ s, y: y(last.accuracy), v: last.accuracy });
+    });
+    ends.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 13) ends[i].y = ends[i - 1].y + 13;
+    ends.forEach((e) => svg.append('text').attr('x', W - m.r + 8).attr('y', e.y).attr('dy', '0.35em').attr('fill', col[e.s]).style('font-size', 'var(--cds-font-size-caption)').text(e.s));
+    const tip = tipBox(el);
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('mousemove', (ev) => {
+        const [px, py] = d3.pointer(ev, el); const s = Math.round(x.invert(px));
+        const pts = series.map((k) => rows.find((r) => r.series === k && r.season === s)).filter(Boolean);
+        if (!pts.length) return;
+        tipRows(tip, `${s} · ${num(+pts[0].games)} games`, pts.map((p) => [col[p.series], p.series, pct(p.accuracy)]));
+        tip.hidden = false; placeTip(el, tip, px, py);
+      }).on('mouseleave', () => { tip.hidden = true; });
+  }
+
+  // ---------- confidence tiers
+  function drawTiers() {
+    const el = document.getElementById('tiers-chart');
+    const r = dash.data('confidence_tiers');
+    el.querySelector('svg')?.remove(); el.querySelector('.fail')?.remove();
+    if (r.status !== 'ok') { if (r.status !== 'loading') fail(el); return; }
+    const rows = r.data.map((d) => ({ ...d, accuracy: +d.accuracy, avg_confidence: +d.avg_confidence, games: +d.games, order: +d.order })).sort((a, b) => a.order - b.order);
+    const W = el.clientWidth, H = 240, m = { t: 18, r: 8, b: 24, l: 40 };
+    const x = d3.scaleBand(rows.map((d) => d.tier), [m.l, W - m.r]).padding(0.3);
+    const y = d3.scaleLinear([0.4, 0.9], [H - m.b, m.t]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(pct0).tickSize(-(W - m.l - m.r))).call(tickStyle).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSizeOuter(0)).call(tickStyle);
+    const bw = Math.min(32, x.bandwidth());
+    const tip = tipBox(el);
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', (d) => x(d.tier) + (x.bandwidth() - bw) / 2).attr('width', bw).attr('y', (d) => y(d.accuracy)).attr('height', (d) => y(0.4) - y(d.accuracy)).attr('rx', 4).attr('fill', dash.colors[0])
+      .on('mousemove', (ev, d) => { tipRows(tip, `Confidence ${d.tier}`, [[null, 'Picked right', pct(d.accuracy)], [null, 'Avg confidence', pct(d.avg_confidence)], [null, 'Games', num(d.games)]]); tip.hidden = false; const [px, py] = d3.pointer(ev, el); placeTip(el, tip, px, py); })
+      .on('mouseleave', () => { tip.hidden = true; });
+    g.append('line').attr('x1', (d) => x(d.tier) + (x.bandwidth() - bw) / 2 - 4).attr('x2', (d) => x(d.tier) + (x.bandwidth() + bw) / 2 + 4).attr('y1', (d) => y(d.avg_confidence)).attr('y2', (d) => y(d.avg_confidence)).attr('stroke', 'var(--color-fg)').attr('stroke-width', 2);
+    g.append('text').attr('x', (d) => x(d.tier) + x.bandwidth() / 2).attr('y', (d) => y(d.accuracy) - 5).attr('text-anchor', 'middle').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((d) => pct0(d.accuracy));
+  }
+
+  // ---------- calibration
+  function drawCalib() {
+    const el = document.getElementById('calib-chart');
+    const r = dash.data('calibration');
+    el.querySelector('svg')?.remove(); el.querySelector('.fail')?.remove();
+    if (r.status !== 'ok') { if (r.status !== 'loading') fail(el); return; }
+    const rows = r.data.map((d) => ({ ...d, predicted: +d.predicted, actual: +d.actual, games: +d.games }));
+    const W = el.clientWidth, H = 240, m = { t: 8, r: 12, b: 28, l: 40 };
+    const x = d3.scaleLinear([0, 1], [m.l, W - m.r]);
+    const y = d3.scaleLinear([0, 1], [H - m.b, m.t]);
+    const rs = d3.scaleSqrt([0, d3.max(rows, (d) => d.games)], [2, 10]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat(pct0).tickSizeOuter(0)).call(tickStyle);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(pct0).tickSize(-(W - m.l - m.r))).call(tickStyle).call((g) => g.select('.domain').remove());
+    svg.append('line').attr('x1', x(0)).attr('y1', y(0)).attr('x2', x(1)).attr('y2', y(1)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
+    svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', dash.colors[0]).attr('stroke-width', 2).attr('stroke-linejoin', 'round').attr('d', d3.line().x((d) => x(d.predicted)).y((d) => y(d.actual)));
+    const tip = tipBox(el);
+    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (d) => x(d.predicted)).attr('cy', (d) => y(d.actual)).attr('r', (d) => rs(d.games)).attr('fill', dash.colors[0])
+      .on('mousemove', (ev, d) => { tipRows(tip, `Predicted ${d.bin}`, [[null, 'Avg predicted', pct(d.predicted)], [null, 'Home won', pct(d.actual)], [null, 'Games', num(d.games)]]); tip.hidden = false; const [px, py] = d3.pointer(ev, el); placeTip(el, tip, px, py); })
+      .on('mouseleave', () => { tip.hidden = true; });
+  }
+
+  // ---------- feature value
+  function drawFeatures() {
+    const el = document.getElementById('feat-chart');
+    const r = dash.data('feature_value');
+    el.querySelector('svg')?.remove(); el.querySelector('.fail')?.remove();
+    if (r.status !== 'ok') { if (r.status !== 'loading') fail(el); return; }
+    const rows = r.data.map((d) => ({ ...d, v: +d.log_loss_increase })).sort((a, b) => b.v - a.v);
+    const W = el.clientWidth, rowH = 28, m = { t: 4, r: 64, b: 24 };
+    const svg = d3.select(el).append('svg').attr('width', '100%');
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    m.l = d3.max(rows, (d) => { probe.text(d.feature_group); return probe.node().getComputedTextLength(); }) + 10;
+    probe.remove();
+    const H = m.t + rows.length * rowH + m.b;
+    svg.attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    const x = d3.scaleLinear([Math.min(0, d3.min(rows, (d) => d.v)), d3.max(rows, (d) => d.v) * 1.1], [m.l, W - m.r]);
+    const y = d3.scaleBand(rows.map((d) => d.feature_group), [m.t, H - m.b]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l) / 90))).tickFormat(d3.format('.3f')).tickSizeOuter(0)).call(tickStyle);
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)');
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', (d) => Math.min(x(0), x(d.v))).attr('width', (d) => Math.max(2, Math.abs(x(d.v) - x(0)))).attr('y', (d) => y(d.feature_group)).attr('height', y.bandwidth()).attr('rx', 4)
+      .attr('fill', (d) => d.v >= 0.0005 ? dash.colors[0] : 'var(--cds-chart-muted)');
+    g.append('text').attr('x', m.l - 8).attr('y', (d) => y(d.feature_group) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((d) => d.feature_group);
+    g.append('text').attr('x', (d) => Math.max(x(0), x(d.v)) + 6).attr('y', (d) => y(d.feature_group) + y.bandwidth() / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((d) => (d.v > 0 ? '+' : '') + d3.format('.4f')(d.v));
+  }
+
+  const seg = (onId, offId, apply) => {
+    document.getElementById(onId).addEventListener('click', () => { apply(); document.getElementById(onId).setAttribute('aria-pressed', 'true'); document.getElementById(offId).setAttribute('aria-pressed', 'false'); drawModels(); });
+  };
+  seg('m-acc', 'm-ll', () => { state.metric = 'accuracy'; });
+  seg('m-ll', 'm-acc', () => { state.metric = 'log_loss'; });
+  seg('p-test', 'p-dev', () => { state.phase = 'test'; });
+  seg('p-dev', 'p-test', () => { state.phase = 'dev'; });
+
+  let linked = false;
+  dash.onData(() => {
+    fillMarks('model_scores', { accuracy: (v) => pct(+v), games: (v) => num(+v) });
+    fillMarks('confidence_tiers', { accuracy: (v) => pct(+v), games: (v) => num(+v) });
+    drawPicks(); drawModels(); drawSeasons(); drawTiers(); drawCalib(); drawFeatures();
+    if (!linked && dash.data('week6_picks').status === 'ok') {
+      linked = true;
+      const named = document.getElementById(location.hash.slice(1));
+      if (named) { named.scrollIntoView(); dash.setLink(named.id); }
+    }
+  });
+})();
+</script>

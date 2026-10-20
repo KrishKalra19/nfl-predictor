@@ -1,0 +1,10 @@
+# downloaded / derived data (re-create with src/download_data.py + run_weekly.py)
+data/raw/
+data/processed/
+# private pick export from the Pick Sheet (contains notes); the site publishes only post-kickoff picks
+outputs/my_picks/
+outputs/dashboard/index_doc.json
+__pycache__/
+*.pyc
+.venv/
+.claude/

@@ -1,0 +1,15 @@
+matchup,gameday,away_team,home_team,pick,confidence,model_home_pct,vegas_home_pct,spread_line,pick_vegas,qb_note
+ARI @ LA,2026-10-18,ARI,LA,LA,0.7906,0.7906,0.863,12.5,Agrees,
+LAC @ KC,2026-10-18,LAC,KC,KC,0.7844,0.7844,0.8,8.5,Agrees,
+WAS @ SF,2026-10-19,WAS,SF,SF,0.7801,0.7801,0.7819,7.5,Agrees,
+BUF @ LV,2026-10-18,BUF,LV,BUF,0.7135,0.2865,0.3092,-5.5,Agrees,LV: different QB than last start
+BAL @ CLE,2026-10-18,BAL,CLE,BAL,0.7089,0.2911,0.325,-4.5,Agrees,BAL: different QB than last start
+NYJ @ NE,2026-10-18,NYJ,NE,NE,0.7023,0.7023,0.7441,7.5,Agrees,
+TEN @ IND,2026-10-18,TEN,IND,IND,0.6936,0.6936,0.7409,7.0,Agrees,
+NO @ NYG,2026-10-18,NO,NYG,NYG,0.6158,0.6158,0.4892,-1.5,Differs,
+HOU @ JAX,2026-10-18,HOU,JAX,JAX,0.6148,0.6148,0.5721,3.0,Agrees,
+PIT @ TB,2026-10-18,PIT,TB,PIT,0.5481,0.4519,0.4486,-2.5,Agrees,
+CAR @ PHI,2026-10-18,CAR,PHI,PHI,0.5266,0.5266,0.5108,1.5,Agrees,
+SEA @ DEN,2026-10-15,SEA,DEN,SEA,0.5154,0.4846,0.4365,-2.5,Agrees,SEA: different QB than last start
+CHI @ ATL,2026-10-18,CHI,ATL,ATL,0.507,0.507,0.4066,-3.0,Differs,ATL: different QB than last start
+DAL @ GB,2026-10-18,DAL,GB,DAL,0.505,0.495,0.5261,1.5,Differs,

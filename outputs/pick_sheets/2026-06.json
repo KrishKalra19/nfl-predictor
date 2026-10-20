@@ -1,0 +1,2985 @@
+{
+ "id": "2026-06",
+ "season": 2026,
+ "week": 6,
+ "generated_at": "2026-10-18T18:43:35Z",
+ "injury_report_posted": true,
+ "games": [
+  {
+   "game_id": "2026_06_SEA_DEN",
+   "kickoff": "2026-10-16T00:15:00Z",
+   "kickoff_label": "Thu Oct 15, 8:15 PM ET",
+   "away": "SEA",
+   "home": "DEN",
+   "venue": "Empower Field at Mile High",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401872995",
+   "teams": {
+    "away": {
+     "abbr": "SEA",
+     "name": "Seahawks",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "SF",
+       "home": true,
+       "pf": 29,
+       "pa": 32,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LAC",
+       "home": true,
+       "pf": 30,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "WAS",
+       "home": false,
+       "pf": 31,
+       "pa": 33,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "ARI",
+       "home": false,
+       "pf": 31,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "NE",
+       "home": true,
+       "pf": 13,
+       "pa": 10,
+       "result": "W"
+      }
+     ],
+     "off_rank": 26,
+     "def_rank": 2,
+     "ppg": 26.8,
+     "papg": 21.0,
+     "rest_days": 4,
+     "travel_miles": 1018,
+     "qb": {
+      "name": "Drew Lock",
+      "epa_per_play": -0.062,
+      "recent_plays": 240,
+      "changed": true,
+      "last_starter": "Sam Darnold"
+     },
+     "missing": [
+      {
+       "name": "Drake Thomas",
+       "pos": "LB",
+       "snap_share": 0.83,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DEN",
+     "name": "Broncos",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LAC",
+       "home": false,
+       "pf": 23,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "SF",
+       "home": false,
+       "pf": 14,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "LA",
+       "home": true,
+       "pf": 30,
+       "pa": 26,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "JAX",
+       "home": true,
+       "pf": 20,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "KC",
+       "home": false,
+       "pf": 10,
+       "pa": 31,
+       "result": "L"
+      }
+     ],
+     "off_rank": 25,
+     "def_rank": 10,
+     "ppg": 19.4,
+     "papg": 22.2,
+     "rest_days": 4,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Bo Nix",
+      "epa_per_play": -0.011,
+      "recent_plays": 302,
+      "changed": false,
+      "last_starter": "Bo Nix"
+     },
+     "missing": [
+      {
+       "name": "Talanoa Hufanga",
+       "pos": "S",
+       "snap_share": 0.91,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "Patrick Surtain II",
+       "pos": "CB",
+       "snap_share": 0.61,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Riley Moss",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Ribs"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.4798,
+    "vegas_home": 0.417,
+    "spread_home": -2.5
+   }
+  },
+  {
+   "game_id": "2026_06_HOU_JAX",
+   "kickoff": "2026-10-18T13:30:00Z",
+   "kickoff_label": "Sun Oct 18, 9:30 AM ET",
+   "away": "HOU",
+   "home": "JAX",
+   "venue": "Wembley Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": true,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401872996",
+   "teams": {
+    "away": {
+     "abbr": "HOU",
+     "name": "Texans",
+     "record": "1-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "TEN",
+       "home": false,
+       "pf": 26,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "DAL",
+       "home": true,
+       "pf": 30,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "IND",
+       "home": false,
+       "pf": 17,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "CIN",
+       "home": true,
+       "pf": 6,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "BUF",
+       "home": true,
+       "pf": 31,
+       "pa": 36,
+       "result": "L"
+      }
+     ],
+     "off_rank": 13,
+     "def_rank": 14,
+     "ppg": 22.0,
+     "papg": 22.4,
+     "rest_days": 7,
+     "travel_miles": 4852,
+     "qb": {
+      "name": "C.J. Stroud",
+      "epa_per_play": -0.001,
+      "recent_plays": 310,
+      "changed": false,
+      "last_starter": "C.J. Stroud"
+     },
+     "missing": [
+      {
+       "name": "Jalen Pitre",
+       "pos": "S",
+       "snap_share": 0.9,
+       "why": "Out (Shoulder)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Ja'Marcus Ingram",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Elbow"
+      },
+      {
+       "name": "Henry To'oTo'o",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Shoulder"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "JAX",
+     "name": "Jaguars",
+     "record": "4-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "PHI",
+       "home": true,
+       "pf": 19,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CIN",
+       "home": false,
+       "pf": 22,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NE",
+       "home": true,
+       "pf": 35,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DEN",
+       "home": false,
+       "pf": 13,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "CLE",
+       "home": true,
+       "pf": 34,
+       "pa": 10,
+       "result": "W"
+      }
+     ],
+     "off_rank": 7,
+     "def_rank": 4,
+     "ppg": 24.6,
+     "papg": 14.0,
+     "rest_days": 7,
+     "travel_miles": 4259,
+     "qb": {
+      "name": "Trevor Lawrence",
+      "epa_per_play": 0.21,
+      "recent_plays": 269,
+      "changed": false,
+      "last_starter": "Trevor Lawrence"
+     },
+     "missing": [
+      {
+       "name": "Anton Harrison",
+       "pos": "OL",
+       "snap_share": 0.9,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Jaylon Jones",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.6004,
+    "vegas_home": 0.5635,
+    "spread_home": 2.5
+   }
+  },
+  {
+   "game_id": "2026_06_BAL_CLE",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "BAL",
+   "home": "CLE",
+   "venue": "Huntington Bank Field",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401872997",
+   "teams": {
+    "away": {
+     "abbr": "BAL",
+     "name": "Ravens",
+     "record": "4-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "ATL",
+       "home": false,
+       "pf": 30,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "TEN",
+       "home": true,
+       "pf": 24,
+       "pa": 18,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DAL",
+       "home": false,
+       "pf": 34,
+       "pa": 31,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "NO",
+       "home": true,
+       "pf": 17,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "IND",
+       "home": false,
+       "pf": 41,
+       "pa": 23,
+       "result": "W"
+      }
+     ],
+     "off_rank": 6,
+     "def_rank": 15,
+     "ppg": 29.2,
+     "papg": 23.8,
+     "rest_days": 7,
+     "travel_miles": 308,
+     "qb": {
+      "name": "Tyler Huntley",
+      "epa_per_play": 0.066,
+      "recent_plays": 210,
+      "changed": false,
+      "last_starter": "Tyler Huntley"
+     },
+     "missing": [
+      {
+       "name": "Lamar Jackson",
+       "pos": "QB",
+       "snap_share": 0.63,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Andrew Vorhees",
+       "pos": "G",
+       "starter": false,
+       "injury": "Foot"
+      },
+      {
+       "name": "Emery Jones Jr.",
+       "pos": "G",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Ja'Kobi Lane",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Wrist"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "CLE",
+     "name": "Browns",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 12,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "PIT",
+       "home": true,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CAR",
+       "home": true,
+       "pf": 21,
+       "pa": 18,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "TB",
+       "home": false,
+       "pf": 23,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "JAX",
+       "home": false,
+       "pf": 10,
+       "pa": 34,
+       "result": "L"
+      }
+     ],
+     "off_rank": 23,
+     "def_rank": 16,
+     "ppg": 18.6,
+     "papg": 22.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Deshaun Watson",
+      "epa_per_play": -0.072,
+      "recent_plays": 269,
+      "changed": false,
+      "last_starter": "Deshaun Watson"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Carson Schwesinger",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Derek Barnett",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Mason Graham",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.3977,
+    "vegas_home": 0.3962,
+    "spread_home": -3.0
+   }
+  },
+  {
+   "game_id": "2026_06_CAR_PHI",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "CAR",
+   "home": "PHI",
+   "venue": "Lincoln Financial Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401872998",
+   "teams": {
+    "away": {
+     "abbr": "CAR",
+     "name": "Panthers",
+     "record": "2-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "DET",
+       "home": true,
+       "pf": 32,
+       "pa": 26,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CLE",
+       "home": false,
+       "pf": 18,
+       "pa": 21,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "ATL",
+       "home": false,
+       "pf": 34,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "CHI",
+       "home": true,
+       "pf": 37,
+       "pa": 59,
+       "result": "L"
+      },
+      {
+       "season": 2025,
+       "week": 19,
+       "opp": "LA",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      }
+     ],
+     "off_rank": 8,
+     "def_rank": 21,
+     "ppg": 30.2,
+     "papg": 27.2,
+     "rest_days": 14,
+     "travel_miles": 448,
+     "qb": {
+      "name": "Bryce Young",
+      "epa_per_play": 0.067,
+      "recent_plays": 310,
+      "changed": false,
+      "last_starter": "Bryce Young"
+     },
+     "missing": [
+      {
+       "name": "Monroe Freeling",
+       "pos": "T",
+       "snap_share": 0.89,
+       "why": "Doubtful (Knee)"
+      },
+      {
+       "name": "Jaycee Horn",
+       "pos": "CB",
+       "snap_share": 0.66,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Michael Jackson",
+       "pos": "CB",
+       "snap_share": 0.52,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Damien Lewis",
+       "pos": "G",
+       "starter": true,
+       "injury": "Elbow"
+      },
+      {
+       "name": "Jaelan Phillips",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Taylor Moton",
+       "pos": "T",
+       "starter": false,
+       "injury": "Lung"
+      },
+      {
+       "name": "Tershawn Wharton",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Trevor Etienne",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "PHI",
+     "name": "Eagles",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "JAX",
+       "home": false,
+       "pf": 17,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LA",
+       "home": true,
+       "pf": 20,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CHI",
+       "home": false,
+       "pf": 7,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "TEN",
+       "home": false,
+       "pf": 24,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "WAS",
+       "home": true,
+       "pf": 24,
+       "pa": 22,
+       "result": "W"
+      }
+     ],
+     "off_rank": 29,
+     "def_rank": 22,
+     "ppg": 18.4,
+     "papg": 22.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Tanner McKee",
+      "epa_per_play": 0.11,
+      "recent_plays": 95,
+      "changed": true,
+      "last_starter": "Jalen Hurts"
+     },
+     "missing": [
+      {
+       "name": "Jalen Hurts",
+       "pos": "QB",
+       "snap_share": 0.98,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Cam Jurgens",
+       "pos": "C",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalyx Hunt",
+       "pos": "LB",
+       "snap_share": 0.68,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Drew Kendall",
+       "pos": "C",
+       "starter": true,
+       "injury": "Knee"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.426,
+    "vegas_home": 0.4066,
+    "spread_home": -3.0
+   }
+  },
+  {
+   "game_id": "2026_06_CHI_ATL",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "CHI",
+   "home": "ATL",
+   "venue": "Mercedes-Benz Stadium",
+   "roof": "",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401872999",
+   "teams": {
+    "away": {
+     "abbr": "CHI",
+     "name": "Bears",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "GB",
+       "home": false,
+       "pf": 7,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 23,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "PHI",
+       "home": true,
+       "pf": 27,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "MIN",
+       "home": true,
+       "pf": 3,
+       "pa": 9,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "CAR",
+       "home": false,
+       "pf": 59,
+       "pa": 37,
+       "result": "W"
+      }
+     ],
+     "off_rank": 12,
+     "def_rank": 13,
+     "ppg": 23.8,
+     "papg": 19.2,
+     "rest_days": 7,
+     "travel_miles": 587,
+     "qb": {
+      "name": "Caleb Williams",
+      "epa_per_play": 0.184,
+      "recent_plays": 303,
+      "changed": true,
+      "last_starter": "Tyson Bagent"
+     },
+     "missing": [
+      {
+       "name": "T.J. Edwards",
+       "pos": "LB",
+       "snap_share": 0.84,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Montez Sweat",
+       "pos": "DL",
+       "snap_share": 0.71,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Dayo Odeyingbo",
+       "pos": "DL",
+       "snap_share": 0.55,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Tyrique Stevenson",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Hip"
+      },
+      {
+       "name": "Kyler Gordon",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Caleb Williams",
+       "pos": "QB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "ATL",
+     "name": "Falcons",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "BAL",
+       "home": true,
+       "pf": 23,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NO",
+       "home": false,
+       "pf": 45,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "GB",
+       "home": false,
+       "pf": 35,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "CAR",
+       "home": true,
+       "pf": 3,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "PIT",
+       "home": false,
+       "pf": 13,
+       "pa": 20,
+       "result": "L"
+      }
+     ],
+     "off_rank": 18,
+     "def_rank": 10,
+     "ppg": 23.8,
+     "papg": 24.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Michael Penix Jr.",
+      "epa_per_play": 0.112,
+      "recent_plays": 242,
+      "changed": false,
+      "last_starter": "Michael Penix Jr."
+     },
+     "missing": [
+      {
+       "name": "C.J. Henderson",
+       "pos": "CB",
+       "snap_share": 0.81,
+       "why": "Out (Groin)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Za'Darius Smith",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Neck"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.477,
+    "vegas_home": 0.4826,
+    "spread_home": -1.5
+   }
+  },
+  {
+   "game_id": "2026_06_NO_NYG",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "NO",
+   "home": "NYG",
+   "venue": "MetLife Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873000",
+   "teams": {
+    "away": {
+     "abbr": "NO",
+     "name": "Saints",
+     "record": "1-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "MIN",
+       "home": true,
+       "pf": 13,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "ATL",
+       "home": true,
+       "pf": 24,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "LV",
+       "home": true,
+       "pf": 27,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "BAL",
+       "home": false,
+       "pf": 24,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "DET",
+       "home": false,
+       "pf": 30,
+       "pa": 31,
+       "result": "L"
+      }
+     ],
+     "off_rank": 24,
+     "def_rank": 27,
+     "ppg": 23.6,
+     "papg": 30.2,
+     "rest_days": 7,
+     "travel_miles": 1170,
+     "qb": {
+      "name": "Tyler Shough",
+      "epa_per_play": 0.041,
+      "recent_plays": 347,
+      "changed": false,
+      "last_starter": "Tyler Shough"
+     },
+     "missing": [
+      {
+       "name": "Kaden Elliss",
+       "pos": "LB",
+       "snap_share": 0.5,
+       "why": "Out (Calf)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Chris Olave",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Illness"
+      },
+      {
+       "name": "Zach Wood",
+       "pos": "LS",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Alvin Kamara",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Nathan Shepherd",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Illness"
+      },
+      {
+       "name": "Lorenzo Styles Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "NYG",
+     "name": "Giants",
+     "record": "3-1-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "WAS",
+       "home": false,
+       "pf": 27,
+       "pa": 27,
+       "result": "T"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "ARI",
+       "home": true,
+       "pf": 36,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "TEN",
+       "home": true,
+       "pf": 12,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "LA",
+       "home": false,
+       "pf": 6,
+       "pa": 28,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "DAL",
+       "home": true,
+       "pf": 28,
+       "pa": 20,
+       "result": "W"
+      }
+     ],
+     "off_rank": 19,
+     "def_rank": 24,
+     "ppg": 21.8,
+     "papg": 21.2,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jameis Winston",
+      "epa_per_play": -0.051,
+      "recent_plays": 250,
+      "changed": false,
+      "last_starter": "Jameis Winston"
+     },
+     "missing": [
+      {
+       "name": "Tyler Nubin",
+       "pos": "S",
+       "snap_share": 0.58,
+       "why": "Out (Neck)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Jermaine Eluemunor",
+       "pos": "T",
+       "starter": true,
+       "injury": "Calf"
+      },
+      {
+       "name": "Andrew Thomas",
+       "pos": "T",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "Abdul Carter",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Calf"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.6037,
+    "vegas_home": 0.5043,
+    "spread_home": -1.5
+   }
+  },
+  {
+   "game_id": "2026_06_NYJ_NE",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "NYJ",
+   "home": "NE",
+   "venue": "Gillette Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873001",
+   "teams": {
+    "away": {
+     "abbr": "NYJ",
+     "name": "Jets",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "CLE",
+       "home": true,
+       "pf": 17,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CHI",
+       "home": false,
+       "pf": 12,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DET",
+       "home": false,
+       "pf": 24,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "GB",
+       "home": true,
+       "pf": 17,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "TEN",
+       "home": false,
+       "pf": 23,
+       "pa": 10,
+       "result": "W"
+      }
+     ],
+     "off_rank": 20,
+     "def_rank": 8,
+     "ppg": 18.6,
+     "papg": 19.2,
+     "rest_days": 7,
+     "travel_miles": 170,
+     "qb": {
+      "name": "Geno Smith",
+      "epa_per_play": -0.003,
+      "recent_plays": 249,
+      "changed": false,
+      "last_starter": "Geno Smith"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Dane Belton",
+       "pos": "S",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Kenyon Sadiq",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Concussion"
+      },
+      {
+       "name": "Omar Cooper Jr.",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "NE",
+     "name": "Patriots",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LV",
+       "home": true,
+       "pf": 45,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "BUF",
+       "home": false,
+       "pf": 29,
+       "pa": 26,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "JAX",
+       "home": false,
+       "pf": 6,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "PIT",
+       "home": true,
+       "pf": 20,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "SEA",
+       "home": false,
+       "pf": 10,
+       "pa": 13,
+       "result": "L"
+      }
+     ],
+     "off_rank": 11,
+     "def_rank": 19,
+     "ppg": 22.0,
+     "papg": 18.8,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Drake Maye",
+      "epa_per_play": -0.08,
+      "recent_plays": 282,
+      "changed": false,
+      "last_starter": "Drake Maye"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Christian Elliss",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Chest"
+      },
+      {
+       "name": "Will Campbell",
+       "pos": "T",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Craig Woodson",
+       "pos": "S",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "A.J. Brown",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Marcus Bryant",
+       "pos": "T",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "TreVeyon Henderson",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Channing Canada",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.7337,
+    "vegas_home": 0.7441,
+    "spread_home": 7.5
+   }
+  },
+  {
+   "game_id": "2026_06_PIT_TB",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "PIT",
+   "home": "TB",
+   "venue": "Raymond James Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873002",
+   "teams": {
+    "away": {
+     "abbr": "PIT",
+     "name": "Steelers",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "IND",
+       "home": true,
+       "pf": 34,
+       "pa": 22,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CLE",
+       "home": false,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CIN",
+       "home": true,
+       "pf": 30,
+       "pa": 27,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "NE",
+       "home": false,
+       "pf": 3,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "ATL",
+       "home": true,
+       "pf": 20,
+       "pa": 13,
+       "result": "W"
+      }
+     ],
+     "off_rank": 17,
+     "def_rank": 20,
+     "ppg": 22.2,
+     "papg": 21.8,
+     "rest_days": 7,
+     "travel_miles": 873,
+     "qb": {
+      "name": "Aaron Rodgers",
+      "epa_per_play": -0.137,
+      "recent_plays": 324,
+      "changed": false,
+      "last_starter": "Aaron Rodgers"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Jalen Ramsey",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Wrist"
+      },
+      {
+       "name": "Pat Freiermuth",
+       "pos": "TE",
+       "starter": true,
+       "injury": "Calf"
+      },
+      {
+       "name": "Keeanu Benton",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Jamel Dean",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Rico Dowdle",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Toe"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "TB",
+     "name": "Buccaneers",
+     "record": "1-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DAL",
+       "home": false,
+       "pf": 24,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "GB",
+       "home": true,
+       "pf": 14,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "MIN",
+       "home": true,
+       "pf": 16,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "CLE",
+       "home": true,
+       "pf": 19,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "CIN",
+       "home": false,
+       "pf": 27,
+       "pa": 33,
+       "result": "L"
+      }
+     ],
+     "off_rank": 27,
+     "def_rank": 6,
+     "ppg": 20.0,
+     "papg": 22.4,
+     "rest_days": 10,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jalon Daniels",
+      "epa_per_play": 0.016,
+      "recent_plays": 61,
+      "changed": false,
+      "last_starter": "Jalon Daniels"
+     },
+     "missing": [
+      {
+       "name": "Antoine Winfield Jr.",
+       "pos": "S",
+       "snap_share": 0.73,
+       "why": "Out (Rib)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Josiah Trotter",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Sean Tucker",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "SirVocea Dennis",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Ayden Garnes",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.4097,
+    "vegas_home": 0.4365,
+    "spread_home": -2.5
+   }
+  },
+  {
+   "game_id": "2026_06_TEN_IND",
+   "kickoff": "2026-10-18T17:00:00Z",
+   "kickoff_label": "Sun Oct 18, 1:00 PM ET",
+   "away": "TEN",
+   "home": "IND",
+   "venue": "Lucas Oil Stadium",
+   "roof": "",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873003",
+   "teams": {
+    "away": {
+     "abbr": "TEN",
+     "name": "Titans",
+     "record": "0-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "HOU",
+       "home": true,
+       "pf": 3,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "BAL",
+       "home": false,
+       "pf": 18,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NYG",
+       "home": false,
+       "pf": 7,
+       "pa": 12,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "PHI",
+       "home": true,
+       "pf": 20,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 10,
+       "pa": 23,
+       "result": "L"
+      }
+     ],
+     "off_rank": 31,
+     "def_rank": 25,
+     "ppg": 11.6,
+     "papg": 21.8,
+     "rest_days": 7,
+     "travel_miles": 251,
+     "qb": {
+      "name": "Cam Ward",
+      "epa_per_play": -0.106,
+      "recent_plays": 248,
+      "changed": false,
+      "last_starter": "Cam Ward"
+     },
+     "missing": [
+      {
+       "name": "Kevin Winston",
+       "pos": "S",
+       "snap_share": 0.75,
+       "why": "Out (Quadricep)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Joshua Williams",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Pectoral"
+      },
+      {
+       "name": "Tyjae Spears",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "IND",
+     "name": "Colts",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "PIT",
+       "home": false,
+       "pf": 22,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "WAS",
+       "home": false,
+       "pf": 30,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "HOU",
+       "home": true,
+       "pf": 19,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "KC",
+       "home": false,
+       "pf": 30,
+       "pa": 33,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "BAL",
+       "home": true,
+       "pf": 23,
+       "pa": 41,
+       "result": "L"
+      }
+     ],
+     "off_rank": 22,
+     "def_rank": 26,
+     "ppg": 24.8,
+     "papg": 27.6,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Daniel Jones",
+      "epa_per_play": -0.066,
+      "recent_plays": 260,
+      "changed": false,
+      "last_starter": "Daniel Jones"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Tyler Warren",
+       "pos": "TE",
+       "starter": true,
+       "injury": "Groin"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.6781,
+    "vegas_home": 0.718,
+    "spread_home": 6.5
+   }
+  },
+  {
+   "game_id": "2026_06_ARI_LA",
+   "kickoff": "2026-10-18T20:05:00Z",
+   "kickoff_label": "Sun Oct 18, 4:05 PM ET",
+   "away": "ARI",
+   "home": "LA",
+   "venue": "SoFi Stadium",
+   "roof": "dome",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873004",
+   "teams": {
+    "away": {
+     "abbr": "ARI",
+     "name": "Cardinals",
+     "record": "1-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DET",
+       "home": true,
+       "pf": 21,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NYG",
+       "home": false,
+       "pf": 24,
+       "pa": 36,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "SF",
+       "home": false,
+       "pf": 30,
+       "pa": 36,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "SEA",
+       "home": true,
+       "pf": 7,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "LAC",
+       "home": false,
+       "pf": 26,
+       "pa": 14,
+       "result": "W"
+      }
+     ],
+     "off_rank": 21,
+     "def_rank": 29,
+     "ppg": 21.6,
+     "papg": 32.4,
+     "rest_days": 7,
+     "travel_miles": 350,
+     "qb": {
+      "name": "Jacoby Brissett",
+      "epa_per_play": -0.015,
+      "recent_plays": 331,
+      "changed": false,
+      "last_starter": "Jacoby Brissett"
+     },
+     "missing": [
+      {
+       "name": "Paris Johnson",
+       "pos": "OL",
+       "snap_share": 0.74,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Isaiah Adams",
+       "pos": "OL",
+       "snap_share": 0.6,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Marvin Harrison Jr.",
+       "pos": "WR",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Andrew Wingard",
+       "pos": "S",
+       "snap_share": 0.51,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Budda Baker",
+       "pos": "S",
+       "starter": true,
+       "injury": "Not injury related - resting player"
+      },
+      {
+       "name": "Blake Gillikin",
+       "pos": "P",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Zaven Collins",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hip"
+      },
+      {
+       "name": "Kitan Crawford",
+       "pos": "S",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "LA",
+     "name": "Rams",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "BUF",
+       "home": true,
+       "pf": 34,
+       "pa": 37,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "PHI",
+       "home": false,
+       "pf": 24,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DEN",
+       "home": false,
+       "pf": 26,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "NYG",
+       "home": true,
+       "pf": 28,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "SF",
+       "home": true,
+       "pf": 7,
+       "pa": 27,
+       "result": "L"
+      }
+     ],
+     "off_rank": 10,
+     "def_rank": 11,
+     "ppg": 23.8,
+     "papg": 24.0,
+     "rest_days": 6,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Matthew Stafford",
+      "epa_per_play": 0.147,
+      "recent_plays": 348,
+      "changed": false,
+      "last_starter": "Matthew Stafford"
+     },
+     "missing": [
+      {
+       "name": "Alaric Jackson",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Kam Curl",
+       "pos": "S",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Trent McDuffie",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Groin"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.7952,
+    "vegas_home": 0.8465,
+    "spread_home": 12.5
+   }
+  },
+  {
+   "game_id": "2026_06_BUF_LV",
+   "kickoff": "2026-10-18T20:25:00Z",
+   "kickoff_label": "Sun Oct 18, 4:25 PM ET",
+   "away": "BUF",
+   "home": "LV",
+   "venue": "Allegiant Stadium",
+   "roof": "dome",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873005",
+   "teams": {
+    "away": {
+     "abbr": "BUF",
+     "name": "Bills",
+     "record": "4-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LA",
+       "home": false,
+       "pf": 37,
+       "pa": 34,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NE",
+       "home": true,
+       "pf": 26,
+       "pa": 29,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "LAC",
+       "home": true,
+       "pf": 24,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DET",
+       "home": true,
+       "pf": 41,
+       "pa": 31,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "HOU",
+       "home": false,
+       "pf": 36,
+       "pa": 31,
+       "result": "W"
+      }
+     ],
+     "off_rank": 1,
+     "def_rank": 30,
+     "ppg": 32.8,
+     "papg": 28.2,
+     "rest_days": 6,
+     "travel_miles": 1980,
+     "qb": {
+      "name": "Josh Allen",
+      "epa_per_play": 0.227,
+      "recent_plays": 310,
+      "changed": false,
+      "last_starter": "Josh Allen"
+     },
+     "missing": [
+      {
+       "name": "Alec Anderson",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "DJ Moore",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Ed Oliver",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Josh Palmer",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Dee Alford",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "T.J. Sanders",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Shoulder"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "LV",
+     "name": "Raiders",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NE",
+       "home": false,
+       "pf": 17,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "KC",
+       "home": true,
+       "pf": 27,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NO",
+       "home": false,
+       "pf": 35,
+       "pa": 27,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "LAC",
+       "home": false,
+       "pf": 26,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "MIA",
+       "home": true,
+       "pf": 27,
+       "pa": 13,
+       "result": "W"
+      }
+     ],
+     "off_rank": 14,
+     "def_rank": 12,
+     "ppg": 26.4,
+     "papg": 25.8,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Kirk Cousins",
+      "epa_per_play": 0.141,
+      "recent_plays": 276,
+      "changed": false,
+      "last_starter": "Kirk Cousins"
+     },
+     "missing": [
+      {
+       "name": "Tonka Hemingway",
+       "pos": "DT",
+       "snap_share": 0.51,
+       "why": "Out (Concussion)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Trey Zuhn III",
+       "pos": "C",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.2976,
+    "vegas_home": 0.3194,
+    "spread_home": -5.5
+   }
+  },
+  {
+   "game_id": "2026_06_LAC_KC",
+   "kickoff": "2026-10-18T20:25:00Z",
+   "kickoff_label": "Sun Oct 18, 4:25 PM ET",
+   "away": "LAC",
+   "home": "KC",
+   "venue": "GEHA Field at Arrowhead Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873006",
+   "teams": {
+    "away": {
+     "abbr": "LAC",
+     "name": "Chargers",
+     "record": "0-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DEN",
+       "home": true,
+       "pf": 17,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "SEA",
+       "home": false,
+       "pf": 23,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "BUF",
+       "home": false,
+       "pf": 16,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "LV",
+       "home": true,
+       "pf": 14,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "ARI",
+       "home": true,
+       "pf": 14,
+       "pa": 26,
+       "result": "L"
+      }
+     ],
+     "off_rank": 32,
+     "def_rank": 5,
+     "ppg": 16.8,
+     "papg": 25.8,
+     "rest_days": 7,
+     "travel_miles": 1366,
+     "qb": {
+      "name": "Justin Herbert",
+      "epa_per_play": -0.124,
+      "recent_plays": 277,
+      "changed": false,
+      "last_starter": "Justin Herbert"
+     },
+     "missing": [
+      {
+       "name": "Rashawn Slater",
+       "pos": "T",
+       "snap_share": 0.71,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Tre Harris",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Joe Alt",
+       "pos": "T",
+       "snap_share": 0.59,
+       "why": "Out (Neck)"
+      },
+      {
+       "name": "Trevor Penning",
+       "pos": "OL",
+       "snap_share": 0.51,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Daiyan Henley",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Jamaree Caldwell",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Bud Dupree",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Dalvin Tomlinson",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "KeAndre Lambert-Smith",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Brenen Thompson",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Quadricep"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "KC",
+     "name": "Chiefs",
+     "record": "4-0",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LV",
+       "home": false,
+       "pf": 30,
+       "pa": 27,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "MIA",
+       "home": false,
+       "pf": 24,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "IND",
+       "home": true,
+       "pf": 33,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "DEN",
+       "home": true,
+       "pf": 31,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2025,
+       "week": 18,
+       "opp": "LV",
+       "home": false,
+       "pf": 12,
+       "pa": 14,
+       "result": "L"
+      }
+     ],
+     "off_rank": 5,
+     "def_rank": 7,
+     "ppg": 29.5,
+     "papg": 19.2,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Patrick Mahomes",
+      "epa_per_play": 0.078,
+      "recent_plays": 290,
+      "changed": false,
+      "last_starter": "Patrick Mahomes"
+     },
+     "missing": [
+      {
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "snap_share": 0.62,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Tyquan Thornton",
+       "pos": "WR",
+       "snap_share": 0.59,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "L'Jarius Sneed",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Knee"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.8006,
+    "vegas_home": 0.7768,
+    "spread_home": 7.5
+   }
+  },
+  {
+   "game_id": "2026_06_DAL_GB",
+   "kickoff": "2026-10-19T00:20:00Z",
+   "kickoff_label": "Sun Oct 18, 8:20 PM ET",
+   "away": "DAL",
+   "home": "GB",
+   "venue": "Lambeau Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873007",
+   "teams": {
+    "away": {
+     "abbr": "DAL",
+     "name": "Cowboys",
+     "record": "2-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "TB",
+       "home": true,
+       "pf": 16,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "HOU",
+       "home": false,
+       "pf": 34,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "BAL",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "WAS",
+       "home": true,
+       "pf": 37,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "NYG",
+       "home": false,
+       "pf": 20,
+       "pa": 28,
+       "result": "L"
+      }
+     ],
+     "off_rank": 4,
+     "def_rank": 32,
+     "ppg": 27.6,
+     "papg": 27.2,
+     "rest_days": 10,
+     "travel_miles": 946,
+     "qb": {
+      "name": "Dak Prescott",
+      "epa_per_play": 0.218,
+      "recent_plays": 289,
+      "changed": false,
+      "last_starter": "Dak Prescott"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "DeMarvion Overshown",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Ameer Speed",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Joey Porter Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "LT Overton",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Foot"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "GB",
+     "name": "Packers",
+     "record": "3-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "CHI",
+       "home": true,
+       "pf": 31,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "TB",
+       "home": false,
+       "pf": 17,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "ATL",
+       "home": true,
+       "pf": 14,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 20,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "MIN",
+       "home": false,
+       "pf": 22,
+       "pa": 39,
+       "result": "L"
+      }
+     ],
+     "off_rank": 16,
+     "def_rank": 18,
+     "ppg": 20.8,
+     "papg": 22.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jordan Love",
+      "epa_per_play": 0.109,
+      "recent_plays": 303,
+      "changed": false,
+      "last_starter": "Jordan Love"
+     },
+     "missing": [
+      {
+       "name": "Edgerrin Cooper",
+       "pos": "LB",
+       "snap_share": 0.57,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Brandon Cisse",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Hip"
+      },
+      {
+       "name": "Aaron Banks",
+       "pos": "G",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Jacob Monk",
+       "pos": "C",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Savion Williams",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Anthony Campbell",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.4773,
+    "vegas_home": 0.5108,
+    "spread_home": 1.5
+   }
+  },
+  {
+   "game_id": "2026_06_WAS_SF",
+   "kickoff": "2026-10-20T00:15:00Z",
+   "kickoff_label": "Mon Oct 19, 8:15 PM ET",
+   "away": "WAS",
+   "home": "SF",
+   "venue": "Levi's Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873008",
+   "teams": {
+    "away": {
+     "abbr": "WAS",
+     "name": "Commanders",
+     "record": "1-3-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NYG",
+       "home": true,
+       "pf": 27,
+       "pa": 27,
+       "result": "T"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "IND",
+       "home": true,
+       "pf": 13,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "SEA",
+       "home": true,
+       "pf": 33,
+       "pa": 31,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DAL",
+       "home": false,
+       "pf": 20,
+       "pa": 37,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "PHI",
+       "home": false,
+       "pf": 22,
+       "pa": 24,
+       "result": "L"
+      }
+     ],
+     "off_rank": 15,
+     "def_rank": 23,
+     "ppg": 23.0,
+     "papg": 29.8,
+     "rest_days": 8,
+     "travel_miles": 2428,
+     "qb": {
+      "name": "Jayden Daniels",
+      "epa_per_play": -0.034,
+      "recent_plays": 225,
+      "changed": false,
+      "last_starter": "Jayden Daniels"
+     },
+     "missing": [],
+     "questionable": [
+      {
+       "name": "Lucas Patrick",
+       "pos": "G",
+       "starter": true,
+       "injury": "Illness"
+      },
+      {
+       "name": "Javon Kinlaw",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Stefon Diggs",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Jeremy McNichols",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Nick Cross",
+       "pos": "S",
+       "starter": false,
+       "injury": "Illness"
+      },
+      {
+       "name": "Percy Butler",
+       "pos": "S",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Jordan Magee",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Tyler Owens",
+       "pos": "S",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Trey Amos",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "SF",
+     "name": "49ers",
+     "record": "5-0",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "SEA",
+       "home": false,
+       "pf": 32,
+       "pa": 29,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "DEN",
+       "home": true,
+       "pf": 24,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "ARI",
+       "home": true,
+       "pf": 36,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "MIA",
+       "home": true,
+       "pf": 35,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 1,
+       "opp": "LA",
+       "home": false,
+       "pf": 27,
+       "pa": 7,
+       "result": "W"
+      }
+     ],
+     "off_rank": 2,
+     "def_rank": 3,
+     "ppg": 30.8,
+     "papg": 18.6,
+     "rest_days": 8,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Brock Purdy",
+      "epa_per_play": 0.146,
+      "recent_plays": 248,
+      "changed": false,
+      "last_starter": "Brock Purdy"
+     },
+     "missing": [
+      {
+       "name": "Dre Greenlaw",
+       "pos": "LB",
+       "snap_share": 0.66,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Marques Sigle",
+       "pos": "S",
+       "snap_share": 0.63,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "Deebo Samuel",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "Out (Hamstring)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Mike Evans",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Ribs"
+      },
+      {
+       "name": "Upton Stout",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Siran Neal",
+       "pos": "S",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Christian Kirk",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Mykel Williams",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Gracen Halton",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Quadricep"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.7782,
+    "vegas_home": 0.7867,
+    "spread_home": 7.5
+   }
+  }
+ ]
+}

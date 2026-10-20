@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Predictor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #f3f5f2; --surface: #fff; --ink: #17201b; --muted: #5d6a62; --line: #d9dfd9;
+  --turf: #1d6b47; --away: #33508a; --good: #1d6b47; --bad: #a3322a;
+  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, "Segoe UI", sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111613; --surface: #1a211d; --ink: #e6ece8; --muted: #9aa8a0; --line: #2e3833;
+    --turf: #4fbf88; --away: #8fa9e0; --good: #4fbf88; --bad: #e57a70; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 960px; margin-inline: auto; padding-inline: 16px; padding-block: 28px 64px; display: flex; flex-direction: column; gap: 28px; }
+h1, h2 { font-family: var(--f-display); font-weight: 700; text-transform: uppercase; margin: 0; letter-spacing: .01em; }
+h1 { font-size: 2.6rem; line-height: 1; }
+h2 { font-size: 1.5rem; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .84rem; }
+.eyebrow { font-family: var(--f-display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--turf); }
+section { display: flex; flex-direction: column; gap: 12px; }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.num { text-align: right; font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+.pick { font-weight: 600; }
+.bar { display: flex; align-items: center; gap: 8px; min-width: 9rem; }
+.track { flex: 1; height: 7px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.fill { height: 100%; background: var(--turf); border-radius: 99px; }
+.ok { color: var(--good); font-weight: 600; }
+.no { color: var(--bad); font-weight: 600; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
+.card.me { border-color: var(--turf); }
+.card .who { font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; text-transform: uppercase; }
+.card .big { font-family: var(--f-display); font-weight: 700; font-size: 2.2rem; line-height: 1; }
+.empty { padding: 22px; text-align: center; color: var(--muted); }
+@media (max-width: 600px) { .hide-sm { display: none; } h1 { font-size: 2.1rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="eyebrow"></div>
+    <h1 id="title">NFL Predictor</h1>
+    <p class="muted small" id="built"></p>
+  </header>
+
+  <section>
+    <h2>Model picks</h2>
+    <p class="muted small">Win probabilities from a five-model ensemble (two neural nets plus logistic regression, ridge and gradient boosting) trained on play-by-play since 2015, pregame rosters and starting QBs. Vegas lines are a benchmark, never an input. Predictions freeze at kickoff.</p>
+    <div class="box"><table>
+      <thead><tr><th>Game</th><th class="hide-sm">Kickoff</th><th>Pick</th><th>Confidence</th><th class="num hide-sm">Vegas on pick</th><th class="num">Final</th></tr></thead>
+      <tbody id="week-rows"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Krish vs the model vs Vegas</h2>
+    <p class="muted small">Krish's picks are probabilities entered before kickoff and published once the game starts. Lower log-loss is better: it rewards confident correct picks and punishes confident misses. A few hundred games are needed before differences mean much.</p>
+    <div class="cards" id="cards"></div>
+    <div class="box"><table>
+      <thead><tr><th>Wk</th><th>Game</th><th>Final</th><th class="num">Krish</th><th class="num">Model</th><th class="num">Vegas</th><th class="hide-sm">Krish's reason</th></tr></thead>
+      <tbody id="graded-rows"></tbody>
+    </table></div>
+  </section>
+</div>
+<script>
+const DATA = /*__DATA__*/null;
+const pct = (p) => Math.round(p * 100) + "%";
+const el = (t, cls, txt) => { const e = document.createElement(t); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+const side = (g, p) => p == null ? "—" : Math.abs(p - 0.5) < 0.005 ? "50%" : (p > 0.5 ? g.home : g.away) + " " + pct(Math.max(p, 1 - p));
+
+document.getElementById("eyebrow").textContent = `${DATA.season} season`;
+document.getElementById("title").textContent = `Week ${DATA.week} picks`;
+document.getElementById("built").textContent = `Updated ${DATA.built}`;
+
+const wr = document.getElementById("week-rows");
+if (!DATA.this_week.length) { const tr = el("tr"); const td = el("td", "empty", "This week's picks aren't posted yet."); td.colSpan = 6; tr.append(td); wr.append(tr); }
+for (const g of DATA.this_week) {
+  const tr = el("tr");
+  tr.append(el("td", null, g.game));
+  tr.append(el("td", "hide-sm muted", g.kickoff ? new Date(g.kickoff).toLocaleString([], { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : ""));
+  tr.append(el("td", "pick", g.pick));
+  const c = el("td"); const b = el("div", "bar"); const t = el("div", "track"); const f = el("div", "fill");
+  f.style.width = ((g.confidence - 0.5) / 0.5 * 100) + "%"; t.append(f); b.append(t, el("span", null, pct(g.confidence))); c.append(b); tr.append(c);
+  const vOn = g.vegas_home == null ? null : (g.pick === g.home ? g.vegas_home : 1 - g.vegas_home);
+  tr.append(el("td", "num hide-sm", vOn == null ? "—" : pct(vOn)));
+  const fin = el("td", "num");
+  if (g.final) { const [a, h] = g.final; const won = (h > a ? g.home : a > h ? g.away : null) === g.pick; fin.append(el("span", won ? "ok" : "no", `${a}-${h}`)); } else fin.textContent = "";
+  tr.append(fin); wr.append(tr);
+}
+
+const G = DATA.graded;
+const ll = (p, y) => { p = Math.min(Math.max(p, 0.01), 0.99); return -(y * Math.log(p) + (1 - y) * Math.log(1 - p)); };
+function score(k) {
+  const r = G.filter((g) => g[k] != null);
+  if (!r.length) return null;
+  const d = r.filter((g) => g.y !== 0.5 && Math.abs(g[k] - 0.5) > 0.004);
+  return { n: r.length, right: d.filter((g) => (g[k] > 0.5) === (g.y === 1)).length, decided: d.length, ll: r.reduce((s, g) => s + ll(g[k], g.y), 0) / r.length };
+}
+const cards = document.getElementById("cards");
+for (const [k, who] of [["you", "Krish"], ["model", "Model"], ["vegas", "Vegas"]]) {
+  const s = score(k); const c = el("div", "card" + (k === "you" ? " me" : ""));
+  c.append(el("span", "who", who), el("span", "big", s ? `${s.right}-${s.decided - s.right}` : "—"),
+           el("span", "small muted", s ? `log-loss ${s.ll.toFixed(3)} · ${s.n} games` : "no graded games yet"));
+  cards.append(c);
+}
+const gr = document.getElementById("graded-rows");
+if (!G.length) { const tr = el("tr"); const td = el("td", "empty", "Graded picks appear here after games finish."); td.colSpan = 7; tr.append(td); gr.append(tr); }
+for (const g of [...G].reverse()) {
+  const tr = el("tr");
+  const winner = g.y === 1 ? g.home : g.y === 0 ? g.away : null;
+  tr.append(el("td", null, String(g.week)), el("td", null, g.game), el("td", "muted", `${g.final[0]}-${g.final[1]}`));
+  for (const k of ["you", "model", "vegas"]) {
+    const p = g[k]; const td = el("td", "num");
+    if (p == null) td.textContent = "—";
+    else { const pick = p > 0.5 ? g.home : p < 0.5 ? g.away : null; td.append(el("span", pick && winner ? (pick === winner ? "ok" : "no") : null, side(g, p))); }
+    tr.append(td);
+  }
+  tr.append(el("td", "hide-sm muted", (g.tags || []).join(", ")));
+  gr.append(tr);
+}
+</script>
+</body>
+</html>

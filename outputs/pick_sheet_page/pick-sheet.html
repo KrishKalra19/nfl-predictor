@@ -1,0 +1,521 @@
+<title>Weekly Pick Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column of game cards; each card = slider strip on top, two-team context below. */
+:root {
+  --bg: #f3f5f2;
+  --surface: #ffffff;
+  --ink: #17201b;
+  --muted: #5d6a62;
+  --line: #d9dfd9;
+  --turf: #1d6b47;
+  --turf-soft: #d7ebe0;
+  --away: #33508a;
+  --away-soft: #dde4f2;
+  --warn: #9a5b00;
+  --warn-soft: #f6e7cc;
+  --bad: #a3322a;
+  --good: #1d6b47;
+  --f-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111613; --surface: #1a211d; --ink: #e6ece8; --muted: #9aa8a0; --line: #2e3833;
+    --turf: #4fbf88; --turf-soft: #1f3a2c; --away: #8fa9e0; --away-soft: #232d44;
+    --warn: #e0a64a; --warn-soft: #3a2e19; --bad: #e57a70; --good: #4fbf88; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111613; --surface: #1a211d; --ink: #e6ece8; --muted: #9aa8a0; --line: #2e3833;
+  --turf: #4fbf88; --turf-soft: #1f3a2c; --away: #8fa9e0; --away-soft: #232d44;
+  --warn: #e0a64a; --warn-soft: #3a2e19; --bad: #e57a70; --good: #4fbf88; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 980px; margin-inline: auto; padding-inline: 16px; padding-block: 20px 64px; display: flex; flex-direction: column; gap: 20px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 700; letter-spacing: .01em; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.4rem; line-height: 1; text-transform: uppercase; }
+h2 { font-size: 1.5rem; text-transform: uppercase; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .82rem; }
+.mono { font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.top .eyebrow { font-family: var(--f-display); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--turf); font-size: .95rem; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+select, input[type=text] { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; }
+.tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.tabs button { font: inherit; font-size: .88rem; border: 0; background: transparent; color: var(--muted); padding: 6px 12px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--turf); outline-offset: 2px; }
+
+.progress { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.progress .count { font-family: var(--f-display); font-size: 1.6rem; font-weight: 700; line-height: 1; }
+.meter { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; min-width: 120px; }
+.meter > div { height: 100%; background: var(--turf); width: 0; transition: width .3s ease; }
+.banner { padding: 10px 14px; border-radius: 8px; background: var(--warn-soft); color: var(--ink); font-size: .88rem; border: 1px solid var(--line); }
+.savestate { font-size: .82rem; color: var(--muted); min-width: 7em; text-align: right; }
+
+/* game card */
+.games { display: flex; flex-direction: column; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.card.locked { opacity: .92; }
+.card-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: .82rem; color: var(--muted); }
+.card-head .meta { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.pill { display: inline-flex; align-items: center; gap: 4px; font-size: .74rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 2px 8px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.pill.open { color: var(--turf); border-color: var(--turf); }
+.pill.locked { color: var(--muted); }
+.pill.need { color: var(--warn); border-color: var(--warn); }
+
+.pickrow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr) minmax(0, 1fr); align-items: center; gap: 12px; padding: 16px; }
+.team { display: flex; flex-direction: column; min-width: 0; }
+.team.home { text-align: right; align-items: flex-end; }
+.team .abbr { font-family: var(--f-display); font-size: 2rem; font-weight: 700; line-height: 1; }
+.team .nm { font-size: .82rem; color: var(--muted); }
+.team .rec { font-family: var(--f-data); font-size: .8rem; color: var(--muted); }
+.team.away .abbr { color: var(--away); }
+.team.home .abbr { color: var(--turf); }
+.slider { display: flex; flex-direction: column; gap: 6px; align-items: stretch; min-width: 0; }
+.readout { text-align: center; font-family: var(--f-display); font-size: 1.35rem; font-weight: 600; line-height: 1.1; min-height: 1.5rem; }
+.readout.unset { color: var(--muted); font-family: var(--f-body); font-size: .85rem; font-weight: 400; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; background: transparent; cursor: pointer; margin: 0; }
+input[type=range]:disabled { cursor: not-allowed; }
+input[type=range]::-webkit-slider-runnable-track { height: 8px; border-radius: 99px; background: var(--track, var(--line)); }
+input[type=range]::-moz-range-track { height: 8px; border-radius: 99px; background: var(--track, var(--line)); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; margin-top: -7px; border-radius: 50%; background: var(--surface); border: 3px solid var(--thumb, var(--muted)); }
+input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--thumb, var(--muted)); }
+.scale { display: flex; justify-content: space-between; font-family: var(--f-data); font-size: .7rem; color: var(--muted); }
+.pickextras { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; align-items: center; }
+.chip { font: inherit; font-size: .76rem; border: 1px solid var(--line); background: transparent; color: var(--muted); padding: 2px 9px; border-radius: 99px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip:disabled { cursor: not-allowed; }
+.note { width: 100%; font-size: .85rem; }
+
+.reveal { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; padding: 8px 16px; background: var(--turf-soft); font-size: .84rem; }
+.reveal b { font-weight: 600; }
+.reveal .won { color: var(--good); font-weight: 600; }
+.reveal .lost { color: var(--bad); font-weight: 600; }
+
+.context { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--line); }
+.ctx { padding: 12px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.ctx + .ctx { border-left: 1px solid var(--line); }
+.ctx h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; }
+.ctx.away h3 { color: var(--away); }
+.ctx.home h3 { color: var(--turf); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr)); gap: 6px; }
+.stat { display: flex; flex-direction: column; }
+.stat .k { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stat .v { font-family: var(--f-data); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.last5 { display: flex; flex-wrap: wrap; gap: 4px; }
+.g { font-family: var(--f-data); font-size: .72rem; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--line); white-space: nowrap; }
+.g.W { border-color: var(--good); color: var(--good); }
+.g.L { border-color: var(--bad); color: var(--bad); }
+.qb { font-size: .86rem; }
+.qb .flag { color: var(--warn); font-weight: 600; }
+.list { display: flex; flex-direction: column; gap: 2px; font-size: .82rem; }
+.list .lbl { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.list .out { color: var(--bad); }
+.list .q { color: var(--warn); }
+.card-foot { display: flex; justify-content: flex-end; padding: 8px 16px; border-top: 1px solid var(--line); font-size: .8rem; }
+a { color: var(--turf); }
+
+/* record tab */
+.record { display: flex; flex-direction: column; gap: 16px; }
+.scoreboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 12px; }
+.sb { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.sb .who { font-family: var(--f-display); font-size: 1.1rem; font-weight: 600; text-transform: uppercase; }
+.sb .big { font-family: var(--f-display); font-size: 2.2rem; font-weight: 700; line-height: 1; }
+.sb.you { border-color: var(--turf); }
+.tablebox { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+td.num, th.num { text-align: right; font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+.empty { padding: 28px 16px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  .pickrow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pickrow .slider { grid-column: 1 / -1; grid-row: 2; }
+  .context { grid-template-columns: minmax(0, 1fr); }
+  .ctx + .ctx { border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) { .meter > div { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow" id="eyebrow">NFL pick sheet</div>
+      <h1 id="title">Weekly picks</h1>
+    </div>
+    <div class="controls">
+      <div class="tabs" role="group" aria-label="View">
+        <button type="button" id="tab-picks" aria-pressed="true">Picks</button>
+        <button type="button" id="tab-record" aria-pressed="false">Your record</button>
+      </div>
+      <label class="small muted" for="week-select">Week</label>
+      <select id="week-select" aria-label="Week"></select>
+    </div>
+  </header>
+
+  <div id="picks-view" class="games-view" style="display:flex;flex-direction:column;gap:16px">
+    <div class="progress" id="progress" hidden>
+      <span class="count" id="count">0/0</span>
+      <span class="small muted">games picked</span>
+      <div class="meter" aria-hidden="true"><div id="meter"></div></div>
+      <span class="savestate" id="savestate" aria-live="polite"></span>
+    </div>
+    <p class="banner" id="inj-banner" hidden>This week's injury report isn't out yet. Missing-player lists will fill in when the sheet refreshes after Friday's report.</p>
+    <p class="small muted" id="howto" hidden>Drag each slider toward the team you think wins. The further you drag, the more confident you are. Picks save automatically and lock at kickoff. The model's number and the Vegas line appear after you save a pick, so they can't sway you.</p>
+    <div class="games" id="games">
+      <div class="empty" id="empty">Loading this week's games…</div>
+    </div>
+  </div>
+
+  <div id="record-view" class="record" hidden>
+    <div class="scoreboard" id="scoreboard"></div>
+    <p class="small muted" id="record-note"></p>
+    <div class="tablebox" id="record-table-box" hidden>
+      <table>
+        <thead><tr><th>Week</th><th>Game</th><th class="num">You</th><th class="num">Model</th><th class="num">Vegas</th><th>Winner</th><th class="num">Your score</th></tr></thead>
+        <tbody id="record-rows"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const TAGS = ["Injury / news", "Matchup", "Motivation / spot", "Coaching", "Gut"];
+  const S = { db: null, uid: null, meta: null, weekId: null, week: null, results: {}, picks: {}, saved: {}, pending: false, writing: false, weeksCache: {}, allPicks: {}, view: "picks" };
+  const $ = (id) => document.getElementById(id);
+
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) {
+      if (v == null || v === false) continue;
+      if (k === "class") el.className = v;
+      else if (k === "text") el.textContent = v;
+      else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? "" : v);
+    }
+    for (const kid of kids.flat()) if (kid != null && kid !== false) el.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+    return el;
+  }
+  const pct = (p) => Math.round(p * 100) + "%";
+  const isLocked = (g) => Date.now() >= Date.parse(g.kickoff);
+  const ord = (n) => {
+    if (n == null) return "—";
+    const t = n % 100, o = n % 10;
+    return n + ((t >= 11 && t <= 13) ? "th" : o === 1 ? "st" : o === 2 ? "nd" : o === 3 ? "rd" : "th");
+  };
+
+  // ---------------------------------------------------------------- persistence
+  let flushTimer = null;
+  function scheduleSave() {
+    S.pending = true;
+    setSaveState("Unsaved changes");
+    clearTimeout(flushTimer);
+    flushTimer = setTimeout(flush, 700);
+  }
+  async function flush() {
+    if (!S.db || !S.uid || !S.weekId) { setSaveState("Sign in to save picks"); return; }
+    if (S.writing) { clearTimeout(flushTimer); flushTimer = setTimeout(flush, 400); return; }
+    S.writing = true; S.pending = false;
+    const body = { week: S.weekId, picks: JSON.parse(JSON.stringify(S.picks)) };
+    setSaveState("Saving…");
+    try {
+      await S.db.doc(`data/users/${S.uid}/picks-${S.weekId}`).set(body);
+      S.saved = JSON.parse(JSON.stringify(S.picks));
+      S.allPicks[S.weekId] = S.saved;
+      setSaveState(S.pending ? "Unsaved changes" : "Saved");
+      renderReveals();
+    } catch (e) {
+      setSaveState("Couldn't save. Check your connection; your picks are still on screen.");
+      S.pending = true;
+    } finally { S.writing = false; }
+  }
+  function setSaveState(t) { $("savestate").textContent = t; }
+
+  // ---------------------------------------------------------------- rendering
+  function trackStyle(input, v, set) {
+    const left = 50 + Math.min(v, 0), right = 50 + Math.max(v, 0);
+    const col = v < 0 ? "var(--away)" : "var(--turf)";
+    input.style.setProperty("--track", set
+      ? `linear-gradient(90deg, var(--line) ${left}%, ${col} ${left}%, ${col} ${right}%, var(--line) ${right}%)`
+      : "var(--line)");
+    input.style.setProperty("--thumb", set ? (v === 0 ? "var(--ink)" : col) : "var(--muted)");
+  }
+  function readoutText(g, pick) {
+    if (!pick) return null;
+    const ph = pick.p_home;
+    if (Math.abs(ph - 0.5) < 0.005) return "Toss-up · 50%";
+    return ph > 0.5 ? `${g.home} ${pct(ph)}` : `${g.away} ${pct(1 - ph)}`;
+  }
+
+  function teamCtx(t, side) {
+    const qb = t.qb || {};
+    const qbLine = h("div", { class: "qb" },
+      h("b", { text: qb.name || "TBD" }),
+      qb.epa_per_play != null ? h("span", { class: "muted mono", text: ` · ${qb.epa_per_play >= 0 ? "+" : ""}${qb.epa_per_play.toFixed(3)} EPA/play` }) : null,
+      qb.changed ? h("div", { class: "flag small", text: `Different QB than last start${qb.last_starter ? ` (${qb.last_starter})` : ""}` }) : null);
+    const last5 = h("div", { class: "last5" }, (t.last5 || []).map((g) =>
+      h("span", { class: `g ${g.result}`, title: `${g.season} week ${g.week}` , text: `${g.result} ${g.pf}-${g.pa} ${g.home ? "vs" : "@"} ${g.opp}` })));
+    const stats = h("div", { class: "stats" },
+      stat("Offense", ord(t.off_rank)), stat("Defense", ord(t.def_rank)),
+      stat("Pts for", t.ppg != null ? t.ppg.toFixed(1) : "—"), stat("Pts against", t.papg != null ? t.papg.toFixed(1) : "—"),
+      stat("Rest", t.rest_days != null ? `${t.rest_days} days` : "—"), stat("Travel", t.travel_miles ? `${t.travel_miles.toLocaleString()} mi` : "Home"));
+    const miss = (t.missing || []);
+    const q = (t.questionable || []);
+    return h("div", { class: `ctx ${side}` },
+      h("h3", { text: `${t.abbr} ${t.name}` }),
+      stats,
+      h("div", { class: "list" }, h("span", { class: "lbl", text: "Last games (newest first)" }), last5),
+      h("div", { class: "list" }, h("span", { class: "lbl", text: "Starting QB" }), qbLine),
+      h("div", { class: "list" }, h("span", { class: "lbl", text: "Regulars unavailable" }),
+        miss.length ? miss.map((m) => h("span", { class: "out", text: `${m.name} (${m.pos}, ${Math.round(m.snap_share * 100)}% snaps) · ${m.why}` }))
+                    : h("span", { class: "muted", text: "None reported" })),
+      q.length ? h("div", { class: "list" }, h("span", { class: "lbl", text: "Questionable" }),
+        q.map((m) => h("span", { class: "q", text: `${m.name} (${m.pos})${m.starter ? " · starter" : ""}${m.injury ? " · " + m.injury : ""}` }))) : null);
+  }
+  function stat(k, v) { return h("div", { class: "stat" }, h("span", { class: "k", text: k }), h("span", { class: "v", text: v })); }
+
+  function gameCard(g) {
+    const locked = isLocked(g);
+    const pick = S.picks[g.game_id];
+    const v0 = pick ? Math.round((pick.p_home - 0.5) * 100) : 0;
+    const readout = h("div", { class: "readout" + (pick ? "" : " unset"), id: `ro-${g.game_id}`, "aria-live": "polite" },
+      readoutText(g, pick) || (locked ? "No pick made" : "Drag toward the team you think wins"));
+    const input = h("input", { type: "range", min: "-49", max: "49", step: "1", value: String(v0), id: `sl-${g.game_id}`,
+      "aria-label": `Confidence: left for ${g.away}, right for ${g.home}`, disabled: locked });
+    trackStyle(input, v0, !!pick);
+    const update = () => {
+      const v = Number(input.value);
+      const cur = S.picks[g.game_id] || { tags: [], note: "" };
+      S.picks[g.game_id] = { ...cur, p_home: Math.round((0.5 + v / 100) * 100) / 100, saved_at: new Date().toISOString() };
+      readout.textContent = readoutText(g, S.picks[g.game_id]);
+      readout.classList.remove("unset");
+      trackStyle(input, v, true);
+      updateProgress();
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", () => { update(); scheduleSave(); });
+
+    const tossBtn = h("button", { type: "button", class: "chip", disabled: locked, onclick: () => { input.value = "0"; update(); scheduleSave(); } }, "50/50");
+    const tagBtns = TAGS.map((t) => {
+      const on = !!pick && (pick.tags || []).includes(t);
+      return h("button", { type: "button", class: "chip", "aria-pressed": on ? "true" : "false", disabled: locked,
+        onclick: (e) => {
+          const p = S.picks[g.game_id];
+          if (!p) { setSaveState("Set a pick first, then tag why"); return; }
+          const tags = new Set(p.tags || []);
+          tags.has(t) ? tags.delete(t) : tags.add(t);
+          p.tags = [...tags];
+          e.currentTarget.setAttribute("aria-pressed", tags.has(t) ? "true" : "false");
+          scheduleSave();
+        } }, t);
+    });
+    const note = h("input", { type: "text", class: "note", id: `note-${g.game_id}`, placeholder: "Optional note: what do you know that the numbers don't?",
+      value: pick?.note || "", disabled: locked, maxlength: "280" });
+    note.addEventListener("input", () => {
+      const p = S.picks[g.game_id];
+      if (!p) return;
+      p.note = note.value; scheduleSave();
+    });
+
+    const a = g.teams.away, hm = g.teams.home;
+    const status = locked ? h("span", { class: "pill locked", text: "Locked" })
+      : pick ? h("span", { class: "pill open", text: "Picked" }) : h("span", { class: "pill need", text: "Needs pick" });
+    return h("article", { class: "card" + (locked ? " locked" : ""), id: `g-${g.game_id}` },
+      h("div", { class: "card-head" },
+        h("div", { class: "meta" }, h("span", { text: g.kickoff_label }), h("span", { text: g.venue + (g.roof ? ` · ${g.roof}` : "") }),
+          g.division_game ? h("span", { text: "Division game" }) : null, g.neutral ? h("span", { text: "Neutral site" }) : null),
+        status),
+      h("div", { class: "pickrow" },
+        h("div", { class: "team away" }, h("span", { class: "abbr", text: g.away }), h("span", { class: "nm", text: `${a.name} · away` }), h("span", { class: "rec", text: a.record })),
+        h("div", { class: "slider" }, readout, input,
+          h("div", { class: "scale", "aria-hidden": "true" }, h("span", { text: `${g.away} 99%` }), h("span", { text: "50%" }), h("span", { text: `${g.home} 99%` })),
+          h("div", { class: "pickextras" }, tossBtn, ...tagBtns), note),
+        h("div", { class: "team home" }, h("span", { class: "abbr", text: g.home }), h("span", { class: "nm", text: `${hm.name} · home` }), h("span", { class: "rec", text: hm.record }))),
+      h("div", { class: "reveal", id: `rv-${g.game_id}`, hidden: true }),
+      h("div", { class: "context" }, teamCtx(a, "away"), teamCtx(hm, "home")),
+      g.link ? h("div", { class: "card-foot" }, h("a", { href: g.link, target: "_blank", rel: "noopener", text: "News, injuries and box score on ESPN ↗" })) : null);
+  }
+
+  function renderReveals() {
+    if (!S.week) return;
+    for (const g of S.week.games) {
+      const el = $(`rv-${g.game_id}`);
+      if (!el) continue;
+      const saved = S.saved[g.game_id];
+      const show = !!saved || isLocked(g);
+      el.hidden = !show || !g.reveal;
+      if (el.hidden) continue;
+      el.innerHTML = "";
+      const r = g.reveal;
+      const side = (p) => p >= 0.5 ? `${g.home} ${pct(p)}` : `${g.away} ${pct(1 - p)}`;
+      el.append(h("span", null, "Model: ", h("b", { text: side(r.model_home) })));
+      if (r.vegas_home != null) el.append(h("span", null, "Vegas: ", h("b", { text: side(r.vegas_home) })));
+      const sc = S.results[g.game_id];
+      if (sc) {
+        const winner = sc.home > sc.away ? g.home : sc.away > sc.home ? g.away : "Tie";
+        el.append(h("span", null, "Final: ", h("b", { text: `${g.away} ${sc.away}, ${g.home} ${sc.home}` })));
+        if (saved && winner !== "Tie") {
+          const right = (saved.p_home > 0.5 && winner === g.home) || (saved.p_home < 0.5 && winner === g.away);
+          if (Math.abs(saved.p_home - 0.5) > 0.004) el.append(h("span", { class: right ? "won" : "lost", text: right ? "You got it" : "You missed" }));
+        }
+      }
+    }
+  }
+
+  function updateProgress() {
+    if (!S.week) return;
+    const n = S.week.games.length;
+    const k = S.week.games.filter((g) => S.picks[g.game_id]).length;
+    $("count").textContent = `${k}/${n}`;
+    $("meter").style.width = (n ? k / n * 100 : 0) + "%";
+  }
+
+  function renderWeek() {
+    const box = $("games");
+    box.innerHTML = "";
+    if (!S.week) {
+      box.append(h("div", { class: "empty", text: S.meta ? "This week's games haven't been posted yet." : "No pick sheet yet. Claude posts each week's games here, usually by Wednesday." }));
+      $("progress").hidden = true; $("howto").hidden = true; $("inj-banner").hidden = true;
+      return;
+    }
+    $("eyebrow").textContent = `${S.week.season} season`;
+    $("title").textContent = `Week ${S.week.week} picks`;
+    $("progress").hidden = false; $("howto").hidden = false;
+    $("inj-banner").hidden = !!S.week.injury_report_posted || S.week.games.every(isLocked);
+    const games = [...S.week.games].sort((x, y) => Date.parse(x.kickoff) - Date.parse(y.kickoff));
+    games.forEach((g) => box.append(gameCard(g)));
+    updateProgress();
+    renderReveals();
+  }
+
+  // ---------------------------------------------------------------- record tab
+  function renderRecord() {
+    const rows = [];
+    for (const wid of (S.meta?.weeks || [])) {
+      const wk = S.weeksCache[wid];
+      const picks = S.allPicks[wid] || {};
+      if (!wk) continue;
+      for (const g of wk.games) {
+        const sc = S.results[g.game_id];
+        const p = picks[g.game_id];
+        if (!sc || !p || !g.reveal) continue;
+        const y = sc.home > sc.away ? 1 : sc.home < sc.away ? 0 : 0.5;
+        rows.push({ wid, wk: wk.week, g, y, you: p.p_home, model: g.reveal.model_home, vegas: g.reveal.vegas_home });
+      }
+    }
+    const ll = (p, y) => { p = Math.min(Math.max(p, 0.01), 0.99); return -(y * Math.log(p) + (1 - y) * Math.log(1 - p)); };
+    const score = (key) => {
+      const r = rows.filter((x) => x[key] != null);
+      if (!r.length) return null;
+      const dec = r.filter((x) => x.y !== 0.5 && Math.abs(x[key] - 0.5) > 0.004);
+      return { n: r.length, ll: r.reduce((s, x) => s + ll(x[key], x.y), 0) / r.length,
+               acc: dec.length ? dec.filter((x) => (x[key] > 0.5) === (x.y === 1)).length / dec.length : null };
+    };
+    const sb = $("scoreboard"); sb.innerHTML = "";
+    const card = (who, s, cls) => h("div", { class: "sb " + (cls || "") },
+      h("span", { class: "who", text: who }),
+      h("span", { class: "big", text: s && s.acc != null ? `${(s.acc * 100).toFixed(1)}%` : "—" }),
+      h("span", { class: "small muted", text: s ? `picked right · log-loss ${s.ll.toFixed(3)} · ${s.n} games` : "no graded games yet" }));
+    sb.append(card("You", score("you"), "you"), card("Model", score("model")), card("Vegas", score("vegas")));
+    $("record-note").textContent = rows.length
+      ? "Log-loss rewards confident correct picks and punishes confident misses; lower is better. It takes a few hundred games before differences mean much."
+      : "Your record fills in as games finish. Only games you picked are graded, and the model and Vegas are scored on the same games.";
+    const tb = $("record-rows"); tb.innerHTML = "";
+    $("record-table-box").hidden = !rows.length;
+    const side = (g, p) => p == null ? "—" : Math.abs(p - 0.5) < 0.005 ? "50%" : p > 0.5 ? `${g.home} ${pct(p)}` : `${g.away} ${pct(1 - p)}`;
+    rows.slice().reverse().forEach((r) => {
+      const winner = r.y === 1 ? r.g.home : r.y === 0 ? r.g.away : "Tie";
+      tb.append(h("tr", null, h("td", { text: r.wk }), h("td", { text: `${r.g.away} @ ${r.g.home}` }),
+        h("td", { class: "num", text: side(r.g, r.you) }), h("td", { class: "num", text: side(r.g, r.model) }),
+        h("td", { class: "num", text: side(r.g, r.vegas) }), h("td", { text: winner }),
+        h("td", { class: "num", text: ll(r.you, r.y).toFixed(3) })));
+    });
+  }
+  async function loadAllWeeks() {
+    for (const wid of (S.meta?.weeks || [])) {
+      if (!S.weeksCache[wid]) {
+        const s = await S.db.doc(`weeks/${wid}`).get();
+        if (s.exists) S.weeksCache[wid] = s.data();
+      }
+      if (!S.allPicks[wid] && S.uid) {
+        const p = await S.db.doc(`data/users/${S.uid}/picks-${wid}`).get();
+        S.allPicks[wid] = p.exists ? (p.data().picks || {}) : {};
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------- wiring
+  function setView(v) {
+    S.view = v;
+    $("tab-picks").setAttribute("aria-pressed", v === "picks" ? "true" : "false");
+    $("tab-record").setAttribute("aria-pressed", v === "record" ? "true" : "false");
+    $("picks-view").hidden = v !== "picks";
+    $("record-view").hidden = v !== "record";
+    if (v === "record" && S.db) loadAllWeeks().then(renderRecord).catch(() => { $("record-note").textContent = "Couldn't load past weeks. Try again in a moment."; });
+  }
+  $("tab-picks").addEventListener("click", () => setView("picks"));
+  $("tab-record").addEventListener("click", () => setView("record"));
+
+  async function openWeek(wid) {
+    if (S.pending) await flush();
+    S.weekId = wid;
+    S.week = null; S.picks = {}; S.saved = {};
+    const snap = S.weeksCache[wid] ? { exists: true, data: () => S.weeksCache[wid] } : await S.db.doc(`weeks/${wid}`).get();
+    if (snap.exists) { S.week = snap.data(); S.weeksCache[wid] = S.week; }
+    if (S.uid) {
+      try {
+        const p = await S.db.doc(`data/users/${S.uid}/picks-${wid}`).get();
+        if (p.exists) { S.picks = JSON.parse(JSON.stringify(p.data().picks || {})); S.saved = JSON.parse(JSON.stringify(S.picks)); }
+      } catch (e) { setSaveState("Couldn't load your saved picks"); }
+    } else {
+      setSaveState("Sign in to save picks");
+    }
+    S.allPicks[wid] = S.saved;
+    renderWeek();
+  }
+
+  $("week-select").addEventListener("change", (e) => openWeek(e.target.value));
+
+  async function start() {
+    const [db, user] = await Promise.all([window.claude?.use?.("db") ?? null, window.claude?.use?.("user") ?? null]);
+    if (!db) { $("empty").textContent = "This page needs you to be signed in to claude.ai to load games and save picks."; return; }
+    S.db = db;
+    S.uid = user ? await user.id() : null;
+    try {
+      const m = await db.doc("meta/current").get();
+      S.meta = m.exists ? m.data() : null;
+      if (S.meta?.season) {
+        const r = await db.doc(`results/${S.meta.season}`).get();
+        S.results = r.exists ? (r.data().scores || {}) : {};
+      }
+    } catch (e) { $("empty").textContent = "Couldn't reach the pick sheet. Reload to try again."; return; }
+    const sel = $("week-select"); sel.innerHTML = "";
+    const weeks = [...(S.meta?.weeks || [])].sort().reverse();
+    weeks.forEach((w) => sel.append(h("option", { value: w, text: `${w.slice(0, 4)} wk ${Number(w.slice(5))}` })));
+    sel.disabled = !weeks.length;
+    if (S.meta?.week) { sel.value = S.meta.week; await openWeek(S.meta.week); } else renderWeek();
+    // re-check locks every minute so slides freeze at kickoff without a reload
+    setInterval(() => {
+      if (!S.week || S.view !== "picks") return;
+      for (const g of S.week.games) {
+        const sl = $(`sl-${g.game_id}`);
+        if (sl && !sl.disabled && isLocked(g)) { if (S.pending) flush(); renderWeek(); break; }
+      }
+    }, 60000);
+  }
+  window.addEventListener("beforeunload", () => { if (S.pending) flush(); });
+  start();
+})();
+</script>
