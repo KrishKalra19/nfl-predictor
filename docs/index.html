@@ -3,137 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NFL Predictor</title>
+<title>Greendale Football Picks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Permanent+Marker&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+/* Layout: campus banner, study-group roster, a course catalog of index cards, then a transcript. */
 :root {
-  --bg: #f3f5f2; --surface: #fff; --ink: #17201b; --muted: #5d6a62; --line: #d9dfd9;
-  --turf: #1d6b47; --away: #33508a; --good: #1d6b47; --bad: #a3322a;
-  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --f-body: "IBM Plex Sans", system-ui, "Segoe UI", sans-serif;
+  --page: #e9eee6;        /* hallway paint */
+  --card: #fffef8;        /* index card */
+  --rule: #c9d6e6;        /* index card ruling */
+  --ink: #1b2a20;
+  --muted: #5b6b60;
+  --green: #1f5b3a;       /* Greendale green */
+  --green-ink: #f3f0d8;
+  --gold: #c99a1c;
+  --gold-soft: #f3e3b0;
+  --pass: #1f6b3e;
+  --fail: #b23a2e;
+  --line: #cfd8cc;
+  --f-college: "Graduate", "Rockwell", "Georgia", serif;
+  --f-hand: "Permanent Marker", "Comic Sans MS", cursive;
+  --f-body: "Libre Franklin", system-ui, "Segoe UI", sans-serif;
   --f-data: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #111613; --surface: #1a211d; --ink: #e6ece8; --muted: #9aa8a0; --line: #2e3833;
-    --turf: #4fbf88; --away: #8fa9e0; --good: #4fbf88; --bad: #e57a70; color-scheme: dark; }
+  :root {
+    --page: #16231b;      /* chalkboard */
+    --card: #1f2e25;
+    --rule: #2f4a3c;
+    --ink: #eef0e2;
+    --muted: #a7b5a6;
+    --green: #2b6b46;
+    --green-ink: #f6f1d4;
+    --gold: #e2b84a;
+    --gold-soft: #3c3317;
+    --pass: #6fd197;
+    --fail: #ff8a7a;
+    --line: #34473b;
+    color-scheme: dark;
+  }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.45; }
-.wrap { max-width: 960px; margin-inline: auto; padding-inline: 16px; padding-block: 28px 64px; display: flex; flex-direction: column; gap: 28px; }
-h1, h2 { font-family: var(--f-display); font-weight: 700; text-transform: uppercase; margin: 0; letter-spacing: .01em; }
-h1 { font-size: 2.6rem; line-height: 1; }
-h2 { font-size: 1.5rem; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1040px; margin-inline: auto; padding-inline: 16px; padding-block: 0 72px; display: flex; flex-direction: column; gap: 36px; }
 p { margin: 0; }
 .muted { color: var(--muted); }
-.small { font-size: .84rem; }
-.eyebrow { font-family: var(--f-display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--turf); }
-section { display: flex; flex-direction: column; gap: 12px; }
-.box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow-x: auto; }
+.small { font-size: .86rem; }
+h2 { font-family: var(--f-college); font-weight: 400; font-size: 1.7rem; margin: 0; letter-spacing: .02em; text-wrap: balance; }
+.kicker { font-family: var(--f-college); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+section { display: flex; flex-direction: column; gap: 14px; }
+.sec-head { display: flex; flex-direction: column; gap: 4px; max-width: 68ch; }
+
+/* banner */
+.banner { background: var(--green); color: var(--green-ink); margin-inline: -16px; padding-inline: 16px; padding-block: 28px 30px; border-bottom: 6px solid var(--gold); }
+.banner-in { max-width: 1040px; margin-inline: auto; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.pennant { flex: 0 0 auto; width: 92px; height: 64px; }
+.banner h1 { font-family: var(--f-college); font-weight: 400; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1; margin: 4px 0; letter-spacing: .02em; }
+.banner .school { font-family: var(--f-college); font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+.banner .sub { font-size: .9rem; opacity: .85; }
+
+/* study group roster */
+.roster { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 14px; }
+.idcard { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.idcard .top { background: var(--green); color: var(--green-ink); padding: 6px 14px; font-family: var(--f-college); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; display: flex; justify-content: space-between; }
+.idcard .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 2px; }
+.idcard .name { font-family: var(--f-college); font-size: 1.25rem; }
+.idcard .role { font-size: .8rem; color: var(--muted); }
+.idcard .rec { font-family: var(--f-hand); font-size: 2.1rem; line-height: 1.1; color: var(--green); margin-top: 6px; }
+.idcard .ll { font-family: var(--f-data); font-size: .78rem; color: var(--muted); }
+.idcard.me { outline: 3px solid var(--gold); outline-offset: -3px; }
+
+/* course catalog: index cards */
+.catalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 16px; }
+.icard { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px 16px;
+  background-image: linear-gradient(transparent 33px, var(--fail) 33px, var(--fail) 34px, transparent 34px),
+                    repeating-linear-gradient(transparent 0 25px, var(--rule) 25px 26px);
+  background-position: 0 0, 0 34px; background-repeat: no-repeat, repeat; box-shadow: 0 1px 0 var(--line), 0 6px 14px -10px rgba(0,0,0,.35);
+  display: flex; flex-direction: column; gap: 8px; }
+.icard .course { font-family: var(--f-data); font-size: .72rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; height: 20px; }
+.matchup { font-family: var(--f-college); font-size: 1.45rem; letter-spacing: .02em; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.matchup .at { font-family: var(--f-body); font-size: .9rem; color: var(--muted); }
+.matchup .picked { color: var(--green); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.verdict { display: flex; flex-direction: column; gap: 4px; }
+.verdict .line { font-size: .95rem; }
+.verdict b { font-weight: 700; }
+.meter { height: 8px; background: var(--rule); border-radius: 99px; overflow: hidden; }
+.meter > div { height: 100%; background: var(--green); border-radius: 99px; }
+.vegas { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: .88rem; }
+.tag { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 2px 8px; border-radius: 99px; border: 1.5px solid currentColor; }
+.tag.agree { color: var(--pass); }
+.tag.differ { color: var(--gold); background: var(--gold-soft); }
+.stamp { position: absolute; right: 12px; top: 40px; font-family: var(--f-hand); font-size: 1.6rem; transform: rotate(-12deg); border: 3px solid currentColor; border-radius: 6px; padding: 0 8px; opacity: .85; pointer-events: none; }
+.stamp.pass { color: var(--pass); }
+.stamp.fail { color: var(--fail); }
+.final { font-family: var(--f-data); font-size: .85rem; color: var(--muted); }
+.empty { padding: 24px; text-align: center; color: var(--muted); background: var(--card); border: 1px dashed var(--line); border-radius: 8px; }
+
+/* transcript */
+.transcript { background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: .9rem; }
 th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
 tr:last-child td { border-bottom: 0; }
-th { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.num { text-align: right; font-family: var(--f-data); font-variant-numeric: tabular-nums; }
-.pick { font-weight: 600; }
-.bar { display: flex; align-items: center; gap: 8px; min-width: 9rem; }
-.track { flex: 1; height: 7px; background: var(--line); border-radius: 99px; overflow: hidden; }
-.fill { height: 100%; background: var(--turf); border-radius: 99px; }
-.ok { color: var(--good); font-weight: 600; }
-.no { color: var(--bad); font-weight: 600; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 12px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
-.card.me { border-color: var(--turf); }
-.card .who { font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; text-transform: uppercase; }
-.card .big { font-family: var(--f-display); font-weight: 700; font-size: 2.2rem; line-height: 1; }
-.empty { padding: 22px; text-align: center; color: var(--muted); }
-@media (max-width: 600px) { .hide-sm { display: none; } h1 { font-size: 2.1rem; } }
+th { font-family: var(--f-college); font-weight: 400; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: var(--card); }
+td.mono { font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+.g { display: inline-flex; align-items: center; gap: 6px; }
+.g .mark { font-family: var(--f-hand); font-size: .95rem; }
+.g.ok .mark { color: var(--pass); }
+.g.no .mark { color: var(--fail); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .84rem; color: var(--muted); }
+footer { font-size: .78rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+a { color: var(--green); }
+@media (prefers-color-scheme: dark) { a { color: var(--gold); } }
+@media (max-width: 600px) { .hide-sm { display: none; } }
 </style>
 </head>
 <body>
+<header class="banner">
+  <div class="banner-in">
+    <svg class="pennant" viewBox="0 0 92 64" aria-hidden="true">
+      <path d="M2 4 L90 32 L2 60 Z" fill="var(--gold)"/>
+      <path d="M2 4 L2 60" stroke="var(--green-ink)" stroke-width="4"/>
+      <text x="16" y="40" font-family="Graduate, Georgia, serif" font-size="22" fill="var(--green)">GCC</text>
+    </svg>
+    <div>
+      <div class="school">Greendale Community College · Dept. of Applied Football Probability</div>
+      <h1 id="title">Week picks</h1>
+      <p class="sub" id="sub"></p>
+    </div>
+  </div>
+</header>
+
 <div class="wrap">
-  <header>
-    <div class="eyebrow" id="eyebrow"></div>
-    <h1 id="title">NFL Predictor</h1>
-    <p class="muted small" id="built"></p>
-  </header>
-
   <section>
-    <h2>Model picks</h2>
-    <p class="muted small">Win probabilities from a five-model ensemble (two neural nets plus logistic regression, ridge and gradient boosting) trained on play-by-play since 2015, pregame rosters and starting QBs. Vegas lines are a benchmark, never an input. Predictions freeze at kickoff.</p>
-    <div class="box"><table>
-      <thead><tr><th>Game</th><th class="hide-sm">Kickoff</th><th>Pick</th><th>Confidence</th><th class="num hide-sm">Vegas on pick</th><th class="num">Final</th></tr></thead>
-      <tbody id="week-rows"></tbody>
-    </table></div>
+    <div class="sec-head">
+      <span class="kicker">Study group</span>
+      <h2>Who's passing the class</h2>
+      <p class="muted small">Everyone is graded on the same games. "Record" is right-wrong on picks. "Log-loss" is the confidence-weighted grade: confident and right scores well, confident and wrong hurts. Lower is better.</p>
+    </div>
+    <div class="roster" id="roster"></div>
   </section>
 
   <section>
-    <h2>Krish vs the model vs Vegas</h2>
-    <p class="muted small">Krish's picks are probabilities entered before kickoff and published once the game starts. Lower log-loss is better: it rewards confident correct picks and punishes confident misses. A few hundred games are needed before differences mean much.</p>
-    <div class="cards" id="cards"></div>
-    <div class="box"><table>
-      <thead><tr><th>Wk</th><th>Game</th><th>Final</th><th class="num">Krish</th><th class="num">Model</th><th class="num">Vegas</th><th class="hide-sm">Krish's reason</th></tr></thead>
-      <tbody id="graded-rows"></tbody>
+    <div class="sec-head">
+      <span class="kicker">Course catalog</span>
+      <h2 id="catalog-title">This week's picks</h2>
+      <p class="muted small">The underlined team is the model's pick. The bar shows how sure it is: 50% is a coin flip, and the bar fills as confidence rises. Each card also says which team Vegas favors and whether the model agrees. Predictions freeze at kickoff.</p>
+    </div>
+    <div class="catalog" id="catalog"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="kicker">Transcript</span>
+      <h2>Graded picks</h2>
+      <p class="muted small">Krish's picks are entered before kickoff and posted here once the game starts.</p>
+    </div>
+    <div class="legend"><span>✓ = picked the winner</span><span>✗ = picked the loser</span><span>% = how sure, for the team named</span></div>
+    <div class="transcript"><table>
+      <thead><tr><th>Wk</th><th>Game</th><th>Final</th><th>Krish</th><th>Model</th><th>Vegas</th><th class="hide-sm">Krish's reason</th></tr></thead>
+      <tbody id="transcript"></tbody>
     </table></div>
   </section>
+
+  <footer>
+    <span id="built"></span>
+    <span>The model is a five-model ensemble (two neural nets, logistic regression, ridge and gradient boosting) trained on play-by-play since 2015, pregame rosters and starting QBs. Vegas lines are only a benchmark, never an input.</span>
+    <span>A fan project. Not affiliated with, or endorsed by, the NFL, NBC, Sony Pictures Television or the makers of Community.</span>
+  </footer>
 </div>
+
 <script>
-const DATA = {"season": 2026, "week": 7, "built": "2026-10-20 05:30 UTC", "this_week": [{"game": "NE @ CHI", "away": "NE", "home": "CHI", "kickoff": "2026-10-23T00:15:00+00:00", "pick": "NE", "confidence": 0.5148, "p_home": 0.4852, "vegas_home": 0.583, "final": null}, {"game": "PIT @ NO", "away": "PIT", "home": "NO", "kickoff": "2026-10-25T13:30:00+00:00", "pick": "PIT", "confidence": 0.6005, "p_home": 0.3995, "vegas_home": 0.3775, "final": null}, {"game": "SF @ ATL", "away": "SF", "home": "ATL", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "SF", "confidence": 0.7262, "p_home": 0.2738, "vegas_home": 0.3553, "final": null}, {"game": "TB @ CAR", "away": "TB", "home": "CAR", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CAR", "confidence": 0.6847, "p_home": 0.6847, "vegas_home": 0.6225, "final": null}, {"game": "NYG @ HOU", "away": "NYG", "home": "HOU", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "HOU", "confidence": 0.6709, "p_home": 0.6709, "vegas_home": 0.8, "final": null}, {"game": "IND @ MIN", "away": "IND", "home": "MIN", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "MIN", "confidence": 0.6498, "p_home": 0.6498, "vegas_home": 0.705, "final": null}, {"game": "MIA @ NYJ", "away": "MIA", "home": "NYJ", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "NYJ", "confidence": 0.5911, "p_home": 0.5911, "vegas_home": 0.669, "final": null}, {"game": "CIN @ BAL", "away": "CIN", "home": "BAL", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CIN", "confidence": 0.5356, "p_home": 0.4644, "vegas_home": 0.5721, "final": null}, {"game": "CLE @ TEN", "away": "CLE", "home": "TEN", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CLE", "confidence": 0.5312, "p_home": 0.4688, "vegas_home": 0.4675, "final": null}, {"game": "DEN @ ARI", "away": "DEN", "home": "ARI", "kickoff": "2026-10-25T20:05:00+00:00", "pick": "DEN", "confidence": 0.6134, "p_home": 0.3866, "vegas_home": 0.331, "final": null}, {"game": "LA @ LV", "away": "LA", "home": "LV", "kickoff": "2026-10-25T20:25:00+00:00", "pick": "LA", "confidence": 0.67, "p_home": 0.33, "vegas_home": 0.3364, "final": null}, {"game": "GB @ DET", "away": "GB", "home": "DET", "kickoff": "2026-10-25T20:25:00+00:00", "pick": "DET", "confidence": 0.6006, "p_home": 0.6006, "vegas_home": 0.5996, "final": null}, {"game": "KC @ SEA", "away": "KC", "home": "SEA", "kickoff": "2026-10-26T00:20:00+00:00", "pick": "KC", "confidence": 0.5488, "p_home": 0.4512, "vegas_home": 0.5635, "final": null}, {"game": "DAL @ PHI", "away": "DAL", "home": "PHI", "kickoff": "2026-10-27T00:15:00+00:00", "pick": "DAL", "confidence": 0.5398, "p_home": 0.4602, "vegas_home": 0.3364, "final": null}], "graded": [{"week": 6, "season": 2026, "game": "ARI @ LA", "away": "ARI", "home": "LA", "final": [18, 16], "y": 0.0, "you": 0.82, "tags": [], "model": 0.7952, "vegas": 0.8465}, {"week": 6, "season": 2026, "game": "BAL @ CLE", "away": "BAL", "home": "CLE", "final": [10, 13], "y": 1.0, "you": 0.1, "tags": ["Gut", "Matchup"], "model": 0.3977, "vegas": 0.3962}, {"week": 6, "season": 2026, "game": "BUF @ LV", "away": "BUF", "home": "LV", "final": [33, 30], "y": 0.0, "you": 0.27, "tags": [], "model": 0.2976, "vegas": 0.3194}, {"week": 6, "season": 2026, "game": "CAR @ PHI", "away": "CAR", "home": "PHI", "final": [25, 14], "y": 0.0, "you": 0.55, "tags": ["Matchup"], "model": 0.426, "vegas": 0.4066}, {"week": 6, "season": 2026, "game": "CHI @ ATL", "away": "CHI", "home": "ATL", "final": [31, 23], "y": 0.0, "you": 0.55, "tags": ["Injury / news"], "model": 0.477, "vegas": 0.4826}, {"week": 6, "season": 2026, "game": "DAL @ GB", "away": "DAL", "home": "GB", "final": [13, 23], "y": 1.0, "you": 0.4, "tags": [], "model": 0.4773, "vegas": 0.5108}, {"week": 6, "season": 2026, "game": "HOU @ JAX", "away": "HOU", "home": "JAX", "final": [34, 31], "y": 0.0, "you": 0.66, "tags": ["Coaching", "Motivation / spot"], "model": 0.6004, "vegas": 0.5635}, {"week": 6, "season": 2026, "game": "LAC @ KC", "away": "LAC", "home": "KC", "final": [6, 22], "y": 1.0, "you": 0.71, "tags": [], "model": 0.8006, "vegas": 0.7768}, {"week": 6, "season": 2026, "game": "NO @ NYG", "away": "NO", "home": "NYG", "final": [34, 27], "y": 0.0, "you": 0.42, "tags": ["Gut"], "model": 0.6037, "vegas": 0.5043}, {"week": 6, "season": 2026, "game": "NYJ @ NE", "away": "NYJ", "home": "NE", "final": [19, 26], "y": 1.0, "you": 0.66, "tags": ["Matchup"], "model": 0.7337, "vegas": 0.7441}, {"week": 6, "season": 2026, "game": "PIT @ TB", "away": "PIT", "home": "TB", "final": [26, 19], "y": 0.0, "you": 0.65, "tags": ["Gut"], "model": 0.4097, "vegas": 0.4365}, {"week": 6, "season": 2026, "game": "SEA @ DEN", "away": "SEA", "home": "DEN", "final": [14, 17], "y": 1.0, "you": 0.37, "tags": ["Injury / news"], "model": 0.4798, "vegas": 0.417}, {"week": 6, "season": 2026, "game": "TEN @ IND", "away": "TEN", "home": "IND", "final": [26, 20], "y": 0.0, "you": 0.63, "tags": [], "model": 0.6781, "vegas": 0.718}, {"week": 6, "season": 2026, "game": "WAS @ SF", "away": "WAS", "home": "SF", "final": [17, 23], "y": 1.0, "you": 0.84, "tags": [], "model": 0.7782, "vegas": 0.7867}]};
+const DATA = {"season": 2026, "week": 7, "built": "2026-10-20 21:01 UTC", "this_week": [{"game": "NE @ CHI", "away": "NE", "home": "CHI", "kickoff": "2026-10-23T00:15:00+00:00", "pick": "NE", "confidence": 0.5148, "p_home": 0.4852, "vegas_home": 0.583, "final": null}, {"game": "PIT @ NO", "away": "PIT", "home": "NO", "kickoff": "2026-10-25T13:30:00+00:00", "pick": "PIT", "confidence": 0.6005, "p_home": 0.3995, "vegas_home": 0.3775, "final": null}, {"game": "SF @ ATL", "away": "SF", "home": "ATL", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "SF", "confidence": 0.7262, "p_home": 0.2738, "vegas_home": 0.3553, "final": null}, {"game": "TB @ CAR", "away": "TB", "home": "CAR", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CAR", "confidence": 0.6847, "p_home": 0.6847, "vegas_home": 0.6225, "final": null}, {"game": "NYG @ HOU", "away": "NYG", "home": "HOU", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "HOU", "confidence": 0.6709, "p_home": 0.6709, "vegas_home": 0.8, "final": null}, {"game": "IND @ MIN", "away": "IND", "home": "MIN", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "MIN", "confidence": 0.6498, "p_home": 0.6498, "vegas_home": 0.705, "final": null}, {"game": "MIA @ NYJ", "away": "MIA", "home": "NYJ", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "NYJ", "confidence": 0.5911, "p_home": 0.5911, "vegas_home": 0.669, "final": null}, {"game": "CIN @ BAL", "away": "CIN", "home": "BAL", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CIN", "confidence": 0.5356, "p_home": 0.4644, "vegas_home": 0.5721, "final": null}, {"game": "CLE @ TEN", "away": "CLE", "home": "TEN", "kickoff": "2026-10-25T17:00:00+00:00", "pick": "CLE", "confidence": 0.5312, "p_home": 0.4688, "vegas_home": 0.4675, "final": null}, {"game": "DEN @ ARI", "away": "DEN", "home": "ARI", "kickoff": "2026-10-25T20:05:00+00:00", "pick": "DEN", "confidence": 0.6134, "p_home": 0.3866, "vegas_home": 0.331, "final": null}, {"game": "LA @ LV", "away": "LA", "home": "LV", "kickoff": "2026-10-25T20:25:00+00:00", "pick": "LA", "confidence": 0.67, "p_home": 0.33, "vegas_home": 0.3364, "final": null}, {"game": "GB @ DET", "away": "GB", "home": "DET", "kickoff": "2026-10-25T20:25:00+00:00", "pick": "DET", "confidence": 0.6006, "p_home": 0.6006, "vegas_home": 0.5996, "final": null}, {"game": "KC @ SEA", "away": "KC", "home": "SEA", "kickoff": "2026-10-26T00:20:00+00:00", "pick": "KC", "confidence": 0.5488, "p_home": 0.4512, "vegas_home": 0.5635, "final": null}, {"game": "DAL @ PHI", "away": "DAL", "home": "PHI", "kickoff": "2026-10-27T00:15:00+00:00", "pick": "DAL", "confidence": 0.5398, "p_home": 0.4602, "vegas_home": 0.3364, "final": null}], "graded": [{"week": 6, "season": 2026, "game": "ARI @ LA", "away": "ARI", "home": "LA", "final": [18, 16], "y": 0.0, "you": 0.82, "tags": [], "model": 0.7952, "vegas": 0.8465}, {"week": 6, "season": 2026, "game": "BAL @ CLE", "away": "BAL", "home": "CLE", "final": [10, 13], "y": 1.0, "you": 0.1, "tags": ["Gut", "Matchup"], "model": 0.3977, "vegas": 0.3962}, {"week": 6, "season": 2026, "game": "BUF @ LV", "away": "BUF", "home": "LV", "final": [33, 30], "y": 0.0, "you": 0.27, "tags": [], "model": 0.2976, "vegas": 0.3194}, {"week": 6, "season": 2026, "game": "CAR @ PHI", "away": "CAR", "home": "PHI", "final": [25, 14], "y": 0.0, "you": 0.55, "tags": ["Matchup"], "model": 0.426, "vegas": 0.4066}, {"week": 6, "season": 2026, "game": "CHI @ ATL", "away": "CHI", "home": "ATL", "final": [31, 23], "y": 0.0, "you": 0.55, "tags": ["Injury / news"], "model": 0.477, "vegas": 0.4826}, {"week": 6, "season": 2026, "game": "DAL @ GB", "away": "DAL", "home": "GB", "final": [13, 23], "y": 1.0, "you": 0.4, "tags": [], "model": 0.4773, "vegas": 0.5108}, {"week": 6, "season": 2026, "game": "HOU @ JAX", "away": "HOU", "home": "JAX", "final": [34, 31], "y": 0.0, "you": 0.66, "tags": ["Coaching", "Motivation / spot"], "model": 0.6004, "vegas": 0.5635}, {"week": 6, "season": 2026, "game": "LAC @ KC", "away": "LAC", "home": "KC", "final": [6, 22], "y": 1.0, "you": 0.71, "tags": [], "model": 0.8006, "vegas": 0.7768}, {"week": 6, "season": 2026, "game": "NO @ NYG", "away": "NO", "home": "NYG", "final": [34, 27], "y": 0.0, "you": 0.42, "tags": ["Gut"], "model": 0.6037, "vegas": 0.5043}, {"week": 6, "season": 2026, "game": "NYJ @ NE", "away": "NYJ", "home": "NE", "final": [19, 26], "y": 1.0, "you": 0.66, "tags": ["Matchup"], "model": 0.7337, "vegas": 0.7441}, {"week": 6, "season": 2026, "game": "PIT @ TB", "away": "PIT", "home": "TB", "final": [26, 19], "y": 0.0, "you": 0.65, "tags": ["Gut"], "model": 0.4097, "vegas": 0.4365}, {"week": 6, "season": 2026, "game": "SEA @ DEN", "away": "SEA", "home": "DEN", "final": [14, 17], "y": 1.0, "you": 0.37, "tags": ["Injury / news"], "model": 0.4798, "vegas": 0.417}, {"week": 6, "season": 2026, "game": "TEN @ IND", "away": "TEN", "home": "IND", "final": [26, 20], "y": 0.0, "you": 0.63, "tags": [], "model": 0.6781, "vegas": 0.718}, {"week": 6, "season": 2026, "game": "WAS @ SF", "away": "WAS", "home": "SF", "final": [17, 23], "y": 1.0, "you": 0.84, "tags": [], "model": 0.7782, "vegas": 0.7867}]};
 const pct = (p) => Math.round(p * 100) + "%";
 const el = (t, cls, txt) => { const e = document.createElement(t); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
-const side = (g, p) => p == null ? "—" : Math.abs(p - 0.5) < 0.005 ? "50%" : (p > 0.5 ? g.home : g.away) + " " + pct(Math.max(p, 1 - p));
+const fav = (g, p) => p > 0.5 ? g.home : p < 0.5 ? g.away : null;
+const conf = (p) => Math.max(p, 1 - p);
+const courseNo = (i) => `FTBL ${101 + i}`;
 
-document.getElementById("eyebrow").textContent = `${DATA.season} season`;
 document.getElementById("title").textContent = `Week ${DATA.week} picks`;
-document.getElementById("built").textContent = `Updated ${DATA.built}`;
+document.getElementById("sub").textContent = `${DATA.season} season`;
+document.getElementById("catalog-title").textContent = `Week ${DATA.week} picks`;
+document.getElementById("built").textContent = `Last updated ${DATA.built}.`;
 
-const wr = document.getElementById("week-rows");
-if (!DATA.this_week.length) { const tr = el("tr"); const td = el("td", "empty", "This week's picks aren't posted yet."); td.colSpan = 6; tr.append(td); wr.append(tr); }
-for (const g of DATA.this_week) {
-  const tr = el("tr");
-  tr.append(el("td", null, g.game));
-  tr.append(el("td", "hide-sm muted", g.kickoff ? new Date(g.kickoff).toLocaleString([], { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : ""));
-  tr.append(el("td", "pick", g.pick));
-  const c = el("td"); const b = el("div", "bar"); const t = el("div", "track"); const f = el("div", "fill");
-  f.style.width = ((g.confidence - 0.5) / 0.5 * 100) + "%"; t.append(f); b.append(t, el("span", null, pct(g.confidence))); c.append(b); tr.append(c);
-  const vOn = g.vegas_home == null ? null : (g.pick === g.home ? g.vegas_home : 1 - g.vegas_home);
-  tr.append(el("td", "num hide-sm", vOn == null ? "—" : pct(vOn)));
-  const fin = el("td", "num");
-  if (g.final) { const [a, h] = g.final; const won = (h > a ? g.home : a > h ? g.away : null) === g.pick; fin.append(el("span", won ? "ok" : "no", `${a}-${h}`)); } else fin.textContent = "";
-  tr.append(fin); wr.append(tr);
-}
-
+// ---------- study group roster
 const G = DATA.graded;
 const ll = (p, y) => { p = Math.min(Math.max(p, 0.01), 0.99); return -(y * Math.log(p) + (1 - y) * Math.log(1 - p)); };
 function score(k) {
   const r = G.filter((g) => g[k] != null);
   if (!r.length) return null;
   const d = r.filter((g) => g.y !== 0.5 && Math.abs(g[k] - 0.5) > 0.004);
-  return { n: r.length, right: d.filter((g) => (g[k] > 0.5) === (g.y === 1)).length, decided: d.length, ll: r.reduce((s, g) => s + ll(g[k], g.y), 0) / r.length };
+  const right = d.filter((g) => (g[k] > 0.5) === (g.y === 1)).length;
+  return { n: r.length, right, wrong: d.length - right, ll: r.reduce((s, g) => s + ll(g[k], g.y), 0) / r.length };
 }
-const cards = document.getElementById("cards");
-for (const [k, who] of [["you", "Krish"], ["model", "Model"], ["vegas", "Vegas"]]) {
-  const s = score(k); const c = el("div", "card" + (k === "you" ? " me" : ""));
-  c.append(el("span", "who", who), el("span", "big", s ? `${s.right}-${s.decided - s.right}` : "—"),
-           el("span", "small muted", s ? `log-loss ${s.ll.toFixed(3)} · ${s.n} games` : "no graded games yet"));
-  cards.append(c);
+const roster = document.getElementById("roster");
+for (const [k, name, role, cls] of [["you", "Krish", "Student · makes his own calls", "me"], ["model", "The Model", "Exchange student · runs on neural nets", ""], ["vegas", "Vegas", "Faculty · sets the betting line", ""]]) {
+  const s = score(k);
+  const c = el("div", "idcard " + cls);
+  const top = el("div", "top"); top.append(el("span", null, "Student ID"), el("span", null, "Greendale"));
+  const b = el("div", "body");
+  b.append(el("span", "name", name), el("span", "role", role),
+           el("span", "rec", s ? `${s.right}–${s.wrong}` : "—"),
+           el("span", "ll", s ? `log-loss ${s.ll.toFixed(3)} · ${s.n} games graded` : "no graded games yet"));
+  c.append(top, b); roster.append(c);
 }
-const gr = document.getElementById("graded-rows");
-if (!G.length) { const tr = el("tr"); const td = el("td", "empty", "Graded picks appear here after games finish."); td.colSpan = 7; tr.append(td); gr.append(tr); }
+
+// ---------- course catalog
+const cat = document.getElementById("catalog");
+if (!DATA.this_week.length) cat.append(el("div", "empty", "This week's picks aren't posted yet."));
+DATA.this_week.forEach((g, i) => {
+  const c = el("article", "icard");
+  const course = el("div", "course");
+  course.append(el("span", null, courseNo(i)),
+    el("span", null, g.kickoff ? new Date(g.kickoff).toLocaleString([], { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : ""));
+  const m = el("div", "matchup");
+  const a = el("span", g.pick === g.away ? "picked" : null, g.away), hm = el("span", g.pick === g.home ? "picked" : null, g.home);
+  m.append(a, el("span", "at", "at"), hm);
+  const v = el("div", "verdict");
+  const line = el("div", "line"); line.append("Model picks ", el("b", null, g.pick), ` · ${pct(g.confidence)} sure`);
+  const meter = el("div", "meter"); const fill = el("div"); fill.style.width = ((g.confidence - 0.5) / 0.5 * 100) + "%"; meter.append(fill);
+  v.append(line, meter);
+  const vg = el("div", "vegas");
+  if (g.vegas_home == null) vg.append(el("span", "muted", "No Vegas line yet"));
+  else {
+    const vf = fav(g, g.vegas_home);
+    vg.append(el("span", null, vf ? `Vegas favors ${vf}, ${pct(conf(g.vegas_home))}` : "Vegas has it even"));
+    const agree = vf === g.pick;
+    vg.append(el("span", "tag " + (agree ? "agree" : "differ"), agree ? "Model agrees" : "Model disagrees"));
+  }
+  c.append(course, m, v, vg);
+  if (g.final) {
+    const [as, hs] = g.final;
+    const winner = hs > as ? g.home : as > hs ? g.away : null;
+    c.append(el("div", "final", `Final: ${g.away} ${as}, ${g.home} ${hs}`));
+    if (winner) c.append(el("div", "stamp " + (winner === g.pick ? "pass" : "fail"), winner === g.pick ? "PASS" : "FAIL"));
+  }
+  cat.append(c);
+});
+
+// ---------- transcript
+const tb = document.getElementById("transcript");
+if (!G.length) { const tr = el("tr"); const td = el("td", "muted", "Graded picks show up here after games finish."); td.colSpan = 7; tr.append(td); tb.append(tr); }
 for (const g of [...G].reverse()) {
   const tr = el("tr");
   const winner = g.y === 1 ? g.home : g.y === 0 ? g.away : null;
-  tr.append(el("td", null, String(g.week)), el("td", null, g.game), el("td", "muted", `${g.final[0]}-${g.final[1]}`));
+  tr.append(el("td", "mono", String(g.week)), el("td", null, `${g.away} @ ${g.home}`), el("td", "mono", `${g.final[0]}-${g.final[1]}`));
   for (const k of ["you", "model", "vegas"]) {
-    const p = g[k]; const td = el("td", "num");
+    const p = g[k]; const td = el("td");
     if (p == null) td.textContent = "—";
-    else { const pick = p > 0.5 ? g.home : p < 0.5 ? g.away : null; td.append(el("span", pick && winner ? (pick === winner ? "ok" : "no") : null, side(g, p))); }
+    else {
+      const f = fav(g, p);
+      const ok = f && winner ? f === winner : null;
+      const s = el("span", "g " + (ok === true ? "ok" : ok === false ? "no" : ""));
+      s.append(el("span", null, f ? `${f} ${pct(conf(p))}` : "50/50"));
+      if (ok !== null) s.append(el("span", "mark", ok ? "✓" : "✗"));
+      td.append(s);
+    }
     tr.append(td);
   }
   tr.append(el("td", "hide-sm muted", (g.tags || []).join(", ")));
-  gr.append(tr);
+  tb.append(tr);
 }
 </script>
 </body>
