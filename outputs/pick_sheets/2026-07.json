@@ -2,7 +2,7 @@
  "id": "2026-07",
  "season": 2026,
  "week": 7,
- "generated_at": "2026-10-22T20:34:22Z",
+ "generated_at": "2026-10-24T04:04:17Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -86,7 +86,7 @@
        "name": "Alijah Vera-Tucker",
        "pos": "G",
        "snap_share": 0.83,
-       "why": "Out (Hamstring)"
+       "why": "Injured reserve"
       },
       {
        "name": "Ben Brown",
@@ -292,7 +292,7 @@
       }
      ],
      "off_rank": 20,
-     "def_rank": 7,
+     "def_rank": 6,
      "ppg": 22.8,
      "papg": 21.3,
      "rest_days": 7,
@@ -376,9 +376,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.4139,
-    "vegas_home": 0.3908,
-    "spread_home": -3.5
+    "model_home": 0.4216,
+    "vegas_home": 0.4066,
+    "spread_home": -3.0
    }
   },
   {
@@ -512,7 +512,7 @@
       }
      ],
      "off_rank": 7,
-     "def_rank": 13,
+     "def_rank": 12,
      "ppg": 26.0,
      "papg": 22.0,
      "rest_days": 7,
@@ -529,9 +529,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.4534,
-    "vegas_home": 0.5174,
-    "spread_home": 1.5
+    "model_home": 0.4532,
+    "vegas_home": 0.4892,
+    "spread_home": -1.5
    }
   },
   {
@@ -682,9 +682,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.4569,
-    "vegas_home": 0.4573,
-    "spread_home": -1.5
+    "model_home": 0.457,
+    "vegas_home": 0.4486,
+    "spread_home": -2.5
    }
   },
   {
@@ -842,8 +842,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.6648,
-    "vegas_home": 0.7095,
+    "model_home": 0.6646,
+    "vegas_home": 0.7136,
     "spread_home": 6.5
    }
   },
@@ -978,7 +978,7 @@
       }
      ],
      "off_rank": 18,
-     "def_rank": 10,
+     "def_rank": 9,
      "ppg": 18.7,
      "papg": 20.3,
      "rest_days": 7,
@@ -995,7 +995,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.6756,
+    "model_home": 0.6758,
     "vegas_home": 0.6636,
     "spread_home": 4.5
    }
@@ -1131,7 +1131,7 @@
       }
      ],
      "off_rank": 10,
-     "def_rank": 20,
+     "def_rank": 19,
      "ppg": 24.0,
      "papg": 23.8,
      "rest_days": 7,
@@ -1148,7 +1148,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.7129,
+    "model_home": 0.712,
     "vegas_home": 0.8043,
     "spread_home": 10.5
    }
@@ -1284,7 +1284,7 @@
       }
      ],
      "off_rank": 21,
-     "def_rank": 12,
+     "def_rank": 11,
      "ppg": 23.7,
      "papg": 25.5,
      "rest_days": 7,
@@ -1301,7 +1301,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.279,
+    "model_home": 0.2785,
     "vegas_home": 0.4279,
     "spread_home": -2.5
    }
@@ -1454,8 +1454,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.6529,
-    "vegas_home": 0.5934,
+    "model_home": 0.6523,
+    "vegas_home": 0.583,
     "spread_home": 3.0
    }
   },
@@ -1523,7 +1523,7 @@
       }
      ],
      "off_rank": 26,
-     "def_rank": 8,
+     "def_rank": 7,
      "ppg": 19.0,
      "papg": 20.8,
      "rest_days": 10,
@@ -1607,7 +1607,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.355,
+    "model_home": 0.3555,
     "vegas_home": 0.325,
     "spread_home": -4.5
    }
@@ -1760,8 +1760,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.6344,
-    "vegas_home": 0.5996,
+    "model_home": 0.6349,
+    "vegas_home": 0.6164,
     "spread_home": 3.0
    }
   },
@@ -1828,8 +1828,8 @@
        "result": "W"
       }
      ],
-     "off_rank": 13,
-     "def_rank": 11,
+     "off_rank": 14,
+     "def_rank": 10,
      "ppg": 22.5,
      "papg": 23.0,
      "rest_days": 7,
@@ -1908,8 +1908,8 @@
        "result": "W"
       }
      ],
-     "off_rank": 12,
-     "def_rank": 21,
+     "off_rank": 13,
+     "def_rank": 20,
      "ppg": 27.0,
      "papg": 27.0,
      "rest_days": 7,
@@ -1927,8 +1927,8 @@
    },
    "reveal": {
     "model_home": 0.361,
-    "vegas_home": 0.3553,
-    "spread_home": -3.5
+    "vegas_home": 0.3908,
+    "spread_home": -3.0
    }
   },
   {
@@ -2068,10 +2068,10 @@
      "rest_days": 10,
      "travel_miles": 0,
      "qb": {
-      "name": "Drew Lock",
-      "epa_per_play": -0.062,
-      "recent_plays": 240,
-      "changed": true,
+      "name": "Sam Darnold",
+      "epa_per_play": -0.006,
+      "recent_plays": 262,
+      "changed": false,
       "last_starter": "Sam Darnold"
      },
      "missing": [],
@@ -2079,8 +2079,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.4648,
-    "vegas_home": 0.5635,
+    "model_home": 0.521,
+    "vegas_home": 0.5721,
     "spread_home": 3.0
    }
   },
@@ -2245,7 +2245,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.4311,
+    "model_home": 0.4306,
     "vegas_home": 0.3425,
     "spread_home": -4.5
    }
