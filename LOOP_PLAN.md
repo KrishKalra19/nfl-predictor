@@ -57,13 +57,13 @@ After phase 2: re-tune the lineup on dev with any adopted features, run the post
   - Leakage tests: every feature row for a game equals what you'd compute with all later games deleted. Run on a sample of games.
   - Symmetry tests: P(A beats B) + P(B beats A) = 1.
   - Freeze tests: predictions for started games don't change.
-- [ ] **18. GitHub Actions CI.** Run lint (ruff) and the tests on every push, with a CI badge in the README.
-- [ ] **19. Repo polish.**
+- [x] **18. GitHub Actions CI.** Run lint (ruff) and the tests on every push, with a CI badge in the README.
+- [x] **19. Repo polish.**
   - README rewrite as a project landing page: results, an architecture diagram in mermaid, how to run, and a link to the site.
   - Pin versions in `requirements.txt`.
   - Add a LICENSE (MIT).
   - Remove scratch outputs like `exp_log1.txt` and `dev_preds.csv`.
-- [ ] **20. Model card** (`MODEL_CARD.md`): data, intended use, evaluation, limitations, known biases.
+- [x] **20. Model card** (`MODEL_CARD.md`): data, intended use, evaluation, limitations, known biases.
 
 ## Phase 5 — Human alpha (only if time remains, ≈0.5 h)
 

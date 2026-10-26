@@ -103,3 +103,15 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - **Leak found:** team-form priors and the Kalman EPA baseline used whole-dataset league means. Fixed with `pregame_means()` (expanding mean over earlier dates) and a running mean in the Kalman filter. Impact on the same 1,218 held-out games: ensemble 0.6242 → 0.6244 log-loss, 66.3% → 66.2%. Dev unchanged (0.6234). REPORT.md has a correction note; originals are kept as `outputs/*_v1_prefix.*`.
 - Added `src/export_results.py`, which regenerates the site's result CSVs with the held-out set fixed at 1,218 games (later 2026 games belong to the live log). `make_og.py` reads it.
 - Full pipeline re-run end to end (`run_weekly.py --no-download`): 13 started games stayed frozen; DAL @ PHI is DAL 60.1%.
+
+## 18. CI — done
+- `.github/workflows/ci.yml`: on every push or PR (skipped for docs/outputs-only commits so the scheduled refreshes don't trigger it), install CPU PyTorch and deps, `ruff check src tests`, then `pytest`. First run green in 66 s. README has a CI badge.
+- `pyproject.toml` holds the ruff config (pyflakes + syntax errors, line length 130) and the pytest config. Lint cleanup removed 7 unused imports and one dead variable.
+
+## 19. Repo polish — done
+- README rewritten as a landing page: CI and site badges, a results table, a mermaid architecture diagram, "keeping it honest", how to run, and a code map. Numbers come from the regenerated exports.
+- `requirements.txt` pinned to tested versions. MIT LICENSE added.
+- Removed stale files: `exp_log1.txt`, old `dev_preds.csv`, `backtest_dev_all.json`, and the old claude.ai dashboard sources the site never reads.
+
+## 20. Model card — done
+- `MODEL_CARD.md`: purpose, intended and non-intended use (not for wagering), data, model, evaluation (with Brier), calibration, live log, leakage controls, and limitations and known biases.

@@ -1,6 +1,11 @@
-pandas>=2.2
-numpy>=1.26
-scikit-learn>=1.5
-scipy>=1.13
-requests>=2.31
-torch>=2.3  # CPU build is enough: pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Tested versions (Python 3.12-3.13). Install the CPU build of torch first:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+pandas==3.0.6
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+requests==2.34.2
+torch==2.14.1
+pillow==13.0.0      # link-preview image only (src/make_og.py)
+pytest==9.1.1       # tests
+ruff==0.17.2        # lint
