@@ -1,7 +1,6 @@
 """No-leakage tests: every pregame feature for a week must be identical whether or not that week's
 (and later weeks') results exist. Run on a synthetic league, so CI needs no data."""
 import numpy as np
-import pandas as pd
 import pytest
 
 import build_features as B

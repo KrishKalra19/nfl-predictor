@@ -11,7 +11,6 @@ Krish's picks appear only for games that have kicked off. Notes are never publis
 import json
 import re
 from datetime import datetime, timezone
-from pathlib import Path
 
 import numpy as np
 import pandas as pd

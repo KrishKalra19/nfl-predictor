@@ -7,8 +7,6 @@ Shared game context (week, division game...) is skipped: in the symmetric model 
 """
 import json
 
-import numpy as np
-
 from dataset import SIDE_CTX, make_xy
 
 GROUPS = [

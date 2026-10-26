@@ -1,0 +1,16 @@
+[project]
+name = "nfl-predictor"
+version = "1.0.0"
+description = "NFL win-probability ensemble (neural nets + classical models), walk-forward validated"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+# pyflakes (unused/undefined names, etc.) + syntax/runtime errors; style is left to the code
+select = ["F", "E9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

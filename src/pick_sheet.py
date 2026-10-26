@@ -13,7 +13,6 @@ import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-import numpy as np
 import pandas as pd
 
 from common import OUTPUTS, PROCESSED, upcoming_week, RAW, haversine_miles, load_games, load_per_season, norm_team, team_geo, venue_geo

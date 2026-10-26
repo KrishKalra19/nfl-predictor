@@ -2,7 +2,6 @@
 
     python src/make_og.py   (rerun after the backtest numbers change)
 """
-import json
 
 from PIL import Image, ImageDraw, ImageFont
 

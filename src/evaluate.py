@@ -9,7 +9,6 @@ import argparse
 import json
 
 import numpy as np
-import pandas as pd
 
 from backtest import DEV_SEASONS, TEST_SEASONS, baselines, feature_sets, metrics, walk_forward
 from common import OUTPUTS

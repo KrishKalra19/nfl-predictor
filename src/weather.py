@@ -6,7 +6,6 @@ Cache: data/raw/weather_games.csv (game_id, wx_temp F, wx_wind mph, wx_precip mm
 """
 import time
 
-import numpy as np
 import pandas as pd
 import requests
 

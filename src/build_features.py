@@ -257,7 +257,6 @@ def qb_features(games, qbg):
 
     # per-QB running state: decayed EPA sum, decayed plays, decayed cpoe, career plays
     state = {}
-    snapshots = {}  # (qb, game_id) not needed; we snapshot by date via ordered events
 
     def prior_mean(qb):
         p = pick.get(qb)
