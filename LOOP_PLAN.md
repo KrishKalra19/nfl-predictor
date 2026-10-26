@@ -23,7 +23,7 @@ Priorities: accuracy that's real, then resume value, then polish.
 ## Phase 1 — Live track record and calibration (≈1.5 h)
 
 - [x] **1. Live prediction log.** Append every frozen pre-kickoff prediction to `outputs/live_log.csv`: game, timestamp, model probability, Vegas probability, result once known. Backfill weeks 6–7 from the existing frozen picks files. This is the fresh out-of-sample record.
-- [ ] **2. "Since launch" record on the site.** Show the live 2026 record next to the backtest in The brief, as model vs Vegas on the same games, with the game count shown prominently.
+- [x] **2. "Since launch" record on the site.** Show the live 2026 record next to the backtest in The brief, as model vs Vegas on the same games, with the game count shown prominently.
 - [ ] **3. Calibration layer.** The model is slightly under-confident (prediction spread 0.168 vs Vegas 0.191). Fit temperature or Platt scaling on dev predictions and adopt it only if dev log-loss improves.
 - [ ] **4. Stacking weights.** Learn ensemble member weights on dev predictions instead of a flat average. Adopt only if dev improves.
 

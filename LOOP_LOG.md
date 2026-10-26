@@ -8,3 +8,8 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Excluded `2026_06_SEA_DEN`: its last stored prediction was recomputed after the game ended, before kickoff freezing existed. All week 7 predictions were confirmed frozen pre-kickoff (the Sunday refresh ran at 13:08 ET and kept earlier numbers for the 1 PM games).
 - First reading: 26 graded live games. Model 15–11 (log-loss 0.715), Vegas 17–9 (0.701) on the same games. That's far too few games to mean anything yet.
 - Verification: a site-only change, so I ran `build_site.py` and checked the data embeds. The model pipeline is unchanged.
+
+## 2. "Since launch" record on the site — done
+- The brief now has a "Live since launch" panel: model vs Vegas on the same live games, with log-loss, the game count, a small-sample caveat and a link to download `data/live_log.csv`.
+- Current: 26 games, model 15–11 (0.715), Vegas 17–9 (0.701).
+- Verified the render in the browser pane with no console errors.

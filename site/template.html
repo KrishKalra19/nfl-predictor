@@ -118,8 +118,20 @@ td.mono { font-family: var(--f-data); font-variant-numeric: tabular-nums; }
 .verdict-cell { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 2px; }
 .verdict-cell .big { font-family: var(--f-serif); font-size: 2.3rem; line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
 .verdict-cell.hero .big { color: var(--brass); }
+.live { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brass); padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; }
+.live-head { display: flex; flex-direction: column; gap: 4px; max-width: 72ch; }
+.live-row { display: flex; flex-wrap: wrap; gap: 10px 36px; align-items: baseline; }
+.live-row .who { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; }
+.live-row .val { font-family: var(--f-serif); font-size: 1.7rem; line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
+.live-row .sub { font-family: var(--f-data); font-size: .76rem; color: var(--muted); }
 .pipeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; counter-reset: step; }
-@media (max-width: 860px) { .pipeline { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 860px) { .live { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brass); padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; }
+.live-head { display: flex; flex-direction: column; gap: 4px; max-width: 72ch; }
+.live-row { display: flex; flex-wrap: wrap; gap: 10px 36px; align-items: baseline; }
+.live-row .who { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; }
+.live-row .val { font-family: var(--f-serif); font-size: 1.7rem; line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
+.live-row .sub { font-family: var(--f-data); font-size: .76rem; color: var(--muted); }
+.pipeline { grid-template-columns: minmax(0, 1fr); } }
 .step { background: var(--panel); border: 1px solid var(--line); padding: 14px; display: flex; flex-direction: column; gap: 6px; position: relative; }
 .step::before { counter-increment: step; content: "Step " counter(step); font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); }
 .step h3 { font-size: 1.02rem; }
@@ -210,6 +222,14 @@ footer { font-size: .78rem; color: var(--muted); border-top: 1px solid var(--lin
     </div>
 
     <div class="verdicts" id="verdicts"></div>
+
+    <div class="live" id="live">
+      <div class="live-head">
+        <span class="lbl-sm">Live since launch</span>
+        <p class="small muted">Every prediction made in real time this season, frozen at kickoff and graded after. These games were never available for tuning. <a href="data/live_log.csv">Download the full log (CSV)</a>.</p>
+      </div>
+      <div class="live-row" id="live-row"></div>
+    </div>
 
     <div class="pipeline" aria-label="Pipeline">
       <div class="step"><h3>Collect</h3><p>Play-by-play since 2014 (over half a million plays), weekly 53-man rosters, snap counts, injury reports and schedules from nflverse.</p></div>
@@ -424,6 +444,17 @@ document.getElementById("brief-lede").textContent =
   + `Tested on ${ens.games.toLocaleString()} games from 2022–26 that it never saw during development, it picks ${pct1(ens.accuracy)} of winners, `
   + `close to the Vegas betting market (${pct1(veg.accuracy)}) and ahead of a classic Elo rating (${pct1(elo.accuracy)}).`;
 
+const liveBox = document.getElementById("live"), liveRow = document.getElementById("live-row");
+if (!DATA.live) liveBox.hidden = true;
+else {
+  const L = DATA.live;
+  for (const [k, who] of [["model", "The Model"], ["vegas", "Vegas"]]) {
+    const s = L[k]; const d = el("div");
+    d.append(el("span", "who", who), el("span", "val", `${s.right}–${s.decided - s.right}`), el("span", "sub", ` log-loss ${s.log_loss.toFixed(3)}`));
+    liveRow.append(d);
+  }
+  liveRow.append(el("span", "small muted", `${L.games} games since ${L.since}. Too early to read much into; a meaningful sample takes a few hundred.`));
+}
 const verdicts = document.getElementById("verdicts");
 const home = m("Always pick home");
 for (const [big, lab, hero] of [
