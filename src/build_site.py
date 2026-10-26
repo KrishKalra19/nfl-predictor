@@ -22,6 +22,14 @@ DOCS = ROOT / "docs"
 PICKS_DIR = OUTPUTS / "my_picks" / "data" / "users" / "me"
 
 
+def model_line(p_home):
+    """Home-team point spread implied by the win probability (same 13.45-pt scale used for Vegas lines),
+    rounded to the half point. Positive = home favored, matching nflverse's spread_line."""
+    from scipy.stats import norm
+    p = min(max(float(p_home), 0.01), 0.99)
+    return round(13.45 * norm.ppf(p) * 2) / 2
+
+
 def load_scores(games):
     s = {r.game_id: (int(r.away_score), int(r.home_score)) for r in games[games["home_score"].notna()].itertuples()}
     manual = ROOT / "data" / "manual_scores.csv"
@@ -85,6 +93,8 @@ def main():
                 "p_home": round(float(r.p_home), 4),
                 "vegas_home": None if pd.isna(r.vegas_prob) else round(float(r.vegas_prob), 4),
                 "final": scores.get(r.game_id),
+                "model_line": model_line(r.p_home),
+                "vegas_line": None if pd.isna(r.spread_line) else float(r.spread_line),
                 "why": json.loads(r.why) if isinstance(getattr(r, "why", None), str) else [],
             })
         this_week.sort(key=lambda g: (g["kickoff"] or "", -g["confidence"]))

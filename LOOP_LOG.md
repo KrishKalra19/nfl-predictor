@@ -69,3 +69,8 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - `predict.py` stores a `why` JSON column per game. The site shows "Grounds" on each case card. Games frozen before this change show none.
 - Example, DAL @ PHI: Roster & injuries → DAL (strong), Offense → DAL (strong), Defense → PHI (moderate).
 - Checked that predictions are unchanged and deterministic: DAL @ PHI's committed Sunday prediction matches a fresh run to every digit.
+
+## 12. Model spread line — done
+- Each case card shows "Line: Model X −n · Vegas Y −m". The model line converts the ensemble win probability to a home spread with the same 13.45-point normal scale used to turn Vegas spreads into probabilities, rounded to the half point. Exactly 50% shows as "Pick'em".
+- I didn't use the ridge-margin member's raw margins: heavy regularization (alpha 10000) shrinks them, which would understate every line.
+- Week 7 examples: SF −8 (Vegas −2.5), HOU −7.5 (Vegas −10.5), DAL −3.5 (Vegas −4.5).
