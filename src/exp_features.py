@@ -15,6 +15,7 @@ BASE_SIDE = ["rest", "travel", "tz_shift", "body_kick"]
 
 CANDIDATES = {
     # name: (extra shared ctx columns, extra side ctx suffixes, team-feature prefixes to include)
+    "coach": ([], [], ["coach_"]),
     "weather": (["ctx_wx_wind", "ctx_wx_cold", "ctx_wx_precip"], ["dome_cold", "wind_pass"], []),
 }
 

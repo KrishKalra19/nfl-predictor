@@ -49,8 +49,9 @@ def summarize(pred):
 
 
 def feature_sets(df):
-    # rs_q_* (production-quality ratings) tested on dev: no gain over team EPA form, so kept out.
-    allf = [f for f in team_columns(df) if not f.startswith("rs_q_")]
+    # Not adopted (no dev gain) -- see LOOP_LOG.md. New candidates stay fenced out until they earn a place.
+    NOT_ADOPTED = ("rs_q_", "coach_")
+    allf = [f for f in team_columns(df) if not f.startswith(NOT_ADOPTED)]
     return {
         "all": allf,
         "no_roster": [f for f in allf if not f.startswith("rs_")],

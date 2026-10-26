@@ -27,3 +27,8 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Features: shared wind / cold / precipitation, plus per-team "dome team outdoors in the cold" and wind × team passing EPA. `src/exp_features.py` is a reusable A/B harness.
 - Dev ensemble: baseline 0.6233 vs weather 0.6234. No member improved meaningfully. Weather shifts totals, not winners.
 - Columns stay in features.csv but out of the model feature lists. The data can feed a site touch later.
+
+## 6. Coaching — no gain, not adopted
+- Per-team features from the full 1999+ schedule using only earlier games: new-coach flag (first season with the team), log tenure with the team, and career win rate shrunk toward .500 (16 pseudo-games). The win-rate differential correlates 0.27 with margin on its own.
+- Dev ensemble: baseline 0.6233 vs coach 0.6234. Mixed members: logreg 0.6244 and MLP 0.6242 were slightly better, GBM 0.6291 and Siamese 0.6263 worse. Coaching quality is already reflected in team form.
+- Candidate features are now fenced out of the production feature sets (`NOT_ADOPTED` in `backtest.py`) until they earn a place, so a new column can't silently enter the live model.

@@ -34,7 +34,7 @@ Priorities: accuracy that's real, then resume value, then polish.
   - Live: Open-Meteo's forecast for upcoming games.
   - Domes get zeros.
   - Expect small gains, and test on dev.
-- [ ] **6. Coaching.** Head coach from `games.csv`: new-coach flag, coach tenure, and the coach's prior win rate with shrinkage.
+- [x] **6. Coaching.** (no gain) Head coach from `games.csv`: new-coach flag, coach tenure, and the coach's prior win rate with shrinkage.
 - [ ] **7. Kicking and special teams quality.** The kicker's field-goal percentage over expected (from play-by-play), weighted by availability, plus punt and return EPA.
 - [ ] **8. Kalman-filter team strength.** A state-space rating per team (offense and defense EPA as latent states with weekly drift), as a principled replacement for or addition to the ridge ratings. This also has strong resume value.
 - [ ] **9. QB model upgrade.** Opponent-adjust QB EPA, add a backup-QB quality prior based on the snap-weighted QB2, and test an age curve.

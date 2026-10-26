@@ -363,6 +363,45 @@ def stakes_features(games):
 
 # ------------------------------------------------------------------ context & Vegas
 
+def coach_features(df):
+    """Per-team coach features from the full schedule history (1999+), using only earlier games:
+    coach_new (first season with this team), coach_tenure (log games with team), coach_winpct
+    (career win rate shrunk toward .500 with 16 pseudo-games)."""
+    from common import RAW, norm_team
+    g = pd.read_csv(RAW / "games.csv")
+    for c in ("home_team", "away_team"):
+        g[c] = g[c].map(norm_team)
+    g = g.sort_values(["gameday", "gametime", "game_id"])
+    career, tenure, first_season = {}, {}, {}
+    feats = {}
+    for r in g.itertuples():
+        for side in ("home", "away"):
+            coach, team = getattr(r, f"{side}_coach"), getattr(r, f"{side}_team")
+            if not isinstance(coach, str):
+                continue
+            w, n = career.get(coach, (0.0, 0))
+            key = (coach, team)
+            first_season.setdefault(key, r.season)
+            feats[(r.game_id, side)] = (int(first_season[key] == r.season), np.log1p(tenure.get(key, 0)),
+                                        (w + 8) / (n + 16))
+        if pd.isna(r.home_score):
+            continue
+        m = r.home_score - r.away_score
+        for side, res in (("home", 1.0 if m > 0 else 0.0 if m < 0 else 0.5), ("away", 1.0 if m < 0 else 0.0 if m > 0 else 0.5)):
+            coach, team = getattr(r, f"{side}_coach"), getattr(r, f"{side}_team")
+            if not isinstance(coach, str):
+                continue
+            w, n = career.get(coach, (0.0, 0))
+            career[coach] = (w + res, n + 1)
+            tenure[(coach, team)] = tenure.get((coach, team), 0) + 1
+    for side, pfx in (("home", "h"), ("away", "a")):
+        v = [feats.get((gid, side), (np.nan, np.nan, np.nan)) for gid in df["game_id"]]
+        df[f"{pfx}_coach_new"] = [x[0] for x in v]
+        df[f"{pfx}_coach_tenure"] = [x[1] for x in v]
+        df[f"{pfx}_coach_winpct"] = [x[2] for x in v]
+    return df
+
+
 def add_weather(df, games):
     """Kickoff weather (src/weather.py cache) as shared + per-team context features."""
     from common import RAW
@@ -472,6 +511,7 @@ def build(games=None):
     df = df.merge(qb_features(games, qbg), on="game_id", how="left")
     df = df.merge(context(games), on="game_id", how="left")
     df = add_weather(df, games)
+    df = coach_features(df)
     df = df.merge(vegas(games), on="game_id", how="left")
 
     m = df["home_score"] - df["away_score"]
