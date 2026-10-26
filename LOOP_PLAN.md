@@ -29,7 +29,7 @@ Priorities: accuracy that's real, then resume value, then polish.
 
 ## Phase 2 — New information the model doesn't have (≈3 h)
 
-- [ ] **5. Weather.**
+- [x] **5. Weather.** (no gain for winners)
   - Training: kickoff-hour wind, temperature and precipitation from Open-Meteo's free historical archive (no key), keyed by stadium coordinates.
   - Live: Open-Meteo's forecast for upcoming games.
   - Domes get zeros.

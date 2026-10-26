@@ -21,3 +21,9 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 ## 4. Stacking weights — no gain, not adopted
 - Non-negative log-odds weights fit walk-forward on earlier seasons. Unshrunk weights favor ridge_margin and the Siamese net but swing by season: dev 0.6256. Shrunk toward equal weights: 0.6237 / 0.6231. The flat average wins at 0.6227.
 - Takeaway: member strength isn't stable enough across seasons to exploit, so the flat log-odds average stays.
+
+## 5. Weather — no gain, not adopted in models
+- `src/weather.py` pulls kickoff-window weather (4 hours) from Open-Meteo: archive for past games, forecast for the next 15 days, indoor games neutral. Cached in `data/raw/weather_games.csv` (3,430 games). It matches nflverse's recorded temperature at r=0.975 and wind at r=0.66.
+- Features: shared wind / cold / precipitation, plus per-team "dome team outdoors in the cold" and wind × team passing EPA. `src/exp_features.py` is a reusable A/B harness.
+- Dev ensemble: baseline 0.6233 vs weather 0.6234. No member improved meaningfully. Weather shifts totals, not winners.
+- Columns stay in features.csv but out of the model feature lists. The data can feed a site touch later.

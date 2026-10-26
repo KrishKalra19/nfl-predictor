@@ -363,6 +363,27 @@ def stakes_features(games):
 
 # ------------------------------------------------------------------ context & Vegas
 
+def add_weather(df, games):
+    """Kickoff weather (src/weather.py cache) as shared + per-team context features."""
+    from common import RAW
+    f = RAW / "weather_games.csv"
+    if not f.exists():
+        return df
+    w = pd.read_csv(f)[["game_id", "wx_temp", "wx_wind", "wx_precip", "wx_indoor"]]
+    df = df.merge(w, on="game_id", how="left")
+    df["ctx_wx_wind"] = df["wx_wind"]
+    df["ctx_wx_cold"] = (45 - df["wx_temp"]).clip(lower=0)
+    df["ctx_wx_precip"] = np.log1p(df["wx_precip"])
+    # Does each team normally play indoors? (its usual home roof that season)
+    home = games.dropna(subset=["roof"]).assign(ind=lambda d: d["roof"].isin(["dome", "closed"]))
+    dome_team = home.groupby(["season", "home_team"])["ind"].mean().gt(0.5).to_dict()
+    for side, pfx in (("home", "h"), ("away", "a")):
+        dt = np.array([dome_team.get((s_, t), False) for s_, t in zip(df["season"], df[f"{side}_team"])])
+        df[f"ctx_{pfx}_dome_cold"] = np.where(dt & (df["wx_indoor"] == 0), df["ctx_wx_cold"], 0.0)
+        df[f"ctx_{pfx}_wind_pass"] = df["ctx_wx_wind"] * df[f"{pfx}_l_off_pass_epa"]
+    return df.drop(columns=["wx_temp", "wx_wind", "wx_precip", "wx_indoor"])
+
+
 def context(games):
     rows = []
     for g in games.itertuples():
@@ -450,6 +471,7 @@ def build(games=None):
     df = df.merge(elo_ratings(games), on="game_id", how="left")
     df = df.merge(qb_features(games, qbg), on="game_id", how="left")
     df = df.merge(context(games), on="game_id", how="left")
+    df = add_weather(df, games)
     df = df.merge(vegas(games), on="game_id", how="left")
 
     m = df["home_score"] - df["away_score"]
