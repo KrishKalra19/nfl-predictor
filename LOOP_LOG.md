@@ -32,3 +32,7 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Per-team features from the full 1999+ schedule using only earlier games: new-coach flag (first season with the team), log tenure with the team, and career win rate shrunk toward .500 (16 pseudo-games). The win-rate differential correlates 0.27 with margin on its own.
 - Dev ensemble: baseline 0.6233 vs coach 0.6234. Mixed members: logreg 0.6244 and MLP 0.6242 were slightly better, GBM 0.6291 and Siamese 0.6263 worse. Coaching quality is already reflected in team form.
 - Candidate features are now fenced out of the production feature sets (`NOT_ADOPTED` in `backtest.py`) until they earn a place, so a new column can't silently enter the live model.
+
+## 7. Kicking quality — no gain, not adopted
+- `k_fgoe`: the team's latest kicker's field goals made over expected per attempt. Expected comes from a league distance curve, exponentially weighted, shrunk with 15 pseudo-attempts, using earlier games only. The differential correlates only 0.05 with margin.
+- Dev ensemble: 0.6232 vs 0.6233 baseline, below the 0.002 adoption bar. Fenced out.

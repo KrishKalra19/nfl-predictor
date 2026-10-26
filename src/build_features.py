@@ -402,6 +402,42 @@ def coach_features(df):
     return df
 
 
+def kicker_features(df, games):
+    """k_fgoe: the team's most recent kicker's field goals made over expected per attempt (expected
+    from a league logistic curve on distance), exponentially weighted and shrunk; earlier games only."""
+    from common import CURRENT_SEASON, FIRST_SEASON, load_per_season, norm_team
+    from sklearn.linear_model import LogisticRegression
+    k = load_per_season("pbp", "play_by_play", range(FIRST_SEASON, CURRENT_SEASON + 1),
+                        usecols=["game_id", "posteam", "kicker_player_id", "field_goal_result", "kick_distance"])
+    k = k[k["field_goal_result"].isin(["made", "missed", "blocked"]) & k["kick_distance"].notna()].copy()
+    k["posteam"] = k["posteam"].map(norm_team)
+    k["made"] = (k["field_goal_result"] == "made").astype(float)
+    curve = LogisticRegression().fit(k[["kick_distance"]], k["made"])  # distance curve is stable over eras
+    k["oe"] = k["made"] - curve.predict_proba(k[["kick_distance"]])[:, 1]
+    dates = games.set_index("game_id")["gameday"]
+    k["gameday"] = k["game_id"].map(dates)
+    k = k.dropna(subset=["gameday"]).sort_values("gameday")
+    state, last_kicker, rating_before = {}, {}, {}
+    # walk games in date order: snapshot each team's kicker rating before the game, then update
+    by_game = {gid: d for gid, d in k.groupby("game_id")}
+    for g in games.sort_values("gameday").itertuples():
+        for side in ("home", "away"):
+            t = getattr(g, f"{side}_team")
+            kid = last_kicker.get(t)
+            s_, n_ = state.get(kid, (0.0, 0.0)) if kid else (0.0, 0.0)
+            rating_before[(g.game_id, side)] = s_ / (n_ + 15.0)
+        d = by_game.get(g.game_id)
+        if d is None:
+            continue
+        for r in d.itertuples():
+            s_, n_ = state.get(r.kicker_player_id, (0.0, 0.0))
+            state[r.kicker_player_id] = (0.97 * s_ + r.oe, 0.97 * n_ + 1)
+            last_kicker[r.posteam] = r.kicker_player_id
+    for side, pfx in (("home", "h"), ("away", "a")):
+        df[f"{pfx}_k_fgoe"] = [rating_before.get((gid, side), 0.0) for gid in df["game_id"]]
+    return df
+
+
 def add_weather(df, games):
     """Kickoff weather (src/weather.py cache) as shared + per-team context features."""
     from common import RAW
@@ -512,6 +548,7 @@ def build(games=None):
     df = df.merge(context(games), on="game_id", how="left")
     df = add_weather(df, games)
     df = coach_features(df)
+    df = kicker_features(df, games)
     df = df.merge(vegas(games), on="game_id", how="left")
 
     m = df["home_score"] - df["away_score"]
