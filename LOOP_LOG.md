@@ -74,3 +74,11 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Each case card shows "Line: Model X −n · Vegas Y −m". The model line converts the ensemble win probability to a home spread with the same 13.45-point normal scale used to turn Vegas spreads into probabilities, rounded to the half point. Exactly 50% shows as "Pick'em".
 - I didn't use the ridge-margin member's raw margins: heavy regularization (alpha 10000) shrinks them, which would understate every line.
 - Week 7 examples: SF −8 (Vegas −2.5), HOU −7.5 (Vegas −10.5), DAL −3.5 (Vegas −4.5).
+
+## 13 + 15. Client list: power rankings with playoff odds — done
+- New page `docs/rankings.html` ("Client list" in the nav).
+  - Columns: all 32 teams ranked by Kalman margin rating (points vs an average team) with a ± uncertainty bar, movement since last week, record, offense/defense ranks (Kalman EPA states), starting QB, and simulated odds for playoffs, division and #1 seed (item 10).
+  - Item 15's playoff odds table lives here rather than on the home page, to keep the docket uncluttered.
+- Shared styling moved to `site/style.css`, which is copied to `docs/style.css`. Both pages link it.
+- Added `.claude/launch.json` (gitignored) to serve `docs/` locally on port 8765, because file previews can't load relative stylesheets. Verified both pages there: themed, no overflow, no console errors.
+- Current top 3: SEA (+7.8 ±4.1), JAX (+6.3), BUF (+4.7). MIN is 6-0 but 6th by rating (29th offense, 1st defense).

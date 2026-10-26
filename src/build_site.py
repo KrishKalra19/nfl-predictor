@@ -39,6 +39,50 @@ def load_scores(games):
     return s
 
 
+def rankings(games, season):
+    """Power rankings from the Kalman ratings: current (pregame for each team's next game),
+    movement vs a week earlier, record, unit ranks, starting QB and playoff odds."""
+    import kalman
+    from pick_sheet import TEAM_NAMES
+    tg = pd.read_csv(ROOT / "data" / "processed" / "team_games.csv", parse_dates=["gameday"])
+    kf = kalman.ratings(games, tg).merge(games[["game_id", "season", "week", "gameday"]], on="game_id")
+    kf = kf[kf["season"] == season]
+    reg = games[(games["season"] == season) & (games["game_type"] == "REG")]
+    done = reg[reg["home_score"].notna()]
+    upcoming = reg[reg["home_score"].isna()]
+    odds_f = DOCS / "data" / "playoff_odds.json"
+    odds = {t["team"]: t for t in json.loads(odds_f.read_text())["teams"]} if odds_f.exists() else {}
+    rows = []
+    for team, d in kf.sort_values("gameday").groupby("team"):
+        nxt = d[d["game_id"].isin(upcoming["game_id"])]
+        cur = nxt.iloc[0] if len(nxt) else d.iloc[-1]
+        before = d[d["gameday"] < cur["gameday"] - pd.Timedelta(days=4)]
+        prev = before.iloc[-1] if len(before) else None
+        w = l = t = 0
+        for g in done[(done["home_team"] == team) | (done["away_team"] == team)].itertuples():
+            m = (g.home_score - g.away_score) * (1 if g.home_team == team else -1)
+            w, l, t = w + (m > 0), l + (m < 0), t + (m == 0)
+        last = games[((games["home_team"] == team) | (games["away_team"] == team)) & (games["season"] == season)]
+        last = last[last["gameday"] <= cur["gameday"]].iloc[-1]
+        qb = last["home_qb_name"] if last["home_team"] == team else last["away_qb_name"]
+        o = odds.get(team, {})
+        rows.append({"team": team, "name": TEAM_NAMES.get(team, team), "record": f"{w}-{l}" + (f"-{t}" if t else ""),
+                     "rating": round(float(cur["kf_margin"]), 1), "sd": round(float(cur["kf_margin_sd"]), 1),
+                     "move": None if prev is None else round(float(cur["kf_margin"] - prev["kf_margin"]), 1),
+                     "off": float(cur["kf_off"]), "def": float(cur["kf_def"]),
+                     "qb": qb if isinstance(qb, str) else "",
+                     "playoff": o.get("playoff"), "division_title": o.get("division_title"),
+                     "top_seed": o.get("top_seed"), "proj_wins": o.get("proj_wins")})
+    rows.sort(key=lambda r: -r["rating"])
+    for k, key in (("off_rank", "off"), ("def_rank", "def")):
+        for i, r in enumerate(sorted(rows, key=lambda r: -r[key]), 1):
+            r[k] = i
+    for i, r in enumerate(rows, 1):
+        r["rank"] = i
+        del r["off"], r["def"]
+    return rows
+
+
 def brief():
     """Backtest evidence for the technical section (walk-forward, held-out 2022-26)."""
     d = OUTPUTS / "dashboard"
@@ -128,6 +172,11 @@ def main():
     tpl = (ROOT / "site" / "template.html").read_text(encoding="utf-8")
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
     (DOCS / "index.html").write_text(html, encoding="utf-8")
+    import shutil
+    shutil.copy(ROOT / "site" / "style.css", DOCS / "style.css")
+    rk = {"season": season, "week": week, "built": data["built"], "teams": rankings(games, season)}
+    rtpl = (ROOT / "site" / "rankings.html").read_text(encoding="utf-8")
+    (DOCS / "rankings.html").write_text(rtpl.replace("/*__DATA__*/null", json.dumps(rk)), encoding="utf-8")
     (DOCS / ".nojekyll").write_text("")
     print(f"site: week {week} ({len(this_week)} games), {len(graded)} graded picks -> docs/index.html")
 

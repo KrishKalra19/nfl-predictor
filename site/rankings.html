@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Client List · Krish &amp; Associates</title>
+<meta name="description" content="NFL power rankings from a Kalman-filter rating model, with uncertainty and simulated playoff odds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.rank-tbl td, .rank-tbl th { padding: 9px 12px; }
+.rk { font-family: var(--f-serif); font-size: 1.15rem; color: var(--brass); width: 2.5rem; }
+.tm { display: flex; flex-direction: column; }
+.tm b { font-family: var(--f-serif); font-weight: 400; font-size: 1.05rem; }
+.tm span { font-size: .78rem; color: var(--muted); }
+.rating { display: flex; align-items: center; gap: 10px; min-width: 12rem; }
+.rating svg { flex: 1; min-width: 7rem; height: 16px; }
+.rating .num { font-family: var(--f-data); font-size: .85rem; min-width: 4.5rem; text-align: right; }
+.mv.up { color: var(--won); } .mv.down { color: var(--lost); } .mv { font-family: var(--f-data); font-size: .8rem; }
+.odds { font-family: var(--f-data); font-variant-numeric: tabular-nums; text-align: right; }
+.odds .bar { display: inline-block; height: 4px; background: var(--brass); vertical-align: middle; margin-left: 6px; }
+@media (max-width: 760px) { .hide-md { display: none; } }
+</style>
+</head>
+<body>
+<header class="letterhead">
+  <div class="lh-in">
+    <svg class="seal" viewBox="0 0 74 74" aria-hidden="true">
+      <circle cx="37" cy="37" r="35" fill="none" stroke="var(--brass)" stroke-width="1.5"/>
+      <circle cx="37" cy="37" r="30" fill="none" stroke="var(--brass-dim)" stroke-width="1"/>
+      <text x="37" y="44" text-anchor="middle" font-family="Libre Caslon Text, Georgia, serif" font-size="21" fill="var(--brass)">K<tspan font-style="italic">&amp;</tspan>A</text>
+    </svg>
+    <div>
+      <div class="firm">Krish <span class="amp">&amp;</span> Associates</div>
+      <div class="tagline">NFL win probability · counsel by neural network</div>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Sections"><div class="in">
+  <a href="index.html#docket">The docket</a><a href="index.html#partners">The partners</a><a href="index.html#record">The record</a><a href="index.html#brief">The brief</a><a href="rankings.html" aria-current="page" style="color:var(--ink);border-bottom-color:var(--brass)">Client list</a>
+</div></nav>
+
+<div class="wrap">
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="sec-mark">The client list</span>
+      <h2 id="title">Power rankings</h2>
+      <p class="muted small">Every team ranked by a Kalman-filter rating: points better or worse than an average team on a neutral field. The bar shows the rating with its uncertainty, since early-season and fast-changing teams are less certain. Movement is the change since the previous week. Playoff odds come from 10,000 simulations of the rest of the season, using the model's numbers for this week and these ratings for later weeks. NFL tiebreakers aren't modeled.</p>
+    </div>
+    <div class="tbl"><table class="rank-tbl">
+      <thead><tr><th>#</th><th>Client</th><th>Rating (pts vs avg)</th><th class="hide-md">Move</th><th class="hide-sm">Off</th><th class="hide-sm">Def</th><th class="hide-md">Starting QB</th><th class="num">Playoffs</th><th class="num hide-sm">Division</th><th class="num hide-md">#1 seed</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+  <footer>
+    <span id="built"></span>
+    <span>A fan project. Not affiliated with, or endorsed by, the NFL, USA Network, NBCUniversal or the makers of Suits.</span>
+  </footer>
+</div>
+<script>
+const DATA = /*__DATA__*/null;
+const el = (t, cls, txt) => { const e = document.createElement(t); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+const NS = "http://www.w3.org/2000/svg";
+const sv = (t, a) => { const e = document.createElementNS(NS, t); for (const [k, v] of Object.entries(a)) e.setAttribute(k, v); return e; };
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const pct = (p) => p == null ? "—" : p >= 0.995 ? ">99%" : p > 0 && p < 0.005 ? "<1%" : Math.round(p * 100) + "%";
+document.getElementById("title").textContent = `Power rankings, ${DATA.season} week ${DATA.week}`;
+document.getElementById("built").textContent = `Updated ${DATA.built}.`;
+const T = DATA.teams;
+const lo = Math.min(...T.map((t) => t.rating - t.sd)), hi = Math.max(...T.map((t) => t.rating + t.sd));
+const tb = document.getElementById("rows");
+for (const t of T) {
+  const tr = el("tr");
+  tr.append(el("td", "rk", String(t.rank)));
+  const tm = el("td"); const box = el("div", "tm"); box.append(el("b", null, `${t.team} ${t.name}`), el("span", null, t.record)); tm.append(box); tr.append(tm);
+  const rc = el("td"); const r = el("div", "rating");
+  const W = 140, x = (v) => (v - lo) / (hi - lo) * W;
+  const svg = sv("svg", { viewBox: `0 0 ${W} 16`, preserveAspectRatio: "none", "aria-hidden": "true" });
+  svg.append(sv("line", { x1: x(0), x2: x(0), y1: 0, y2: 16, stroke: css("--line") }));
+  svg.append(sv("rect", { x: x(t.rating - t.sd), y: 6, width: Math.max(1, x(t.rating + t.sd) - x(t.rating - t.sd)), height: 4, fill: css("--brass-dim") }));
+  svg.append(sv("circle", { cx: x(t.rating), cy: 8, r: 4, fill: css("--brass") }));
+  r.append(svg, el("span", "num", `${t.rating > 0 ? "+" : ""}${t.rating.toFixed(1)} ±${t.sd.toFixed(1)}`));
+  rc.append(r); tr.append(rc);
+  const mv = t.move == null ? "—" : t.move > 0.05 ? `▲ ${t.move.toFixed(1)}` : t.move < -0.05 ? `▼ ${Math.abs(t.move).toFixed(1)}` : "—";
+  tr.append(el("td", "hide-md mv " + (t.move > 0.05 ? "up" : t.move < -0.05 ? "down" : ""), mv));
+  tr.append(el("td", "hide-sm mono", String(t.off_rank)), el("td", "hide-sm mono", String(t.def_rank)));
+  tr.append(el("td", "hide-md muted", t.qb));
+  const po = el("td", "odds"); po.append(pct(t.playoff)); const b = el("span", "bar"); b.style.width = Math.round((t.playoff || 0) * 40) + "px"; po.append(b); tr.append(po);
+  tr.append(el("td", "odds hide-sm", pct(t.division_title)), el("td", "odds hide-md", pct(t.top_seed)));
+  tb.append(tr);
+}
+</script>
+</body>
+</html>
