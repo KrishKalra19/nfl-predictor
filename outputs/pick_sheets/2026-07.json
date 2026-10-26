@@ -2,7 +2,7 @@
  "id": "2026-07",
  "season": 2026,
  "week": 7,
- "generated_at": "2026-10-25T17:08:20Z",
+ "generated_at": "2026-10-26T04:06:43Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -1168,7 +1168,7 @@
    "away": "NYG",
    "home": "HOU",
    "venue": "Reliant Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873016",
@@ -1385,7 +1385,7 @@
    "away": "SF",
    "home": "ATL",
    "venue": "Mercedes-Benz Stadium",
-   "roof": "",
+   "roof": "open",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873017",
@@ -1676,10 +1676,10 @@
      "rest_days": 7,
      "travel_miles": 510,
      "qb": {
-      "name": "Jalon Daniels",
-      "epa_per_play": -0.191,
-      "recent_plays": 109,
-      "changed": false,
+      "name": "Baker Mayfield",
+      "epa_per_play": -0.082,
+      "recent_plays": 281,
+      "changed": true,
       "last_starter": "Jalon Daniels"
      },
      "missing": [
@@ -1806,7 +1806,7 @@
    "away": "DEN",
    "home": "ARI",
    "venue": "State Farm Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873019",
