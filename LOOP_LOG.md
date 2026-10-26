@@ -115,3 +115,30 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 
 ## 20. Model card — done
 - `MODEL_CARD.md`: purpose, intended and non-intended use (not for wagering), data, model, evaluation (with Brier), calibration, live log, leakage controls, and limitations and known biases.
+
+## 21. Krish + Model blend — done (descriptive)
+- Partners section: "Joint counsel" line scoring a 50/50 log-odds average of Krish's and the model's probabilities on Krish's graded games. Week 6: 5–9, log-loss 0.784, against Krish 0.889 and the model 0.702. Labeled as too early to read until about 200 cases.
+
+## 22. Pick analysis by reason tag — built, gated until there's data
+- A per-tag table (cases, won–lost, log-loss) under the partners board. A tag appears only after 30+ graded picks, so nothing shows yet (largest tag today: 3 picks). Logic verified on the real picks with the threshold lowered.
+
+## Loop summary (2026-10-26)
+- **Shipped to the live site:**
+  - live "since launch" record with a downloadable log;
+  - "Grounds" explanations on every case;
+  - model point spread next to the Vegas line;
+  - weekly recap;
+  - Client list page with Kalman power rankings (± uncertainty) and Monte Carlo playoff odds;
+  - favicon and link-preview card;
+  - accessibility and footer polish;
+  - the joint-counsel line and gated tag analysis.
+- **Engineering:**
+  - 15-test pytest suite (leakage, symmetry, freeze) on a synthetic league;
+  - GitHub Actions CI (green) with a README badge;
+  - README landing page with a mermaid diagram;
+  - MODEL_CARD.md, MIT license, pinned requirements;
+  - reproducible result exports.
+- **Model:**
+  - Tested 9 ideas honestly on dev (calibration, stacking, weather, coaching, kicking, Kalman as an addition and as a swap, QB opponent adjustment + age); none cleared the 0.002 bar. Best near miss: QB features at −0.0006.
+  - The tests found a real (tiny) leak of whole-dataset league means into early-season priors. Fixed. Corrected held-out numbers: 66.2% / 0.6244 (were 66.3% / 0.6242).
+- **Still blocked on Krish:** picks on the website (Supabase project), Andrew's GitHub username, any scheduled-task changes.

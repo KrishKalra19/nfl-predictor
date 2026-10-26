@@ -201,6 +201,8 @@ function score(k) {
   const won = d.filter((g) => (g[k] > 0.5) === (g.y === 1)).length;
   return { n: r.length, won, lost: d.length - won, ll: r.reduce((s, g) => s + ll(g[k], g.y), 0) / r.length };
 }
+const lgt = (p) => { p = Math.min(Math.max(p, 0.01), 0.99); return Math.log(p / (1 - p)); };
+for (const g of G) if (g.you != null && g.model != null) g.blend = 1 / (1 + Math.exp(-(0.5 * lgt(g.you) + 0.5 * lgt(g.model))));
 const counsel = document.getElementById("counsel");
 const scores = {};
 for (const [k, name, title, cls] of [["you", "Krish", "Name partner", "me"], ["model", "The Model", "Associate · no law degree, perfect memory", ""], ["vegas", "Vegas", "Opposing counsel", ""]]) {
@@ -211,6 +213,36 @@ for (const [k, name, title, cls] of [["you", "Krish", "Name partner", "me"], ["m
   c.append(el("span", "lbl-sm", title), el("span", "name", name), rec,
            el("span", "ll", s ? `log-loss ${s.ll.toFixed(3)} · ${s.n} cases` : "no cases decided yet"));
   counsel.append(c);
+}
+{
+  const s = score("blend");
+  if (s) {
+    const n = el("p", "small muted");
+    n.append(`Joint counsel (Krish and the Model averaged in log-odds): ${s.won}–${s.lost}, log-loss ${s.ll.toFixed(3)} over ${s.n} cases. `,
+             `Combining a person and a model often beats either alone. ${s.n < 200 ? "Too few cases to tell yet; it means more past ~200." : ""}`);
+    counsel.after(n);
+  }
+}
+// Krish's record by reason tag: a tag appears once it has 30+ graded picks (too noisy before that)
+{
+  const MIN_TAG = 30, by = {};
+  for (const g of G) for (const t of (g.tags || [])) (by[t] = by[t] || []).push(g);
+  const rows = Object.entries(by).filter(([, gs]) => gs.length >= MIN_TAG);
+  if (rows.length) {
+    const box = el("div", "tbl"); const tbl = el("table"); const head = el("tr");
+    for (const h of ["Krish's grounds", "Cases", "Won–lost", "Log-loss"]) head.append(el("th", null, h));
+    const tb2 = el("tbody");
+    for (const [tag, gs] of rows) {
+      const dec = gs.filter((g) => g.y !== 0.5 && Math.abs(g.you - 0.5) > 0.004);
+      const w = dec.filter((g) => (g.you > 0.5) === (g.y === 1)).length;
+      const tr = el("tr");
+      tr.append(el("td", null, tag), el("td", "mono", String(gs.length)), el("td", "mono", `${w}–${dec.length - w}`),
+                el("td", "mono", (gs.reduce((a, g) => a + ll(g.you, g.y), 0) / gs.length).toFixed(3)));
+      tb2.append(tr);
+    }
+    const th = el("thead"); th.append(head); tbl.append(th, tb2); box.append(tbl);
+    document.getElementById("counsel").parentElement.append(box);
+  }
 }
 
 // ---------- closing argument

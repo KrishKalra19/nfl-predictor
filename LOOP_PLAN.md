@@ -67,8 +67,8 @@ After phase 2: re-tune the lineup on dev with any adopted features, run the post
 
 ## Phase 5 — Human alpha (only if time remains, ≈0.5 h)
 
-- [ ] **21. "Krish + Model" blend.** After kickoff, show what a 50/50 log-odds blend of Krish and the model would have scored, as a teaser for the stacking idea. It stays descriptive until there are about 200 picks.
-- [ ] **22. Pick analysis by reason tag** (accuracy and log-loss per tag). Only displayed once a tag has at least 30 graded picks.
+- [x] **21. "Krish + Model" blend.** After kickoff, show what a 50/50 log-odds blend of Krish and the model would have scored, as a teaser for the stacking idea. It stays descriptive until there are about 200 picks.
+- [x] **22. Pick analysis by reason tag** (gated: shows at 30+ per tag) (accuracy and log-loss per tag). Only displayed once a tag has at least 30 graded picks.
 
 ## Blocked: needs Krish
 
