@@ -96,3 +96,15 @@ Week 6 injury designations weren't published yet when these picks were made. Re-
 - **Possible improvements:** live weather forecasts, a proper playoff-odds simulation, and quality-based player ratings.
 
 All experiment results are in `outputs/experiments.csv`. Per-game predictions are in `outputs/preds_dev.csv` and `outputs/preds_test.csv`.
+
+## Correction (2026-10-26): leak found by the test suite
+
+The new no-leakage tests (`tests/test_leakage.py`) found that two league-wide averages were computed over the whole dataset, including future seasons:
+- the prior that early-season team form is shrunk toward;
+- the Kalman EPA baseline.
+
+Both now use *pregame* league averages: an expanding mean over games before each date. Re-scored on the same 1,218 held-out games, the effect is negligible:
+- Ensemble log-loss 0.6242 → **0.6244**; accuracy 66.3% → **66.2%**.
+- Dev 2018–21 is unchanged at 0.6234.
+
+The model lineup didn't change, so this is a corrected measurement, not a re-selection. The site now shows the corrected numbers. The originals are kept in `outputs/*_v1_prefix.*`.

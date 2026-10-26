@@ -188,9 +188,9 @@
    "team": "PHI",
    "division": "NFC East",
    "wins_now": 2.0,
-   "proj_wins": 7.3,
-   "playoff": 0.2338,
-   "division_title": 0.2172,
+   "proj_wins": 7.4,
+   "playoff": 0.234,
+   "division_title": 0.2173,
    "top_seed": 0.0009
   },
   {
@@ -198,8 +198,8 @@
    "division": "NFC East",
    "wins_now": 2.0,
    "proj_wins": 7.0,
-   "playoff": 0.1646,
-   "division_title": 0.1468,
+   "playoff": 0.1644,
+   "division_title": 0.1467,
    "top_seed": 0.0003
   },
   {

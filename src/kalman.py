@@ -43,8 +43,8 @@ def ratings(games, tg):
     T = len(teams)
     fm = Filter(T, M_INIT_SD)
     fe = Filter(2 * T, E_INIT_SD)          # [o_0..o_T-1, d_0..d_T-1]
-    mu = tg["off_epa"].mean()
     off = tg.set_index(["game_id", "team"])["off_epa"].to_dict()
+    ep_sum, ep_n = 0.0, 0  # league-average EPA from games seen so far (a whole-dataset mean would leak)
 
     rows, prev_season = [], None
     for (season, week), wk in games.sort_values("gameday").groupby(["season", "week"], sort=True):
@@ -62,6 +62,10 @@ def ratings(games, tg):
                 i = ti[getattr(g, f"{side}_team")]
                 rows.append({"game_id": g.game_id, "team": teams[i], "kf_margin": fm.x[i], "kf_margin_sd": msd[i],
                              "kf_off": fe.x[i], "kf_def": -fe.x[T + i], "kf_off_sd": esd[i]})
+        wk_vals = [off.get((g.game_id, t)) for g in wk.itertuples() for t in (g.home_team, g.away_team)]
+        wk_vals = [v for v in wk_vals if v is not None and not np.isnan(v)]
+        ep_sum, ep_n = ep_sum + sum(wk_vals), ep_n + len(wk_vals)
+        mu = ep_sum / ep_n if ep_n else 0.0
         for g in wk.itertuples():
             if pd.isna(g.home_score):
                 continue

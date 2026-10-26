@@ -26,8 +26,30 @@ ELO_K, ELO_HFA, ELO_REVERT = 20.0, 40.0, 1 / 3
 
 # ------------------------------------------------------------------ rolling team form
 
+def pregame_means(rows, source, stats):
+    """League average of `stats` over `source` games played strictly before each row's date
+    (rows aligned to rows.index). Using a whole-dataset mean here would leak future seasons into
+    early-season priors. Rows before any data fall back to the first day's average."""
+    src = source[["gameday"] + stats].copy()
+    by_day = src.groupby("gameday")[stats]
+    sums, counts = by_day.sum(min_count=1).fillna(0).sort_index(), by_day.count().sort_index()
+    cs, cc = sums.cumsum(), counts.cumsum()
+    days = cs.index.to_numpy()
+    pos = np.searchsorted(days, rows["gameday"].to_numpy(), side="left") - 1  # last day strictly before
+    first = (sums.iloc[0] / counts.iloc[0].replace(0, np.nan)).to_numpy()
+    out = np.empty((len(rows), len(stats)))
+    valid = pos >= 0
+    out[valid] = (cs.to_numpy()[pos[valid]] / np.where(cc.to_numpy()[pos[valid]] == 0, np.nan, cc.to_numpy()[pos[valid]]))
+    out[~valid] = first
+    return out
+
+
 def weighted_history(tg, stats, halflife, carry, prior_n, means):
-    """Pregame recency-weighted mean of `stats` for each team-game (uses strictly earlier games)."""
+    """Pregame recency-weighted mean of `stats` for each team-game (uses strictly earlier games).
+    `means` is the league-average prior: one row per tg row (pregame), or a single vector."""
+    means = np.asarray(means, dtype=float)
+    if means.ndim == 1:
+        means = np.tile(means, (len(tg), 1))
     out = np.full((len(tg), len(stats)), np.nan)
     tg = tg.sort_values(["team", "gameday"])
     for _, grp in tg.groupby("team", sort=False):
@@ -36,14 +58,15 @@ def weighted_history(tg, stats, halflife, carry, prior_n, means):
         n = len(grp)
         idx = np.arange(n)
         for j in range(n):
+            m = means[grp.index[j]]
             if j == 0:
-                out[grp.index[j]] = means
+                out[grp.index[j]] = m
                 continue
             i = idx[:j]
             w = 0.5 ** ((j - 1 - i) / halflife) * carry ** (seasons[j] - seasons[i])
             Xi = X[:j]
             mask = ~np.isnan(Xi)
-            num = np.nansum(Xi * w[:, None], axis=0) + prior_n * means
+            num = np.nansum(Xi * w[:, None], axis=0) + prior_n * m
             den = (mask * w[:, None]).sum(axis=0) + prior_n
             out[grp.index[j]] = num / den
     return out
@@ -52,18 +75,20 @@ def weighted_history(tg, stats, halflife, carry, prior_n, means):
 def add_opponent_adjusted(tg):
     """Opponent-adjust EPA & margin using opponents' *pregame* long-window form (no leakage)."""
     base = ["off_epa", "def_epa", "margin"]
-    means = tg[base].mean().to_numpy()
-    pre = weighted_history(tg.reset_index(drop=True), base, 8.0, 0.55, 2.0, means)
+    tg = tg.reset_index(drop=True)
+    means = pregame_means(tg, tg, base)
+    pre = weighted_history(tg, base, 8.0, 0.55, 2.0, means)
     pre = pd.DataFrame(pre, columns=[f"pre_{c}" for c in base])
-    tg = pd.concat([tg.reset_index(drop=True), pre], axis=1)
+    tg = pd.concat([tg, pre, pd.DataFrame(means[:, :2], columns=["lg_off", "lg_def"])], axis=1)
     opp = tg[["game_id", "team", "pre_off_epa", "pre_def_epa", "pre_margin"]].rename(
         columns={"team": "opp", "pre_off_epa": "opp_pre_off", "pre_def_epa": "opp_pre_def", "pre_margin": "opp_pre_margin"})
     tg = tg.merge(opp, on=["game_id", "opp"], how="left")
     # good offense vs a stingy defense (low def_epa allowed) deserves credit
-    tg["adj_off_epa"] = tg["off_epa"] - (tg["opp_pre_def"] - means[1])
-    tg["adj_def_epa"] = tg["def_epa"] - (tg["opp_pre_off"] - means[0])
+    tg["adj_off_epa"] = tg["off_epa"] - (tg["opp_pre_def"] - tg["lg_def"])
+    tg["adj_def_epa"] = tg["def_epa"] - (tg["opp_pre_off"] - tg["lg_off"])
     tg["adj_margin"] = tg["margin"] + tg["opp_pre_margin"]
-    return tg.drop(columns=["pre_off_epa", "pre_def_epa", "pre_margin", "opp_pre_off", "opp_pre_def", "opp_pre_margin"])
+    return tg.drop(columns=["pre_off_epa", "pre_def_epa", "pre_margin", "opp_pre_off", "opp_pre_def", "opp_pre_margin",
+                            "lg_off", "lg_def"])
 
 
 def team_form(tg, games):
@@ -76,7 +101,7 @@ def team_form(tg, games):
     # Unplayed games get NaN stats so they receive pregame features but contribute nothing.
     full = sched.merge(tg.drop(columns=["season", "week", "gameday"]), on=["game_id", "team"], how="left")
     full = full.sort_values(["gameday", "game_id"]).reset_index(drop=True)
-    means = tg[ROLL_STATS].mean().to_numpy()
+    means = pregame_means(full, tg, ROLL_STATS)
 
     feats = [full[["game_id", "team"]]]
     for name, hl, carry, pn in WINDOWS:

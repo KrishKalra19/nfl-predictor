@@ -1,21 +1,21 @@
 phase,model,kind,games,accuracy,log_loss,brier
-test,Logistic regression,Classical,1218,0.6697,0.6238,0.2161
-test,Ridge margin,Classical,1218,0.6705,0.6242,0.2162
-test,Gradient boosting,Classical,1218,0.6565,0.6309,0.2193
-test,MLP neural net,Neural,1218,0.6689,0.6245,0.2163
-test,Siamese neural net,Neural,1218,0.6565,0.6274,0.2178
-test,Ensemble (5 models),Ensemble,1218,0.6631,0.6242,0.2163
-test,Neural nets only,Neural,1218,0.6664,0.6255,0.2169
-test,Always pick home,Baseline,1218,0.5502,0.6881,0.2467
+test,Ensemble (5 models),Ensemble,1218,0.6623,0.6244,0.2164
+test,Logistic regression,Classical,1218,0.673,0.6241,0.2162
+test,Ridge margin,Classical,1218,0.668,0.6246,0.2163
+test,Gradient boosting,Classical,1218,0.654,0.6308,0.2193
+test,MLP neural net,Neural,1218,0.668,0.6247,0.2164
+test,Siamese neural net,Neural,1218,0.6565,0.6275,0.2179
+test,Neural nets only,Neural,1218,0.6656,0.6256,0.217
 test,Vegas moneyline,Baseline,1218,0.6738,0.6103,0.2106
 test,Elo rating,Baseline,1218,0.6392,0.6349,0.2214
-dev,Logistic regression,Classical,1088,0.6648,0.6247,0.2161
-dev,Ridge margin,Classical,1088,0.6519,0.6258,0.2159
-dev,Gradient boosting,Classical,1088,0.639,0.6284,0.2181
-dev,MLP neural net,Neural,1088,0.6602,0.6249,0.2163
-dev,Siamese neural net,Neural,1088,0.651,0.6258,0.2167
-dev,Ensemble (5 models),Ensemble,1088,0.6593,0.6234,0.2156
-dev,Neural nets only,Neural,1088,0.6584,0.6245,0.2161
-dev,Always pick home,Baseline,1088,0.5355,0.6925,0.2485
+test,Always pick home,Baseline,1218,0.5502,0.6881,0.2467
+dev,Ensemble (5 models),Ensemble,1088,0.6611,0.6234,0.2156
+dev,Logistic regression,Classical,1088,0.6657,0.6246,0.2161
+dev,Ridge margin,Classical,1088,0.6528,0.6257,0.2159
+dev,Gradient boosting,Classical,1088,0.638,0.6286,0.2182
+dev,MLP neural net,Neural,1088,0.6602,0.6248,0.2163
+dev,Siamese neural net,Neural,1088,0.651,0.6257,0.2167
+dev,Neural nets only,Neural,1088,0.6584,0.6244,0.2161
 dev,Vegas moneyline,Baseline,1088,0.651,0.6115,0.2107
 dev,Elo rating,Baseline,1088,0.6334,0.6379,0.2219
+dev,Always pick home,Baseline,1088,0.5355,0.6925,0.2485

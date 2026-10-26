@@ -20,10 +20,10 @@ def font(name, size):
 
 
 def main():
-    m = json.loads((OUTPUTS / "metrics_test.json").read_text())
-    ens = m["models"]["ensemble"]["overall"]
-    veg = m["baselines"]["vegas"]["overall"]
-    elo = m["baselines"]["elo"]["overall"]
+    import pandas as pd
+    ms = pd.read_csv(OUTPUTS / "dashboard" / "model_scores.csv")
+    ms = ms[ms["phase"] == "test"].set_index("model")
+    ens, veg, elo = (ms.loc[k].to_dict() for k in ("Ensemble (5 models)", "Vegas moneyline", "Elo rating"))
 
     im = Image.new("RGB", (1200, 630), BG)
     d = ImageDraw.Draw(im)

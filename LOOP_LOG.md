@@ -94,3 +94,12 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Footer on both pages links to the source code and credits nflverse.
 - Checked at 375px on the local server: no page-level horizontal scroll; the rankings table scrolls inside its box.
 - Skipped the separate print layout: the frame can't print, and the brief already reads cleanly as a page.
+
+## 17. Tests — done (and they caught a real leak)
+- `tests/` (pytest, 15 tests, ~8 s) runs on a synthetic two-season, 32-team league built in `conftest.py`, so no data files are needed (CI-friendly).
+  - **Leakage:** for a cutoff week, Elo, ridge power ratings, team form, standings and Kalman ratings must be identical whether or not later results exist. A control test confirms the detector catches a deliberately leaky feature.
+  - **Symmetry:** on a neutral field, P(A beats B) + P(B beats A) = 1 for logreg, ridge, GBM, MLP and Siamese. Home field is learned with the right sign.
+  - **Freeze:** `predict.apply_freeze` (refactored out of `main`) keeps saved rows for started games only.
+- **Leak found:** team-form priors and the Kalman EPA baseline used whole-dataset league means. Fixed with `pregame_means()` (expanding mean over earlier dates) and a running mean in the Kalman filter. Impact on the same 1,218 held-out games: ensemble 0.6242 → 0.6244 log-loss, 66.3% → 66.2%. Dev unchanged (0.6234). REPORT.md has a correction note; originals are kept as `outputs/*_v1_prefix.*`.
+- Added `src/export_results.py`, which regenerates the site's result CSVs with the held-out set fixed at 1,218 games (later 2026 games belong to the live log). `make_og.py` reads it.
+- Full pipeline re-run end to end (`run_weekly.py --no-download`): 13 started games stayed frozen; DAL @ PHI is DAL 60.1%.

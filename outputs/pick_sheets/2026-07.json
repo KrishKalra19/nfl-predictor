@@ -2,7 +2,7 @@
  "id": "2026-07",
  "season": 2026,
  "week": 7,
- "generated_at": "2026-10-26T06:06:38Z",
+ "generated_at": "2026-10-26T06:23:04Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -2859,7 +2859,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.399,
+    "model_home": 0.3994,
     "vegas_home": 0.3425,
     "spread_home": -4.5
    }

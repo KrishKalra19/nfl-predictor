@@ -7,6 +7,7 @@ Writes outputs/picks_<season>_wk<week>.csv and .json
 """
 import argparse
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -16,6 +17,19 @@ from common import OUTPUTS, kickoff_utc, load_games, upcoming_week
 from config import LINEUP
 from dataset import load_features
 from evaluate import logit_mean
+
+
+def apply_freeze(out, prev, kickoffs, now):
+    """Freeze at kickoff: a game that has started keeps the row saved before it started.
+    out: fresh predictions; prev: the previously saved file (or None); kickoffs: game_id -> UTC time."""
+    started = {gid for gid in out["game_id"] if kickoffs.get(gid) is not None and kickoffs[gid] <= now}
+    if not started or prev is None:
+        return out
+    keep = prev[prev["game_id"].isin(started)]
+    merged = pd.concat([out[~out["game_id"].isin(keep["game_id"])], keep], ignore_index=True)
+    if len(keep):
+        print(f"kept pre-kickoff predictions for {len(keep)} started games")
+    return merged.sort_values("confidence", ascending=False)
 
 
 def main():
@@ -57,18 +71,9 @@ def main():
 
     OUTPUTS.mkdir(exist_ok=True)
     stem = OUTPUTS / f"picks_{season}_wk{week:02d}"
-    # Freeze at kickoff: a game that has started keeps the prediction made before it started.
     ko = {r.game_id: kickoff_utc(r.gameday, r.gametime) for r in sched[sched["game_id"].isin(out["game_id"])].itertuples()}
-    now = pd.Timestamp.now(tz="UTC")
-    started = [gid for gid in out["game_id"] if ko.get(gid) is not None and ko[gid] <= now]
-    prev_f = f"{stem}.csv"
-    import os
-    if started and os.path.exists(prev_f):
-        prev = pd.read_csv(prev_f)
-        keep = prev[prev["game_id"].isin(started)]
-        out = pd.concat([out[~out["game_id"].isin(keep["game_id"])], keep], ignore_index=True)
-        out = out.sort_values("confidence", ascending=False)
-        print(f"kept pre-kickoff predictions for {len(keep)} started games")
+    prev_f = Path(f"{stem}.csv")
+    out = apply_freeze(out, pd.read_csv(prev_f) if prev_f.exists() else None, ko, pd.Timestamp.now(tz="UTC"))
     out.to_csv(f"{stem}.csv", index=False)
     with open(f"{stem}.json", "w") as f:
         json.dump({"season": season, "week": week, "trained_on_games": int(len(train)),

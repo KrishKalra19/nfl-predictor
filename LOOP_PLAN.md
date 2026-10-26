@@ -53,7 +53,7 @@ After phase 2: re-tune the lineup on dev with any adopted features, run the post
 
 ## Phase 4 — Engineering quality (≈1.5 h, high resume value)
 
-- [ ] **17. Tests.**
+- [x] **17. Tests.** (caught + fixed a minor leak)
   - Leakage tests: every feature row for a game equals what you'd compute with all later games deleted. Run on a sample of games.
   - Symmetry tests: P(A beats B) + P(B beats A) = 1.
   - Freeze tests: predictions for started games don't change.
