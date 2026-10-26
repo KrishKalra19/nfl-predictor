@@ -45,7 +45,19 @@ def brief():
     return out
 
 
+def refresh_scores():
+    """Pull the latest schedule/scores so finals show up without a full pipeline run."""
+    import requests
+    from common import RAW
+    r = requests.get("https://github.com/nflverse/nfldata/raw/master/data/games.csv", timeout=60)
+    if r.status_code == 200 and r.content.startswith(b"game_id"):
+        (RAW / "games.csv").write_bytes(r.content)
+    else:
+        print(f"score refresh failed ({r.status_code}); using cached schedule")
+
+
 def main():
+    refresh_scores()
     games = load_games()
     now = pd.Timestamp.now(tz="UTC")
     ko = {r.game_id: kickoff_utc(r.gameday, r.gametime) for r in games.itertuples()}
