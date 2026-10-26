@@ -549,6 +549,11 @@ def build(games=None):
     df = add_weather(df, games)
     df = coach_features(df)
     df = kicker_features(df, games)
+    import kalman
+    kf = kalman.ratings(games, tg)
+    for side, pfx in (("home", "h"), ("away", "a")):
+        df = df.merge(kf.rename(columns={"team": f"{side}_team", **{c: f"{pfx}_{c}" for c in kf.columns if c.startswith("kf_")}}),
+                      on=["game_id", f"{side}_team"], how="left")
     df = df.merge(vegas(games), on="game_id", how="left")
 
     m = df["home_score"] - df["away_score"]

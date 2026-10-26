@@ -36,7 +36,7 @@ Priorities: accuracy that's real, then resume value, then polish.
   - Expect small gains, and test on dev.
 - [x] **6. Coaching.** (no gain) Head coach from `games.csv`: new-coach flag, coach tenure, and the coach's prior win rate with shrinkage.
 - [x] **7. Kicking and special teams quality.** (no gain) The kicker's field-goal percentage over expected (from play-by-play), weighted by availability, plus punt and return EPA.
-- [ ] **8. Kalman-filter team strength.** A state-space rating per team (offense and defense EPA as latent states with weekly drift), as a principled replacement for or addition to the ridge ratings. This also has strong resume value.
+- [x] **8. Kalman-filter team strength.** (no model gain; reused for rankings) A state-space rating per team (offense and defense EPA as latent states with weekly drift), as a principled replacement for or addition to the ridge ratings. This also has strong resume value.
 - [ ] **9. QB model upgrade.** Opponent-adjust QB EPA, add a backup-QB quality prior based on the snap-weighted QB2, and test an age curve.
 - [ ] **10. Proper playoff-stakes simulation.** Monte Carlo the remaining schedule each week (using the model's own probabilities) to get each team's playoff odds and whether it has clinched a seed. Replaces the crude stakes flags and also feeds a site feature (#15).
 

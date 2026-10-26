@@ -17,6 +17,8 @@ CANDIDATES = {
     # name: (extra shared ctx columns, extra side ctx suffixes, team-feature prefixes to include)
     "coach": ([], [], ["coach_"]),
     "kicker": ([], [], ["k_fgoe"]),
+    "kalman": ([], [], ["kf_"]),
+    "kalman_swap": ([], [], ["kf_"], ["pr_", "prm_"]),  # replace ridge ratings with Kalman ratings
     "weather": (["ctx_wx_wind", "ctx_wx_cold", "ctx_wx_precip"], ["dome_cold", "wind_pass"], []),
 }
 
@@ -29,6 +31,7 @@ def run(shared, side, extra_prefixes, exclude_prefixes):
     preds, out = {}, None
     for name, (factory, feat) in LINEUP.items():
         names = [n for n in fs[feat] if not n.startswith(tuple(exclude_prefixes))] if exclude_prefixes else list(fs[feat])
+        names = [n for n in names if not n.startswith(tuple(extra_prefixes))] if extra_prefixes else names
         names += [n for n in dataset.team_columns(df) if n.startswith(tuple(extra_prefixes)) and n not in names] if extra_prefixes else []
         p = walk_forward(factory, df, DEV_SEASONS, names)
         preds[name] = p["pred"].to_numpy()
@@ -44,7 +47,7 @@ def main(cand):
     sh, sd, pref = CANDIDATES[cand][:3]
     excl = CANDIDATES[cand][3] if len(CANDIDATES[cand]) > 3 else []
     print("baseline ", run(BASE_SHARED, BASE_SIDE, [], pref), flush=True)
-    print(cand.ljust(9), run(BASE_SHARED + sh, BASE_SIDE + sd, pref, []), flush=True)
+    print(cand.ljust(9), run(BASE_SHARED + sh, BASE_SIDE + sd, pref, excl), flush=True)
 
 
 if __name__ == "__main__":

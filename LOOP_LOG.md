@@ -36,3 +36,14 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 ## 7. Kicking quality — no gain, not adopted
 - `k_fgoe`: the team's latest kicker's field goals made over expected per attempt. Expected comes from a league distance curve, exponentially weighted, shrunk with 15 pseudo-attempts, using earlier games only. The differential correlates only 0.05 with margin.
 - Dev ensemble: 0.6232 vs 0.6233 baseline, below the 0.002 adoption bar. Fenced out.
+
+## 8. Kalman-filter team strength — no gain in the model, kept for the site
+- `src/kalman.py`: joint Kalman filters over all 32 teams.
+  - Margin model: points, with home-field advantage.
+  - EPA model: offense and defense latent states, opponent-adjusted by construction.
+  - Weekly drift, offseason regression and widening uncertainty.
+  - Snapshots are taken per week before any of that week's results are applied, the same convention as the live picks.
+- Signal alone (corr of rating difference with margin, 2016–21): Kalman 0.389, tuned ridge 0.392, Elo 0.379. The tuning surface is flat (0.388–0.389), so defaults are kept.
+- Dev ensemble: as an addition 0.6240 (worse; redundant with the ridge ratings). As a replacement for the ridge ratings 0.6236 (a tie, but the Siamese net degrades). Not adopted.
+- Kept because each rating comes with an uncertainty (±), which suits the power-rankings page (item 13).
+- Fixed the A/B harness so swap candidates exclude features in the candidate run.
