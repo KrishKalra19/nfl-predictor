@@ -54,3 +54,11 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Dev ensemble: baseline 0.6233. All qbx features 0.6227 (4 of 5 members improve, but −0.0006 is under the 0.002 bar). Age only 0.6235.
 - Not adopted per the ground rules. It's the best candidate so far; revisit if a later change makes it cross the bar.
 - Backup-QB prior skipped: QB2 snap shares are tiny and noisy, and the existing draft-based prior already covers unknown starters.
+
+## 10. Playoff simulation — done (site feature; model use skipped)
+- `src/playoffs.py` simulates the rest of the season 10,000 times (4 s).
+  - Game probabilities: frozen model predictions for this week; Kalman margin ratings with their uncertainty for later weeks.
+  - Seeding: 4 division winners plus 3 wild cards per conference. Real NFL tiebreakers aren't modeled; ties are broken at random.
+- Writes `docs/data/playoff_odds.json`, regenerated on every site build (wrapped so a failure can't break the site).
+- Sanity: playoff, division and #1-seed probabilities sum to exactly 14 / 8 / 2.
+- Not tested as a model feature: the crude stakes flags already showed zero value, and a fair backtest would need simulations for every historical week. Odds are rendered on the site in item 15.

@@ -60,6 +60,11 @@ def main():
     refresh_scores()
     import live_log
     live = live_log.summary(live_log.update())
+    try:
+        import playoffs
+        playoffs.main()
+    except Exception as e:  # the site must still build if the simulation fails
+        print(f"playoff odds skipped: {e}")
     games = load_games()
     now = pd.Timestamp.now(tz="UTC")
     ko = {r.game_id: kickoff_utc(r.gameday, r.gametime) for r in games.itertuples()}
