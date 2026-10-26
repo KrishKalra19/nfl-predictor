@@ -62,3 +62,10 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Writes `docs/data/playoff_odds.json`, regenerated on every site build (wrapped so a failure can't break the site).
 - Sanity: playoff, division and #1-seed probabilities sum to exactly 14 / 8 / 2.
 - Not tested as a model feature: the crude stakes flags already showed zero value, and a fair backtest would need simulations for every historical week. Odds are rendered on the site in item 15.
+
+## 11. "Why this pick" — done
+- `src/explain.py`: the ensemble's logistic member is linear in (team A − team B) feature differences, so its log-odds split exactly into per-feature contributions. ~250 features are summed into 9 readable groups (Quarterback, Roster & injuries, Team strength rating, Offense / Defense / Results this season, Recent form, Special teams, Rest & travel) plus Home field. The top 3 are kept with the team each favors and a strength (slight / moderate / strong by log-odds).
+- Shared context (week, division game) is excluded: in the symmetric model it doesn't favor either side.
+- `predict.py` stores a `why` JSON column per game. The site shows "Grounds" on each case card. Games frozen before this change show none.
+- Example, DAL @ PHI: Roster & injuries → DAL (strong), Offense → DAL (strong), Defense → PHI (moderate).
+- Checked that predictions are unchanged and deterministic: DAL @ PHI's committed Sunday prediction matches a fresh run to every digit.

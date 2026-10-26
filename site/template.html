@@ -78,6 +78,11 @@ nav.tabs a:hover { color: var(--ink); border-bottom-color: var(--brass); }
 .ruling .txt b { font-weight: 600; }
 .gauge { height: 6px; background: var(--panel-2); border: 1px solid var(--line); }
 .gauge > div { height: 100%; background: var(--brass); }
+.grounds { display: flex; flex-direction: column; gap: 4px; }
+.grounds ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 3px; }
+.grounds li { display: flex; justify-content: space-between; gap: 10px; font-size: .86rem; }
+.grounds .str { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.grounds .str.strong { color: var(--brass); }
 .opposing { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
 .opposing b { color: var(--ink); font-weight: 600; }
 .chip { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid currentColor; border-radius: 2px; white-space: nowrap; }
@@ -396,6 +401,15 @@ DATA.this_week.forEach((g, i) => {
   const txt = el("span", "txt"); txt.append("Model rules for ", el("b", null, g.pick), `, ${pct(g.confidence)} sure`);
   const gauge = el("div", "gauge"); const fill = el("div"); fill.style.width = ((g.confidence - 0.5) / 0.5 * 100) + "%"; gauge.append(fill);
   ru.append(el("span", "lbl-sm", "Ruling"), txt, gauge);
+  if (g.why && g.why.length) {
+    const gr = el("div", "grounds"); const ul = el("ul");
+    gr.append(el("span", "lbl-sm", "Grounds"));
+    for (const w of g.why) {
+      const li = el("li"); const l = el("span"); l.append(`${w.factor} `, el("b", null, `→ ${w.favors}`));
+      li.append(l, el("span", "str " + w.strength, w.strength)); ul.append(li);
+    }
+    gr.append(ul); ru.append(gr);
+  }
   const op = el("div", "opposing");
   if (g.vegas_home == null) op.append(el("span", null, "No Vegas line yet"));
   else {

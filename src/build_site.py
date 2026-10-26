@@ -85,6 +85,7 @@ def main():
                 "p_home": round(float(r.p_home), 4),
                 "vegas_home": None if pd.isna(r.vegas_prob) else round(float(r.vegas_prob), 4),
                 "final": scores.get(r.game_id),
+                "why": json.loads(r.why) if isinstance(getattr(r, "why", None), str) else [],
             })
         this_week.sort(key=lambda g: (g["kickoff"] or "", -g["confidence"]))
 

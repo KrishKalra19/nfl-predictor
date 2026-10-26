@@ -34,15 +34,19 @@ def main():
     # Train only on weeks before this one, so a mid-week rerun never learns from this week's results.
     train = df[df["target"].notna() & (df["season"] >= TRAIN_START) & (df["gameday"] < games["gameday"].min())]
 
+    fitted = {}
     for name, (factory, fs) in LINEUP.items():
-        games[name] = factory().fit(train, fsets[fs]).predict(games)
+        fitted[name] = factory().fit(train, fsets[fs])
+        games[name] = fitted[name].predict(games)
         print(f"trained {name}", flush=True)
+    from explain import explain
+    games["why"] = explain(fitted["logreg"], games)
     games["p_home"] = logit_mean([games[n] for n in LINEUP])
 
     out = games[["game_id", "gameday", "away_team", "home_team", "p_home", "vegas_prob", "spread_line",
                  "h_qb_rating", "a_qb_rating", "h_qb_changed", "a_qb_changed",
                  "h_rs_missing_off", "a_rs_missing_off", "h_rs_missing_def", "a_rs_missing_def",
-                 "h_pr_margin", "a_pr_margin"] + list(LINEUP)].copy()
+                 "h_pr_margin", "a_pr_margin", "why"] + list(LINEUP)].copy()
     out["pick"] = np.where(out["p_home"] >= 0.5, out["home_team"], out["away_team"])
     out["confidence"] = np.maximum(out["p_home"], 1 - out["p_home"])
     out["vegas_pick"] = np.where(out["vegas_prob"] >= 0.5, out["home_team"], out["away_team"])
