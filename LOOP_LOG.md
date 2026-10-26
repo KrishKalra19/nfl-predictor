@@ -47,3 +47,10 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Dev ensemble: as an addition 0.6240 (worse; redundant with the ridge ratings). As a replacement for the ridge ratings 0.6236 (a tie, but the Siamese net degrades). Not adopted.
 - Kept because each rating comes with an uncertainty (±), which suits the power-rankings page (item 13).
 - Fixed the A/B harness so swap candidates exclude features in the candidate run.
+
+## 9. QB model upgrade — near miss, not adopted
+- `qbx_rating`: QB EPA per play adjusted for each opponent's pregame pass defense, plus QB age at kickoff (centered at 28, with a squared term). Birth dates come from players.csv.
+- Signal alone: qbx_rating 0.343 vs the existing qb_rating 0.343 (the opponent adjustment adds nothing). QB age 0.137.
+- Dev ensemble: baseline 0.6233. All qbx features 0.6227 (4 of 5 members improve, but −0.0006 is under the 0.002 bar). Age only 0.6235.
+- Not adopted per the ground rules. It's the best candidate so far; revisit if a later change makes it cross the bar.
+- Backup-QB prior skipped: QB2 snap shares are tiny and noisy, and the existing draft-based prior already covers unknown starters.

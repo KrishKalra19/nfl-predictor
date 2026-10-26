@@ -363,6 +363,56 @@ def stakes_features(games):
 
 # ------------------------------------------------------------------ context & Vegas
 
+def qb_adjusted(df, games, qbg, form):
+    """qbx_rating: QB EPA per play adjusted for each opponent's pregame pass defense (long window),
+    decayed and shrunk like qb_rating; qbx_age and qbx_age2 (years at kickoff, centered at 28)."""
+    from common import RAW
+    birth = pd.read_csv(RAW / "players.csv", usecols=["gsis_id", "birth_date"]).dropna()
+    birth = dict(zip(birth["gsis_id"], pd.to_datetime(birth["birth_date"], errors="coerce")))
+    opp_def = {}
+    lf = form.set_index(["game_id", "team"])["l_def_pass_epa"].to_dict()
+    gm = games.set_index("game_id")
+    league = form["l_def_pass_epa"].mean()
+    for gid, r in gm[["home_team", "away_team"]].iterrows():
+        opp_def[(gid, r["home_team"])] = lf.get((gid, r["away_team"]), league) - league
+        opp_def[(gid, r["away_team"])] = lf.get((gid, r["home_team"]), league) - league
+    q = qbg.copy()
+    q["gameday"] = q["game_id"].map(gm["gameday"])
+    q = q.dropna(subset=["gameday"])
+    q["plays"] = q["dropbacks"] + q["qb_runs"]
+    # a QB facing a defense that allows more EPA than average gets less credit
+    q["val"] = q["qb_epa"] + q["qb_run_epa"] - q["plays"] * [opp_def.get((g, t), 0.0) for g, t in zip(q["game_id"], q["team"])]
+    by_game = {g: d for g, d in q.groupby("game_id")}
+    state, last = {}, {}
+    out = {}
+    for g in games.sort_values(["gameday", "gametime", "game_id"]).itertuples():
+        for side in ("home", "away"):
+            team = getattr(g, f"{side}_team")
+            qb = getattr(g, f"{side}_qb_id")
+            if not isinstance(qb, str):
+                qb = last.get(team)
+            s_ = state.get(qb)
+            rating = -0.08 if s_ is None else (s_[0] + 120 * -0.08) / (s_[1] + 120)
+            b = birth.get(qb)
+            age = (pd.Timestamp(g.gameday) - b).days / 365.25 - 28 if b is not None and not pd.isna(b) else 0.0
+            out[(g.game_id, side)] = (rating, age, age * age)
+        d = by_game.get(g.game_id)
+        if d is None:
+            continue
+        for r in d.itertuples():
+            s_ = state.get(r.qb_id, [0.0, 0.0, g.season])
+            if s_[2] != g.season:
+                s_ = [s_[0] * 0.75, s_[1] * 0.75, g.season]
+            state[r.qb_id] = [s_[0] * 0.95 + r.val, s_[1] * 0.95 + r.plays, g.season]
+            last[r.team] = r.qb_id
+    for side, pfx in (("home", "h"), ("away", "a")):
+        v = [out.get((gid, side), (np.nan, np.nan, np.nan)) for gid in df["game_id"]]
+        df[f"{pfx}_qbx_rating"] = [x[0] for x in v]
+        df[f"{pfx}_qbx_age"] = [x[1] for x in v]
+        df[f"{pfx}_qbx_age2"] = [x[2] for x in v]
+    return df
+
+
 def coach_features(df):
     """Per-team coach features from the full schedule history (1999+), using only earlier games:
     coach_new (first season with this team), coach_tenure (log games with team), coach_winpct
@@ -549,6 +599,7 @@ def build(games=None):
     df = add_weather(df, games)
     df = coach_features(df)
     df = kicker_features(df, games)
+    df = qb_adjusted(df, games, qbg, form)
     import kalman
     kf = kalman.ratings(games, tg)
     for side, pfx in (("home", "h"), ("away", "a")):

@@ -18,6 +18,9 @@ CANDIDATES = {
     "coach": ([], [], ["coach_"]),
     "kicker": ([], [], ["k_fgoe"]),
     "kalman": ([], [], ["kf_"]),
+    "qbx": ([], [], ["qbx_"]),
+    "qbx_swap": ([], [], ["qbx_rating"], ["qb_rating"]),
+    "qb_age": ([], [], ["qbx_age"]),
     "kalman_swap": ([], [], ["kf_"], ["pr_", "prm_"]),  # replace ridge ratings with Kalman ratings
     "weather": (["ctx_wx_wind", "ctx_wx_cold", "ctx_wx_precip"], ["dome_cold", "wind_pass"], []),
 }
