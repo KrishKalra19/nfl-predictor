@@ -58,6 +58,8 @@ def refresh_scores():
 
 def main():
     refresh_scores()
+    import live_log
+    live = live_log.summary(live_log.update())
     games = load_games()
     now = pd.Timestamp.now(tz="UTC")
     ko = {r.game_id: kickoff_utc(r.gameday, r.gametime) for r in games.itertuples()}
@@ -105,7 +107,7 @@ def main():
     graded.sort(key=lambda g: (g["season"], g["week"], g["game"]))
 
     data = {"season": season, "week": week, "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-            "this_week": this_week, "graded": graded, "brief": brief()}
+            "this_week": this_week, "graded": graded, "brief": brief(), "live": live}
     DOCS.mkdir(exist_ok=True)
     tpl = (ROOT / "site" / "template.html").read_text(encoding="utf-8")
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
