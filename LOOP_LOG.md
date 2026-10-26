@@ -87,3 +87,10 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - "Week N in review" section on the home page, generated only from the live log (frozen pre-kickoff numbers) and results. No hand-written narrative.
 - Tiles: model record vs Vegas on the same games, Krish's record that week, biggest upset (lowest Vegas probability for the winner), the model's best call and its worst miss (excluding the upset game so tiles don't repeat).
 - Week 6: model 7–6, Vegas 8–5, Krish 5–9. Upset ARI over LA 18-16 (Vegas had ARI at 15%). Best call KC over LAC at 80%.
+
+## 16. Polish — done
+- K&A seal favicon (`favicon.svg`), plus Open Graph / Twitter tags and a 1200×630 link-preview card (`og.png`, drawn by `src/make_og.py` from the real held-out numbers) for both pages, so a shared link shows a proper card.
+- Accessibility: `<main>` landmark on both pages. Contrast checked: muted text on the panel is about 6.6:1. Existing focus outlines were kept.
+- Footer on both pages links to the source code and credits nflverse.
+- Checked at 375px on the local server: no page-level horizontal scroll; the rankings table scrolls inside its box.
+- Skipped the separate print layout: the frame can't print, and the brief already reads cleanly as a page.

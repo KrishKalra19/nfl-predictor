@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Client List · Krish &amp; Associates</title>
 <meta name="description" content="NFL power rankings from a Kalman-filter rating model, with uncertainty and simulated playoff odds.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Client List · Krish &amp; Associates">
+<meta property="og:description" content="NFL power rankings from a Kalman-filter rating model, with uncertainty and simulated playoff odds.">
+<meta property="og:url" content="https://krishkalra19.github.io/nfl-predictor/rankings.html">
+<meta property="og:image" content="https://krishkalra19.github.io/nfl-predictor/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#11151b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -42,7 +52,7 @@
   <a href="index.html#docket">The docket</a><a href="index.html#partners">The partners</a><a href="index.html#record">The record</a><a href="index.html#brief">The brief</a><a href="rankings.html" aria-current="page" style="color:var(--ink);border-bottom-color:var(--brass)">Client list</a>
 </div></nav>
 
-<div class="wrap">
+<main class="wrap" id="main">
   <section style="margin-top:36px">
     <div class="sec-head">
       <span class="sec-mark">The client list</span>
@@ -56,9 +66,10 @@
   </section>
   <footer>
     <span id="built"></span>
+    <span><a href="https://github.com/KrishKalra19/nfl-predictor">Source code on GitHub</a> · Data: nflverse.</span>
     <span>A fan project. Not affiliated with, or endorsed by, the NFL, USA Network, NBCUniversal or the makers of Suits.</span>
   </footer>
-</div>
+</main>
 <script>
 const DATA = /*__DATA__*/null;
 const el = (t, cls, txt) => { const e = document.createElement(t); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };

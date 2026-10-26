@@ -210,7 +210,8 @@ def main():
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
     (DOCS / "index.html").write_text(html, encoding="utf-8")
     import shutil
-    shutil.copy(ROOT / "site" / "style.css", DOCS / "style.css")
+    for asset in ("style.css", "og.png", "favicon.svg"):
+        shutil.copy(ROOT / "site" / asset, DOCS / asset)
     rk = {"season": season, "week": week, "built": data["built"], "teams": rankings(games, season)}
     rtpl = (ROOT / "site" / "rankings.html").read_text(encoding="utf-8")
     (DOCS / "rankings.html").write_text(rtpl.replace("/*__DATA__*/null", json.dumps(rk)), encoding="utf-8")

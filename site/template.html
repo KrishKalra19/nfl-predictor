@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Krish &amp; Associates</title>
 <meta name="description" content="A neural-network ensemble that predicts NFL win probabilities from pregame data, with weekly picks and a graded track record.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Krish &amp; Associates">
+<meta property="og:description" content="A neural-network ensemble that predicts NFL win probabilities from pregame data, with weekly picks, a live track record and a technical brief.">
+<meta property="og:url" content="https://krishkalra19.github.io/nfl-predictor/">
+<meta property="og:image" content="https://krishkalra19.github.io/nfl-predictor/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#11151b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -28,7 +38,7 @@
   <a href="#docket">The docket</a><a href="#partners">The partners</a><a href="#record">The record</a><a href="#brief">The brief</a><a href="rankings.html">Client list</a>
 </div></nav>
 
-<div class="wrap">
+<main class="wrap" id="main">
   <div class="desk" style="margin-top:36px">
     <figure class="qotd">
       <span class="lbl">From the senior partner's desk · <span id="qotd-date"></span></span>
@@ -162,9 +172,10 @@
 
   <footer>
     <span id="built"></span>
+    <span><a href="https://github.com/KrishKalra19/nfl-predictor">Source code on GitHub</a> · Data: nflverse.</span>
     <span>A fan project. Not affiliated with, or endorsed by, the NFL, USA Network, NBCUniversal or the makers of Suits.</span>
   </footer>
-</div>
+</main>
 
 <script>
 const DATA = /*__DATA__*/null;
@@ -178,7 +189,7 @@ const conf = (p) => Math.max(p, 1 - p);
 const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 document.getElementById("docket-title").textContent = `Week ${DATA.week} of the ${DATA.season} season`;
-document.getElementById("built").textContent = `Record last updated ${DATA.built}. Data: nflverse.`;
+document.getElementById("built").textContent = `Record last updated ${DATA.built}.`;
 
 // ---------- partners
 const G = DATA.graded;
