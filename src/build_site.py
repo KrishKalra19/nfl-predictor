@@ -31,6 +31,20 @@ def load_scores(games):
     return s
 
 
+def brief():
+    """Backtest evidence for the technical section (walk-forward, held-out 2022-26)."""
+    d = OUTPUTS / "dashboard"
+    out = {}
+    ms = pd.read_csv(d / "model_scores.csv")
+    out["models"] = ms[ms["phase"] == "test"][["model", "kind", "games", "accuracy", "log_loss"]].to_dict(orient="records")
+    ss = pd.read_csv(d / "season_scores.csv")
+    out["seasons"] = ss[["season", "series", "accuracy", "phase"]].to_dict(orient="records")
+    out["tiers"] = pd.read_csv(d / "confidence_tiers.csv")[["tier", "games", "accuracy", "avg_confidence"]].to_dict(orient="records")
+    fv = pd.read_csv(d / "feature_value.csv")
+    out["features"] = fv[["feature_group", "log_loss_increase"]].to_dict(orient="records")
+    return out
+
+
 def main():
     games = load_games()
     now = pd.Timestamp.now(tz="UTC")
@@ -79,7 +93,7 @@ def main():
     graded.sort(key=lambda g: (g["season"], g["week"], g["game"]))
 
     data = {"season": season, "week": week, "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-            "this_week": this_week, "graded": graded}
+            "this_week": this_week, "graded": graded, "brief": brief()}
     DOCS.mkdir(exist_ok=True)
     tpl = (ROOT / "site" / "template.html").read_text(encoding="utf-8")
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
