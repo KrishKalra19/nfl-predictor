@@ -47,7 +47,7 @@ After phase 2: re-tune the lineup on dev with any adopted features, run the post
 - [x] **11. "Why this pick" on each case.** Expand a case card to show the top 3–4 factors behind the ruling: the logistic model's coefficient × feature difference, in plain words like "QB edge: CIN" or "Rest: +3 days BAL". Explainability is the biggest resume win.
 - [x] **12. Model spread line.** Convert the ridge-margin model into a predicted point spread on each case ("Model line: BAL −2.5"), shown next to Vegas's.
 - [x] **13. Firm rankings page.** Power rankings for all 32 teams (rating, offense and defense EPA rank, QB, trend arrow since last week), styled as "The firm's client list". Ships as a second page, `docs/rankings.html`.
-- [ ] **14. Weekly recap.** Auto-generated each week from data: biggest upset, the model's best and worst calls, and Krish vs the model that week. No made-up narrative.
+- [x] **14. Weekly recap.** Auto-generated each week from data: biggest upset, the model's best and worst calls, and Krish vs the model that week. No made-up narrative.
 - [x] **15. Playoff odds table** (on the rankings page) from #10.
 - [ ] **16. Polish.** Favicon (the K&A seal), social preview image and Open Graph tags, accessibility pass (contrast, focus, landmarks), mobile check at 375px, a print-free resume-friendly layout for The brief, and a footer link to the repo.
 

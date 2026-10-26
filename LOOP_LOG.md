@@ -82,3 +82,8 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
 - Shared styling moved to `site/style.css`, which is copied to `docs/style.css`. Both pages link it.
 - Added `.claude/launch.json` (gitignored) to serve `docs/` locally on port 8765, because file previews can't load relative stylesheets. Verified both pages there: themed, no overflow, no console errors.
 - Current top 3: SEA (+7.8 ±4.1), JAX (+6.3), BUF (+4.7). MIN is 6-0 but 6th by rating (29th offense, 1st defense).
+
+## 14. Weekly recap — done
+- "Week N in review" section on the home page, generated only from the live log (frozen pre-kickoff numbers) and results. No hand-written narrative.
+- Tiles: model record vs Vegas on the same games, Krish's record that week, biggest upset (lowest Vegas probability for the winner), the model's best call and its worst miss (excluding the upset game so tiles don't repeat).
+- Week 6: model 7–6, Vegas 8–5, Krish 5–9. Upset ARI over LA 18-16 (Vegas had ARI at 15%). Best call KC over LAC at 80%.

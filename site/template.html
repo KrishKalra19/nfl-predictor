@@ -46,6 +46,14 @@
     <div class="docket" id="docket-grid"></div>
   </section>
 
+  <section id="recap" hidden>
+    <div class="sec-head">
+      <span class="sec-mark">In review</span>
+      <h2 id="recap-title">Last week's verdicts</h2>
+    </div>
+    <div class="verdicts" id="recap-cells"></div>
+  </section>
+
   <section id="partners">
     <div class="sec-head">
       <span class="sec-mark">The partners</span>
@@ -279,6 +287,22 @@ DATA.this_week.forEach((g, i) => {
   }
   dk.append(c);
 });
+
+// ---------- recap
+(function () {
+  const R = DATA.recap;
+  if (!R) return;
+  document.getElementById("recap").hidden = false;
+  document.getElementById("recap-title").textContent = `Week ${R.week} in review`;
+  const box = document.getElementById("recap-cells");
+  const cell = (lab, big, sub) => { const c = el("div", "verdict-cell"); c.append(el("span", "lbl-sm", lab), el("span", "big", big)); if (sub) c.append(el("span", "small muted", sub)); box.append(c); };
+  cell("The model", `${R.model[0]}–${R.model[1]}`, `Vegas went ${R.vegas[0]}–${R.vegas[1]} on the same ${R.games} games`);
+  if (R.krish) cell("Krish", `${R.krish[0]}–${R.krish[1]}`, "on the games he picked");
+  const u = R.upset;
+  cell("Biggest upset", `${u.winner} over ${u.loser}`, `${u.score}. ` + (u.vegas != null ? `Vegas gave ${u.winner} ${pct(u.vegas)}` : `The model gave ${u.winner} ${pct(u.model)}`));
+  if (R.best) cell("Best call", `${R.best.winner} over ${R.best.loser}`, `${R.best.score}, called at ${pct(R.best.model)}`);
+  if (R.worst) cell("Worst miss", `${R.worst.winner} over ${R.worst.loser}`, `${R.worst.score}. The model had ${R.worst.loser} at ${pct(R.worst.model)}`);
+})();
 
 // ---------- record
 const tb = document.getElementById("history");

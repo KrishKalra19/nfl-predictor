@@ -83,6 +83,42 @@ def rankings(games, season):
     return rows
 
 
+def recap(week_before, season, graded):
+    """Data-only review of the most recent week with graded live predictions."""
+    import live_log
+    log = pd.read_csv(live_log.LOG)
+    log = log[(log["season"] == season) & (log["week"] <= week_before) & log["home_won"].notna()]
+    if log.empty:
+        return None
+    wk = int(log["week"].max())
+    d = log[log["week"] == wk].copy()
+    d = d[d["home_won"] != 0.5]
+    d["winner"] = np.where(d["home_won"] == 1, d["home_team"], d["away_team"])
+    d["loser"] = np.where(d["home_won"] == 1, d["away_team"], d["home_team"])
+    d["p_winner"] = np.where(d["home_won"] == 1, d["p_home"], 1 - d["p_home"])
+    d["v_winner"] = np.where(d["home_won"] == 1, d["vegas_home"], 1 - d["vegas_home"])
+    d["score"] = [f"{max(a, h):.0f}-{min(a, h):.0f}" for a, h in zip(d["away_score"], d["home_score"])]
+    right = d[d["p_winner"] > 0.5]
+    wrong = d[d["p_winner"] < 0.5]
+    up = d.loc[d["v_winner"].idxmin()] if d["v_winner"].notna().any() else d.loc[d["p_winner"].idxmin()]
+    out = {"week": wk, "games": int(len(d)),
+           "model": [int((d["p_winner"] > 0.5).sum()), int((d["p_winner"] < 0.5).sum())],
+           "vegas": [int((d["v_winner"] > 0.5).sum()), int((d["v_winner"] < 0.5).sum())],
+           "upset": {"winner": up["winner"], "loser": up["loser"], "score": up["score"],
+                     "vegas": float(up["v_winner"]) if not pd.isna(up["v_winner"]) else None, "model": float(up["p_winner"])}}
+    if len(right):
+        b = right.loc[right["p_winner"].idxmax()]
+        out["best"] = {"winner": b["winner"], "loser": b["loser"], "score": b["score"], "model": float(b["p_winner"])}
+    wrong = wrong[wrong["winner"] != up["winner"]]  # don't repeat the upset as the worst miss
+    if len(wrong):
+        w = wrong.loc[wrong["p_winner"].idxmin()]
+        out["worst"] = {"winner": w["winner"], "loser": w["loser"], "score": w["score"], "model": float(1 - w["p_winner"])}
+    mine = [g for g in graded if g["week"] == wk and g["season"] == season and g["y"] != 0.5 and abs(g["you"] - 0.5) > 0.004]
+    if mine:
+        out["krish"] = [sum((g["you"] > 0.5) == (g["y"] == 1) for g in mine), sum((g["you"] > 0.5) != (g["y"] == 1) for g in mine)]
+    return out
+
+
 def brief():
     """Backtest evidence for the technical section (walk-forward, held-out 2022-26)."""
     d = OUTPUTS / "dashboard"
@@ -167,7 +203,8 @@ def main():
     graded.sort(key=lambda g: (g["season"], g["week"], g["game"]))
 
     data = {"season": season, "week": week, "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-            "this_week": this_week, "graded": graded, "brief": brief(), "live": live}
+            "this_week": this_week, "graded": graded, "brief": brief(), "live": live,
+            "recap": recap(week - 1, season, graded)}
     DOCS.mkdir(exist_ok=True)
     tpl = (ROOT / "site" / "template.html").read_text(encoding="utf-8")
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
