@@ -1,0 +1,5603 @@
+{
+ "id": "2026-08",
+ "season": 2026,
+ "week": 8,
+ "generated_at": "2026-10-27T04:06:33Z",
+ "injury_report_posted": false,
+ "games": [
+  {
+   "game_id": "2026_08_CAR_GB",
+   "kickoff": "2026-10-30T00:15:00Z",
+   "kickoff_label": "Thu Oct 29, 8:15 PM ET",
+   "away": "CAR",
+   "home": "GB",
+   "venue": "Lambeau Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873023",
+   "teams": {
+    "away": {
+     "abbr": "CAR",
+     "name": "Panthers",
+     "record": "3-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "TB",
+       "home": true,
+       "pf": 13,
+       "pa": 43,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "PHI",
+       "home": false,
+       "pf": 25,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "DET",
+       "home": true,
+       "pf": 32,
+       "pa": 26,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CLE",
+       "home": false,
+       "pf": 18,
+       "pa": 21,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "ATL",
+       "home": false,
+       "pf": 34,
+       "pa": 3,
+       "result": "W"
+      }
+     ],
+     "off_rank": 8,
+     "def_rank": 17,
+     "ppg": 26.5,
+     "papg": 27.7,
+     "rest_days": 4,
+     "travel_miles": 746,
+     "qb": {
+      "name": "Bryce Young",
+      "epa_per_play": 0.064,
+      "recent_plays": 317,
+      "changed": false,
+      "last_starter": "Bryce Young"
+     },
+     "missing": [
+      {
+       "name": "Robert Hunt",
+       "pos": "G",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Luke Fortner",
+       "pos": "C",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bryce Young",
+       "pos": "QB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rasheed Walker",
+       "pos": "T",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tre'von Moehrig",
+       "pos": "S",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bobby Okereke",
+       "pos": "LB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Will Lee",
+       "pos": "CB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tetairoa McMillan",
+       "pos": "WR",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Derrick Brown",
+       "pos": "DT",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Devin Lloyd",
+       "pos": "LB",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Damien Lewis",
+       "pos": "G",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Akayleb Evans",
+       "pos": "CB",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Monroe Freeling",
+       "pos": "T",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zakee Wheatley",
+       "pos": "S",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaelan Phillips",
+       "pos": "LB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tommy Tremble",
+       "pos": "TE",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brycen Tremayne",
+       "pos": "WR",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Lathan Ransom",
+       "pos": "S",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Patrick Jones II",
+       "pos": "LB",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nick Scott",
+       "pos": "S",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mitchell Evans",
+       "pos": "TE",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "GB",
+     "name": "Packers",
+     "record": "4-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DET",
+       "home": false,
+       "pf": 17,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "DAL",
+       "home": true,
+       "pf": 23,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "CHI",
+       "home": true,
+       "pf": 31,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "TB",
+       "home": false,
+       "pf": 17,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "ATL",
+       "home": true,
+       "pf": 14,
+       "pa": 35,
+       "result": "L"
+      }
+     ],
+     "off_rank": 15,
+     "def_rank": 14,
+     "ppg": 20.6,
+     "papg": 20.7,
+     "rest_days": 4,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jordan Love",
+      "epa_per_play": 0.141,
+      "recent_plays": 306,
+      "changed": false,
+      "last_starter": "Jordan Love"
+     },
+     "missing": [
+      {
+       "name": "Sean Rhyan",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordan Morgan",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Evan Williams",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordan Love",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zaire Franklin",
+       "pos": "LB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Xavier McKinney",
+       "pos": "S",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Keisean Nixon",
+       "pos": "CB",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brandon Cisse",
+       "pos": "CB",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Matthew Golden",
+       "pos": "WR",
+       "snap_share": 0.83,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Javon Bullard",
+       "pos": "S",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tucker Kraft",
+       "pos": "TE",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Watson",
+       "pos": "WR",
+       "snap_share": 0.79,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Anthony Belton",
+       "pos": "T",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Laken Tomlinson",
+       "pos": "G",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Lukas Van Ness",
+       "pos": "DE",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Karl Brooks",
+       "pos": "DT",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travis Glover",
+       "pos": "T",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_ARI_DAL",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "ARI",
+   "home": "DAL",
+   "venue": "AT&T Stadium",
+   "roof": "",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873024",
+   "teams": {
+    "away": {
+     "abbr": "ARI",
+     "name": "Cardinals",
+     "record": "2-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DEN",
+       "home": true,
+       "pf": 16,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "LA",
+       "home": false,
+       "pf": 18,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DET",
+       "home": true,
+       "pf": 21,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NYG",
+       "home": false,
+       "pf": 24,
+       "pa": 36,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "SF",
+       "home": false,
+       "pf": 30,
+       "pa": 36,
+       "result": "L"
+      }
+     ],
+     "off_rank": 19,
+     "def_rank": 28,
+     "ppg": 20.3,
+     "papg": 29.7,
+     "rest_days": 7,
+     "travel_miles": 879,
+     "qb": {
+      "name": "Jacoby Brissett",
+      "epa_per_play": -0.001,
+      "recent_plays": 334,
+      "changed": false,
+      "last_starter": "Jacoby Brissett"
+     },
+     "missing": [
+      {
+       "name": "Jacoby Brissett",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Elijah Wilkinson",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Hjalte Froholdt",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Isaac Seumalo",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Budda Baker",
+       "pos": "S",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mack Wilson",
+       "pos": "LB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Trey McBride",
+       "pos": "TE",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Michael Wilson",
+       "pos": "WR",
+       "snap_share": 0.91,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Denzel Burke",
+       "pos": "CB",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jack Gibbens",
+       "pos": "LB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Max Melton",
+       "pos": "CB",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jon Gaines",
+       "pos": "OL",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Walter Nolen",
+       "pos": "DL",
+       "snap_share": 0.62,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Sweat",
+       "pos": "LB",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kendrick Bourne",
+       "pos": "WR",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jayden Williams",
+       "pos": "OL",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Garrett Williams",
+       "pos": "CB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DAL",
+     "name": "Cowboys",
+     "record": "2-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "GB",
+       "home": false,
+       "pf": 13,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "TB",
+       "home": true,
+       "pf": 16,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "HOU",
+       "home": false,
+       "pf": 34,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "BAL",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "WAS",
+       "home": true,
+       "pf": 37,
+       "pa": 20,
+       "result": "W"
+      }
+     ],
+     "off_rank": 6,
+     "def_rank": 31,
+     "ppg": 25.2,
+     "papg": 26.5,
+     "rest_days": 6,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Dak Prescott",
+      "epa_per_play": 0.13,
+      "recent_plays": 315,
+      "changed": false,
+      "last_starter": "Dak Prescott"
+     },
+     "missing": [
+      {
+       "name": "Tyler Booker",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cooper Beebe",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dak Prescott",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Caleb Downs",
+       "pos": "DB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Terence Steele",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "DaRon Bland",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Guyton",
+       "pos": "T",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "George Pickens",
+       "pos": "WR",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "CeeDee Lamb",
+       "pos": "WR",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaishawn Barham",
+       "pos": "LB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Javonte Williams",
+       "pos": "RB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ryan Flournoy",
+       "pos": "WR",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Donovan Ezeiruaku",
+       "pos": "LB",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rashan Gary",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jake Ferguson",
+       "pos": "TE",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kenny Clark",
+       "pos": "DT",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quinnen Williams",
+       "pos": "DT",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dee Winters",
+       "pos": "LB",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malik Hooker",
+       "pos": "S",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Shemar James",
+       "pos": "LB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "T.J. Bass",
+       "pos": "G",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Smith",
+       "pos": "G",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_ATL_TB",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "ATL",
+   "home": "TB",
+   "venue": "Raymond James Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873025",
+   "teams": {
+    "away": {
+     "abbr": "ATL",
+     "name": "Falcons",
+     "record": "3-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "SF",
+       "home": true,
+       "pf": 29,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CHI",
+       "home": true,
+       "pf": 23,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "BAL",
+       "home": true,
+       "pf": 23,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NO",
+       "home": false,
+       "pf": 45,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "GB",
+       "home": false,
+       "pf": 35,
+       "pa": 14,
+       "result": "W"
+      }
+     ],
+     "off_rank": 21,
+     "def_rank": 11,
+     "ppg": 24.4,
+     "papg": 24.7,
+     "rest_days": 7,
+     "travel_miles": 415,
+     "qb": {
+      "name": "Michael Penix Jr.",
+      "epa_per_play": 0.071,
+      "recent_plays": 248,
+      "changed": false,
+      "last_starter": "Michael Penix Jr."
+     },
+     "missing": [
+      {
+       "name": "Matthew Bergeron",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ryan Neuzil",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chris Lindstrom",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jawaan Taylor",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Xavier Watts",
+       "pos": "S",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Michael Penix",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jessie Bates III",
+       "pos": "S",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Drake London",
+       "pos": "WR",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mike Hughes",
+       "pos": "CB",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jake Matthews",
+       "pos": "T",
+       "snap_share": 0.79,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Divine Deablo",
+       "pos": "LB",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bijan Robinson",
+       "pos": "RB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jahan Dotson",
+       "pos": "WR",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kyle Pitts",
+       "pos": "TE",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cameron Thomas",
+       "pos": "DE",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "C.J. Henderson",
+       "pos": "CB",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brandon Dorlus",
+       "pos": "DL",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Avieon Terrell",
+       "pos": "CB",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Harold Perkins",
+       "pos": "LB",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Gervon Dexter",
+       "pos": "DT",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Charlie Woerner",
+       "pos": "TE",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Maason Smith",
+       "pos": "DL",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kendal Daniels",
+       "pos": "LB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "TB",
+     "name": "Buccaneers",
+     "record": "2-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CAR",
+       "home": false,
+       "pf": 43,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "PIT",
+       "home": true,
+       "pf": 19,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DAL",
+       "home": false,
+       "pf": 24,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "GB",
+       "home": true,
+       "pf": 14,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "MIN",
+       "home": true,
+       "pf": 16,
+       "pa": 23,
+       "result": "L"
+      }
+     ],
+     "off_rank": 30,
+     "def_rank": 4,
+     "ppg": 23.1,
+     "papg": 21.6,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Baker Mayfield",
+      "epa_per_play": -0.082,
+      "recent_plays": 281,
+      "changed": true,
+      "last_starter": "Jalon Daniels"
+     },
+     "missing": [
+      {
+       "name": "Alex Anzalone",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Graham Barton",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ben Bredeson",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zyon McCollum",
+       "pos": "CB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Luke Goedeke",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cody Mauch",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tristan Wirfs",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jacob Parrish",
+       "pos": "CB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tykee Smith",
+       "pos": "S",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cade Otton",
+       "pos": "TE",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Emeka Egbuka",
+       "pos": "WR",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chris Godwin",
+       "pos": "WR",
+       "snap_share": 0.83,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Vita Vea",
+       "pos": "NT",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalon Daniels",
+       "pos": "QB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josiah Trotter",
+       "pos": "LB",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Calijah Kancey",
+       "pos": "DL",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bucky Irving",
+       "pos": "RB",
+       "snap_share": 0.62,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "YaYa Diaby",
+       "pos": "LB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Keionte Scott",
+       "pos": "DB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ted Hurst",
+       "pos": "WR",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ifeatu Melifonwu",
+       "pos": "S",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_BAL_BUF",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "BAL",
+   "home": "BUF",
+   "venue": "Highmark Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873026",
+   "teams": {
+    "away": {
+     "abbr": "BAL",
+     "name": "Ravens",
+     "record": "4-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CIN",
+       "home": true,
+       "pf": 13,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CLE",
+       "home": false,
+       "pf": 10,
+       "pa": 13,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "ATL",
+       "home": false,
+       "pf": 30,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "TEN",
+       "home": true,
+       "pf": 24,
+       "pa": 18,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DAL",
+       "home": false,
+       "pf": 34,
+       "pa": 31,
+       "result": "W"
+      }
+     ],
+     "off_rank": 7,
+     "def_rank": 12,
+     "ppg": 24.1,
+     "papg": 23.9,
+     "rest_days": 7,
+     "travel_miles": 267,
+     "qb": {
+      "name": "Tyler Huntley",
+      "epa_per_play": 0.065,
+      "recent_plays": 215,
+      "changed": false,
+      "last_starter": "Tyler Huntley"
+     },
+     "missing": [
+      {
+       "name": "Olaivavega Ioane",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "John Simpson",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Roquan Smith",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Roger Rosengarten",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nate Wiggins",
+       "pos": "CB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malaki Starks",
+       "pos": "S",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kyle Hamilton",
+       "pos": "S",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylinn Hawkins",
+       "pos": "S",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nnamdi Madubuike",
+       "pos": "DL",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ronnie Stanley",
+       "pos": "T",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Marlon Humphrey",
+       "pos": "CB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zay Flowers",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tavius Robinson",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Emery Jones",
+       "pos": "G",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mark Andrews",
+       "pos": "TE",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Huntley",
+       "pos": "QB",
+       "snap_share": 0.62,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rashod Bateman",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Derrick Henry",
+       "pos": "RB",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Trenton Simpson",
+       "pos": "LB",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travis Jones",
+       "pos": "DL",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Devontez Walker",
+       "pos": "WR",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "BUF",
+     "name": "Bills",
+     "record": "5-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "LV",
+       "home": false,
+       "pf": 33,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LA",
+       "home": false,
+       "pf": 37,
+       "pa": 34,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NE",
+       "home": true,
+       "pf": 26,
+       "pa": 29,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "LAC",
+       "home": true,
+       "pf": 24,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DET",
+       "home": true,
+       "pf": 41,
+       "pa": 31,
+       "result": "W"
+      }
+     ],
+     "off_rank": 1,
+     "def_rank": 30,
+     "ppg": 32.8,
+     "papg": 28.5,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Josh Allen",
+      "epa_per_play": 0.283,
+      "recent_plays": 301,
+      "changed": false,
+      "last_starter": "Josh Allen"
+     },
+     "missing": [
+      {
+       "name": "Josh Allen",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alec Anderson",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cole Bishop",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Connor McGovern",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dion Dawkins",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "O'Cyrus Torrence",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Terrel Bernard",
+       "pos": "LB",
+       "snap_share": 0.9,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "C.J. Gardner-Johnson",
+       "pos": "S",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Spencer Brown",
+       "pos": "T",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Gregory Rousseau",
+       "pos": "LB",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Deone Walker",
+       "pos": "DL",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Davison Igbinosun",
+       "pos": "CB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Keon Coleman",
+       "pos": "WR",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bradley Chubb",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Khalil Shakir",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dorian Williams",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dawson Knox",
+       "pos": "TE",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dalton Kincaid",
+       "pos": "TE",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Benford",
+       "pos": "CB",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "James Cook",
+       "pos": "RB",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Maxwell Hairston",
+       "pos": "CB",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_CLE_PIT",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "CLE",
+   "home": "PIT",
+   "venue": "Acrisure Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873027",
+   "teams": {
+    "away": {
+     "abbr": "CLE",
+     "name": "Browns",
+     "record": "5-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "TEN",
+       "home": false,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "BAL",
+       "home": true,
+       "pf": 13,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 12,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "PIT",
+       "home": true,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CAR",
+       "home": true,
+       "pf": 21,
+       "pa": 18,
+       "result": "W"
+      }
+     ],
+     "off_rank": 24,
+     "def_rank": 15,
+     "ppg": 19.0,
+     "papg": 20.9,
+     "rest_days": 7,
+     "travel_miles": 114,
+     "qb": {
+      "name": "Deshaun Watson",
+      "epa_per_play": -0.038,
+      "recent_plays": 267,
+      "changed": false,
+      "last_starter": "Deshaun Watson"
+     },
+     "missing": [
+      {
+       "name": "Austin Barber",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Spencer Fano",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zion Johnson",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Carson Schwesinger",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ronnie Hickman",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Denzel Ward",
+       "pos": "CB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Deshaun Watson",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quincy Williams",
+       "pos": "LB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Denzel Boston",
+       "pos": "WR",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Harold Fannin",
+       "pos": "TE",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tytus Howard",
+       "pos": "T",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Grant Delpit",
+       "pos": "S",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Elgton Jenkins",
+       "pos": "C",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyson Campbell",
+       "pos": "CB",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Maliek Collins",
+       "pos": "DT",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "KC Concepcion",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jared Verse",
+       "pos": "DE",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Isaiah McGuire",
+       "pos": "DE",
+       "snap_share": 0.62,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Myles Harden",
+       "pos": "CB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jerry Jeudy",
+       "pos": "WR",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Emmanuel McNeil-Warren",
+       "pos": "S",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Adin Huntington",
+       "pos": "DE",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "PIT",
+     "name": "Steelers",
+     "record": "5-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NO",
+       "home": false,
+       "pf": 16,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "TB",
+       "home": false,
+       "pf": 26,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "IND",
+       "home": true,
+       "pf": 34,
+       "pa": 22,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CLE",
+       "home": false,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CIN",
+       "home": true,
+       "pf": 30,
+       "pa": 27,
+       "result": "W"
+      }
+     ],
+     "off_rank": 20,
+     "def_rank": 6,
+     "ppg": 21.9,
+     "papg": 19.7,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Aaron Rodgers",
+      "epa_per_play": -0.136,
+      "recent_plays": 337,
+      "changed": false,
+      "last_starter": "Aaron Rodgers"
+     },
+     "missing": [
+      {
+       "name": "Troy Fautanu",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaquan Brisker",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zach Frazier",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brock Hoffman",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mason McCormick",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Max Iheanachor",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Patrick Queen",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Ramsey",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Aaron Rodgers",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "D.K. Metcalf",
+       "pos": "WR",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Asante Samuel Jr.",
+       "pos": "CB",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylen Warren",
+       "pos": "RB",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Payton Wilson",
+       "pos": "LB",
+       "snap_share": 0.83,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "T.J. Watt",
+       "pos": "LB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Darnell Washington",
+       "pos": "TE",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alex Highsmith",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Pat Freiermuth",
+       "pos": "TE",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cameron Heyward",
+       "pos": "DT",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Germie Bernard",
+       "pos": "WR",
+       "snap_share": 0.63,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Keeanu Benton",
+       "pos": "DT",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Daylen Everette",
+       "pos": "CB",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nick Herbig",
+       "pos": "LB",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_IND_JAX",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "IND",
+   "home": "JAX",
+   "venue": "EverBank Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873028",
+   "teams": {
+    "away": {
+     "abbr": "IND",
+     "name": "Colts",
+     "record": "2-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "MIN",
+       "home": false,
+       "pf": 10,
+       "pa": 16,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "TEN",
+       "home": true,
+       "pf": 20,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "PIT",
+       "home": false,
+       "pf": 22,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "WAS",
+       "home": false,
+       "pf": 30,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "HOU",
+       "home": true,
+       "pf": 19,
+       "pa": 17,
+       "result": "W"
+      }
+     ],
+     "off_rank": 22,
+     "def_rank": 23,
+     "ppg": 22.0,
+     "papg": 25.7,
+     "rest_days": 7,
+     "travel_miles": 700,
+     "qb": {
+      "name": "Daniel Jones",
+      "epa_per_play": -0.082,
+      "recent_plays": 276,
+      "changed": false,
+      "last_starter": "Daniel Jones"
+     },
+     "missing": [
+      {
+       "name": "Tanor Bortolini",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Matt Goncalves",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Daniel Jones",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Camryn Bynum",
+       "pos": "S",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Charvarius Ward",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quenton Nelson",
+       "pos": "G",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Travis",
+       "pos": "T",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bernhard Raimann",
+       "pos": "T",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Akeem Davis-Gaither",
+       "pos": "LB",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "DeForest Buckner",
+       "pos": "DT",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Sauce Gardner",
+       "pos": "CB",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Laquon Treadwell",
+       "pos": "WR",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "A.J. Haulcy",
+       "pos": "S",
+       "snap_share": 0.83,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Downs",
+       "pos": "WR",
+       "snap_share": 0.79,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jonathan Taylor",
+       "pos": "RB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Laiatu Latu",
+       "pos": "DE",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Walley",
+       "pos": "CB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "JT Tuimoloau",
+       "pos": "DE",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Warren",
+       "pos": "TE",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Grover Stewart",
+       "pos": "DT",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "JAX",
+     "name": "Jaguars",
+     "record": "4-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "HOU",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "PHI",
+       "home": true,
+       "pf": 19,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CIN",
+       "home": false,
+       "pf": 22,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NE",
+       "home": true,
+       "pf": 35,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DEN",
+       "home": false,
+       "pf": 13,
+       "pa": 20,
+       "result": "L"
+      }
+     ],
+     "off_rank": 5,
+     "def_rank": 16,
+     "ppg": 25.7,
+     "papg": 17.3,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Trevor Lawrence",
+      "epa_per_play": 0.242,
+      "recent_plays": 267,
+      "changed": false,
+      "last_starter": "Trevor Lawrence"
+     },
+     "missing": [
+      {
+       "name": "Emmanuel Pregnon",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Robert Hainsey",
+       "pos": "OL",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Trevor Lawrence",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cole Van Lanen",
+       "pos": "OL",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ezra Cleveland",
+       "pos": "OL",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Foyesade Oluokun",
+       "pos": "LB",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jarrian Jones",
+       "pos": "CB",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travis Hunter",
+       "pos": "WR",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travon Walker",
+       "pos": "DE",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Antonio Johnson",
+       "pos": "S",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jakobi Meyers",
+       "pos": "WR",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brenton Strange",
+       "pos": "TE",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Hines-Allen",
+       "pos": "DE",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Parker Washington",
+       "pos": "WR",
+       "snap_share": 0.79,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ventrell Miller",
+       "pos": "LB",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Arik Armstead",
+       "pos": "DT",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jourdan Lewis",
+       "pos": "CB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Anton Harrison",
+       "pos": "OL",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Eric Murray",
+       "pos": "S",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bhayshul Tuten",
+       "pos": "RB",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_LV_NYJ",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "LV",
+   "home": "NYJ",
+   "venue": "MetLife Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873029",
+   "teams": {
+    "away": {
+     "abbr": "LV",
+     "name": "Raiders",
+     "record": "3-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "LA",
+       "home": true,
+       "pf": 21,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "BUF",
+       "home": true,
+       "pf": 30,
+       "pa": 33,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NE",
+       "home": false,
+       "pf": 17,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "KC",
+       "home": true,
+       "pf": 27,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NO",
+       "home": false,
+       "pf": 35,
+       "pa": 27,
+       "result": "W"
+      }
+     ],
+     "off_rank": 13,
+     "def_rank": 20,
+     "ppg": 26.1,
+     "papg": 28.1,
+     "rest_days": 7,
+     "travel_miles": 2228,
+     "qb": {
+      "name": "Kirk Cousins",
+      "epa_per_play": 0.156,
+      "recent_plays": 278,
+      "changed": false,
+      "last_starter": "Kirk Cousins"
+     },
+     "missing": [
+      {
+       "name": "Spencer Burford",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jeremy Chinn",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nakobe Dean",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Delmar Glaze",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quay Walker",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kolton Miller",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Linderbaum",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Eric Stokes",
+       "pos": "CB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kirk Cousins",
+       "pos": "QB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Taron Johnson",
+       "pos": "CB",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Maxx Crosby",
+       "pos": "DE",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brock Bowers",
+       "pos": "TE",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Michael Mayer",
+       "pos": "TE",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Treydan Stukes",
+       "pos": "S",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tre Tucker",
+       "pos": "WR",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ashton Jeanty",
+       "pos": "RB",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Hezekiah Masses",
+       "pos": "CB",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kwity Paye",
+       "pos": "DE",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Adam Butler",
+       "pos": "DT",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Caleb Rogers",
+       "pos": "G",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "NYJ",
+     "name": "Jets",
+     "record": "2-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "MIA",
+       "home": true,
+       "pf": 25,
+       "pa": 28,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NE",
+       "home": false,
+       "pf": 19,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "CLE",
+       "home": true,
+       "pf": 17,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CHI",
+       "home": false,
+       "pf": 12,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DET",
+       "home": false,
+       "pf": 24,
+       "pa": 31,
+       "result": "L"
+      }
+     ],
+     "off_rank": 18,
+     "def_rank": 9,
+     "ppg": 19.6,
+     "papg": 21.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Geno Smith",
+      "epa_per_play": 0.017,
+      "recent_plays": 259,
+      "changed": false,
+      "last_starter": "Geno Smith"
+     },
+     "missing": [
+      {
+       "name": "Dane Belton",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Geno Smith",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Myers",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Olu Fashanu",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Demario Davis",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Azareye'h Thomas",
+       "pos": "CB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Joe Tippmann",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Armand Membou",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brandon Stephens",
+       "pos": "CB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jamien Sherwood",
+       "pos": "LB",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordan Meredith",
+       "pos": "OL",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "David Bailey",
+       "pos": "DE",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Braelon Allen",
+       "pos": "RB",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Minkah Fitzpatrick",
+       "pos": "S",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Isaiah Williams",
+       "pos": "WR",
+       "snap_share": 0.65,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jarvis Brownlee",
+       "pos": "DB",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Harrison Phillips",
+       "pos": "DL",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "T'Vondre Sweat",
+       "pos": "DL",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jowon Briggs",
+       "pos": "DL",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kingsley Enagbare",
+       "pos": "DE",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_MIN_DET",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "MIN",
+   "home": "DET",
+   "venue": "Ford Field",
+   "roof": "dome",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873030",
+   "teams": {
+    "away": {
+     "abbr": "MIN",
+     "name": "Vikings",
+     "record": "6-0",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "IND",
+       "home": true,
+       "pf": 16,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NO",
+       "home": false,
+       "pf": 23,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "MIA",
+       "home": true,
+       "pf": 15,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "TB",
+       "home": false,
+       "pf": 23,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "CHI",
+       "home": false,
+       "pf": 9,
+       "pa": 3,
+       "result": "W"
+      }
+     ],
+     "off_rank": 27,
+     "def_rank": 1,
+     "ppg": 20.8,
+     "papg": 12.3,
+     "rest_days": 7,
+     "travel_miles": 541,
+     "qb": {
+      "name": "Kyler Murray",
+      "epa_per_play": -0.042,
+      "recent_plays": 261,
+      "changed": false,
+      "last_starter": "Kyler Murray"
+     },
+     "missing": [
+      {
+       "name": "Blake Brandel",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Metellus",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Will Fries",
+       "pos": "G",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brian O'Neill",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Blake Cashman",
+       "pos": "LB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Eric Wilson",
+       "pos": "LB",
+       "snap_share": 0.93,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Byron Murphy",
+       "pos": "CB",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Isaiah Rodgers",
+       "pos": "CB",
+       "snap_share": 0.9,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Andrew Van Ginkel",
+       "pos": "LB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dallas Turner",
+       "pos": "LB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Redmond",
+       "pos": "DL",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Aaron Jones",
+       "pos": "RB",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kyler Murray",
+       "pos": "QB",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordan Addison",
+       "pos": "WR",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Darrisaw",
+       "pos": "T",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Theo Jackson",
+       "pos": "S",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jauan Jennings",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "T.J. Hockenson",
+       "pos": "TE",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Levi Drake Rodriguez",
+       "pos": "DL",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Harrison Smith",
+       "pos": "S",
+       "snap_share": 0.53,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyrion Ingram-Dawkins",
+       "pos": "DL",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Donovan Jackson",
+       "pos": "G",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Jefferson",
+       "pos": "WR",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DET",
+     "name": "Lions",
+     "record": "4-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "GB",
+       "home": true,
+       "pf": 20,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "ARI",
+       "home": false,
+       "pf": 45,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "CAR",
+       "home": false,
+       "pf": 26,
+       "pa": 32,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 31,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "BUF",
+       "home": false,
+       "pf": 31,
+       "pa": 41,
+       "result": "L"
+      }
+     ],
+     "off_rank": 3,
+     "def_rank": 32,
+     "ppg": 30.7,
+     "papg": 27.5,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jared Goff",
+      "epa_per_play": 0.204,
+      "recent_plays": 343,
+      "changed": false,
+      "last_starter": "Jared Goff"
+     },
+     "missing": [
+      {
+       "name": "Jack Campbell",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jared Goff",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Penei Sewell",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Juice Scruggs",
+       "pos": "OL",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tate Ratledge",
+       "pos": "OL",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "D.J. Reed",
+       "pos": "CB",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chuck Clark",
+       "pos": "S",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jameson Williams",
+       "pos": "WR",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Aidan Hutchinson",
+       "pos": "DE",
+       "snap_share": 0.91,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Sam LaPorta",
+       "pos": "TE",
+       "snap_share": 0.9,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Amon-Ra St. Brown",
+       "pos": "WR",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Derrick Barnes",
+       "pos": "LB",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Roger McCreary",
+       "pos": "CB",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alim McNeill",
+       "pos": "DL",
+       "snap_share": 0.79,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jahmyr Gibbs",
+       "pos": "RB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Mahogany",
+       "pos": "OL",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Blake Miller",
+       "pos": "T",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Isaac TeSlaa",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Izien",
+       "pos": "DB",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyleik Williams",
+       "pos": "DL",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "D.J. Wonnum",
+       "pos": "DE",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_TEN_CIN",
+   "kickoff": "2026-11-01T18:00:00Z",
+   "kickoff_label": "Sun Nov 1, 1:00 PM ET",
+   "away": "TEN",
+   "home": "CIN",
+   "venue": "Paycor Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873031",
+   "teams": {
+    "away": {
+     "abbr": "TEN",
+     "name": "Titans",
+     "record": "1-6",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CLE",
+       "home": true,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "IND",
+       "home": false,
+       "pf": 26,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "HOU",
+       "home": true,
+       "pf": 3,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "BAL",
+       "home": false,
+       "pf": 18,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "NYG",
+       "home": false,
+       "pf": 7,
+       "pa": 12,
+       "result": "L"
+      }
+     ],
+     "off_rank": 29,
+     "def_rank": 22,
+     "ppg": 15.4,
+     "papg": 22.3,
+     "rest_days": 7,
+     "travel_miles": 237,
+     "qb": {
+      "name": "Cam Ward",
+      "epa_per_play": -0.141,
+      "recent_plays": 240,
+      "changed": false,
+      "last_starter": "Cam Ward"
+     },
+     "missing": [
+      {
+       "name": "Dan Moore",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cam Ward",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Peter Skoronski",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Austin Schlottmann",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Anthony Hill",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "JC Latham",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jeffery Simmons",
+       "pos": "DT",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cordale Flott",
+       "pos": "CB",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Carnell Tate",
+       "pos": "WR",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cody Barton",
+       "pos": "LB",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Atonio Mafi",
+       "pos": "G",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Amani Hooker",
+       "pos": "S",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alontae Taylor",
+       "pos": "CB",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Gunnar Helm",
+       "pos": "TE",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Wan'Dale Robinson",
+       "pos": "WR",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Elic Ayomanor",
+       "pos": "WR",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Marcus Harris",
+       "pos": "CB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jacob Martin",
+       "pos": "DE",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tony Pollard",
+       "pos": "RB",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tony Adams",
+       "pos": "S",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jermaine Johnson II",
+       "pos": "DE",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "John Franklin-Myers",
+       "pos": "DL",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kevin Winston",
+       "pos": "S",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "CIN",
+     "name": "Bengals",
+     "record": "4-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "BAL",
+       "home": false,
+       "pf": 35,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "MIA",
+       "home": false,
+       "pf": 31,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "JAX",
+       "home": true,
+       "pf": 17,
+       "pa": 22,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "PIT",
+       "home": false,
+       "pf": 27,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "HOU",
+       "home": false,
+       "pf": 20,
+       "pa": 6,
+       "result": "W"
+      }
+     ],
+     "off_rank": 9,
+     "def_rank": 18,
+     "ppg": 27.2,
+     "papg": 20.3,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Joe Burrow",
+      "epa_per_play": 0.244,
+      "recent_plays": 316,
+      "changed": false,
+      "last_starter": "Joe Burrow"
+     },
+     "missing": [
+      {
+       "name": "Jordan Battle",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Joe Burrow",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Orlando Brown Jr.",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dalton Risner",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ted Karras",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Barrett Carter",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dylan Fairchild",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "DJ Turner",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Daxton Hill",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Amarius Mims",
+       "pos": "T",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Demetrius Knight",
+       "pos": "LB",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tee Higgins",
+       "pos": "WR",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Boye Mafe",
+       "pos": "DE",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ja'Marr Chase",
+       "pos": "WR",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dexter Lawrence",
+       "pos": "DT",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chase Brown",
+       "pos": "HB",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jonathan Allen",
+       "pos": "DT",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Myles Murphy",
+       "pos": "DE",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bryan Cook",
+       "pos": "S",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_LAC_LA",
+   "kickoff": "2026-11-01T21:05:00Z",
+   "kickoff_label": "Sun Nov 1, 4:05 PM ET",
+   "away": "LAC",
+   "home": "LA",
+   "venue": "SoFi Stadium",
+   "roof": "dome",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873032",
+   "teams": {
+    "away": {
+     "abbr": "LAC",
+     "name": "Chargers",
+     "record": "0-6",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "KC",
+       "home": false,
+       "pf": 6,
+       "pa": 22,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "DEN",
+       "home": true,
+       "pf": 17,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "SEA",
+       "home": false,
+       "pf": 23,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "BUF",
+       "home": false,
+       "pf": 16,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "LV",
+       "home": true,
+       "pf": 14,
+       "pa": 26,
+       "result": "L"
+      }
+     ],
+     "off_rank": 32,
+     "def_rank": 8,
+     "ppg": 15.0,
+     "papg": 25.2,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Justin Herbert",
+      "epa_per_play": -0.252,
+      "recent_plays": 288,
+      "changed": false,
+      "last_starter": "Justin Herbert"
+     },
+     "missing": [
+      {
+       "name": "Jake Slaughter",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cole Strange",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Herbert",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tarheeb Still",
+       "pos": "CB",
+       "snap_share": 0.97,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cam Hart",
+       "pos": "CB",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Daiyan Henley",
+       "pos": "LB",
+       "snap_share": 0.91,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tuli Tuipulotu",
+       "pos": "LB",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Khalil Mack",
+       "pos": "LB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travis Burke",
+       "pos": "T",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Del'Shawn Phillips",
+       "pos": "LB",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tony Jefferson",
+       "pos": "S",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quentin Johnston",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Teair Tart",
+       "pos": "DL",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Logan Taylor",
+       "pos": "G",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Genesis Smith",
+       "pos": "S",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Akheem Mesidor",
+       "pos": "LB",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Oronde Gadsden II",
+       "pos": "TE",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Elijah Molden",
+       "pos": "DB",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Eboigbe",
+       "pos": "DL",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alex Harkey",
+       "pos": "G",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "LA",
+     "name": "Rams",
+     "record": "3-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "LV",
+       "home": false,
+       "pf": 35,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "ARI",
+       "home": true,
+       "pf": 16,
+       "pa": 18,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "BUF",
+       "home": true,
+       "pf": 34,
+       "pa": 37,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "PHI",
+       "home": false,
+       "pf": 24,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "DEN",
+       "home": false,
+       "pf": 26,
+       "pa": 30,
+       "result": "L"
+      }
+     ],
+     "off_rank": 14,
+     "def_rank": 10,
+     "ppg": 24.3,
+     "papg": 22.7,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Matthew Stafford",
+      "epa_per_play": 0.127,
+      "recent_plays": 341,
+      "changed": false,
+      "last_starter": "Matthew Stafford"
+     },
+     "missing": [
+      {
+       "name": "Steve Avila",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Matthew Stafford",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Warren McClendon",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quentin Lake",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Coleman Shelton",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kamren Curl",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kevin Dotson",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nathan Landman",
+       "pos": "LB",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Byron Young",
+       "pos": "LB",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Wallace",
+       "pos": "CB",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Davante Adams",
+       "pos": "WR",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alaric Jackson",
+       "pos": "OL",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Trent McDuffie",
+       "pos": "CB",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kyren Williams",
+       "pos": "RB",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josaiah Stewart",
+       "pos": "LB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Higbee",
+       "pos": "TE",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Puka Nacua",
+       "pos": "WR",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kobie Turner",
+       "pos": "DE",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylen Watson",
+       "pos": "CB",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Braden Fiske",
+       "pos": "DE",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_KC_DEN",
+   "kickoff": "2026-11-01T21:25:00Z",
+   "kickoff_label": "Sun Nov 1, 4:25 PM ET",
+   "away": "KC",
+   "home": "DEN",
+   "venue": "Empower Field at Mile High",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873033",
+   "teams": {
+    "away": {
+     "abbr": "KC",
+     "name": "Chiefs",
+     "record": "5-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "SEA",
+       "home": false,
+       "pf": 3,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "LAC",
+       "home": true,
+       "pf": 22,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LV",
+       "home": false,
+       "pf": 30,
+       "pa": 27,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "MIA",
+       "home": false,
+       "pf": 24,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "IND",
+       "home": true,
+       "pf": 33,
+       "pa": 30,
+       "result": "W"
+      }
+     ],
+     "off_rank": 4,
+     "def_rank": 3,
+     "ppg": 23.8,
+     "papg": 17.2,
+     "rest_days": 7,
+     "travel_miles": 564,
+     "qb": {
+      "name": "Patrick Mahomes",
+      "epa_per_play": 0.067,
+      "recent_plays": 270,
+      "changed": false,
+      "last_starter": "Patrick Mahomes"
+     },
+     "missing": [
+      {
+       "name": "Kahlil Benson",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nick Bolton",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Patrick Mahomes",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Creed Humphrey",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Trey Smith",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nohl Williams",
+       "pos": "DB",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylon Moore",
+       "pos": "OL",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alohi Gilman",
+       "pos": "S",
+       "snap_share": 0.85,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Drue Tranquill",
+       "pos": "LB",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "George Karlaftis III",
+       "pos": "DE",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Xavier Worthy",
+       "pos": "WR",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Travis Kelce",
+       "pos": "TE",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chris Jones",
+       "pos": "DT",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kingsley Suamataia",
+       "pos": "OL",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mansoor Delane",
+       "pos": "CB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaden Hicks",
+       "pos": "DB",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "L'Jarius Sneed",
+       "pos": "CB",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Noah Gray",
+       "pos": "TE",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "R Mason Thomas",
+       "pos": "DE",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DEN",
+     "name": "Broncos",
+     "record": "5-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "ARI",
+       "home": false,
+       "pf": 30,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "SEA",
+       "home": true,
+       "pf": 17,
+       "pa": 14,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LAC",
+       "home": false,
+       "pf": 23,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "SF",
+       "home": false,
+       "pf": 14,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "LA",
+       "home": true,
+       "pf": 30,
+       "pa": 26,
+       "result": "W"
+      }
+     ],
+     "off_rank": 26,
+     "def_rank": 7,
+     "ppg": 20.6,
+     "papg": 20.1,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Bo Nix",
+      "epa_per_play": -0.053,
+      "recent_plays": 291,
+      "changed": false,
+      "last_starter": "Bo Nix"
+     },
+     "missing": [
+      {
+       "name": "Alex Singleton",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brandon Jones",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Mike McGlinchey",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Bo Nix",
+       "pos": "QB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Garett Bolles",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ben Powers",
+       "pos": "G",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Luke Wattenberg",
+       "pos": "C",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quinn Meinerz",
+       "pos": "G",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Strnad",
+       "pos": "LB",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Courtland Sutton",
+       "pos": "WR",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jahdae Barron",
+       "pos": "CB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylen Waddle",
+       "pos": "WR",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zach Allen",
+       "pos": "DL",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Talanoa Hufanga",
+       "pos": "S",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nik Bonitto",
+       "pos": "LB",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malcolm Roach",
+       "pos": "DT",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kris Abrams-Draine",
+       "pos": "CB",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Evan Engram",
+       "pos": "TE",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ja'Quan McMillian",
+       "pos": "CB",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jonah Elliss",
+       "pos": "LB",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quandarrius Robinson",
+       "pos": "LB",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Eyioma Uwazurike",
+       "pos": "DL",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_NE_MIA",
+   "kickoff": "2026-11-01T21:25:00Z",
+   "kickoff_label": "Sun Nov 1, 4:25 PM ET",
+   "away": "NE",
+   "home": "MIA",
+   "venue": "Hard Rock Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873034",
+   "teams": {
+    "away": {
+     "abbr": "NE",
+     "name": "Patriots",
+     "record": "4-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CHI",
+       "home": false,
+       "pf": 24,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 26,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "LV",
+       "home": true,
+       "pf": 45,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "BUF",
+       "home": false,
+       "pf": 29,
+       "pa": 26,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "JAX",
+       "home": false,
+       "pf": 6,
+       "pa": 35,
+       "result": "L"
+      }
+     ],
+     "off_rank": 12,
+     "def_rank": 21,
+     "ppg": 22.9,
+     "papg": 20.4,
+     "rest_days": 10,
+     "travel_miles": 1226,
+     "qb": {
+      "name": "Drake Maye",
+      "epa_per_play": 0.076,
+      "recent_plays": 284,
+      "changed": false,
+      "last_starter": "Drake Maye"
+     },
+     "missing": [
+      {
+       "name": "Jared Wilson",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Drake Maye",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Craig Woodson",
+       "pos": "S",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Robert Spillane",
+       "pos": "LB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Elliss",
+       "pos": "LB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kevin Byard",
+       "pos": "S",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Marcus Jones",
+       "pos": "CB",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Will Campbell",
+       "pos": "T",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Morgan Moses",
+       "pos": "T",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Elijah Ponder",
+       "pos": "LB",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Milton Williams",
+       "pos": "DT",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Hunter Henry",
+       "pos": "TE",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ben Brown",
+       "pos": "C",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dre'Mont Jones",
+       "pos": "LB",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "snap_share": 0.67,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Efton Chism III",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Charles Woods",
+       "pos": "CB",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Alijah Vera-Tucker",
+       "pos": "G",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Eli Raridon",
+       "pos": "TE",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "DeMario Douglas",
+       "pos": "WR",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Gabe Jacas",
+       "pos": "LB",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Gonzalez",
+       "pos": "CB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "MIA",
+     "name": "Dolphins",
+     "record": "1-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 28,
+       "pa": 25,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "CIN",
+       "home": true,
+       "pf": 24,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "MIN",
+       "home": false,
+       "pf": 10,
+       "pa": 15,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "KC",
+       "home": true,
+       "pf": 10,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "SF",
+       "home": false,
+       "pf": 13,
+       "pa": 35,
+       "result": "L"
+      }
+     ],
+     "off_rank": 31,
+     "def_rank": 29,
+     "ppg": 16.3,
+     "papg": 26.2,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Malik Willis",
+      "epa_per_play": -0.051,
+      "recent_plays": 198,
+      "changed": false,
+      "last_starter": "Malik Willis"
+     },
+     "missing": [
+      {
+       "name": "Aaron Brewer",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Austin Jackson",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malik Willis",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kadyn Proctor",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Patrick Paul",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jacob Rodriguez",
+       "pos": "LB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Michael Taaffe",
+       "pos": "S",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chris Johnson",
+       "pos": "CB",
+       "snap_share": 0.95,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordyn Brooks",
+       "pos": "LB",
+       "snap_share": 0.89,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dante Trader",
+       "pos": "S",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jonah Savaiinaea",
+       "pos": "G",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malik Washington",
+       "pos": "WR",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jason Marshall",
+       "pos": "CB",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zach Sieler",
+       "pos": "DL",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Julius Brents",
+       "pos": "CB",
+       "snap_share": 0.7,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Joshua Uche",
+       "pos": "DE",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chris Bell",
+       "pos": "WR",
+       "snap_share": 0.66,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Greg Dulcich",
+       "pos": "TE",
+       "snap_share": 0.64,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jordan Phillips",
+       "pos": "DL",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zeek Biggers",
+       "pos": "DL",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ollie Gordon",
+       "pos": "RB",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kevin Coleman",
+       "pos": "WR",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_PHI_WAS",
+   "kickoff": "2026-11-02T01:20:00Z",
+   "kickoff_label": "Sun Nov 1, 8:20 PM ET",
+   "away": "PHI",
+   "home": "WAS",
+   "venue": "Northwest Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873035",
+   "teams": {
+    "away": {
+     "abbr": "PHI",
+     "name": "Eagles",
+     "record": "2-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CAR",
+       "home": true,
+       "pf": 14,
+       "pa": 25,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "JAX",
+       "home": false,
+       "pf": 17,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LA",
+       "home": true,
+       "pf": 20,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "CHI",
+       "home": false,
+       "pf": 7,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "TEN",
+       "home": false,
+       "pf": 24,
+       "pa": 20,
+       "result": "W"
+      }
+     ],
+     "off_rank": 28,
+     "def_rank": 25,
+     "ppg": 17.7,
+     "papg": 22.8,
+     "rest_days": 6,
+     "travel_miles": 114,
+     "qb": {
+      "name": "Jalen Hurts",
+      "epa_per_play": -0.048,
+      "recent_plays": 279,
+      "changed": true,
+      "last_starter": "Tanner McKee"
+     },
+     "missing": [
+      {
+       "name": "Jordan Mailata",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Andrew Mukuba",
+       "pos": "S",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Riq Woolen",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cooper DeJean",
+       "pos": "DB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyler Steen",
+       "pos": "G",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quinyon Mitchell",
+       "pos": "CB",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jihaad Campbell",
+       "pos": "LB",
+       "snap_share": 0.84,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Carter",
+       "pos": "DT",
+       "snap_share": 0.82,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dontayvion Wicks",
+       "pos": "WR",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Makai Lemon",
+       "pos": "WR",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Markel Bell",
+       "pos": "T",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Hurts",
+       "pos": "QB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Zack Baun",
+       "pos": "LB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Darius Cooper",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nolan Smith",
+       "pos": "LB",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Moro Ojomo",
+       "pos": "DT",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Arnold Ebiketie",
+       "pos": "LB",
+       "snap_share": 0.52,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Willie Lampkin",
+       "pos": "C",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cam Jurgens",
+       "pos": "C",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Drew Kendall",
+       "pos": "C",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jake Majors",
+       "pos": "C",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "WAS",
+     "name": "Commanders",
+     "record": "1-4-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "SF",
+       "home": false,
+       "pf": 17,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NYG",
+       "home": true,
+       "pf": 27,
+       "pa": 27,
+       "result": "T"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "IND",
+       "home": true,
+       "pf": 13,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "SEA",
+       "home": true,
+       "pf": 33,
+       "pa": 31,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 2,
+       "opp": "DAL",
+       "home": false,
+       "pf": 20,
+       "pa": 37,
+       "result": "L"
+      }
+     ],
+     "off_rank": 16,
+     "def_rank": 26,
+     "ppg": 22.0,
+     "papg": 28.7,
+     "rest_days": 13,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jayden Daniels",
+      "epa_per_play": -0.069,
+      "recent_plays": 238,
+      "changed": false,
+      "last_starter": "Jayden Daniels"
+     },
+     "missing": [
+      {
+       "name": "Chris Paul",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Conerly",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Brandon Coleman",
+       "pos": "T",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Lucas Patrick",
+       "pos": "G",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Amik Robertson",
+       "pos": "CB",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Sonny Styles",
+       "pos": "LB",
+       "snap_share": 0.9,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jeremy Reaves",
+       "pos": "S",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Daron Payne",
+       "pos": "DT",
+       "snap_share": 0.78,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rasul Douglas",
+       "pos": "CB",
+       "snap_share": 0.77,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Quan Martin",
+       "pos": "S",
+       "snap_share": 0.76,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Frankie Luvu",
+       "pos": "LB",
+       "snap_share": 0.73,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "K'Lavon Chaisson",
+       "pos": "LB",
+       "snap_share": 0.68,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Javon Kinlaw",
+       "pos": "DT",
+       "snap_share": 0.62,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Antonio Williams",
+       "pos": "WR",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Odafe Oweh",
+       "pos": "LB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Treylon Burks",
+       "pos": "WR",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Chig Okonkwo",
+       "pos": "TE",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jayden Daniels",
+       "pos": "QB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_08_CHI_SEA",
+   "kickoff": "2026-11-03T01:15:00Z",
+   "kickoff_label": "Mon Nov 2, 8:15 PM ET",
+   "away": "CHI",
+   "home": "SEA",
+   "venue": "Lumen Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873036",
+   "teams": {
+    "away": {
+     "abbr": "CHI",
+     "name": "Bears",
+     "record": "5-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NE",
+       "home": true,
+       "pf": 30,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "ATL",
+       "home": false,
+       "pf": 31,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "GB",
+       "home": false,
+       "pf": 7,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 23,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "PHI",
+       "home": true,
+       "pf": 27,
+       "pa": 7,
+       "result": "W"
+      }
+     ],
+     "off_rank": 11,
+     "def_rank": 13,
+     "ppg": 25.7,
+     "papg": 20.4,
+     "rest_days": 11,
+     "travel_miles": 1734,
+     "qb": {
+      "name": "Caleb Williams",
+      "epa_per_play": 0.217,
+      "recent_plays": 316,
+      "changed": false,
+      "last_starter": "Caleb Williams"
+     },
+     "missing": [
+      {
+       "name": "Joe Thuney",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Darnell Wright",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Garrett Bradbury",
+       "pos": "OL",
+       "snap_share": 0.98,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Dillon Thieneman",
+       "pos": "DB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaylon Johnson",
+       "pos": "DB",
+       "snap_share": 0.96,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rome Odunze",
+       "pos": "WR",
+       "snap_share": 0.94,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Devin Bush Jr.",
+       "pos": "LB",
+       "snap_share": 0.93,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jonah Jackson",
+       "pos": "OL",
+       "snap_share": 0.91,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Theo Benedet",
+       "pos": "OL",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Colston Loveland",
+       "pos": "TE",
+       "snap_share": 0.86,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Grady Jarrett",
+       "pos": "DL",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Malik Muhammad",
+       "pos": "DB",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Austin Booker",
+       "pos": "DL",
+       "snap_share": 0.71,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "D'Marco Jackson",
+       "pos": "LB",
+       "snap_share": 0.69,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cole Kmet",
+       "pos": "TE",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "D'Andre Swift",
+       "pos": "RB",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Kalif Raymond",
+       "pos": "WR",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Luther Burden",
+       "pos": "WR",
+       "snap_share": 0.58,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cameron Lewis",
+       "pos": "DB",
+       "snap_share": 0.56,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Tyrique Stevenson",
+       "pos": "DB",
+       "snap_share": 0.54,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Caleb Williams",
+       "pos": "QB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "SEA",
+     "name": "Seahawks",
+     "record": "4-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "KC",
+       "home": true,
+       "pf": 20,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "DEN",
+       "home": false,
+       "pf": 14,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "SF",
+       "home": true,
+       "pf": 29,
+       "pa": 32,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 4,
+       "opp": "LAC",
+       "home": true,
+       "pf": 30,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 3,
+       "opp": "WAS",
+       "home": false,
+       "pf": 31,
+       "pa": 33,
+       "result": "L"
+      }
+     ],
+     "off_rank": 25,
+     "def_rank": 2,
+     "ppg": 24.0,
+     "papg": 17.9,
+     "rest_days": 8,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Sam Darnold",
+      "epa_per_play": -0.006,
+      "recent_plays": 262,
+      "changed": false,
+      "last_starter": "Sam Darnold"
+     },
+     "missing": [
+      {
+       "name": "Charles Cross",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Sam Darnold",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Ernest Jones",
+       "pos": "LB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Grey Zabel",
+       "pos": "G",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Abraham Lucas",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jalen Sundell",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Josh Jobe",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Devon Witherspoon",
+       "pos": "CB",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "AJ Barner",
+       "pos": "TE",
+       "snap_share": 0.92,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jaxon Smith-Njigba",
+       "pos": "WR",
+       "snap_share": 0.88,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Nick Emmanwori",
+       "pos": "S",
+       "snap_share": 0.8,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Julian Love",
+       "pos": "S",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Leonard Williams",
+       "pos": "DT",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Cooper Kupp",
+       "pos": "WR",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "DeMarcus Lawrence",
+       "pos": "LB",
+       "snap_share": 0.61,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Drake Thomas",
+       "pos": "LB",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Christian Haynes",
+       "pos": "G",
+       "snap_share": 0.6,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Uchenna Nwosu",
+       "pos": "LB",
+       "snap_share": 0.55,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Rodney Thomas II",
+       "pos": "S",
+       "snap_share": 0.51,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  }
+ ]
+}
