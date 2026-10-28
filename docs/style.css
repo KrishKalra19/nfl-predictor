@@ -151,3 +151,28 @@ ul.plain { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column
 ul.plain b { color: var(--ink); font-weight: 600; }
 footer { font-size: .78rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 4px; }
 @media (max-width: 620px) { .hide-sm { display: none; } }
+
+/* website picks (picks.js) */
+.bar { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brass); padding: 14px 18px; }
+.auth { display: flex; flex-direction: column; gap: 10px; }
+.auth-head { display: flex; flex-direction: column; gap: 2px; }
+.auth-fields { display: flex; flex-wrap: wrap; gap: 8px; }
+.auth-fields input { flex: 1 1 180px; min-width: 0; background: var(--bg); color: var(--ink); border: 1px solid var(--line); padding: 8px 10px; font: inherit; font-size: .9rem; }
+.auth-fields input:focus-visible, .file input:focus-visible { outline: 2px solid var(--brass); outline-offset: 1px; }
+.auth-foot, .auth-in { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
+.auth-in b { font-weight: 600; color: var(--brass); }
+.btn { background: var(--brass); color: var(--bg); border: 0; padding: 8px 16px; font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
+.btn:disabled { opacity: .6; cursor: default; }
+.btn:focus-visible, .link:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.link { background: none; border: 0; padding: 0; color: var(--brass); font: inherit; font-size: .86rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.status { color: var(--muted); }
+.file { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: var(--panel-2); border: 1px solid var(--line); }
+.file-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; font-family: var(--f-data); font-size: .82rem; }
+.file input[type=range] { width: 100%; accent-color: var(--brass); cursor: pointer; }
+.file.locked input[type=range] { cursor: default; opacity: .6; }
+.file-foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.file-read { font-family: var(--f-serif); font-size: 1.05rem; min-width: 7.5em; }
+.case.sealed .ruling, .case.sealed .lines, .case.sealed .opposing { display: none; }
+.seal-note { font-style: italic; }
+#associates { display: flex; flex-direction: column; gap: 8px; }

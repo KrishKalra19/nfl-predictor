@@ -166,7 +166,7 @@ def main():
         for r in p.itertuples():
             k = ko.get(r.game_id)
             this_week.append({
-                "game": f"{r.away_team} @ {r.home_team}", "away": r.away_team, "home": r.home_team,
+                "id": r.game_id, "game": f"{r.away_team} @ {r.home_team}", "away": r.away_team, "home": r.home_team,
                 "kickoff": k.isoformat() if k is not None else None,
                 "pick": r.pick, "confidence": round(float(r.confidence), 4),
                 "p_home": round(float(r.p_home), 4),
@@ -201,7 +201,13 @@ def main():
             })
     graded.sort(key=lambda g: (g["season"], g["week"], g["game"]))
 
-    data = {"season": season, "week": week, "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+    # for grading website picks in the browser: this season's finals and the model's frozen probabilities
+    season_scores = {gid: list(v) for gid, v in scores.items() if gid.startswith(f"{season}_")}
+    model_p = {}
+    for mf in sorted(OUTPUTS.glob(f"picks_{season}_wk*.csv")):
+        model_p.update(pd.read_csv(mf).set_index("game_id")["p_home"].round(4).to_dict())
+
+    data = {"season": season, "week": week, "scores": season_scores, "model_p": model_p, "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "this_week": this_week, "graded": graded, "brief": brief(), "live": live,
             "recap": recap(week - 1, season, graded)}
     DOCS.mkdir(exist_ok=True)
@@ -209,7 +215,7 @@ def main():
     html = tpl.replace("/*__DATA__*/null", json.dumps(data))
     (DOCS / "index.html").write_text(html, encoding="utf-8")
     import shutil
-    for asset in ("style.css", "og.png", "favicon.svg"):
+    for asset in ("style.css", "og.png", "favicon.svg", "picks.js"):
         shutil.copy(ROOT / "site" / asset, DOCS / asset)
     rk = {"season": season, "week": week, "built": data["built"], "teams": rankings(games, season)}
     rtpl = (ROOT / "site" / "rankings.html").read_text(encoding="utf-8")

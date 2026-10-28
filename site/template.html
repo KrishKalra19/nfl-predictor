@@ -53,6 +53,7 @@
       <h2 id="docket-title">This week's cases</h2>
       <p class="muted small">One case per game. The <b>ruling</b> is the model's pick and how sure it is, from 50% (a coin flip) up to 100%. <b>Opposing counsel</b> is the Vegas betting line: who it favors, and whether the model agrees. Rulings are final at kickoff.</p>
     </div>
+    <div class="bar" id="filings" hidden></div>
     <div class="docket" id="docket-grid"></div>
   </section>
 
@@ -71,6 +72,11 @@
       <p class="muted small">Everyone is judged on the same games. The record counts right and wrong picks. Log-loss is the confidence-weighted score: a confident correct call scores well, a confident miss costs a lot. Lower is better.</p>
     </div>
     <div class="counsel" id="counsel"></div>
+    <div id="associates" hidden>
+      <h3>The associates</h3>
+      <p class="muted small">Everyone who files picks on this site, graded on the games they picked. "vs Model" is their log-loss minus the model's on those same games: negative means they beat it.</p>
+      <div class="tbl"><table><thead><tr><th>Associate</th><th>Cases</th><th>Won–lost</th><th>Log-loss</th><th>vs Model</th></tr></thead><tbody id="assoc-body"></tbody></table></div>
+    </div>
   </section>
 
   <section id="record">
@@ -292,6 +298,7 @@ const dk = document.getElementById("docket-grid");
 if (!DATA.this_week.length) dk.append(el("div", "empty", "This week's docket hasn't been filed yet."));
 DATA.this_week.forEach((g, i) => {
   const c = el("article", "case");
+  c.dataset.id = g.id;
   const no = el("div", "case-no");
   no.append(el("span", null, `No. ${DATA.season}-${String(DATA.week).padStart(2, "0")}-${String(i + 1).padStart(2, "0")}`),
     el("span", null, g.kickoff ? new Date(g.kickoff).toLocaleString([], { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : ""));
@@ -482,5 +489,7 @@ hbars("ch-features", B.features.map((r) => ({
   box.append(svg);
 })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"></script>
+<script src="picks.js"></script>
 </body>
 </html>
