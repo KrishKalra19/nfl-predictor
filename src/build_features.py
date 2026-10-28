@@ -1,6 +1,6 @@
 """Assemble the game-level modeling table. Every feature uses only pre-kickoff information.
 
-Writes data/processed/features.csv: one row per game (2015+ incl. unplayed games that have
+Writes data/processed/features.csv: one row per game (2007+ incl. unplayed games that have
 rosters/QBs), with h_* (home team), a_* (away team), ctx_* (game context), target and Vegas benchmark.
 """
 import math

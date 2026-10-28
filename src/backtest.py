@@ -15,7 +15,7 @@ from dataset import load_features, team_columns
 
 DEV_SEASONS = [2018, 2019, 2020, 2021]
 TEST_SEASONS = [2022, 2023, 2024, 2025, 2026]
-TRAIN_START = 2015
+TRAIN_START = 2007
 
 
 def metrics(y, p):

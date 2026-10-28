@@ -12,7 +12,7 @@ Not intended for wagering decisions. It doesn't beat the betting market (see Eva
 information about late-breaking news after its last refresh.
 
 ## Data
-- [nflverse](https://github.com/nflverse): play-by-play (2014–present), schedules and results, weekly rosters, snap counts, injury reports, player IDs. Training uses 2015 onward; 2014 seeds the ratings.
+- [nflverse](https://github.com/nflverse): play-by-play (2006–present), schedules and results, weekly rosters, snap counts (2013+), injury reports (2009+), player IDs. Training uses 2007 onward; 2006 seeds the ratings. Roster features are imputed before 2013.
 - Vegas moneylines and spreads from the same schedule data are used **only** as a benchmark, never as inputs.
 
 ## Model

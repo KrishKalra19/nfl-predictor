@@ -8,11 +8,12 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 # NFL_PROCESSED / NFL_FIRST_SEASON redirect experiment builds (e.g. pre-2015 history) away from the live tables
+# Training history starts in 2007 (dev 0.6231 -> 0.6213 vs starting in 2015; see LOOP_LOG.md round 2).
 PROCESSED = Path(os.environ.get("NFL_PROCESSED", ROOT / "data" / "processed"))
 OUTPUTS = ROOT / "outputs"
 
-FIRST_SEASON = int(os.environ.get("NFL_FIRST_SEASON", 2014))  # pulled only to seed priors / player ratings
-FIRST_MODEL_SEASON = int(os.environ.get("NFL_FIRST_MODEL_SEASON", 2015))  # first season in the modeling table
+FIRST_SEASON = int(os.environ.get("NFL_FIRST_SEASON", 2006))  # 2006 seeds ratings for the first modeled season
+FIRST_MODEL_SEASON = int(os.environ.get("NFL_FIRST_MODEL_SEASON", 2007))  # first season in the modeling table
 CURRENT_SEASON = 2026
 
 # Relocated franchises -> one continuous code so team history carries over.

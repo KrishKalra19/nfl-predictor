@@ -1,10 +1,11 @@
 """Download raw nflverse data into data/raw/.
 
 Usage:
-    python src/download_data.py            # all seasons 2014..current (skips files already cached)
+    python src/download_data.py            # all seasons 2006..current (skips files already cached)
     python src/download_data.py --refresh  # re-download the current season (run weekly)
 
-2014 is pulled so 2015 has a prior season for preseason priors / player ratings.
+2006 is pulled so 2007, the first modeled season, has a prior season for ratings.
+Snap counts start in 2013 (nflverse's 2012 file is empty); earlier roster features are imputed.
 """
 import argparse
 import sys
@@ -15,11 +16,14 @@ import requests
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 
-FIRST_SEASON = 2014
+FIRST_SEASON = 2006
 CURRENT_SEASON = 2026
 
 RELEASE = "https://github.com/nflverse/nflverse-data/releases/download"
 SCHEDULES_URL = "https://github.com/nflverse/nfldata/raw/master/data/games.csv"
+
+# first season each dataset is actually published for (earlier requests 404 or return empty files)
+FIRST_AVAILABLE = {"snaps": 2013, "injuries": 2009}
 
 # dataset name -> (release tag, filename pattern)
 PER_SEASON = {
@@ -59,7 +63,7 @@ def main() -> None:
 
     for name, (tag, pattern) in PER_SEASON.items():
         print(name)
-        for y in range(FIRST_SEASON, CURRENT_SEASON + 1):
+        for y in range(max(FIRST_SEASON, FIRST_AVAILABLE.get(name, FIRST_SEASON)), CURRENT_SEASON + 1):
             fname = pattern.format(y=y)
             force = args.refresh and y == CURRENT_SEASON
             if not fetch(f"{RELEASE}/{tag}/{fname}", RAW / name / fname, force=force):
