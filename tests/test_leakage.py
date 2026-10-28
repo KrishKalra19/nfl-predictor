@@ -67,6 +67,18 @@ def test_standings_are_pregame(league):
     np.testing.assert_allclose(full[cols].to_numpy(float), trunc[cols].to_numpy(float), atol=1e-9)
 
 
+def test_stakes_simulation_is_pregame(league):
+    games, _ = league
+    g2, _ = truncate(games, league[1], cutoff_of(games))
+    s, w = CUTOFF_WEEK
+    pick = lambda d: d[(d["season"] == s) & (d["week"] == w)].sort_values("team").reset_index(drop=True)
+    full = pick(B.sim_stakes(games, B.elo_ratings(games), n=300))
+    trunc = pick(B.sim_stakes(g2, B.elo_ratings(g2), n=300))
+    cols = [c for c in full.columns if c.startswith("sim_")]
+    assert len(full) > 0
+    np.testing.assert_allclose(full[cols].to_numpy(float), trunc[cols].to_numpy(float), atol=1e-9)
+
+
 def test_kalman_is_pregame(league):
     games, tg = league
     g2, tg2 = truncate(games, tg, cutoff_of(games))

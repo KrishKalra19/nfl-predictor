@@ -142,3 +142,23 @@ Started 2026-10-26. Plan: LOOP_PLAN.md. One entry per item.
   - Tested 9 ideas honestly on dev (calibration, stacking, weather, coaching, kicking, Kalman as an addition and as a swap, QB opponent adjustment + age); none cleared the 0.002 bar. Best near miss: QB features at −0.0006.
   - The tests found a real (tiny) leak of whole-dataset league means into early-season priors. Fixed. Corrected held-out numbers: 66.2% / 0.6244 (were 66.3% / 0.6242).
 - **Still blocked on Krish:** picks on the website (Supabase project), Andrew's GitHub username, any scheduled-task changes.
+
+## Round 2: the previously untested list (2026-10-26 to 28)
+Dev seasons 2018–21. Baseline ensemble 0.6234 log-loss, 0.6187 on regular-season weeks 15–18 (222 games).
+Stakes features are judged on weeks 15–18 (agreed with Krish): adopt if those improve and the full season isn't hurt.
+
+| Candidate | Full season | Wk 15–18 | Verdict |
+|---|---|---|---|
+| **Monte Carlo stakes replacing the standings flags** (`sim_`) | 0.6231 | **0.6159** | **Adopted** |
+| Monte Carlo stakes added to the flags | 0.6235 | 0.6152 | Swap is simpler and no worse overall |
+| Game-day roster, oracle (players who took a snap) | 0.6200 | 0.6086 | Upper bound only: uses in-game information |
+| Game-day roster, realistic (Friday view minus Questionable players who sat) | 0.6233 | 0.6186 | No gain |
+| Position-unit matchups (pass/rush/sack/explosive/trench products) | 0.6237 | 0.6189 | No gain |
+| Team-specific home field, Denver altitude, 2020 no fans | 0.6237 | 0.6192 | No gain |
+| Season down-weighting 0.95/season (re-test on current lineup) | 0.6236 | 0.6191 | No gain (matches the first-round grid) |
+| Transformer over each team's last 12 games, added / replacing MLP | 0.6237 / 0.6238 | – | No gain (alone 0.6296) |
+| Deeper MLP (128-64), added / replacing MLP | 0.6237 / 0.6238 | – | No gain (alone 0.6273) |
+
+- `sim_stakes` (build_features): 2,000 simulations of the rest of the regular season before every week, from pregame Elo, seeded per (season, week) so backtest and live draws match. Per team: playoff odds and this game's leverage on playoff, division and #1-seed odds (P(x | win) − P(x | loss)). Playoff games are set to full leverage. Leakage test added.
+- The oracle vs realistic inactives gap says the game-day gain came from information nobody has before kickoff (in-game injuries, healthy scratches). ESPN's free feed does publish injury inactives (`src/gameday.py`), but they add nothing over Friday's Out/Doubtful list, so they're not wired into the model.
+- Candidate prefixes `rsg_`, `rsq_` and the old `stakes_` are fenced in `NOT_ADOPTED`; matchup and home-field columns are side-context and stay out unless listed in `SIDE_CTX`.

@@ -49,8 +49,8 @@ def summarize(pred):
 
 
 def feature_sets(df):
-    # Not adopted (no dev gain) -- see LOOP_LOG.md. New candidates stay fenced out until they earn a place.
-    NOT_ADOPTED = ("rs_q_", "coach_", "k_fgoe", "kf_", "qbx_")
+    # Not adopted (no dev gain) -- see LOOP_LOG.md. stakes_ was replaced by the Monte Carlo sim_ features. New candidates stay fenced out until they earn a place.
+    NOT_ADOPTED = ("rs_q_", "coach_", "k_fgoe", "kf_", "qbx_", "stakes_", "rsg_", "rsq_")
     allf = [f for f in team_columns(df) if not f.startswith(NOT_ADOPTED)]
     return {
         "all": allf,
@@ -60,10 +60,10 @@ def feature_sets(df):
         "compact": [f for f in allf if f.startswith(("l_adj", "l_off_epa", "l_def_epa", "l_margin", "elo",
                                                       "qb_", "rs_off_top11", "rs_def_top11", "rs_missing",
                                                       "rs_off_talent", "rs_def_talent", "s_adj", "trend_",
-                                                      "last3", "streak", "l_st_epa", "l_win", "pr_", "prm_", "stakes_"))],
+                                                      "last3", "streak", "l_st_epa", "l_win", "pr_", "prm_", "sim_"))],
         "core": [f for f in allf if f.startswith(("pr_", "prm_", "elo", "qb_", "rs_off_top11", "rs_def_top11",
                                                    "rs_missing", "rs_off_talent", "rs_def_talent", "rs_exp",
-                                                   "l_st_epa", "streak", "last3", "stakes_"))],
+                                                   "l_st_epa", "streak", "last3", "sim_"))],
     }
 
 

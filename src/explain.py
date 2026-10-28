@@ -18,6 +18,7 @@ GROUPS = [
     ("Offense this season", ("l_off_", "l_adj_off")),
     ("Defense this season", ("l_def_", "l_adj_def")),
     ("Results this season", ("l_margin", "l_adj_margin", "l_win", "l_pts_", "l_to_margin", "season_win_pct", "games_played")),
+    ("Playoff stakes", ("sim_",)),
     ("Rest & travel", ("ctx_",)),
 ]
 

@@ -68,12 +68,16 @@ def load_rosters():
     return r.drop_duplicates(["season", "week", "team", "gsis_id"])
 
 
-def load_injury_outs():
+def load_injury_status(statuses):
     cols = ["season", "week", "team", "gsis_id", "report_status"]
     i = load_per_season("injuries", "injuries", range(FIRST_SEASON, CURRENT_SEASON + 1), usecols=cols)
     i["team"] = i["team"].map(norm_team)
-    i = i[i["report_status"].isin(["Out", "Doubtful"])]
+    i = i[i["report_status"].isin(statuses)]
     return i[["season", "week", "team", "gsis_id"]].drop_duplicates()
+
+
+def load_injury_outs():
+    return load_injury_status(["Out", "Doubtful"])
 
 
 def player_share_history(snaps, games):
@@ -222,6 +226,46 @@ def build(games):
     # game-day inactives are recorded) and not listed Out/Doubtful on the injury report.
     r["active"] = r["status"].isin(["ACT", "INA"]) & r["listed_out"].isna()
 
+    agg = aggregate(r, snaps, games)
+    act = r[r["active"] & r["group"].notna()]
+
+    # Candidate (not adopted): game-day view = players who actually took a snap in this game. An upper
+    # bound on what Sunday inactives could add; prefixed rsg_ and fenced out of the live model.
+    played = snaps.loc[(snaps["offense_snaps"] + snaps["defense_snaps"] + snaps["st_snaps"]) > 0, ["game_id", "gsis_id"]]
+    gd = r.merge(played.drop_duplicates().assign(took_snap=1), on=["game_id", "gsis_id"], how="left")
+    has_snaps = gd["game_id"].isin(set(played["game_id"]))
+    gd["active"] = np.where(has_snaps, gd["status"].isin(["ACT", "INA"]) & gd["took_snap"].notna(), gd["active"])
+    g2 = aggregate(gd, snaps, games)
+    g2.columns = [c.replace("rs_", "rsg_", 1) if c.startswith("rs_") else c for c in g2.columns]
+    agg = agg.merge(g2, on=["game_id", "team"], how="left")
+
+    # Candidate: the realistic game-day view = Friday view minus Questionable players who didn't play.
+    # Matches what ESPN publishes ~90 minutes before kickoff (injured players flipped to Inactive); see gameday.py.
+    q = load_injury_status(["Questionable"]).assign(questionable=1)
+    gq = gd.merge(q, on=["season", "week", "team", "gsis_id"], how="left")
+    sat = gq["questionable"].notna() & gq["took_snap"].isna() & has_snaps
+    gq["active"] = r["active"].to_numpy() & ~sat.to_numpy()
+    g3 = aggregate(gq, snaps, games)
+    g3.columns = [c.replace("rs_", "rsq_", 1) if c.startswith("rs_") else c for c in g3.columns]
+    agg = agg.merge(g3, on=["game_id", "team"], how="left")
+
+    # Production quality of the available roster (expected per-game contribution)
+    qh = player_quality_history(snaps, games)
+    rq = pd.merge_asof(act[["game_id", "team", "gsis_id", "gameday", "group"]].sort_values("gameday"), qh,
+                       on="gameday", by="gsis_id", allow_exact_matches=False, direction="backward").fillna(0)
+    units = {"q_rec": ["WR", "TE", "RB"], "q_rush": ["RB"], "q_pressure": ["DL", "LB"], "q_cover": ["DB", "LB"]}
+    for stat, groups in units.items():
+        x = rq[rq["group"].isin(groups)].groupby(["game_id", "team"])[f"post_{stat}"].sum().rename(f"rs_{stat}")
+        agg = agg.merge(x.reset_index(), on=["game_id", "team"], how="left")
+
+    PROCESSED.mkdir(parents=True, exist_ok=True)
+    agg.to_csv(PROCESSED / "roster_strength.csv", index=False)
+    print(f"roster_strength: {len(agg)} rows, {agg.shape[1]} cols")
+    return agg
+
+
+def aggregate(r, snaps, games):
+    """Per (game, team) unit strength over rows of r flagged active, plus missing regulars."""
     act = r[r["active"] & r["group"].notna()]
     agg = act.pivot_table(index=["game_id", "team"], columns="group", values=["share", "talent"],
                           aggfunc="sum", fill_value=0)
@@ -242,19 +286,6 @@ def build(games):
     agg = agg.merge(exp.rename("rs_exp").reset_index(), on=["game_id", "team"], how="left")
 
     agg = agg.merge(missing_regulars(snaps, r, games), on=["game_id", "team"], how="left")
-
-    # Production quality of the available roster (expected per-game contribution)
-    qh = player_quality_history(snaps, games)
-    rq = pd.merge_asof(act[["game_id", "team", "gsis_id", "gameday", "group"]].sort_values("gameday"), qh,
-                       on="gameday", by="gsis_id", allow_exact_matches=False, direction="backward").fillna(0)
-    units = {"q_rec": ["WR", "TE", "RB"], "q_rush": ["RB"], "q_pressure": ["DL", "LB"], "q_cover": ["DB", "LB"]}
-    for stat, groups in units.items():
-        x = rq[rq["group"].isin(groups)].groupby(["game_id", "team"])[f"post_{stat}"].sum().rename(f"rs_{stat}")
-        agg = agg.merge(x.reset_index(), on=["game_id", "team"], how="left")
-
-    PROCESSED.mkdir(parents=True, exist_ok=True)
-    agg.to_csv(PROCESSED / "roster_strength.csv", index=False)
-    print(f"roster_strength: {len(agg)} rows, {agg.shape[1]} cols")
     return agg
 
 

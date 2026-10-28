@@ -385,6 +385,129 @@ def stakes_features(games):
     return pd.DataFrame(rows)
 
 
+SIM_N = 2000
+
+
+def _seed_outcomes(wins, conf_idx, div_idx, n_spots):
+    """wins: sims x 32 (tiny noise added for random tiebreaks). Returns playoff, division, #1 seed flags."""
+    S, T = wins.shape
+    po = np.zeros((S, T), bool); dv = np.zeros((S, T), bool); top = np.zeros((S, T), bool)
+    rows = np.arange(S)[:, None]
+    for conf, members in conf_idx.items():
+        winners = np.stack([d[np.argmax(wins[:, d], axis=1)] for d in div_idx[conf]], axis=1)
+        dv[rows, winners] = True
+        best = winners[np.arange(S), np.argmax(wins[rows, winners], axis=1)]
+        top[np.arange(S), best] = True
+        w = np.where(dv[:, members], -np.inf, wins[:, members])
+        wc = members[np.argsort(-w, axis=1)[:, :n_spots - 4]]
+        po[rows, wc] = True
+    po |= dv
+    return po, dv, top
+
+
+def sim_stakes(games, elo, n=SIM_N, seed=11):
+    """Monte Carlo stakes before each regular-season week, from pregame Elo (no later information).
+
+    For each team: playoff odds, and how much this week's game moves its playoff / division / #1-seed odds
+    (P(x | win) - P(x | loss)). Near-zero leverage late in the season = nothing to play for.
+    Random tiebreaks; NFL tiebreakers aren't modeled.
+    """
+    teams = sorted(TEAM_DIV)
+    ti = {t: i for i, t in enumerate(teams)}
+    conf_idx = {c: np.array([ti[t] for t in teams if TEAM_DIV[t].startswith(c)]) for c in ("AFC", "NFC")}
+    div_idx = {c: [np.array([ti[t] for t in DIVISIONS[d]]) for d in DIVISIONS if d.startswith(c)] for c in conf_idx}
+    g = games.merge(elo, on="game_id", how="left")
+    reg = g[g["game_type"] == "REG"]
+    rows = []
+    for season, sg in reg.groupby("season"):
+        n_spots = 7 if season >= 2020 else 6
+        sg = sg.sort_values("gameday")
+        for week, wk in sg.groupby("week"):
+            cutoff = wk["gameday"].min()
+            past = sg[(sg["gameday"] < cutoff) & sg["home_score"].notna()]
+            fut = sg[sg["gameday"] >= cutoff].reset_index(drop=True)
+            base = np.zeros(len(teams))
+            for r in past.itertuples():
+                m = r.home_score - r.away_score
+                base[ti[r.home_team]] += 1.0 if m > 0 else 0.5 if m == 0 else 0.0
+                base[ti[r.away_team]] += 1.0 if m < 0 else 0.5 if m == 0 else 0.0
+            # Elo as of the cutoff: each team's pregame rating in its first remaining game
+            rating = {}
+            for r in fut.itertuples():
+                rating.setdefault(r.home_team, r.h_elo)
+                rating.setdefault(r.away_team, r.a_elo)
+            hi = fut["home_team"].map(ti).to_numpy(); ai = fut["away_team"].map(ti).to_numpy()
+            hfa = np.where(fut["location"] == "Neutral", 0.0, ELO_HFA)
+            d = fut["home_team"].map(rating).to_numpy() + hfa - fut["away_team"].map(rating).to_numpy()
+            p = 1 / (1 + 10 ** (-d / 400))
+            rng = np.random.default_rng([seed, int(season), int(week)])  # same draws in backtest and live
+            hw = rng.random((n, len(fut))) < p
+            wins = np.tile(base, (n, 1)) + rng.random((n, len(teams))) * 1e-3
+            np.add.at(wins.T, hi, hw.T)
+            np.add.at(wins.T, ai, ~hw.T)
+            po, dv, top = _seed_outcomes(wins, conf_idx, div_idx, n_spots)
+            this_week = fut["week"].to_numpy() == week
+            for j in np.flatnonzero(this_week):
+                won = hw[:, j]
+                for t, w in ((hi[j], won), (ai[j], ~won)):
+                    if w.all() or (~w).all():
+                        continue
+                    lev = [x[w, t].mean() - x[~w, t].mean() for x in (po, dv, top)]
+                    rows.append({"season": season, "week": week, "team": teams[t],
+                                 "sim_playoff": po[:, t].mean(), "sim_lev_playoff": lev[0],
+                                 "sim_lev_div": lev[1], "sim_lev_top": lev[2],
+                                 "sim_lev_total": lev[0] + 0.5 * lev[1] + lev[2]})
+    return pd.DataFrame(rows)
+
+
+def matchup_features(df):
+    """Side-context interactions: one team's unit against the opponent's matching unit.
+
+    Linear cross terms are already implied by the team-difference features, so only products and
+    style mismatches are added. ctx_{side}_mu_* for each side.
+    """
+    for me, op in (("h", "a"), ("a", "h")):
+        df[f"ctx_{me}_mu_pass"] = df[f"{me}_pr_pass_off"] * df[f"{op}_pr_pass_def"]
+        df[f"ctx_{me}_mu_rush"] = df[f"{me}_pr_rush_off"] * df[f"{op}_pr_rush_def"]
+        df[f"ctx_{me}_mu_style"] = (df[f"{me}_l_off_early_pass_rate"] - 0.55) * (df[f"{op}_pr_pass_def"] - df[f"{op}_pr_rush_def"])
+        df[f"ctx_{me}_mu_sack"] = df[f"{me}_l_off_sack_rate"] * df[f"{op}_l_def_sack_rate"]
+        df[f"ctx_{me}_mu_explosive"] = df[f"{me}_l_off_explosive"] * df[f"{op}_l_def_explosive"]
+        df[f"ctx_{me}_mu_trench"] = df[f"{me}_rs_talent_OL"] * df[f"{op}_rs_talent_DL"]
+    return df
+
+
+HFA_SHRINK = 40.0   # home games of evidence before trusting a team's own home edge
+
+
+def home_field_features(df, games):
+    """Team-specific home edge, altitude and no-crowd 2020, as side context (home side only).
+
+    hfa_team = shrunk mean of (home margin - Elo-expected margin) over the team's earlier home games,
+    minus the same for its road games, halved. Uses only games before each date.
+    """
+    g = games[["game_id", "gameday", "home_team", "away_team", "home_score", "away_score", "location"]]
+    g = g.merge(df[["game_id", "h_elo", "a_elo"]], on="game_id", how="inner").sort_values("gameday")
+    home_res, away_res = {}, {}
+    vals = {}
+    for r in g.itertuples():
+        hs, as_ = home_res.get(r.home_team, (0.0, 0)), away_res.get(r.home_team, (0.0, 0))
+        vals[r.game_id] = 0.5 * (hs[0] / (hs[1] + HFA_SHRINK) - as_[0] / (as_[1] + HFA_SHRINK))
+        if pd.isna(r.home_score) or r.location == "Neutral":
+            continue
+        exp = (r.h_elo + ELO_HFA - r.a_elo) / 25.0   # ~25 Elo points per point of margin
+        res = (r.home_score - r.away_score) - exp
+        s, k = home_res.get(r.home_team, (0.0, 0)); home_res[r.home_team] = (s + res, k + 1)
+        s, k = away_res.get(r.away_team, (0.0, 0)); away_res[r.away_team] = (s - res, k + 1)
+    home = (df["ctx_neutral"] == 0).astype(float)
+    df["ctx_h_hfa_team"] = df["game_id"].map(vals).fillna(0) * home
+    df["ctx_a_hfa_team"] = 0.0
+    df["ctx_h_altitude"] = 0.0
+    df["ctx_a_altitude"] = ((df["home_team"] == "DEN") & (df["ctx_neutral"] == 0)).astype(float)
+    df["ctx_h_nofans"] = ((df["season"] == 2020) & (df["ctx_neutral"] == 0)).astype(float)
+    df["ctx_a_nofans"] = 0.0
+    return df
+
+
 # ------------------------------------------------------------------ context & Vegas
 
 def qb_adjusted(df, games, qbg, form):
@@ -617,10 +740,23 @@ def build(games=None):
         df = df.merge(stakes.rename(columns={"team": f"{side}_team", **{c: f"{pfx}_{c}" for c in stc}}),
                       on=["season", "week", f"{side}_team"], how="left")
         df[[f"{pfx}_{c}" for c in stc]] = df[[f"{pfx}_{c}" for c in stc]].fillna(0)  # playoffs: all-in
-    df = df.merge(elo_ratings(games), on="game_id", how="left")
+    elo = elo_ratings(games)
+    df = df.merge(elo, on="game_id", how="left")
+    sim = sim_stakes(games, elo)
+    smc = [c for c in sim.columns if c.startswith("sim_")]
+    for side, pfx in (("home", "h"), ("away", "a")):
+        df = df.merge(sim.rename(columns={"team": f"{side}_team", **{c: f"{pfx}_{c}" for c in smc}}),
+                      on=["season", "week", f"{side}_team"], how="left")
+        cols = [f"{pfx}_{c}" for c in smc]
+        po = df["game_type"] != "REG"   # playoffs: win or go home
+        df.loc[po, cols] = 0.0
+        df.loc[po, [f"{pfx}_sim_playoff", f"{pfx}_sim_lev_playoff", f"{pfx}_sim_lev_total"]] = 1.0
+        df[cols] = df[cols].fillna(0.0)
     df = df.merge(qb_features(games, qbg), on="game_id", how="left")
     df = df.merge(context(games), on="game_id", how="left")
     df = add_weather(df, games)
+    df = matchup_features(df)
+    df = home_field_features(df, games)
     df = coach_features(df)
     df = kicker_features(df, games)
     df = qb_adjusted(df, games, qbg, form)

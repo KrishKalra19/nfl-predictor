@@ -100,3 +100,30 @@ class GRU(TorchModel):
 
     def predict(self, df):
         return super().predict(with_sequences(df))
+
+
+class TransformerNet(GRUNet):
+    """Same matchup head as GRUNet, but each team's last K games go through a small self-attention encoder."""
+
+    def __init__(self, d_team, d_shared, emb=16, hidden=32, dropout=0.5, gru=32, heads=2, layers=1):
+        super().__init__(d_team, d_shared, emb, hidden, dropout, gru)
+        del self.gru
+        self.inp = nn.Linear(F, gru)
+        self.pos = nn.Parameter(torch.zeros(K, gru))
+        layer = nn.TransformerEncoderLayer(gru, heads, dim_feedforward=2 * gru, dropout=0.1, batch_first=True)
+        self.attn = nn.TransformerEncoder(layer, layers)
+
+    def encode(self, t):
+        seq = t[:, :self.d_seq].reshape(-1, K, F)
+        valid = seq[:, :, -1] > 0                     # standardized valid flag: 1 maps above zero, 0 below
+        valid[:, -1] = True                           # never fully masked
+        h = self.attn(self.inp(seq) + self.pos, src_key_padding_mask=~valid)
+        pooled = (h * valid[..., None]).sum(1) / valid.sum(1, keepdim=True)
+        return self.enc(torch.cat([pooled, t[:, self.d_seq:]], 1))
+
+
+class Transformer(GRU):
+    def _build(self, d_team, d_shared):
+        p = self.params
+        kw = {k: p[k] for k in ("hidden", "dropout", "emb", "gru", "heads", "layers") if k in p}
+        return TransformerNet(d_team, d_shared, **kw)

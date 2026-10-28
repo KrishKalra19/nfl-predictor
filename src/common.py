@@ -1,16 +1,18 @@
 """Shared paths, team normalization, geography and raw-data loaders."""
 import math
+import os
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-PROCESSED = ROOT / "data" / "processed"
+# NFL_PROCESSED / NFL_FIRST_SEASON redirect experiment builds (e.g. pre-2015 history) away from the live tables
+PROCESSED = Path(os.environ.get("NFL_PROCESSED", ROOT / "data" / "processed"))
 OUTPUTS = ROOT / "outputs"
 
-FIRST_SEASON = 2014       # pulled only to seed priors / player ratings
-FIRST_MODEL_SEASON = 2015  # first season that appears in the modeling table
+FIRST_SEASON = int(os.environ.get("NFL_FIRST_SEASON", 2014))  # pulled only to seed priors / player ratings
+FIRST_MODEL_SEASON = int(os.environ.get("NFL_FIRST_MODEL_SEASON", 2015))  # first season in the modeling table
 CURRENT_SEASON = 2026
 
 # Relocated franchises -> one continuous code so team history carries over.

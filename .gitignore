@@ -8,3 +8,5 @@ __pycache__/
 *.pyc
 .venv/
 .claude/
+outputs/exp/
+data/processed_2006/
