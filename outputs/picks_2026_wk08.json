@@ -9,8 +9,8 @@
       "away_team": "TEN",
       "home_team": "CIN",
       "p_home": 0.7875,
-      "vegas_prob": 0.8,
-      "spread_line": 10.0,
+      "vegas_prob": 0.8271,
+      "spread_line": 11.5,
       "h_qb_rating": 0.1522,
       "a_qb_rating": -0.1046,
       "h_qb_changed": 0,
@@ -31,7 +31,7 @@
       "confidence": 0.7875,
       "vegas_pick": "CIN",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0125
+      "edge_vs_vegas": -0.0396
     },
     {
       "game_id": "2026_08_LAC_LA",
@@ -39,7 +39,7 @@
       "away_team": "LAC",
       "home_team": "LA",
       "p_home": 0.7615,
-      "vegas_prob": 0.7095,
+      "vegas_prob": 0.7002,
       "spread_line": 6.5,
       "h_qb_rating": 0.1288,
       "a_qb_rating": -0.0643,
@@ -61,7 +61,7 @@
       "confidence": 0.7615,
       "vegas_pick": "LA",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": 0.052
+      "edge_vs_vegas": 0.0614
     },
     {
       "game_id": "2026_08_NE_MIA",
@@ -69,7 +69,7 @@
       "away_team": "NE",
       "home_team": "MIA",
       "p_home": 0.2479,
-      "vegas_prob": 0.2742,
+      "vegas_prob": 0.2665,
       "spread_line": -7.0,
       "h_qb_rating": -0.0443,
       "a_qb_rating": 0.1106,
@@ -91,7 +91,7 @@
       "confidence": 0.7521,
       "vegas_pick": "NE",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0264
+      "edge_vs_vegas": -0.0186
     },
     {
       "game_id": "2026_08_IND_JAX",
@@ -99,7 +99,7 @@
       "away_team": "IND",
       "home_team": "JAX",
       "p_home": 0.7415,
-      "vegas_prob": 0.7958,
+      "vegas_prob": 0.8,
       "spread_line": 10.0,
       "h_qb_rating": 0.1194,
       "a_qb_rating": -0.0137,
@@ -121,7 +121,7 @@
       "confidence": 0.7415,
       "vegas_pick": "JAX",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0542
+      "edge_vs_vegas": -0.0585
     },
     {
       "game_id": "2026_08_ARI_DAL",
@@ -129,7 +129,7 @@
       "away_team": "ARI",
       "home_team": "DAL",
       "p_home": 0.7379,
-      "vegas_prob": 0.7335,
+      "vegas_prob": 0.7258,
       "spread_line": 7.0,
       "h_qb_rating": 0.0994,
       "a_qb_rating": -0.035,
@@ -151,7 +151,7 @@
       "confidence": 0.7379,
       "vegas_pick": "DAL",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": 0.0044
+      "edge_vs_vegas": 0.0122
     },
     {
       "game_id": "2026_08_BAL_BUF",
@@ -189,7 +189,7 @@
       "away_team": "CHI",
       "home_team": "SEA",
       "p_home": 0.6021,
-      "vegas_prob": 0.5996,
+      "vegas_prob": 0.6038,
       "spread_line": 3.0,
       "h_qb_rating": 0.0301,
       "a_qb_rating": 0.0799,
@@ -211,7 +211,7 @@
       "confidence": 0.6021,
       "vegas_pick": "SEA",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": 0.0025
+      "edge_vs_vegas": -0.0016
     },
     {
       "game_id": "2026_08_CAR_GB",
@@ -219,7 +219,7 @@
       "away_team": "CAR",
       "home_team": "GB",
       "p_home": 0.602,
-      "vegas_prob": 0.6369,
+      "vegas_prob": 0.6225,
       "spread_line": 3.5,
       "h_qb_rating": 0.1306,
       "a_qb_rating": -0.0045,
@@ -241,7 +241,7 @@
       "confidence": 0.602,
       "vegas_pick": "GB",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0349
+      "edge_vs_vegas": -0.0205
     },
     {
       "game_id": "2026_08_CLE_PIT",
@@ -279,7 +279,7 @@
       "away_team": "PHI",
       "home_team": "WAS",
       "p_home": 0.5776,
-      "vegas_prob": 0.669,
+      "vegas_prob": 0.6854,
       "spread_line": 6.0,
       "h_qb_rating": 0.0291,
       "a_qb_rating": 0.0094,
@@ -301,7 +301,7 @@
       "confidence": 0.5776,
       "vegas_pick": "WAS",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0914
+      "edge_vs_vegas": -0.1078
     },
     {
       "game_id": "2026_08_LV_NYJ",
@@ -309,7 +309,7 @@
       "away_team": "LV",
       "home_team": "NYJ",
       "p_home": 0.5597,
-      "vegas_prob": 0.5325,
+      "vegas_prob": 0.5261,
       "spread_line": 1.5,
       "h_qb_rating": -0.0341,
       "a_qb_rating": 0.0399,
@@ -331,7 +331,7 @@
       "confidence": 0.5597,
       "vegas_pick": "NYJ",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": 0.0273
+      "edge_vs_vegas": 0.0336
     },
     {
       "game_id": "2026_08_MIN_DET",

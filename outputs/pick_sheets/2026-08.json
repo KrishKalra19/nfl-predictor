@@ -2,7 +2,7 @@
  "id": "2026-08",
  "season": 2026,
  "week": 8,
- "generated_at": "2026-10-29T14:44:18Z",
+ "generated_at": "2026-10-29T23:23:44Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -224,7 +224,7 @@
    },
    "reveal": {
     "model_home": 0.602,
-    "vegas_home": 0.6369,
+    "vegas_home": 0.6225,
     "spread_home": 3.5
    }
   },
@@ -377,7 +377,7 @@
    },
    "reveal": {
     "model_home": 0.7379,
-    "vegas_home": 0.7335,
+    "vegas_home": 0.7258,
     "spread_home": 7.0
    }
   },
@@ -1016,7 +1016,7 @@
    },
    "reveal": {
     "model_home": 0.7415,
-    "vegas_home": 0.7958,
+    "vegas_home": 0.8,
     "spread_home": 10.0
    }
   },
@@ -1169,7 +1169,7 @@
    },
    "reveal": {
     "model_home": 0.5597,
-    "vegas_home": 0.5325,
+    "vegas_home": 0.5261,
     "spread_home": 1.5
    }
   },
@@ -1475,8 +1475,8 @@
    },
    "reveal": {
     "model_home": 0.7875,
-    "vegas_home": 0.8,
-    "spread_home": 10.0
+    "vegas_home": 0.8271,
+    "spread_home": 11.5
    }
   },
   {
@@ -1635,7 +1635,7 @@
    },
    "reveal": {
     "model_home": 0.7615,
-    "vegas_home": 0.7095,
+    "vegas_home": 0.7002,
     "spread_home": 6.5
    }
   },
@@ -1948,7 +1948,7 @@
    },
    "reveal": {
     "model_home": 0.2479,
-    "vegas_home": 0.2742,
+    "vegas_home": 0.2665,
     "spread_home": -7.0
    }
   },
@@ -2114,7 +2114,7 @@
    },
    "reveal": {
     "model_home": 0.5776,
-    "vegas_home": 0.669,
+    "vegas_home": 0.6854,
     "spread_home": 6.0
    }
   },
@@ -2274,7 +2274,7 @@
    },
    "reveal": {
     "model_home": 0.6021,
-    "vegas_home": 0.5996,
+    "vegas_home": 0.6038,
     "spread_home": 3.0
    }
   }
