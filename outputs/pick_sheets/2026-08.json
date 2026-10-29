@@ -2,8 +2,8 @@
  "id": "2026-08",
  "season": 2026,
  "week": 8,
- "generated_at": "2026-10-28T19:13:20Z",
- "injury_report_posted": false,
+ "generated_at": "2026-10-29T14:44:18Z",
+ "injury_report_posted": true,
  "games": [
   {
    "game_id": "2026_08_CAR_GB",
@@ -81,8 +81,28 @@
       "changed": false,
       "last_starter": "Bryce Young"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Akayleb Evans",
+       "pos": "CB",
+       "snap_share": 0.85,
+       "why": "Out (Triceps)"
+      },
+      {
+       "name": "Damien Lewis",
+       "pos": "G",
+       "snap_share": 0.63,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Bobby Brown III",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Hand"
+      }
+     ]
     },
     "home": {
      "abbr": "GB",
@@ -148,13 +168,63 @@
       "changed": false,
       "last_starter": "Jordan Love"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Sean Rhyan",
+       "pos": "C",
+       "snap_share": 0.77,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "Zaire Franklin",
+       "pos": "LB",
+       "snap_share": 0.73,
+       "why": "Out (Shin)"
+      },
+      {
+       "name": "Travis Glover",
+       "pos": "G",
+       "snap_share": 0.5,
+       "why": "Out (Knee)"
+      },
+      {
+       "name": "Travis Glover",
+       "pos": "T",
+       "snap_share": 0.5,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Matthew Golden",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Devonte Wyatt",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Brenton Cox Jr.",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Anthony Campbell",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.6076,
-    "vegas_home": 0.6309,
+    "model_home": 0.602,
+    "vegas_home": 0.6369,
     "spread_home": 3.5
    }
   },
@@ -306,8 +376,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.7377,
-    "vegas_home": 0.7478,
+    "model_home": 0.7379,
+    "vegas_home": 0.7335,
     "spread_home": 7.0
    }
   },
@@ -460,7 +530,7 @@
    },
    "reveal": {
     "model_home": 0.5174,
-    "vegas_home": 0.5514,
+    "vegas_home": 0.5635,
     "spread_home": 2.5
    }
   },
@@ -626,7 +696,7 @@
    },
    "reveal": {
     "model_home": 0.6812,
-    "vegas_home": 0.6092,
+    "vegas_home": 0.6038,
     "spread_home": 3.0
    }
   },
@@ -946,7 +1016,7 @@
    },
    "reveal": {
     "model_home": 0.7415,
-    "vegas_home": 0.8,
+    "vegas_home": 0.7958,
     "spread_home": 10.0
    }
   },
@@ -1099,7 +1169,7 @@
    },
    "reveal": {
     "model_home": 0.5597,
-    "vegas_home": 0.5261,
+    "vegas_home": 0.5325,
     "spread_home": 1.5
    }
   },
@@ -1404,9 +1474,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.789,
+    "model_home": 0.7875,
     "vegas_home": 0.8,
-    "spread_home": 10.5
+    "spread_home": 10.0
    }
   },
   {
@@ -1565,7 +1635,7 @@
    },
    "reveal": {
     "model_home": 0.7615,
-    "vegas_home": 0.718,
+    "vegas_home": 0.7095,
     "spread_home": 6.5
    }
   },
@@ -1877,7 +1947,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.2483,
+    "model_home": 0.2479,
     "vegas_home": 0.2742,
     "spread_home": -7.0
    }
@@ -1960,6 +2030,12 @@
      },
      "missing": [
       {
+       "name": "Dameon Pierce",
+       "pos": "RB",
+       "snap_share": 0.59,
+       "why": "Injured reserve"
+      },
+      {
        "name": "Jalen Hurts",
        "pos": "QB",
        "snap_share": 0.5,
@@ -2037,9 +2113,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.575,
-    "vegas_home": 0.675,
-    "spread_home": 5.5
+    "model_home": 0.5776,
+    "vegas_home": 0.669,
+    "spread_home": 6.0
    }
   },
   {
