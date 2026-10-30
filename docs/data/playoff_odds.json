@@ -10,8 +10,8 @@
    "wins_now": 6.0,
    "proj_wins": 12.4,
    "playoff": 0.9557,
-   "division_title": 0.6822,
-   "top_seed": 0.4452
+   "division_title": 0.6814,
+   "top_seed": 0.4451
   },
   {
    "team": "JAX",
@@ -19,8 +19,8 @@
    "wins_now": 4.0,
    "proj_wins": 11.5,
    "playoff": 0.9555,
-   "division_title": 0.9322,
-   "top_seed": 0.192
+   "division_title": 0.9321,
+   "top_seed": 0.1929
   },
   {
    "team": "SF",
@@ -28,89 +28,89 @@
    "wins_now": 6.0,
    "proj_wins": 12.0,
    "playoff": 0.9436,
-   "division_title": 0.6442,
-   "top_seed": 0.3097
+   "division_title": 0.6463,
+   "top_seed": 0.3099
   },
   {
    "team": "BUF",
    "division": "AFC East",
    "wins_now": 5.0,
-   "proj_wins": 11.9,
-   "playoff": 0.9418,
-   "division_title": 0.7546,
-   "top_seed": 0.2874
+   "proj_wins": 11.8,
+   "playoff": 0.9384,
+   "division_title": 0.7485,
+   "top_seed": 0.2799
   },
   {
    "team": "DEN",
    "division": "AFC West",
    "wins_now": 5.0,
    "proj_wins": 11.1,
-   "playoff": 0.8727,
+   "playoff": 0.8724,
    "division_title": 0.5054,
-   "top_seed": 0.1285
+   "top_seed": 0.13
   },
   {
    "team": "KC",
    "division": "AFC West",
    "wins_now": 5.0,
    "proj_wins": 11.1,
-   "playoff": 0.857,
+   "playoff": 0.8559,
    "division_title": 0.4868,
-   "top_seed": 0.1415
+   "top_seed": 0.1428
   },
   {
    "team": "CIN",
    "division": "AFC North",
    "wins_now": 4.0,
    "proj_wins": 11.1,
-   "playoff": 0.8496,
-   "division_title": 0.5219,
-   "top_seed": 0.1338
+   "playoff": 0.8508,
+   "division_title": 0.5217,
+   "top_seed": 0.1357
   },
   {
    "team": "SEA",
    "division": "NFC West",
    "wins_now": 4.0,
    "proj_wins": 11.0,
-   "playoff": 0.8372,
-   "division_title": 0.3111,
-   "top_seed": 0.0959
+   "playoff": 0.835,
+   "division_title": 0.3085,
+   "top_seed": 0.0951
   },
   {
    "team": "NE",
    "division": "AFC East",
    "wins_now": 4.0,
    "proj_wins": 10.2,
-   "playoff": 0.7265,
-   "division_title": 0.2436,
-   "top_seed": 0.0458
-  },
-  {
-   "team": "PIT",
-   "division": "AFC North",
-   "wins_now": 5.0,
-   "proj_wins": 10.1,
-   "playoff": 0.6779,
-   "division_title": 0.257,
-   "top_seed": 0.0462
+   "playoff": 0.7253,
+   "division_title": 0.2497,
+   "top_seed": 0.0461
   },
   {
    "team": "CHI",
    "division": "NFC North",
    "wins_now": 5.0,
    "proj_wins": 10.2,
-   "playoff": 0.6736,
-   "division_title": 0.1269,
-   "top_seed": 0.0547
+   "playoff": 0.6764,
+   "division_title": 0.1276,
+   "top_seed": 0.0551
+  },
+  {
+   "team": "PIT",
+   "division": "AFC North",
+   "wins_now": 5.0,
+   "proj_wins": 10.1,
+   "playoff": 0.6761,
+   "division_title": 0.2551,
+   "top_seed": 0.0472
   },
   {
    "team": "DET",
    "division": "NFC North",
    "wins_now": 4.0,
    "proj_wins": 10.2,
-   "playoff": 0.6598,
-   "division_title": 0.1395,
-   "top_seed": 0.0613
+   "playoff": 0.6597,
+   "division_title": 0.1396,
+   "top_seed": 0.0614
   },
   {
    "team": "NYG",
@@ -118,7 +118,7 @@
    "wins_now": 4.5,
    "proj_wins": 8.9,
    "playoff": 0.5991,
-   "division_title": 0.5749,
+   "division_title": 0.575,
    "top_seed": 0.0076
   },
   {
@@ -128,24 +128,24 @@
    "proj_wins": 9.5,
    "playoff": 0.495,
    "division_title": 0.0514,
-   "top_seed": 0.0165
+   "top_seed": 0.0166
   },
   {
    "team": "CLE",
    "division": "AFC North",
    "wins_now": 5.0,
    "proj_wins": 9.3,
-   "playoff": 0.4672,
-   "division_title": 0.1333,
-   "top_seed": 0.0155
+   "playoff": 0.4654,
+   "division_title": 0.1324,
+   "top_seed": 0.0156
   },
   {
    "team": "ATL",
    "division": "NFC South",
    "wins_now": 3.0,
    "proj_wins": 7.8,
-   "playoff": 0.4129,
-   "division_title": 0.4041,
+   "playoff": 0.4121,
+   "division_title": 0.4035,
    "top_seed": 0.0015
   },
   {
@@ -153,17 +153,17 @@
    "division": "AFC North",
    "wins_now": 4.0,
    "proj_wins": 8.9,
-   "playoff": 0.3811,
-   "division_title": 0.0878,
-   "top_seed": 0.0086
+   "playoff": 0.3907,
+   "division_title": 0.0908,
+   "top_seed": 0.0091
   },
   {
    "team": "LA",
    "division": "NFC West",
    "wins_now": 3.0,
    "proj_wins": 8.8,
-   "playoff": 0.3295,
-   "division_title": 0.0443,
+   "playoff": 0.3292,
+   "division_title": 0.0448,
    "top_seed": 0.0059
   },
   {
@@ -171,17 +171,17 @@
    "division": "NFC East",
    "wins_now": 3.0,
    "proj_wins": 8.0,
-   "playoff": 0.3246,
+   "playoff": 0.3247,
    "division_title": 0.2934,
-   "top_seed": 0.001
+   "top_seed": 0.0011
   },
   {
    "team": "TB",
    "division": "NFC South",
    "wins_now": 2.0,
    "proj_wins": 7.3,
-   "playoff": 0.2808,
-   "division_title": 0.273,
+   "playoff": 0.2814,
+   "division_title": 0.2735,
    "top_seed": 0.0001
   },
   {
@@ -190,7 +190,7 @@
    "wins_now": 3.0,
    "proj_wins": 7.1,
    "playoff": 0.2264,
-   "division_title": 0.2178,
+   "division_title": 0.2179,
    "top_seed": 0.0005
   },
   {
@@ -198,7 +198,7 @@
    "division": "AFC South",
    "wins_now": 2.0,
    "proj_wins": 7.7,
-   "playoff": 0.1566,
+   "playoff": 0.1561,
    "division_title": 0.047,
    "top_seed": 0.0006
   },
@@ -216,8 +216,8 @@
    "division": "NFC East",
    "wins_now": 2.0,
    "proj_wins": 6.4,
-   "playoff": 0.0878,
-   "division_title": 0.0815,
+   "playoff": 0.0879,
+   "division_title": 0.0816,
    "top_seed": 0.0001
   },
   {
@@ -225,8 +225,8 @@
    "division": "NFC East",
    "wins_now": 1.5,
    "proj_wins": 6.0,
-   "playoff": 0.0564,
-   "division_title": 0.0502,
+   "playoff": 0.0562,
+   "division_title": 0.05,
    "top_seed": 0.0
   },
   {
@@ -234,8 +234,8 @@
    "division": "AFC South",
    "wins_now": 2.0,
    "proj_wins": 6.7,
-   "playoff": 0.0542,
-   "division_title": 0.0205,
+   "playoff": 0.0539,
+   "division_title": 0.0206,
    "top_seed": 0.0
   },
   {
@@ -243,7 +243,7 @@
    "division": "AFC West",
    "wins_now": 3.0,
    "proj_wins": 6.7,
-   "playoff": 0.047,
+   "playoff": 0.0466,
    "division_title": 0.0076,
    "top_seed": 0.0001
   },

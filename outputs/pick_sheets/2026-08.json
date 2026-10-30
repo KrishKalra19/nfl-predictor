@@ -2,7 +2,7 @@
  "id": "2026-08",
  "season": 2026,
  "week": 8,
- "generated_at": "2026-10-30T04:06:55Z",
+ "generated_at": "2026-10-30T22:57:12Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -86,7 +86,7 @@
        "name": "Akayleb Evans",
        "pos": "CB",
        "snap_share": 0.85,
-       "why": "Out (Triceps)"
+       "why": "Injured reserve"
       },
       {
        "name": "Damien Lewis",
@@ -376,8 +376,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.7379,
-    "vegas_home": 0.7258,
+    "model_home": 0.738,
+    "vegas_home": 0.7221,
     "spread_home": 7.0
    }
   },
@@ -445,7 +445,7 @@
       }
      ],
      "off_rank": 20,
-     "def_rank": 12,
+     "def_rank": 13,
      "ppg": 24.4,
      "papg": 24.7,
      "rest_days": 7,
@@ -529,8 +529,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.5174,
-    "vegas_home": 0.5635,
+    "model_home": 0.5181,
+    "vegas_home": 0.5514,
     "spread_home": 2.5
    }
   },
@@ -598,16 +598,16 @@
       }
      ],
      "off_rank": 8,
-     "def_rank": 20,
+     "def_rank": 19,
      "ppg": 24.1,
      "papg": 23.9,
      "rest_days": 7,
      "travel_miles": 267,
      "qb": {
-      "name": "Tyler Huntley",
-      "epa_per_play": 0.102,
-      "recent_plays": 209,
-      "changed": false,
+      "name": "Lamar Jackson",
+      "epa_per_play": 0.261,
+      "recent_plays": 196,
+      "changed": true,
       "last_starter": "Tyler Huntley"
      },
      "missing": [],
@@ -695,8 +695,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.6812,
-    "vegas_home": 0.6038,
+    "model_home": 0.6349,
+    "vegas_home": 0.6092,
     "spread_home": 3.0
    }
   },
@@ -764,7 +764,7 @@
       }
      ],
      "off_rank": 22,
-     "def_rank": 10,
+     "def_rank": 11,
      "ppg": 19.0,
      "papg": 20.9,
      "rest_days": 7,
@@ -831,7 +831,7 @@
       }
      ],
      "off_rank": 19,
-     "def_rank": 9,
+     "def_rank": 10,
      "ppg": 21.9,
      "papg": 19.7,
      "rest_days": 7,
@@ -848,7 +848,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.5887,
+    "model_home": 0.5886,
     "vegas_home": 0.6309,
     "spread_home": 3.5
    }
@@ -1015,7 +1015,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.7415,
+    "model_home": 0.7409,
     "vegas_home": 0.8,
     "spread_home": 10.0
    }
@@ -1168,7 +1168,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.5597,
+    "model_home": 0.5582,
     "vegas_home": 0.5261,
     "spread_home": 1.5
    }
@@ -1321,7 +1321,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.5416,
+    "model_home": 0.5425,
     "vegas_home": 0.6038,
     "spread_home": 3.0
    }
@@ -1402,7 +1402,14 @@
       "changed": false,
       "last_starter": "Cam Ward"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Jeffery Simmons",
+       "pos": "DT",
+       "snap_share": 0.87,
+       "why": "No longer on roster"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -1474,9 +1481,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.7875,
-    "vegas_home": 0.8271,
-    "spread_home": 11.5
+    "model_home": 0.7979,
+    "vegas_home": 0.8371,
+    "spread_home": 12.5
    }
   },
   {
@@ -1543,7 +1550,7 @@
       }
      ],
      "off_rank": 32,
-     "def_rank": 8,
+     "def_rank": 9,
      "ppg": 15.0,
      "papg": 25.2,
      "rest_days": 14,
@@ -1634,7 +1641,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.7615,
+    "model_home": 0.7614,
     "vegas_home": 0.7002,
     "spread_home": 6.5
    }
@@ -1947,7 +1954,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.2479,
+    "model_home": 0.2485,
     "vegas_home": 0.2665,
     "spread_home": -7.0
    }
@@ -2113,7 +2120,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.5776,
+    "model_home": 0.5749,
     "vegas_home": 0.6854,
     "spread_home": 6.0
    }
@@ -2182,7 +2189,7 @@
       }
      ],
      "off_rank": 9,
-     "def_rank": 11,
+     "def_rank": 12,
      "ppg": 25.7,
      "papg": 20.4,
      "rest_days": 11,
@@ -2273,7 +2280,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.6021,
+    "model_home": 0.591,
     "vegas_home": 0.6038,
     "spread_home": 3.0
    }
