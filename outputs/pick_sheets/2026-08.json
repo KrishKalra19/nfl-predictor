@@ -2,7 +2,7 @@
  "id": "2026-08",
  "season": 2026,
  "week": 8,
- "generated_at": "2026-10-30T22:57:12Z",
+ "generated_at": "2026-11-02T05:06:30Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -235,7 +235,7 @@
    "away": "ARI",
    "home": "DAL",
    "venue": "AT&T Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873024",
@@ -2029,10 +2029,10 @@
      "rest_days": 6,
      "travel_miles": 114,
      "qb": {
-      "name": "Jalen Hurts",
-      "epa_per_play": -0.048,
-      "recent_plays": 279,
-      "changed": true,
+      "name": "Tanner McKee",
+      "epa_per_play": -0.017,
+      "recent_plays": 181,
+      "changed": false,
       "last_starter": "Tanner McKee"
      },
      "missing": [
