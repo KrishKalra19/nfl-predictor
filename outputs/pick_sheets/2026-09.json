@@ -2,7 +2,7 @@
  "id": "2026-09",
  "season": 2026,
  "week": 9,
- "generated_at": "2026-11-06T05:53:48Z",
+ "generated_at": "2026-11-07T20:17:31Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -166,7 +166,7 @@
        "name": "Tyler Huntley",
        "pos": "QB",
        "snap_share": 0.8,
-       "why": "Out (Toe)"
+       "why": "Injured reserve"
       }
      ],
      "questionable": [
@@ -268,7 +268,14 @@
       "last_starter": "Joe Burrow"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Cedric Johnson",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     },
     "home": {
      "abbr": "ATL",
@@ -335,12 +342,43 @@
       "last_starter": "Michael Penix Jr."
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Divine Deablo",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Forearm"
+      },
+      {
+       "name": "Yasir Abdullah",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Beaux Collins",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hip"
+      },
+      {
+       "name": "James Pearce Jr.",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Cameron Williams",
+       "pos": "T",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.311,
-    "vegas_home": 0.3962,
+    "model_home": 0.3099,
+    "vegas_home": 0.3908,
     "spread_home": -3.0
    }
   },
@@ -420,8 +458,22 @@
       "changed": true,
       "last_starter": "Deshaun Watson"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Maliek Collins",
+       "pos": "DT",
+       "snap_share": 0.62,
+       "why": "Out (Elbow)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Deshaun Watson",
+       "pos": "QB",
+       "starter": true,
+       "injury": "Concussion"
+      }
+     ]
     },
     "home": {
      "abbr": "NO",
@@ -488,12 +540,37 @@
       "last_starter": "Tyler Shough"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Asim Richards",
+       "pos": "T",
+       "starter": true,
+       "injury": "Thumb"
+      },
+      {
+       "name": "Martin Emerson",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Shin"
+      },
+      {
+       "name": "Kelvin Banks Jr.",
+       "pos": "T",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Jordyn Tyson",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.6512,
-    "vegas_home": 0.5934,
+    "model_home": 0.6539,
+    "vegas_home": 0.5996,
     "spread_home": 3.0
    }
   },
@@ -574,7 +651,50 @@
       "last_starter": "Dak Prescott"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "George Pickens",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Jonathan Bullard",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Jake Ferguson",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Luke Schoonmaker",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Groin"
+      },
+      {
+       "name": "DeMarvion Overshown",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Joey Porter Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Marist Liufau",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Forearm"
+      }
+     ]
     },
     "home": {
      "abbr": "IND",
@@ -642,6 +762,12 @@
      },
      "missing": [
       {
+       "name": "Akeem Davis-Gaither",
+       "pos": "LB",
+       "snap_share": 0.87,
+       "why": "Out (Knee)"
+      },
+      {
        "name": "Quenton Nelson",
        "pos": "G",
        "snap_share": 0.75,
@@ -652,15 +778,34 @@
        "pos": "DT",
        "snap_share": 0.64,
        "why": "No longer on roster"
+      },
+      {
+       "name": "Justin Walley",
+       "pos": "CB",
+       "snap_share": 0.57,
+       "why": "Out (Knee)"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Jalen Travis",
+       "pos": "T",
+       "starter": true,
+       "injury": "Thumb"
+      },
+      {
+       "name": "A.J. Haulcy",
+       "pos": "S",
+       "starter": true,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.3711,
-    "vegas_home": 0.331,
-    "spread_home": -5.5
+    "model_home": 0.3643,
+    "vegas_home": 0.3425,
+    "spread_home": -4.5
    }
   },
   {
@@ -739,8 +884,52 @@
       "changed": false,
       "last_starter": "Bo Nix"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Brandon Jones",
+       "pos": "S",
+       "snap_share": 0.84,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Kris Abrams-Draine",
+       "pos": "CB",
+       "snap_share": 0.58,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "Taylor Rapp",
+       "pos": "S",
+       "snap_share": 0.55,
+       "why": "Released"
+      },
+      {
+       "name": "Eyioma Uwazurike",
+       "pos": "DL",
+       "snap_share": 0.52,
+       "why": "Out (Shoulder)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Talanoa Hufanga",
+       "pos": "S",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Dondrea Tillman",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hip"
+      },
+      {
+       "name": "Pat Bryant",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     },
     "home": {
      "abbr": "CAR",
@@ -808,18 +997,49 @@
      },
      "missing": [
       {
+       "name": "Bobby Okereke",
+       "pos": "LB",
+       "snap_share": 0.91,
+       "why": "Out (Foot)"
+      },
+      {
+       "name": "Will Lee",
+       "pos": "CB",
+       "snap_share": 0.82,
+       "why": "Out (Hamstring)"
+      },
+      {
        "name": "Akayleb Evans",
        "pos": "CB",
        "snap_share": 0.74,
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Brady Christensen",
+       "pos": "G",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Corey Bullock",
+       "pos": "G",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Torricelli Simpkins III",
+       "pos": "G",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.3927,
-    "vegas_home": 0.417,
+    "model_home": 0.39,
+    "vegas_home": 0.4365,
     "spread_home": -2.5
    }
   },
@@ -899,8 +1119,40 @@
       "changed": false,
       "last_starter": "Jared Goff"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Jack Campbell",
+       "pos": "LB",
+       "snap_share": 0.94,
+       "why": "Out (Neck)"
+      },
+      {
+       "name": "D.J. Reed",
+       "pos": "CB",
+       "snap_share": 0.92,
+       "why": "Out (Hip)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Amon-Ra St. Brown",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Rib"
+      },
+      {
+       "name": "Jacob Saylors",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Sione Vaki",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     },
     "home": {
      "abbr": "MIA",
@@ -967,13 +1219,32 @@
       "last_starter": "Malik Willis"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Malik Herring",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Jaylen Wright",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Kaytron Allen",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Quadricep"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.2314,
-    "vegas_home": 0.2591,
-    "spread_home": -7.0
+    "model_home": 0.2608,
+    "vegas_home": 0.2779,
+    "spread_home": -6.5
    }
   },
   {
@@ -1052,8 +1323,46 @@
       "changed": false,
       "last_starter": "Matthew Stafford"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Jaylen Watson",
+       "pos": "CB",
+       "snap_share": 0.91,
+       "why": "Out (Shoulder)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Kam Curl",
+       "pos": "S",
+       "starter": true,
+       "injury": "Foot"
+      },
+      {
+       "name": "Colby Parkinson",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Ribs"
+      },
+      {
+       "name": "Grant Stuard",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Trent McDuffie",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Jordan Whittington",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     },
     "home": {
      "abbr": "WAS",
@@ -1121,17 +1430,30 @@
      },
      "missing": [
       {
+       "name": "Treylon Burks",
+       "pos": "WR",
+       "snap_share": 0.64,
+       "why": "Out (Foot)"
+      },
+      {
        "name": "Daron Payne",
        "pos": "DT",
        "snap_share": 0.6,
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Jer'Zhan Newton",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Pectoral"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.3759,
+    "model_home": 0.3662,
     "vegas_home": 0.3364,
     "spread_home": -4.5
    }
@@ -1220,7 +1542,14 @@
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Charlie Jones",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hand"
+      }
+     ]
     },
     "home": {
      "abbr": "PHI",
@@ -1291,16 +1620,29 @@
        "name": "Dameon Pierce",
        "pos": "RB",
        "snap_share": 0.59,
-       "why": "Injured reserve"
+       "why": "Released"
+      },
+      {
+       "name": "Jihaad Campbell",
+       "pos": "LB",
+       "snap_share": 0.5,
+       "why": "Out (Hamstring)"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Tanner McKee",
+       "pos": "QB",
+       "starter": true,
+       "injury": "Rib"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.4202,
+    "model_home": 0.3907,
     "vegas_home": 0.4066,
-    "spread_home": -3.5
+    "spread_home": -3.0
    }
   },
   {
@@ -1379,8 +1721,40 @@
       "changed": false,
       "last_starter": "Geno Smith"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "snap_share": 0.89,
+       "why": "Out (Concussion)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Harrison Phillips",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Joseph Ossai",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Nahshon Wright",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "VJ Payne",
+       "pos": "S",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "KC",
@@ -1446,14 +1820,28 @@
       "changed": false,
       "last_starter": "Patrick Mahomes"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Mansoor Delane",
+       "pos": "CB",
+       "snap_share": 0.72,
+       "why": "Out (Shoulder)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Nikko Remigio",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hip"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.7149,
-    "vegas_home": 0.8173,
-    "spread_home": 10.0
+    "model_home": 0.7245,
+    "vegas_home": 0.8043,
+    "spread_home": 9.5
    }
   },
   {
@@ -1604,8 +1992,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.3033,
-    "vegas_home": 0.325,
+    "model_home": 0.3005,
+    "vegas_home": 0.3194,
     "spread_home": -6.0
    }
   },
@@ -1686,7 +2074,14 @@
       "last_starter": "Kirk Cousins"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Darien Porter",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Groin"
+      }
+     ]
     },
     "home": {
      "abbr": "SF",
@@ -1753,11 +2148,36 @@
       "last_starter": "Brock Purdy"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Demarcus Robinson",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Siran Neal",
+       "pos": "S",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Nate Hobbs",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Groin"
+      },
+      {
+       "name": "Upton Stout",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Shoulder"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.7881,
+    "model_home": 0.7701,
     "vegas_home": 0.7958,
     "spread_home": 10.0
    }
@@ -1838,8 +2258,40 @@
       "changed": true,
       "last_starter": "Jacoby Brissett"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Jayden Williams",
+       "pos": "OL",
+       "snap_share": 0.9,
+       "why": "Out (Knee)"
+      },
+      {
+       "name": "Jon Gaines",
+       "pos": "OL",
+       "snap_share": 0.5,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Max Melton",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Isaiah Adams",
+       "pos": "G",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Walter Nolen",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     },
     "home": {
      "abbr": "SEA",
@@ -1905,12 +2357,38 @@
       "changed": true,
       "last_starter": "Sam Darnold"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Sam Darnold",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "Out (Quadricep)"
+      },
+      {
+       "name": "Leonard Williams",
+       "pos": "DT",
+       "snap_share": 0.73,
+       "why": "Out (Stinger)"
+      },
+      {
+       "name": "Charles Cross",
+       "pos": "T",
+       "snap_share": 0.71,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Connor O'Toole",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Foot"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.7865,
+    "model_home": 0.752,
     "vegas_home": 0.7867,
     "spread_home": 8.5
    }
@@ -1991,8 +2469,40 @@
       "changed": false,
       "last_starter": "Jordan Love"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Sean Rhyan",
+       "pos": "C",
+       "snap_share": 0.52,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "Travis Glover",
+       "pos": "G",
+       "snap_share": 0.5,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Keisean Nixon",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "Chris Brooks",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "MarShawn Lloyd",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "NE",
@@ -2059,12 +2569,55 @@
       "last_starter": "Drake Maye"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Morgan Moses",
+       "pos": "T",
+       "starter": true,
+       "injury": "Foot"
+      },
+      {
+       "name": "Hunter Henry",
+       "pos": "TE",
+       "starter": true,
+       "injury": "Foot"
+      },
+      {
+       "name": "Kevin Byard",
+       "pos": "S",
+       "starter": true,
+       "injury": "Chest"
+      },
+      {
+       "name": "Greg Van Roten",
+       "pos": "G",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Mack Hollins",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Carlton Davis III",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Brenden Schooler",
+       "pos": "S",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.5822,
-    "vegas_home": 0.5996,
+    "model_home": 0.5854,
+    "vegas_home": 0.6038,
     "spread_home": 3.0
    }
   },
@@ -2145,7 +2698,14 @@
       "last_starter": "Baker Mayfield"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Emeka Egbuka",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Foot"
+      }
+     ]
     },
     "home": {
      "abbr": "CHI",
@@ -2212,12 +2772,31 @@
       "last_starter": "Caleb Williams"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Tyrique Stevenson",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Thumb"
+      },
+      {
+       "name": "Kyle Monangai",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Thumb"
+      },
+      {
+       "name": "Malik Muhammad",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Toe"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.649,
-    "vegas_home": 0.718,
+    "model_home": 0.651,
+    "vegas_home": 0.7002,
     "spread_home": 6.0
    }
   },
@@ -2382,8 +2961,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.4213,
-    "vegas_home": 0.3908,
+    "model_home": 0.424,
+    "vegas_home": 0.3962,
     "spread_home": -3.0
    }
   }
