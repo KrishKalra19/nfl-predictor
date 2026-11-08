@@ -2,7 +2,7 @@
  "id": "2026-09",
  "season": 2026,
  "week": 9,
- "generated_at": "2026-11-07T20:19:18Z",
+ "generated_at": "2026-11-08T19:00:43Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -198,7 +198,7 @@
    "away": "CIN",
    "home": "ATL",
    "venue": "Bernabeu",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": true,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873038",
@@ -366,12 +366,6 @@
        "pos": "DE",
        "starter": false,
        "injury": "Back"
-      },
-      {
-       "name": "Cameron Williams",
-       "pos": "T",
-       "starter": false,
-       "injury": "Ankle"
       }
      ]
     }
@@ -762,6 +756,12 @@
      },
      "missing": [
       {
+       "name": "A.J. Haulcy",
+       "pos": "S",
+       "snap_share": 0.91,
+       "why": "Out (Ankle)"
+      },
+      {
        "name": "Akeem Davis-Gaither",
        "pos": "LB",
        "snap_share": 0.87,
@@ -792,12 +792,6 @@
        "pos": "T",
        "starter": true,
        "injury": "Thumb"
-      },
-      {
-       "name": "A.J. Haulcy",
-       "pos": "S",
-       "starter": true,
-       "injury": "Ankle"
       }
      ]
     }
@@ -1735,24 +1729,6 @@
        "pos": "DT",
        "starter": true,
        "injury": "Ankle"
-      },
-      {
-       "name": "Joseph Ossai",
-       "pos": "DE",
-       "starter": false,
-       "injury": "Ankle"
-      },
-      {
-       "name": "Nahshon Wright",
-       "pos": "CB",
-       "starter": false,
-       "injury": "Back"
-      },
-      {
-       "name": "VJ Payne",
-       "pos": "S",
-       "starter": false,
-       "injury": "Knee"
       }
      ]
     },
@@ -1920,7 +1896,14 @@
       "changed": false,
       "last_starter": "C.J. Stroud"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Reed Blankenship",
+       "pos": "S",
+       "snap_share": 0.6,
+       "why": "Out (Concussion)"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -1992,9 +1975,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.3005,
-    "vegas_home": 0.3194,
-    "spread_home": -6.0
+    "model_home": 0.3123,
+    "vegas_home": 0.331,
+    "spread_home": -5.5
    }
   },
   {
@@ -2178,8 +2161,8 @@
    },
    "reveal": {
     "model_home": 0.7701,
-    "vegas_home": 0.7958,
-    "spread_home": 10.0
+    "vegas_home": 0.7819,
+    "spread_home": 8.5
    }
   },
   {
@@ -2389,7 +2372,7 @@
    },
    "reveal": {
     "model_home": 0.752,
-    "vegas_home": 0.7867,
+    "vegas_home": 0.7819,
     "spread_home": 8.5
    }
   },
@@ -2587,12 +2570,6 @@
        "pos": "S",
        "starter": true,
        "injury": "Chest"
-      },
-      {
-       "name": "Greg Van Roten",
-       "pos": "G",
-       "starter": false,
-       "injury": "Hamstring"
       },
       {
        "name": "Mack Hollins",
@@ -2890,7 +2867,38 @@
        "why": "No longer on roster"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Dion Dawkins",
+       "pos": "T",
+       "starter": true,
+       "injury": "Rib"
+      },
+      {
+       "name": "Greg Gaines",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Alec Anderson",
+       "pos": "G",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Tyrell Shavers",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Jordan Hancock",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     },
     "home": {
      "abbr": "MIN",
@@ -2956,13 +2964,39 @@
       "changed": false,
       "last_starter": "Kyler Murray"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Kyler Murray",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Jauan Jennings",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "Out (Calf)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Theo Jackson",
+       "pos": "S",
+       "starter": true,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Jay Ward",
+       "pos": "S",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.424,
-    "vegas_home": 0.3962,
+    "model_home": 0.3903,
+    "vegas_home": 0.3908,
     "spread_home": -3.0
    }
   }
