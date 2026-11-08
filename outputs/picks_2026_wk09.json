@@ -39,7 +39,7 @@
       "away_team": "ARI",
       "home_team": "SEA",
       "p_home": 0.752,
-      "vegas_prob": 0.7819,
+      "vegas_prob": 0.7867,
       "spread_line": 8.5,
       "h_qb_rating": -0.0253,
       "a_qb_rating": -0.0698,
@@ -61,7 +61,7 @@
       "confidence": 0.752,
       "vegas_pick": "SEA",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0299
+      "edge_vs_vegas": -0.0347
     },
     {
       "game_id": "2026_09_DET_MIA",
@@ -189,7 +189,7 @@
       "away_team": "HOU",
       "home_team": "LAC",
       "p_home": 0.3123,
-      "vegas_prob": 0.331,
+      "vegas_prob": 0.3364,
       "spread_line": -5.5,
       "h_qb_rating": -0.0863,
       "a_qb_rating": 0.0612,
@@ -211,7 +211,7 @@
       "confidence": 0.6877,
       "vegas_pick": "HOU",
       "agrees_with_vegas": true,
-      "edge_vs_vegas": -0.0187
+      "edge_vs_vegas": -0.0241
     },
     {
       "game_id": "2026_09_CLE_NO",
