@@ -2,7 +2,7 @@
  "id": "2026-09",
  "season": 2026,
  "week": 9,
- "generated_at": "2026-11-08T19:58:01Z",
+ "generated_at": "2026-11-09T00:25:33Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -575,7 +575,7 @@
    "away": "DAL",
    "home": "IND",
    "venue": "Lucas Oil Stadium",
-   "roof": "",
+   "roof": "open",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873040",
@@ -2772,7 +2772,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.651,
+    "model_home": 0.6501,
     "vegas_home": 0.7002,
     "spread_home": 6.0
    }
@@ -2995,7 +2995,7 @@
     }
    },
    "reveal": {
-    "model_home": 0.3903,
+    "model_home": 0.3902,
     "vegas_home": 0.3908,
     "spread_home": -3.0
    }
