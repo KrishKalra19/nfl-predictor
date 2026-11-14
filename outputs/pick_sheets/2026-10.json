@@ -2,8 +2,8 @@
  "id": "2026-10",
  "season": 2026,
  "week": 10,
- "generated_at": "2026-11-10T17:16:52Z",
- "injury_report_posted": false,
+ "generated_at": "2026-11-14T19:18:38Z",
+ "injury_report_posted": true,
  "games": [
   {
    "game_id": "2026_10_WAS_NYG",
@@ -81,7 +81,14 @@
       "changed": false,
       "last_starter": "Jayden Daniels"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Lucas Patrick",
+       "pos": "G",
+       "snap_share": 0.86,
+       "why": "Out (Concussion)"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -156,7 +163,14 @@
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Malik Harrison",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Groin"
+      }
+     ]
     }
    },
    "reveal": {
@@ -242,7 +256,62 @@
       "last_starter": "Drake Maye"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Kevin Byard",
+       "pos": "S",
+       "starter": true,
+       "injury": "Chest"
+      },
+      {
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Walter Rouse",
+       "pos": "T",
+       "starter": true,
+       "injury": "Concussion"
+      },
+      {
+       "name": "Greg Van Roten",
+       "pos": "G",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "A.J. Brown",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Reggie Gilliam",
+       "pos": "FB",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Brenden Schooler",
+       "pos": "S",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Cameron Latu",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Charles Woods",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     },
     "home": {
      "abbr": "DET",
@@ -314,9 +383,28 @@
        "pos": "LB",
        "snap_share": 0.69,
        "why": "Injured reserve"
+      },
+      {
+       "name": "D.J. Reed",
+       "pos": "CB",
+       "snap_share": 0.67,
+       "why": "Out (Hip)"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Amon-Ra St. Brown",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Rib"
+      },
+      {
+       "name": "Sione Vaki",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
@@ -407,9 +495,40 @@
        "pos": "C",
        "snap_share": 0.73,
        "why": "No longer on roster"
+      },
+      {
+       "name": "Spencer Brown",
+       "pos": "T",
+       "snap_share": 0.55,
+       "why": "Doubtful (Ankle)"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Christian Benford",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Wrist"
+      },
+      {
+       "name": "Sam Franklin Jr.",
+       "pos": "S",
+       "starter": false,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Tyrell Shavers",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Jordan Hancock",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     },
     "home": {
      "abbr": "NYJ",
@@ -476,7 +595,56 @@
       "last_starter": "Geno Smith"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Harrison Phillips",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Concussion"
+      },
+      {
+       "name": "Omar Cooper Jr.",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Joseph Ossai",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Nahshon Wright",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Back"
+      },
+      {
+       "name": "Jarvis Brownlee Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Illness"
+      },
+      {
+       "name": "Adonai Mitchell",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "VJ Payne",
+       "pos": "S",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     }
    },
    "reveal": {
@@ -563,13 +731,44 @@
      },
      "missing": [
       {
+       "name": "Bobby Okereke",
+       "pos": "LB",
+       "snap_share": 0.72,
+       "why": "Out (Foot)"
+      },
+      {
        "name": "Marco Wilson",
        "pos": "CB",
        "snap_share": 0.5,
        "why": "Practice squad"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Will Lee III",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Jaelan Phillips",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Brady Christensen",
+       "pos": "G",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Xavier Legette",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "NO",
@@ -635,8 +834,34 @@
       "changed": false,
       "last_starter": "Tyler Shough"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Taliese Fuaga",
+       "pos": "T",
+       "snap_share": 1.0,
+       "why": "Out (Knee)"
+      },
+      {
+       "name": "Erik McCoy",
+       "pos": "C",
+       "snap_share": 0.93,
+       "why": "Out (Biceps)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Martin Emerson",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Shin"
+      },
+      {
+       "name": "Travis Etienne",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     }
    },
    "reveal": {
@@ -721,8 +946,64 @@
       "changed": false,
       "last_starter": "C.J. Stroud"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Keylan Rutledge",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "Out (Neck)"
+      },
+      {
+       "name": "Azeez Al-Shaair",
+       "pos": "LB",
+       "snap_share": 0.95,
+       "why": "Out (Groin)"
+      },
+      {
+       "name": "Danielle Hunter",
+       "pos": "DE",
+       "snap_share": 0.72,
+       "why": "Out (Hamstring)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Trent Brown",
+       "pos": "T",
+       "starter": true,
+       "injury": "Wrist"
+      },
+      {
+       "name": "Will Anderson Jr.",
+       "pos": "DE",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Wyatt Teller",
+       "pos": "G",
+       "starter": false,
+       "injury": "Illness"
+      },
+      {
+       "name": "David Montgomery",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Groin"
+      },
+      {
+       "name": "Jacob Hummel",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Groin"
+      },
+      {
+       "name": "Jaylin Smith",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     },
     "home": {
      "abbr": "CLE",
@@ -788,8 +1069,22 @@
       "changed": true,
       "last_starter": "Shedeur Sanders"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Ronnie Hickman",
+       "pos": "S",
+       "snap_share": 0.98,
+       "why": "Out (Concussion)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Denzel Boston",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Toe"
+      }
+     ]
     }
    },
    "reveal": {
@@ -875,7 +1170,14 @@
       "last_starter": "Trevor Lawrence"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Robert Hainsey",
+       "pos": "C",
+       "starter": true,
+       "injury": "Concussion"
+      }
+     ]
     },
     "home": {
      "abbr": "TEN",
@@ -943,13 +1245,50 @@
      },
      "missing": [
       {
+       "name": "Anthony Hill",
+       "pos": "LB",
+       "snap_share": 0.99,
+       "why": "Out (Neck)"
+      },
+      {
+       "name": "Peter Skoronski",
+       "pos": "G",
+       "snap_share": 0.95,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Amani Hooker",
+       "pos": "S",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
        "name": "Jeffery Simmons",
        "pos": "DT",
        "snap_share": 0.66,
        "why": "No longer on roster"
+      },
+      {
+       "name": "Cody Barton",
+       "pos": "LB",
+       "snap_share": 0.65,
+       "why": "Out (Concussion)"
+      },
+      {
+       "name": "Carnell Tate",
+       "pos": "WR",
+       "snap_share": 0.6,
+       "why": "Out (Shoulder)"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Tyjae Spears",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1034,8 +1373,34 @@
       "changed": false,
       "last_starter": "Patrick Mahomes"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Jaylon Moore",
+       "pos": "OL",
+       "snap_share": 0.54,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "Jaydn Ott",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Mansoor Delane",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Shoulder"
+      }
+     ]
     },
     "home": {
      "abbr": "ATL",
@@ -1101,8 +1466,40 @@
       "changed": false,
       "last_starter": "Michael Penix Jr."
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Ryan Neuzil",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jessie Bates III",
+       "pos": "S",
+       "snap_share": 0.99,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Gervon Dexter Sr.",
+       "pos": "DT",
+       "starter": true,
+       "injury": "Illness"
+      },
+      {
+       "name": "Josh Woods",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "James Pearce Jr.",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1187,8 +1584,40 @@
       "changed": false,
       "last_starter": "Malik Willis"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Aaron Brewer",
+       "pos": "C",
+       "snap_share": 1.0,
+       "why": "Out (Concussion)"
+      },
+      {
+       "name": "Malik Willis",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Zach Sieler",
+       "pos": "DL",
+       "snap_share": 0.77,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Chris Bell",
+       "pos": "WR",
+       "snap_share": 0.63,
+       "why": "Doubtful (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Darrell Baker Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "IND",
@@ -1256,13 +1685,50 @@
      },
      "missing": [
       {
+       "name": "Jalen Travis",
+       "pos": "T",
+       "snap_share": 0.85,
+       "why": "Out (Knee)"
+      },
+      {
+       "name": "Josh Downs",
+       "pos": "WR",
+       "snap_share": 0.81,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Akeem Davis-Gaither",
+       "pos": "LB",
+       "snap_share": 0.66,
+       "why": "Out (Knee)"
+      },
+      {
+       "name": "Keenan Allen",
+       "pos": "WR",
+       "snap_share": 0.57,
+       "why": "No longer on roster"
+      },
+      {
        "name": "Quenton Nelson",
        "pos": "G",
        "snap_share": 0.5,
        "why": "No longer on roster"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Arden Key",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Will Mallory",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Hamstring"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1341,14 +1807,58 @@
      "rest_days": 6,
      "travel_miles": 257,
      "qb": {
-      "name": "Kyler Murray",
-      "epa_per_play": -0.047,
-      "recent_plays": 257,
+      "name": "Kirk Cousins",
+      "epa_per_play": 0.187,
+      "recent_plays": 304,
       "changed": true,
       "last_starter": "Carson Wentz"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Blake Cashman",
+       "pos": "LB",
+       "snap_share": 0.95,
+       "why": "Out (Concussion)"
+      },
+      {
+       "name": "Kyler Murray",
+       "pos": "QB",
+       "snap_share": 0.75,
+       "why": "Out (Hamstring)"
+      },
+      {
+       "name": "Tyrion Ingram-Dawkins",
+       "pos": "DL",
+       "snap_share": 0.68,
+       "why": "Out (Ankle)"
+      },
+      {
+       "name": "T.J. Hockenson",
+       "pos": "TE",
+       "snap_share": 0.61,
+       "why": "Out (Wrist)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Josh Metellus",
+       "pos": "S",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Jordan Addison",
+       "pos": "WR",
+       "starter": true,
+       "injury": "Thumb"
+      },
+      {
+       "name": "Kyle Van Noy",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Calf"
+      }
+     ]
     },
     "home": {
      "abbr": "GB",
@@ -1415,7 +1925,50 @@
       "last_starter": "Jordan Love"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Xavier McKinney",
+       "pos": "S",
+       "starter": true,
+       "injury": "Foot"
+      },
+      {
+       "name": "Lukas Van Ness",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Back"
+      },
+      {
+       "name": "Travis Glover",
+       "pos": "G",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Javon Bullard",
+       "pos": "S",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Kevin Zeitler",
+       "pos": "G",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Skyy Moore",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Chris Brooks",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1502,13 +2055,56 @@
      },
      "missing": [
       {
+       "name": "Puka Nacua",
+       "pos": "WR",
+       "snap_share": 0.91,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Steve Avila",
+       "pos": "OL",
+       "snap_share": 0.8,
+       "why": "Out (Hamstring)"
+      },
+      {
        "name": "Jaylen Watson",
        "pos": "CB",
        "snap_share": 0.66,
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Kam Curl",
+       "pos": "S",
+       "starter": true,
+       "injury": "Toe"
+      },
+      {
+       "name": "Davis Allen",
+       "pos": "TE",
+       "starter": true,
+       "injury": "Oblique"
+      },
+      {
+       "name": "Joe Cardona",
+       "pos": "LS",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Myles Garrett",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Trent McDuffie",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     },
     "home": {
      "abbr": "ARI",
@@ -1576,13 +2172,62 @@
      },
      "missing": [
       {
+       "name": "Hjalte Froholdt",
+       "pos": "OL",
+       "snap_share": 1.0,
+       "why": "Out (Concussion)"
+      },
+      {
+       "name": "Michael Wilson",
+       "pos": "WR",
+       "snap_share": 0.86,
+       "why": "Injured reserve"
+      },
+      {
        "name": "Jacoby Brissett",
        "pos": "QB",
        "snap_share": 0.65,
        "why": "No longer on roster"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Andrew Wingard",
+       "pos": "S",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "Max Melton",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Jayden Williams",
+       "pos": "T",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Roy Lopez",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Toe"
+      },
+      {
+       "name": "Hunter Long",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Darius Robinson",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Wrist"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1667,7 +2312,20 @@
       "changed": true,
       "last_starter": "Drew Lock"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Sam Darnold",
+       "pos": "QB",
+       "snap_share": 0.75,
+       "why": "Out (Ribs)"
+      },
+      {
+       "name": "Leonard Williams",
+       "pos": "DT",
+       "snap_share": 0.55,
+       "why": "Out (Stinger)"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -1728,14 +2386,34 @@
      "rest_days": 7,
      "travel_miles": 0,
      "qb": {
-      "name": "Kirk Cousins",
-      "epa_per_play": 0.187,
-      "recent_plays": 304,
-      "changed": false,
+      "name": "Fernando Mendoza",
+      "epa_per_play": 0.155,
+      "recent_plays": 8,
+      "changed": true,
       "last_starter": "Kirk Cousins"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Kirk Cousins",
+       "pos": "QB",
+       "snap_share": 1.0,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Thomas Booker",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Dont'e Thornton Jr.",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1821,7 +2499,50 @@
       "last_starter": "Brock Purdy"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Trent Williams",
+       "pos": "T",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Dre Greenlaw",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Knee"
+      },
+      {
+       "name": "Deommodore Lenoir",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Foot"
+      },
+      {
+       "name": "Renardo Green",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Back"
+      },
+      {
+       "name": "Nate Hobbs",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Groin"
+      },
+      {
+       "name": "Upton Stout",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "C.J. West",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "DAL",
@@ -1887,8 +2608,46 @@
       "changed": false,
       "last_starter": "Dak Prescott"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Donovan Ezeiruaku",
+       "pos": "LB",
+       "snap_share": 0.57,
+       "why": "Out (Ankle)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "DaRon Bland",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Jonathan Bullard",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Joey Porter Jr.",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Alijah Clark",
+       "pos": "S",
+       "starter": false,
+       "injury": "Illness"
+      },
+      {
+       "name": "Devin Moore",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hip"
+      }
+     ]
     }
    },
    "reveal": {
@@ -1974,7 +2733,14 @@
       "last_starter": "Aaron Rodgers"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Derrick Harmon",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Foot"
+      }
+     ]
     },
     "home": {
      "abbr": "CIN",
@@ -2114,7 +2880,7 @@
       }
      ],
      "off_rank": 32,
-     "def_rank": 15,
+     "def_rank": 14,
      "ppg": 15.1,
      "papg": 27.4,
      "rest_days": 8,
