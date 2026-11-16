@@ -2,7 +2,7 @@
  "id": "2026-10",
  "season": 2026,
  "week": 10,
- "generated_at": "2026-11-14T19:38:01Z",
+ "generated_at": "2026-11-16T16:39:42Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -735,12 +735,6 @@
        "pos": "LB",
        "snap_share": 0.72,
        "why": "Out (Foot)"
-      },
-      {
-       "name": "Marco Wilson",
-       "pos": "CB",
-       "snap_share": 0.5,
-       "why": "Practice squad"
       }
      ],
      "questionable": [
@@ -1254,7 +1248,7 @@
        "name": "Peter Skoronski",
        "pos": "G",
        "snap_share": 0.95,
-       "why": "Out (Hamstring)"
+       "why": "Injured reserve"
       },
       {
        "name": "Amani Hooker",
@@ -1304,7 +1298,7 @@
    "away": "KC",
    "home": "ATL",
    "venue": "Mercedes-Benz Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873058",
@@ -1515,7 +1509,7 @@
    "away": "MIA",
    "home": "IND",
    "venue": "Lucas Oil Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873059",
@@ -1578,10 +1572,10 @@
      "rest_days": 7,
      "travel_miles": 1013,
      "qb": {
-      "name": "Malik Willis",
-      "epa_per_play": -0.109,
-      "recent_plays": 244,
-      "changed": false,
+      "name": "Kyle McCord",
+      "epa_per_play": null,
+      "recent_plays": 0,
+      "changed": true,
       "last_starter": "Malik Willis"
      },
      "missing": [
@@ -1700,7 +1694,7 @@
        "name": "Akeem Davis-Gaither",
        "pos": "LB",
        "snap_share": 0.66,
-       "why": "Out (Knee)"
+       "why": "Injured reserve"
       },
       {
        "name": "Keenan Allen",
@@ -1984,7 +1978,7 @@
    "away": "LA",
    "home": "ARI",
    "venue": "State Farm Stadium",
-   "roof": "",
+   "roof": "open",
    "division_game": true,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873061",
@@ -2429,7 +2423,7 @@
    "away": "SF",
    "home": "DAL",
    "venue": "AT&T Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873063",
