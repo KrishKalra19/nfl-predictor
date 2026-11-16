@@ -54,7 +54,7 @@
    "division": "AFC West",
    "wins_now": 7.0,
    "proj_wins": 11.6,
-   "playoff": 0.9676,
+   "playoff": 0.9677,
    "division_title": 0.3796,
    "top_seed": 0.0543
   },
@@ -90,7 +90,7 @@
    "division": "AFC North",
    "wins_now": 6.0,
    "proj_wins": 10.1,
-   "playoff": 0.7863,
+   "playoff": 0.7864,
    "division_title": 0.1069,
    "top_seed": 0.0048
   },
@@ -153,7 +153,7 @@
    "division": "AFC East",
    "wins_now": 5.0,
    "proj_wins": 8.6,
-   "playoff": 0.3707,
+   "playoff": 0.3709,
    "division_title": 0.0059,
    "top_seed": 0.0001
   },
@@ -171,7 +171,7 @@
    "division": "AFC South",
    "wins_now": 3.0,
    "proj_wins": 7.8,
-   "playoff": 0.1799,
+   "playoff": 0.18,
    "division_title": 0.0041,
    "top_seed": 0.0
   },
@@ -180,7 +180,7 @@
    "division": "AFC North",
    "wins_now": 4.0,
    "proj_wins": 7.7,
-   "playoff": 0.1699,
+   "playoff": 0.1693,
    "division_title": 0.0062,
    "top_seed": 0.0
   },
@@ -225,7 +225,7 @@
    "division": "AFC West",
    "wins_now": 4.0,
    "proj_wins": 6.8,
-   "playoff": 0.0488,
+   "playoff": 0.0489,
    "division_title": 0.001,
    "top_seed": 0.0
   },

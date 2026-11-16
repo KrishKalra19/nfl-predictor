@@ -2,7 +2,7 @@
  "id": "2026-10",
  "season": 2026,
  "week": 10,
- "generated_at": "2026-11-16T16:39:42Z",
+ "generated_at": "2026-11-16T17:17:14Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -1711,12 +1711,6 @@
      ],
      "questionable": [
       {
-       "name": "Arden Key",
-       "pos": "DE",
-       "starter": false,
-       "injury": "Hamstring"
-      },
-      {
        "name": "Will Mallory",
        "pos": "TE",
        "starter": false,
@@ -2874,7 +2868,7 @@
       }
      ],
      "off_rank": 32,
-     "def_rank": 14,
+     "def_rank": 13,
      "ppg": 15.1,
      "papg": 27.4,
      "rest_days": 8,
@@ -2887,7 +2881,44 @@
       "last_starter": "Justin Herbert"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Denzel Perryman",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Pectoral"
+      },
+      {
+       "name": "David Njoku",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Fibula"
+      },
+      {
+       "name": "Trey Pipkins",
+       "pos": "T",
+       "starter": false,
+       "injury": "Not injury related - personal matter"
+      },
+      {
+       "name": "Kayode Awosika",
+       "pos": "G",
+       "starter": false,
+       "injury": "Fibula"
+      },
+      {
+       "name": "Justin Eboigbe",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Ladd McConkey",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     },
     "home": {
      "abbr": "BAL",
@@ -2940,8 +2971,8 @@
        "result": "W"
       }
      ],
-     "off_rank": 20,
-     "def_rank": 19,
+     "off_rank": 21,
+     "def_rank": 21,
      "ppg": 21.0,
      "papg": 26.2,
      "rest_days": 11,
@@ -2961,12 +2992,19 @@
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Adam Randall",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Neck"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.6832,
-    "vegas_home": 0.6575,
+    "model_home": 0.6808,
+    "vegas_home": 0.6636,
     "spread_home": 4.5
    }
   }
