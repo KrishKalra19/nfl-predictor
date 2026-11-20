@@ -2,7 +2,7 @@
  "id": "2026-11",
  "season": 2026,
  "week": 11,
- "generated_at": "2026-11-20T03:37:07Z",
+ "generated_at": "2026-11-20T05:06:15Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -12,7 +12,7 @@
    "away": "IND",
    "home": "HOU",
    "venue": "Reliant Stadium",
-   "roof": "",
+   "roof": "open",
    "division_game": true,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873066",
