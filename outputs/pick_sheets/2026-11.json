@@ -2,7 +2,7 @@
  "id": "2026-11",
  "season": 2026,
  "week": 11,
- "generated_at": "2026-11-22T04:52:54Z",
+ "generated_at": "2026-11-23T03:03:24Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -509,10 +509,10 @@
      "rest_days": 6,
      "travel_miles": 364,
      "qb": {
-      "name": "Tyler Huntley",
-      "epa_per_play": 0.103,
-      "recent_plays": 195,
-      "changed": true,
+      "name": "Jacoby Brissett",
+      "epa_per_play": -0.045,
+      "recent_plays": 351,
+      "changed": false,
       "last_starter": "Jacoby Brissett"
      },
      "missing": [
@@ -634,179 +634,6 @@
     "model_home": 0.6262,
     "vegas_home": 0.5635,
     "spread_home": 2.5
-   }
-  },
-  {
-   "game_id": "2026_11_JAX_NYG",
-   "kickoff": "2026-11-22T18:00:00Z",
-   "kickoff_label": "Sun Nov 22, 1:00 PM ET",
-   "away": "JAX",
-   "home": "NYG",
-   "venue": "MetLife Stadium",
-   "roof": "outdoors",
-   "division_game": false,
-   "neutral": false,
-   "link": "https://www.espn.com/nfl/game/_/gameId/401873069",
-   "teams": {
-    "away": {
-     "abbr": "JAX",
-     "name": "Jaguars",
-     "record": "7-2",
-     "last5": [
-      {
-       "season": 2026,
-       "week": 10,
-       "opp": "TEN",
-       "home": false,
-       "pf": 40,
-       "pa": 23,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 9,
-       "opp": "BAL",
-       "home": false,
-       "pf": 33,
-       "pa": 10,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 8,
-       "opp": "IND",
-       "home": true,
-       "pf": 42,
-       "pa": 7,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 6,
-       "opp": "HOU",
-       "home": true,
-       "pf": 31,
-       "pa": 34,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "PHI",
-       "home": true,
-       "pf": 19,
-       "pa": 17,
-       "result": "W"
-      }
-     ],
-     "off_rank": 5,
-     "def_rank": 4,
-     "ppg": 29.9,
-     "papg": 16.0,
-     "rest_days": 7,
-     "travel_miles": 839,
-     "qb": {
-      "name": "Trevor Lawrence",
-      "epa_per_play": 0.273,
-      "recent_plays": 256,
-      "changed": false,
-      "last_starter": "Trevor Lawrence"
-     },
-     "missing": [
-      {
-       "name": "Robert Hainsey",
-       "pos": "OL",
-       "snap_share": 0.84,
-       "why": "Out (Knee)"
-      }
-     ],
-     "questionable": [
-      {
-       "name": "Matt Dickerson",
-       "pos": "DT",
-       "starter": false,
-       "injury": "Neck"
-      },
-      {
-       "name": "Danny Striggow",
-       "pos": "DE",
-       "starter": false,
-       "injury": "Concussion"
-      }
-     ]
-    },
-    "home": {
-     "abbr": "NYG",
-     "name": "Giants",
-     "record": "5-3-1",
-     "last5": [
-      {
-       "season": 2026,
-       "week": 10,
-       "opp": "WAS",
-       "home": true,
-       "pf": 21,
-       "pa": 24,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 9,
-       "opp": "PHI",
-       "home": false,
-       "pf": 19,
-       "pa": 11,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 7,
-       "opp": "HOU",
-       "home": false,
-       "pf": 27,
-       "pa": 21,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 6,
-       "opp": "NO",
-       "home": true,
-       "pf": 27,
-       "pa": 34,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "WAS",
-       "home": false,
-       "pf": 27,
-       "pa": 27,
-       "result": "T"
-      }
-     ],
-     "off_rank": 11,
-     "def_rank": 17,
-     "ppg": 22.6,
-     "papg": 21.8,
-     "rest_days": 10,
-     "travel_miles": 0,
-     "qb": {
-      "name": "J.J. McCarthy",
-      "epa_per_play": 0.166,
-      "recent_plays": 209,
-      "changed": false,
-      "last_starter": "J.J. McCarthy"
-     },
-     "missing": [],
-     "questionable": []
-    }
-   },
-   "reveal": {
-    "model_home": 0.2973,
-    "vegas_home": 0.3099,
-    "spread_home": -6.0
    }
   },
   {
@@ -1256,6 +1083,229 @@
    }
   },
   {
+   "game_id": "2026_11_PIT_PHI",
+   "kickoff": "2026-11-22T18:00:00Z",
+   "kickoff_label": "Sun Nov 22, 1:00 PM ET",
+   "away": "PIT",
+   "home": "PHI",
+   "venue": "Lincoln Financial Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873076",
+   "teams": {
+    "away": {
+     "abbr": "PIT",
+     "name": "Steelers",
+     "record": "6-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "CIN",
+       "home": false,
+       "pf": 18,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "CLE",
+       "home": true,
+       "pf": 27,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NO",
+       "home": false,
+       "pf": 16,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "TB",
+       "home": false,
+       "pf": 26,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "IND",
+       "home": true,
+       "pf": 34,
+       "pa": 22,
+       "result": "W"
+      }
+     ],
+     "off_rank": 15,
+     "def_rank": 13,
+     "ppg": 22.0,
+     "papg": 20.2,
+     "rest_days": 7,
+     "travel_miles": 259,
+     "qb": {
+      "name": "Aaron Rodgers",
+      "epa_per_play": -0.038,
+      "recent_plays": 301,
+      "changed": false,
+      "last_starter": "Aaron Rodgers"
+     },
+     "missing": [
+      {
+       "name": "Mason McCormick",
+       "pos": "G",
+       "snap_share": 0.83,
+       "why": "Injured reserve"
+      },
+      {
+       "name": "Brandon Smith",
+       "pos": "WR",
+       "snap_share": 0.53,
+       "why": "Released"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Patrick Queen",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Hand"
+      },
+      {
+       "name": "Nick Herbig",
+       "pos": "LB",
+       "starter": true,
+       "injury": "Hip"
+      },
+      {
+       "name": "DeShon Elliott",
+       "pos": "S",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Michael Pittman",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Foot"
+      },
+      {
+       "name": "Roman Wilson",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Hand"
+      },
+      {
+       "name": "Gennings Dunker",
+       "pos": "G",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "PHI",
+     "name": "Eagles",
+     "record": "2-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "NYG",
+       "home": true,
+       "pf": 11,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "WAS",
+       "home": false,
+       "pf": 10,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DAL",
+       "home": true,
+       "pf": 21,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CAR",
+       "home": true,
+       "pf": 14,
+       "pa": 25,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "JAX",
+       "home": false,
+       "pf": 17,
+       "pa": 19,
+       "result": "L"
+      }
+     ],
+     "off_rank": 29,
+     "def_rank": 28,
+     "ppg": 16.4,
+     "papg": 24.6,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Joe Milton III",
+      "epa_per_play": -0.009,
+      "recent_plays": 104,
+      "changed": false,
+      "last_starter": "Joe Milton III"
+     },
+     "missing": [
+      {
+       "name": "Zack Baun",
+       "pos": "LB",
+       "snap_share": 0.87,
+       "why": "Out (Back)"
+      },
+      {
+       "name": "Jordan Davis",
+       "pos": "DT",
+       "snap_share": 0.59,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Will Shipley",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Foot"
+      }
+     ]
+    }
+   },
+   "reveal": {
+    "model_home": 0.3104,
+    "vegas_home": 0.3712,
+    "spread_home": -3.5
+   }
+  },
+  {
    "game_id": "2026_11_TB_DET",
    "kickoff": "2026-11-22T18:00:00Z",
    "kickoff_label": "Sun Nov 22, 1:00 PM ET",
@@ -1472,7 +1522,7 @@
    "away": "TEN",
    "home": "DAL",
    "venue": "AT&T Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": false,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873073",
@@ -1930,6 +1980,179 @@
    }
   },
   {
+   "game_id": "2026_11_JAX_NYG",
+   "kickoff": "2026-11-22T21:25:00Z",
+   "kickoff_label": "Sun Nov 22, 4:25 PM ET",
+   "away": "JAX",
+   "home": "NYG",
+   "venue": "MetLife Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873069",
+   "teams": {
+    "away": {
+     "abbr": "JAX",
+     "name": "Jaguars",
+     "record": "7-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "TEN",
+       "home": false,
+       "pf": 40,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "BAL",
+       "home": false,
+       "pf": 33,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "IND",
+       "home": true,
+       "pf": 42,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "HOU",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "PHI",
+       "home": true,
+       "pf": 19,
+       "pa": 17,
+       "result": "W"
+      }
+     ],
+     "off_rank": 5,
+     "def_rank": 4,
+     "ppg": 29.9,
+     "papg": 16.0,
+     "rest_days": 7,
+     "travel_miles": 839,
+     "qb": {
+      "name": "Trevor Lawrence",
+      "epa_per_play": 0.273,
+      "recent_plays": 256,
+      "changed": false,
+      "last_starter": "Trevor Lawrence"
+     },
+     "missing": [
+      {
+       "name": "Robert Hainsey",
+       "pos": "OL",
+       "snap_share": 0.84,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Matt Dickerson",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Neck"
+      },
+      {
+       "name": "Danny Striggow",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Concussion"
+      }
+     ]
+    },
+    "home": {
+     "abbr": "NYG",
+     "name": "Giants",
+     "record": "5-3-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "WAS",
+       "home": true,
+       "pf": 21,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "PHI",
+       "home": false,
+       "pf": 19,
+       "pa": 11,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "HOU",
+       "home": false,
+       "pf": 27,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NO",
+       "home": true,
+       "pf": 27,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "WAS",
+       "home": false,
+       "pf": 27,
+       "pa": 27,
+       "result": "T"
+      }
+     ],
+     "off_rank": 11,
+     "def_rank": 17,
+     "ppg": 22.6,
+     "papg": 21.8,
+     "rest_days": 10,
+     "travel_miles": 0,
+     "qb": {
+      "name": "J.J. McCarthy",
+      "epa_per_play": 0.166,
+      "recent_plays": 209,
+      "changed": false,
+      "last_starter": "J.J. McCarthy"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": {
+    "model_home": 0.2973,
+    "vegas_home": 0.3099,
+    "spread_home": -6.0
+   }
+  },
+  {
    "game_id": "2026_11_LV_DEN",
    "kickoff": "2026-11-22T21:25:00Z",
    "kickoff_label": "Sun Nov 22, 4:25 PM ET",
@@ -2120,229 +2343,6 @@
     "model_home": 0.8008,
     "vegas_home": 0.8301,
     "spread_home": 10.5
-   }
-  },
-  {
-   "game_id": "2026_11_PIT_PHI",
-   "kickoff": "2026-11-22T21:25:00Z",
-   "kickoff_label": "Sun Nov 22, 4:25 PM ET",
-   "away": "PIT",
-   "home": "PHI",
-   "venue": "Lincoln Financial Field",
-   "roof": "outdoors",
-   "division_game": false,
-   "neutral": false,
-   "link": "https://www.espn.com/nfl/game/_/gameId/401873076",
-   "teams": {
-    "away": {
-     "abbr": "PIT",
-     "name": "Steelers",
-     "record": "6-3",
-     "last5": [
-      {
-       "season": 2026,
-       "week": 10,
-       "opp": "CIN",
-       "home": false,
-       "pf": 18,
-       "pa": 38,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 8,
-       "opp": "CLE",
-       "home": true,
-       "pf": 27,
-       "pa": 6,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 7,
-       "opp": "NO",
-       "home": false,
-       "pf": 16,
-       "pa": 10,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 6,
-       "opp": "TB",
-       "home": false,
-       "pf": 26,
-       "pa": 19,
-       "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "IND",
-       "home": true,
-       "pf": 34,
-       "pa": 22,
-       "result": "W"
-      }
-     ],
-     "off_rank": 15,
-     "def_rank": 13,
-     "ppg": 22.0,
-     "papg": 20.2,
-     "rest_days": 7,
-     "travel_miles": 259,
-     "qb": {
-      "name": "Aaron Rodgers",
-      "epa_per_play": -0.038,
-      "recent_plays": 301,
-      "changed": false,
-      "last_starter": "Aaron Rodgers"
-     },
-     "missing": [
-      {
-       "name": "Mason McCormick",
-       "pos": "G",
-       "snap_share": 0.83,
-       "why": "Injured reserve"
-      },
-      {
-       "name": "Brandon Smith",
-       "pos": "WR",
-       "snap_share": 0.53,
-       "why": "Released"
-      }
-     ],
-     "questionable": [
-      {
-       "name": "Patrick Queen",
-       "pos": "LB",
-       "starter": true,
-       "injury": "Hand"
-      },
-      {
-       "name": "Nick Herbig",
-       "pos": "LB",
-       "starter": true,
-       "injury": "Hip"
-      },
-      {
-       "name": "DeShon Elliott",
-       "pos": "S",
-       "starter": false,
-       "injury": "Knee"
-      },
-      {
-       "name": "Michael Pittman",
-       "pos": "WR",
-       "starter": false,
-       "injury": "Foot"
-      },
-      {
-       "name": "Roman Wilson",
-       "pos": "WR",
-       "starter": false,
-       "injury": "Hand"
-      },
-      {
-       "name": "Gennings Dunker",
-       "pos": "G",
-       "starter": false,
-       "injury": "Knee"
-      }
-     ]
-    },
-    "home": {
-     "abbr": "PHI",
-     "name": "Eagles",
-     "record": "2-7",
-     "last5": [
-      {
-       "season": 2026,
-       "week": 9,
-       "opp": "NYG",
-       "home": true,
-       "pf": 11,
-       "pa": 19,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 8,
-       "opp": "WAS",
-       "home": false,
-       "pf": 10,
-       "pa": 27,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 7,
-       "opp": "DAL",
-       "home": true,
-       "pf": 21,
-       "pa": 38,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 6,
-       "opp": "CAR",
-       "home": true,
-       "pf": 14,
-       "pa": 25,
-       "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "JAX",
-       "home": false,
-       "pf": 17,
-       "pa": 19,
-       "result": "L"
-      }
-     ],
-     "off_rank": 29,
-     "def_rank": 28,
-     "ppg": 16.4,
-     "papg": 24.6,
-     "rest_days": 14,
-     "travel_miles": 0,
-     "qb": {
-      "name": "Joe Milton III",
-      "epa_per_play": -0.009,
-      "recent_plays": 104,
-      "changed": false,
-      "last_starter": "Joe Milton III"
-     },
-     "missing": [
-      {
-       "name": "Zack Baun",
-       "pos": "LB",
-       "snap_share": 0.87,
-       "why": "Out (Back)"
-      },
-      {
-       "name": "Jordan Davis",
-       "pos": "DT",
-       "snap_share": 0.59,
-       "why": "No longer on roster"
-      }
-     ],
-     "questionable": [
-      {
-       "name": "Will Shipley",
-       "pos": "RB",
-       "starter": false,
-       "injury": "Foot"
-      }
-     ]
-    }
-   },
-   "reveal": {
-    "model_home": 0.3104,
-    "vegas_home": 0.3712,
-    "spread_home": -3.5
    }
   },
   {
@@ -2655,8 +2655,46 @@
       "changed": false,
       "last_starter": "Joe Burrow"
      },
-     "missing": [],
-     "questionable": []
+     "missing": [
+      {
+       "name": "Dalton Risner",
+       "pos": "G",
+       "snap_share": 0.85,
+       "why": "Out (Knee)"
+      }
+     ],
+     "questionable": [
+      {
+       "name": "Daxton Hill",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Illness"
+      },
+      {
+       "name": "Dylan Fairchild",
+       "pos": "G",
+       "starter": true,
+       "injury": "Oblique"
+      },
+      {
+       "name": "Kyle Dugger",
+       "pos": "S",
+       "starter": false,
+       "injury": "Quadricep"
+      },
+      {
+       "name": "Swayze Bozeman",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Forearm"
+      },
+      {
+       "name": "Brian Parker II",
+       "pos": "G",
+       "starter": false,
+       "injury": "Knee"
+      }
+     ]
     },
     "home": {
      "abbr": "WAS",
@@ -2709,7 +2747,7 @@
        "result": "T"
       }
      ],
-     "off_rank": 17,
+     "off_rank": 18,
      "def_rank": 22,
      "ppg": 21.8,
      "papg": 24.8,
@@ -2723,12 +2761,37 @@
       "last_starter": "Jayden Daniels"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Lucas Patrick",
+       "pos": "C",
+       "starter": true,
+       "injury": "Concussion"
+      },
+      {
+       "name": "Amik Robertson",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Rachaad White",
+       "pos": "RB",
+       "starter": true,
+       "injury": "Heel"
+      },
+      {
+       "name": "Jacory Croskey-Merritt",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Groin"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.2977,
-    "vegas_home": 0.2793,
+    "model_home": 0.3113,
+    "vegas_home": 0.2818,
     "spread_home": -6.0
    }
   }
