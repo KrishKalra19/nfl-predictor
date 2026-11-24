@@ -1,0 +1,2483 @@
+{
+ "id": "2026-12",
+ "season": 2026,
+ "week": 12,
+ "generated_at": "2026-11-24T05:06:32Z",
+ "injury_report_posted": false,
+ "games": [
+  {
+   "game_id": "2026_12_GB_LA",
+   "kickoff": "2026-11-26T01:00:00Z",
+   "kickoff_label": "Wed Nov 25, 8:00 PM ET",
+   "away": "GB",
+   "home": "LA",
+   "venue": "SoFi Stadium",
+   "roof": "dome",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873079",
+   "teams": {
+    "away": {
+     "abbr": "GB",
+     "name": "Packers",
+     "record": "6-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "MIN",
+       "home": true,
+       "pf": 10,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "NE",
+       "home": false,
+       "pf": 45,
+       "pa": 27,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "CAR",
+       "home": true,
+       "pf": 27,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DET",
+       "home": false,
+       "pf": 17,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "DAL",
+       "home": true,
+       "pf": 23,
+       "pa": 13,
+       "result": "W"
+      }
+     ],
+     "off_rank": 14,
+     "def_rank": 10,
+     "ppg": 22.6,
+     "papg": 22.1,
+     "rest_days": 10,
+     "travel_miles": 1764,
+     "qb": {
+      "name": "Jordan Love",
+      "epa_per_play": 0.162,
+      "recent_plays": 322,
+      "changed": false,
+      "last_starter": "Jordan Love"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "LA",
+     "name": "Rams",
+     "record": "6-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "ARI",
+       "home": false,
+       "pf": 34,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "WAS",
+       "home": false,
+       "pf": 20,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "LAC",
+       "home": true,
+       "pf": 24,
+       "pa": 9,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "LV",
+       "home": false,
+       "pf": 35,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "ARI",
+       "home": true,
+       "pf": 16,
+       "pa": 18,
+       "result": "L"
+      }
+     ],
+     "off_rank": 8,
+     "def_rank": 1,
+     "ppg": 24.8,
+     "papg": 18.7,
+     "rest_days": 10,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Matthew Stafford",
+      "epa_per_play": 0.105,
+      "recent_plays": 330,
+      "changed": false,
+      "last_starter": "Matthew Stafford"
+     },
+     "missing": [
+      {
+       "name": "Puka Nacua",
+       "pos": "WR",
+       "snap_share": 0.69,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_CHI_DET",
+   "kickoff": "2026-11-26T18:00:00Z",
+   "kickoff_label": "Thu Nov 26, 1:00 PM ET",
+   "away": "CHI",
+   "home": "DET",
+   "venue": "Ford Field",
+   "roof": "dome",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873081",
+   "teams": {
+    "away": {
+     "abbr": "CHI",
+     "name": "Bears",
+     "record": "8-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "NO",
+       "home": true,
+       "pf": 21,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "TB",
+       "home": true,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "SEA",
+       "home": false,
+       "pf": 34,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NE",
+       "home": true,
+       "pf": 30,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "ATL",
+       "home": false,
+       "pf": 31,
+       "pa": 23,
+       "result": "W"
+      }
+     ],
+     "off_rank": 10,
+     "def_rank": 7,
+     "ppg": 26.2,
+     "papg": 19.7,
+     "rest_days": 4,
+     "travel_miles": 237,
+     "qb": {
+      "name": "Caleb Williams",
+      "epa_per_play": 0.105,
+      "recent_plays": 286,
+      "changed": false,
+      "last_starter": "Caleb Williams"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DET",
+     "name": "Lions",
+     "record": "8-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "TB",
+       "home": true,
+       "pf": 31,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "NE",
+       "home": true,
+       "pf": 35,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "MIA",
+       "home": false,
+       "pf": 19,
+       "pa": 9,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "MIN",
+       "home": true,
+       "pf": 19,
+       "pa": 15,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "GB",
+       "home": true,
+       "pf": 20,
+       "pa": 17,
+       "result": "W"
+      }
+     ],
+     "off_rank": 5,
+     "def_rank": 25,
+     "ppg": 28.8,
+     "papg": 22.0,
+     "rest_days": 4,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Jared Goff",
+      "epa_per_play": 0.195,
+      "recent_plays": 279,
+      "changed": false,
+      "last_starter": "Jared Goff"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_PHI_DAL",
+   "kickoff": "2026-11-26T21:30:00Z",
+   "kickoff_label": "Thu Nov 26, 4:30 PM ET",
+   "away": "PHI",
+   "home": "DAL",
+   "venue": "AT&T Stadium",
+   "roof": "",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873080",
+   "teams": {
+    "away": {
+     "abbr": "PHI",
+     "name": "Eagles",
+     "record": "3-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "PIT",
+       "home": true,
+       "pf": 19,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "NYG",
+       "home": true,
+       "pf": 11,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "WAS",
+       "home": false,
+       "pf": 10,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DAL",
+       "home": true,
+       "pf": 21,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CAR",
+       "home": true,
+       "pf": 14,
+       "pa": 25,
+       "result": "L"
+      }
+     ],
+     "off_rank": 29,
+     "def_rank": 26,
+     "ppg": 16.7,
+     "papg": 23.7,
+     "rest_days": 4,
+     "travel_miles": 1312,
+     "qb": {
+      "name": "Joe Milton III",
+      "epa_per_play": -0.047,
+      "recent_plays": 131,
+      "changed": false,
+      "last_starter": "Joe Milton III"
+     },
+     "missing": [
+      {
+       "name": "Zack Baun",
+       "pos": "LB",
+       "snap_share": 0.62,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "DAL",
+     "name": "Cowboys",
+     "record": "5-6",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "TEN",
+       "home": true,
+       "pf": 51,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "SF",
+       "home": true,
+       "pf": 40,
+       "pa": 46,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "IND",
+       "home": false,
+       "pf": 27,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "ARI",
+       "home": true,
+       "pf": 30,
+       "pa": 33,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "PHI",
+       "home": false,
+       "pf": 38,
+       "pa": 21,
+       "result": "W"
+      }
+     ],
+     "off_rank": 3,
+     "def_rank": 32,
+     "ppg": 30.6,
+     "papg": 28.4,
+     "rest_days": 4,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Dak Prescott",
+      "epa_per_play": 0.153,
+      "recent_plays": 338,
+      "changed": false,
+      "last_starter": "Dak Prescott"
+     },
+     "missing": [
+      {
+       "name": "DaRon Bland",
+       "pos": "CB",
+       "snap_share": 0.54,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_KC_BUF",
+   "kickoff": "2026-11-27T01:20:00Z",
+   "kickoff_label": "Thu Nov 26, 8:20 PM ET",
+   "away": "KC",
+   "home": "BUF",
+   "venue": "Highmark Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873082",
+   "teams": {
+    "away": {
+     "abbr": "KC",
+     "name": "Chiefs",
+     "record": "8-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "ARI",
+       "home": true,
+       "pf": 34,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "ATL",
+       "home": false,
+       "pf": 35,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 35,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "DEN",
+       "home": false,
+       "pf": 24,
+       "pa": 28,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "SEA",
+       "home": false,
+       "pf": 3,
+       "pa": 20,
+       "result": "L"
+      }
+     ],
+     "off_rank": 6,
+     "def_rank": 4,
+     "ppg": 27.1,
+     "papg": 16.3,
+     "rest_days": 4,
+     "travel_miles": 858,
+     "qb": {
+      "name": "Patrick Mahomes",
+      "epa_per_play": 0.209,
+      "recent_plays": 274,
+      "changed": false,
+      "last_starter": "Patrick Mahomes"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "BUF",
+     "name": "Bills",
+     "record": "9-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "MIA",
+       "home": true,
+       "pf": 26,
+       "pa": 9,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 31,
+       "pa": 12,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "MIN",
+       "home": false,
+       "pf": 23,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "BAL",
+       "home": true,
+       "pf": 36,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "LV",
+       "home": false,
+       "pf": 33,
+       "pa": 30,
+       "result": "W"
+      }
+     ],
+     "off_rank": 4,
+     "def_rank": 8,
+     "ppg": 31.3,
+     "papg": 20.8,
+     "rest_days": 4,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Josh Allen",
+      "epa_per_play": 0.134,
+      "recent_plays": 288,
+      "changed": false,
+      "last_starter": "Josh Allen"
+     },
+     "missing": [
+      {
+       "name": "Alec Anderson",
+       "pos": "C",
+       "snap_share": 0.72,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_DEN_PIT",
+   "kickoff": "2026-11-27T20:00:00Z",
+   "kickoff_label": "Fri Nov 27, 3:00 PM ET",
+   "away": "DEN",
+   "home": "PIT",
+   "venue": "Acrisure Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873083",
+   "teams": {
+    "away": {
+     "abbr": "DEN",
+     "name": "Broncos",
+     "record": "8-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "LV",
+       "home": true,
+       "pf": 38,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "CAR",
+       "home": false,
+       "pf": 26,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "KC",
+       "home": true,
+       "pf": 28,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "ARI",
+       "home": false,
+       "pf": 30,
+       "pa": 16,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "SEA",
+       "home": true,
+       "pf": 17,
+       "pa": 14,
+       "result": "W"
+      }
+     ],
+     "off_rank": 13,
+     "def_rank": 15,
+     "ppg": 23.6,
+     "papg": 21.0,
+     "rest_days": 5,
+     "travel_miles": 1318,
+     "qb": {
+      "name": "Bo Nix",
+      "epa_per_play": 0.025,
+      "recent_plays": 295,
+      "changed": false,
+      "last_starter": "Bo Nix"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "PIT",
+     "name": "Steelers",
+     "record": "6-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "PHI",
+       "home": false,
+       "pf": 16,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "CIN",
+       "home": false,
+       "pf": 18,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "CLE",
+       "home": true,
+       "pf": 27,
+       "pa": 6,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NO",
+       "home": false,
+       "pf": 16,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "TB",
+       "home": false,
+       "pf": 26,
+       "pa": 19,
+       "result": "W"
+      }
+     ],
+     "off_rank": 17,
+     "def_rank": 11,
+     "ppg": 21.4,
+     "papg": 20.1,
+     "rest_days": 5,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Aaron Rodgers",
+      "epa_per_play": 0.011,
+      "recent_plays": 309,
+      "changed": false,
+      "last_starter": "Aaron Rodgers"
+     },
+     "missing": [
+      {
+       "name": "Mason McCormick",
+       "pos": "G",
+       "snap_share": 0.58,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_ATL_MIN",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "ATL",
+   "home": "MIN",
+   "venue": "U.S. Bank Stadium",
+   "roof": "dome",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873084",
+   "teams": {
+    "away": {
+     "abbr": "ATL",
+     "name": "Falcons",
+     "record": "3-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "KC",
+       "home": true,
+       "pf": 13,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "CIN",
+       "home": true,
+       "pf": 17,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "TB",
+       "home": false,
+       "pf": 0,
+       "pa": 16,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "SF",
+       "home": true,
+       "pf": 29,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "CHI",
+       "home": true,
+       "pf": 23,
+       "pa": 31,
+       "result": "L"
+      }
+     ],
+     "off_rank": 26,
+     "def_rank": 20,
+     "ppg": 20.1,
+     "papg": 25.8,
+     "rest_days": 14,
+     "travel_miles": 907,
+     "qb": {
+      "name": "Michael Penix Jr.",
+      "epa_per_play": -0.049,
+      "recent_plays": 263,
+      "changed": false,
+      "last_starter": "Michael Penix Jr."
+     },
+     "missing": [
+      {
+       "name": "Ryan Neuzil",
+       "pos": "OL",
+       "snap_share": 0.75,
+       "why": "No longer on roster"
+      },
+      {
+       "name": "Jessie Bates III",
+       "pos": "S",
+       "snap_share": 0.74,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "MIN",
+     "name": "Vikings",
+     "record": "7-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "SF",
+       "home": false,
+       "pf": 10,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "GB",
+       "home": false,
+       "pf": 30,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "BUF",
+       "home": true,
+       "pf": 6,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "DET",
+       "home": false,
+       "pf": 15,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "IND",
+       "home": true,
+       "pf": 16,
+       "pa": 10,
+       "result": "W"
+      }
+     ],
+     "off_rank": 30,
+     "def_rank": 2,
+     "ppg": 18.6,
+     "papg": 16.1,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Kirk Cousins",
+      "epa_per_play": 0.123,
+      "recent_plays": 309,
+      "changed": false,
+      "last_starter": "Kirk Cousins"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_BAL_HOU",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "BAL",
+   "home": "HOU",
+   "venue": "Reliant Stadium",
+   "roof": "",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873085",
+   "teams": {
+    "away": {
+     "abbr": "BAL",
+     "name": "Ravens",
+     "record": "4-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "CAR",
+       "home": false,
+       "pf": 33,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "LAC",
+       "home": true,
+       "pf": 20,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "JAX",
+       "home": true,
+       "pf": 10,
+       "pa": 33,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "BUF",
+       "home": false,
+       "pf": 10,
+       "pa": 36,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CIN",
+       "home": true,
+       "pf": 13,
+       "pa": 35,
+       "result": "L"
+      }
+     ],
+     "off_rank": 20,
+     "def_rank": 18,
+     "ppg": 22.0,
+     "papg": 26.7,
+     "rest_days": 7,
+     "travel_miles": 1255,
+     "qb": {
+      "name": "Jacoby Brissett",
+      "epa_per_play": -0.02,
+      "recent_plays": 362,
+      "changed": false,
+      "last_starter": "Jacoby Brissett"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "HOU",
+     "name": "Texans",
+     "record": "4-6",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "IND",
+       "home": true,
+       "pf": 26,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "CLE",
+       "home": false,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "LAC",
+       "home": false,
+       "pf": 44,
+       "pa": 22,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NYG",
+       "home": true,
+       "pf": 21,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "JAX",
+       "home": false,
+       "pf": 34,
+       "pa": 31,
+       "result": "W"
+      }
+     ],
+     "off_rank": 9,
+     "def_rank": 12,
+     "ppg": 25.9,
+     "papg": 22.2,
+     "rest_days": 10,
+     "travel_miles": 0,
+     "qb": {
+      "name": "C.J. Stroud",
+      "epa_per_play": 0.191,
+      "recent_plays": 273,
+      "changed": false,
+      "last_starter": "C.J. Stroud"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_NO_CIN",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "NO",
+   "home": "CIN",
+   "venue": "Paycor Stadium",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873087",
+   "teams": {
+    "away": {
+     "abbr": "NO",
+     "name": "Saints",
+     "record": "3-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "CHI",
+       "home": false,
+       "pf": 13,
+       "pa": 21,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "CAR",
+       "home": true,
+       "pf": 17,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "CLE",
+       "home": true,
+       "pf": 23,
+       "pa": 22,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "PIT",
+       "home": true,
+       "pf": 10,
+       "pa": 16,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NYG",
+       "home": false,
+       "pf": 34,
+       "pa": 27,
+       "result": "W"
+      }
+     ],
+     "off_rank": 22,
+     "def_rank": 24,
+     "ppg": 21.5,
+     "papg": 25.7,
+     "rest_days": 7,
+     "travel_miles": 706,
+     "qb": {
+      "name": "Tyler Shough",
+      "epa_per_play": -0.043,
+      "recent_plays": 325,
+      "changed": false,
+      "last_starter": "Tyler Shough"
+     },
+     "missing": [
+      {
+       "name": "Justin Reid",
+       "pos": "S",
+       "snap_share": 0.52,
+       "why": "Released"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "CIN",
+     "name": "Bengals",
+     "record": "7-2",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "PIT",
+       "home": true,
+       "pf": 38,
+       "pa": 18,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "ATL",
+       "home": false,
+       "pf": 34,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "TEN",
+       "home": true,
+       "pf": 43,
+       "pa": 36,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "BAL",
+       "home": false,
+       "pf": 35,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "MIA",
+       "home": false,
+       "pf": 31,
+       "pa": 24,
+       "result": "W"
+      }
+     ],
+     "off_rank": 2,
+     "def_rank": 16,
+     "ppg": 30.9,
+     "papg": 21.4,
+     "rest_days": 6,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Joe Burrow",
+      "epa_per_play": 0.296,
+      "recent_plays": 324,
+      "changed": false,
+      "last_starter": "Joe Burrow"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_NYG_IND",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "NYG",
+   "home": "IND",
+   "venue": "Lucas Oil Stadium",
+   "roof": "",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873088",
+   "teams": {
+    "away": {
+     "abbr": "NYG",
+     "name": "Giants",
+     "record": "6-3-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "JAX",
+       "home": true,
+       "pf": 23,
+       "pa": 18,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "WAS",
+       "home": true,
+       "pf": 21,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "PHI",
+       "home": false,
+       "pf": 19,
+       "pa": 11,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "HOU",
+       "home": false,
+       "pf": 27,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NO",
+       "home": true,
+       "pf": 27,
+       "pa": 34,
+       "result": "L"
+      }
+     ],
+     "off_rank": 16,
+     "def_rank": 14,
+     "ppg": 22.6,
+     "papg": 21.4,
+     "rest_days": 7,
+     "travel_miles": 641,
+     "qb": {
+      "name": "J.J. McCarthy",
+      "epa_per_play": 0.086,
+      "recent_plays": 222,
+      "changed": false,
+      "last_starter": "J.J. McCarthy"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "IND",
+     "name": "Colts",
+     "record": "3-8",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "HOU",
+       "home": false,
+       "pf": 3,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "MIA",
+       "home": true,
+       "pf": 24,
+       "pa": 22,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "DAL",
+       "home": true,
+       "pf": 23,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "JAX",
+       "home": false,
+       "pf": 7,
+       "pa": 42,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "MIN",
+       "home": false,
+       "pf": 10,
+       "pa": 16,
+       "result": "L"
+      }
+     ],
+     "off_rank": 32,
+     "def_rank": 19,
+     "ppg": 19.2,
+     "papg": 27.0,
+     "rest_days": 10,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Anthony Richardson",
+      "epa_per_play": 0.001,
+      "recent_plays": 181,
+      "changed": true,
+      "last_starter": "Daniel Jones"
+     },
+     "missing": [
+      {
+       "name": "Daniel Jones",
+       "pos": "QB",
+       "snap_share": 0.93,
+       "why": "Released"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_NYJ_MIA",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "NYJ",
+   "home": "MIA",
+   "venue": "Hard Rock Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873089",
+   "teams": {
+    "away": {
+     "abbr": "NYJ",
+     "name": "Jets",
+     "record": "3-8",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "LAC",
+       "home": false,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "BUF",
+       "home": true,
+       "pf": 12,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "KC",
+       "home": false,
+       "pf": 12,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "LV",
+       "home": true,
+       "pf": 33,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "MIA",
+       "home": true,
+       "pf": 25,
+       "pa": 28,
+       "result": "L"
+      }
+     ],
+     "off_rank": 15,
+     "def_rank": 29,
+     "ppg": 20.1,
+     "papg": 25.3,
+     "rest_days": 7,
+     "travel_miles": 1086,
+     "qb": {
+      "name": "Geno Smith",
+      "epa_per_play": 0.013,
+      "recent_plays": 236,
+      "changed": false,
+      "last_starter": "Geno Smith"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "MIA",
+     "name": "Dolphins",
+     "record": "1-9",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "BUF",
+       "home": false,
+       "pf": 9,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "IND",
+       "home": false,
+       "pf": 22,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "DET",
+       "home": true,
+       "pf": 9,
+       "pa": 19,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "NE",
+       "home": true,
+       "pf": 19,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 28,
+       "pa": 25,
+       "result": "W"
+      }
+     ],
+     "off_rank": 28,
+     "def_rank": 27,
+     "ppg": 15.7,
+     "papg": 25.0,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Kyle McCord",
+      "epa_per_play": -0.346,
+      "recent_plays": 72,
+      "changed": false,
+      "last_starter": "Kyle McCord"
+     },
+     "missing": [
+      {
+       "name": "Malik Willis",
+       "pos": "QB",
+       "snap_share": 0.5,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_TEN_JAX",
+   "kickoff": "2026-11-29T18:00:00Z",
+   "kickoff_label": "Sun Nov 29, 1:00 PM ET",
+   "away": "TEN",
+   "home": "JAX",
+   "venue": "EverBank Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873090",
+   "teams": {
+    "away": {
+     "abbr": "TEN",
+     "name": "Titans",
+     "record": "1-9",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "DAL",
+       "home": false,
+       "pf": 30,
+       "pa": 51,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "JAX",
+       "home": true,
+       "pf": 23,
+       "pa": 40,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "CIN",
+       "home": false,
+       "pf": 36,
+       "pa": 43,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CLE",
+       "home": true,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "IND",
+       "home": false,
+       "pf": 26,
+       "pa": 20,
+       "result": "W"
+      }
+     ],
+     "off_rank": 24,
+     "def_rank": 30,
+     "ppg": 19.7,
+     "papg": 29.0,
+     "rest_days": 7,
+     "travel_miles": 501,
+     "qb": {
+      "name": "Cam Ward",
+      "epa_per_play": -0.042,
+      "recent_plays": 288,
+      "changed": false,
+      "last_starter": "Cam Ward"
+     },
+     "missing": [
+      {
+       "name": "Amani Hooker",
+       "pos": "S",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "JAX",
+     "name": "Jaguars",
+     "record": "7-3",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "NYG",
+       "home": false,
+       "pf": 18,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "TEN",
+       "home": false,
+       "pf": 40,
+       "pa": 23,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "BAL",
+       "home": false,
+       "pf": 33,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "IND",
+       "home": true,
+       "pf": 42,
+       "pa": 7,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "HOU",
+       "home": true,
+       "pf": 31,
+       "pa": 34,
+       "result": "L"
+      }
+     ],
+     "off_rank": 7,
+     "def_rank": 3,
+     "ppg": 28.7,
+     "papg": 16.7,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Trevor Lawrence",
+      "epa_per_play": 0.225,
+      "recent_plays": 275,
+      "changed": false,
+      "last_starter": "Trevor Lawrence"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_NE_LAC",
+   "kickoff": "2026-11-29T21:05:00Z",
+   "kickoff_label": "Sun Nov 29, 4:05 PM ET",
+   "away": "NE",
+   "home": "LAC",
+   "venue": "SoFi Stadium",
+   "roof": "dome",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873093",
+   "teams": {
+    "away": {
+     "abbr": "NE",
+     "name": "Patriots",
+     "record": "5-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "DET",
+       "home": false,
+       "pf": 10,
+       "pa": 35,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "GB",
+       "home": true,
+       "pf": 27,
+       "pa": 45,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "MIA",
+       "home": false,
+       "pf": 24,
+       "pa": 19,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CHI",
+       "home": false,
+       "pf": 24,
+       "pa": 30,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 26,
+       "pa": 19,
+       "result": "W"
+      }
+     ],
+     "off_rank": 12,
+     "def_rank": 23,
+     "ppg": 22.1,
+     "papg": 24.2,
+     "rest_days": 14,
+     "travel_miles": 2589,
+     "qb": {
+      "name": "Drake Maye",
+      "epa_per_play": 0.196,
+      "recent_plays": 245,
+      "changed": true,
+      "last_starter": "Tommy DeVito"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "LAC",
+     "name": "Chargers",
+     "record": "1-9",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "NYJ",
+       "home": true,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "BAL",
+       "home": false,
+       "pf": 23,
+       "pa": 20,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "HOU",
+       "home": true,
+       "pf": 22,
+       "pa": 44,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "LA",
+       "home": false,
+       "pf": 9,
+       "pa": 24,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "KC",
+       "home": false,
+       "pf": 6,
+       "pa": 22,
+       "result": "L"
+      }
+     ],
+     "off_rank": 31,
+     "def_rank": 22,
+     "ppg": 16.8,
+     "papg": 26.6,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Justin Herbert",
+      "epa_per_play": -0.17,
+      "recent_plays": 264,
+      "changed": false,
+      "last_starter": "Justin Herbert"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_SEA_SF",
+   "kickoff": "2026-11-29T21:25:00Z",
+   "kickoff_label": "Sun Nov 29, 4:25 PM ET",
+   "away": "SEA",
+   "home": "SF",
+   "venue": "Levi's Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873091",
+   "teams": {
+    "away": {
+     "abbr": "SEA",
+     "name": "Seahawks",
+     "record": "6-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "LV",
+       "home": false,
+       "pf": 21,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "ARI",
+       "home": true,
+       "pf": 17,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "CHI",
+       "home": true,
+       "pf": 17,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "KC",
+       "home": true,
+       "pf": 20,
+       "pa": 3,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "DEN",
+       "home": false,
+       "pf": 14,
+       "pa": 17,
+       "result": "L"
+      }
+     ],
+     "off_rank": 21,
+     "def_rank": 6,
+     "ppg": 22.3,
+     "papg": 17.5,
+     "rest_days": 14,
+     "travel_miles": 704,
+     "qb": {
+      "name": "Sam Darnold",
+      "epa_per_play": -0.055,
+      "recent_plays": 268,
+      "changed": true,
+      "last_starter": "Drew Lock"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "SF",
+     "name": "49ers",
+     "record": "9-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "MIN",
+       "home": true,
+       "pf": 35,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "DAL",
+       "home": false,
+       "pf": 46,
+       "pa": 40,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "LV",
+       "home": true,
+       "pf": 38,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "ATL",
+       "home": false,
+       "pf": 20,
+       "pa": 29,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "WAS",
+       "home": true,
+       "pf": 23,
+       "pa": 17,
+       "result": "W"
+      }
+     ],
+     "off_rank": 1,
+     "def_rank": 9,
+     "ppg": 31.6,
+     "papg": 20.6,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Brock Purdy",
+      "epa_per_play": 0.286,
+      "recent_plays": 260,
+      "changed": false,
+      "last_starter": "Brock Purdy"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_WAS_ARI",
+   "kickoff": "2026-11-29T21:25:00Z",
+   "kickoff_label": "Sun Nov 29, 4:25 PM ET",
+   "away": "WAS",
+   "home": "ARI",
+   "venue": "State Farm Stadium",
+   "roof": "",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873092",
+   "teams": {
+    "away": {
+     "abbr": "WAS",
+     "name": "Commanders",
+     "record": "3-5-1",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "NYG",
+       "home": false,
+       "pf": 24,
+       "pa": 21,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "LA",
+       "home": true,
+       "pf": 13,
+       "pa": 20,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "PHI",
+       "home": true,
+       "pf": 27,
+       "pa": 10,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "SF",
+       "home": false,
+       "pf": 17,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 5,
+       "opp": "NYG",
+       "home": true,
+       "pf": 27,
+       "pa": 27,
+       "result": "T"
+      }
+     ],
+     "off_rank": 19,
+     "def_rank": 21,
+     "ppg": 21.8,
+     "papg": 24.8,
+     "rest_days": 6,
+     "travel_miles": 1995,
+     "qb": {
+      "name": "Jayden Daniels",
+      "epa_per_play": -0.044,
+      "recent_plays": 258,
+      "changed": false,
+      "last_starter": "Jayden Daniels"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "ARI",
+     "name": "Cardinals",
+     "record": "3-8",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "KC",
+       "home": false,
+       "pf": 7,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "LA",
+       "home": true,
+       "pf": 6,
+       "pa": 34,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "SEA",
+       "home": false,
+       "pf": 3,
+       "pa": 17,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "DAL",
+       "home": false,
+       "pf": 33,
+       "pa": 30,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "DEN",
+       "home": true,
+       "pf": 16,
+       "pa": 30,
+       "result": "L"
+      }
+     ],
+     "off_rank": 27,
+     "def_rank": 31,
+     "ppg": 17.4,
+     "papg": 29.4,
+     "rest_days": 7,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Gardner Minshew",
+      "epa_per_play": -0.03,
+      "recent_plays": 211,
+      "changed": true,
+      "last_starter": "Josh Johnson"
+     },
+     "missing": [
+      {
+       "name": "Andrew Wingard",
+       "pos": "S",
+       "snap_share": 0.75,
+       "why": "Injured reserve"
+      }
+     ],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_LV_CLE",
+   "kickoff": "2026-11-30T01:20:00Z",
+   "kickoff_label": "Sun Nov 29, 8:20 PM ET",
+   "away": "LV",
+   "home": "CLE",
+   "venue": "Huntington Bank Field",
+   "roof": "outdoors",
+   "division_game": false,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873086",
+   "teams": {
+    "away": {
+     "abbr": "LV",
+     "name": "Raiders",
+     "record": "4-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "DEN",
+       "home": false,
+       "pf": 24,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "SEA",
+       "home": true,
+       "pf": 13,
+       "pa": 21,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "SF",
+       "home": false,
+       "pf": 17,
+       "pa": 38,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "NYJ",
+       "home": false,
+       "pf": 38,
+       "pa": 33,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "LA",
+       "home": true,
+       "pf": 21,
+       "pa": 35,
+       "result": "L"
+      }
+     ],
+     "off_rank": 18,
+     "def_rank": 28,
+     "ppg": 25.0,
+     "papg": 29.7,
+     "rest_days": 7,
+     "travel_miles": 1829,
+     "qb": {
+      "name": "Fernando Mendoza",
+      "epa_per_play": -0.069,
+      "recent_plays": 88,
+      "changed": false,
+      "last_starter": "Fernando Mendoza"
+     },
+     "missing": [
+      {
+       "name": "Kirk Cousins",
+       "pos": "QB",
+       "snap_share": 0.5,
+       "why": "No longer on roster"
+      }
+     ],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "CLE",
+     "name": "Browns",
+     "record": "6-4",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "HOU",
+       "home": true,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "NO",
+       "home": false,
+       "pf": 22,
+       "pa": 23,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "PIT",
+       "home": false,
+       "pf": 6,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "TEN",
+       "home": false,
+       "pf": 27,
+       "pa": 24,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "BAL",
+       "home": true,
+       "pf": 13,
+       "pa": 10,
+       "result": "W"
+      }
+     ],
+     "off_rank": 23,
+     "def_rank": 13,
+     "ppg": 18.8,
+     "papg": 22.0,
+     "rest_days": 14,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Deshaun Watson",
+      "epa_per_play": -0.02,
+      "recent_plays": 322,
+      "changed": false,
+      "last_starter": "Deshaun Watson"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  },
+  {
+   "game_id": "2026_12_CAR_TB",
+   "kickoff": "2026-12-01T01:15:00Z",
+   "kickoff_label": "Mon Nov 30, 8:15 PM ET",
+   "away": "CAR",
+   "home": "TB",
+   "venue": "Raymond James Stadium",
+   "roof": "outdoors",
+   "division_game": true,
+   "neutral": false,
+   "link": "https://www.espn.com/nfl/game/_/gameId/401873094",
+   "teams": {
+    "away": {
+     "abbr": "CAR",
+     "name": "Panthers",
+     "record": "5-5",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "BAL",
+       "home": true,
+       "pf": 35,
+       "pa": 33,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 10,
+       "opp": "NO",
+       "home": false,
+       "pf": 20,
+       "pa": 17,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "DEN",
+       "home": true,
+       "pf": 21,
+       "pa": 26,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "GB",
+       "home": false,
+       "pf": 19,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "TB",
+       "home": true,
+       "pf": 13,
+       "pa": 43,
+       "result": "L"
+      }
+     ],
+     "off_rank": 11,
+     "def_rank": 17,
+     "ppg": 25.4,
+     "papg": 26.9,
+     "rest_days": 8,
+     "travel_miles": 510,
+     "qb": {
+      "name": "Bryce Young",
+      "epa_per_play": -0.02,
+      "recent_plays": 323,
+      "changed": false,
+      "last_starter": "Bryce Young"
+     },
+     "missing": [],
+     "questionable": []
+    },
+    "home": {
+     "abbr": "TB",
+     "name": "Buccaneers",
+     "record": "3-7",
+     "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "DET",
+       "home": false,
+       "pf": 21,
+       "pa": 31,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 9,
+       "opp": "CHI",
+       "home": false,
+       "pf": 24,
+       "pa": 27,
+       "result": "L"
+      },
+      {
+       "season": 2026,
+       "week": 8,
+       "opp": "ATL",
+       "home": true,
+       "pf": 16,
+       "pa": 0,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 7,
+       "opp": "CAR",
+       "home": false,
+       "pf": 43,
+       "pa": 13,
+       "result": "W"
+      },
+      {
+       "season": 2026,
+       "week": 6,
+       "opp": "PIT",
+       "home": true,
+       "pf": 19,
+       "pa": 26,
+       "result": "L"
+      }
+     ],
+     "off_rank": 25,
+     "def_rank": 5,
+     "ppg": 22.3,
+     "papg": 20.9,
+     "rest_days": 8,
+     "travel_miles": 0,
+     "qb": {
+      "name": "Baker Mayfield",
+      "epa_per_play": -0.103,
+      "recent_plays": 226,
+      "changed": false,
+      "last_starter": "Baker Mayfield"
+     },
+     "missing": [],
+     "questionable": []
+    }
+   },
+   "reveal": null
+  }
+ ]
+}
