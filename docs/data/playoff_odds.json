@@ -11,7 +11,7 @@
    "proj_wins": 13.8,
    "playoff": 0.9996,
    "division_title": 0.9967,
-   "top_seed": 0.5495
+   "top_seed": 0.5493
   },
   {
    "team": "DEN",
@@ -45,9 +45,9 @@
    "division": "AFC North",
    "wins_now": 7.0,
    "proj_wins": 12.5,
-   "playoff": 0.9911,
-   "division_title": 0.9052,
-   "top_seed": 0.1438
+   "playoff": 0.9913,
+   "division_title": 0.9055,
+   "top_seed": 0.1442
   },
   {
    "team": "KC",
@@ -56,7 +56,7 @@
    "proj_wins": 12.0,
    "playoff": 0.9883,
    "division_title": 0.3857,
-   "top_seed": 0.0836
+   "top_seed": 0.0834
   },
   {
    "team": "DET",
@@ -72,7 +72,7 @@
    "division": "NFC North",
    "wins_now": 8.0,
    "proj_wins": 11.5,
-   "playoff": 0.859,
+   "playoff": 0.8591,
    "division_title": 0.2445,
    "top_seed": 0.0746
   },
@@ -90,8 +90,8 @@
    "division": "NFC East",
    "wins_now": 6.5,
    "proj_wins": 9.8,
-   "playoff": 0.8261,
-   "division_title": 0.8205,
+   "playoff": 0.8263,
+   "division_title": 0.8207,
    "top_seed": 0.0059
   },
   {
@@ -100,7 +100,7 @@
    "wins_now": 6.0,
    "proj_wins": 9.5,
    "playoff": 0.6899,
-   "division_title": 0.049,
+   "division_title": 0.0487,
    "top_seed": 0.0008
   },
   {
@@ -126,7 +126,7 @@
    "division": "AFC North",
    "wins_now": 6.0,
    "proj_wins": 9.0,
-   "playoff": 0.5367,
+   "playoff": 0.5366,
    "division_title": 0.0454,
    "top_seed": 0.0002
   },
@@ -144,7 +144,7 @@
    "division": "AFC East",
    "wins_now": 5.0,
    "proj_wins": 8.6,
-   "playoff": 0.4017,
+   "playoff": 0.4016,
    "division_title": 0.0033,
    "top_seed": 0.0001
   },
@@ -207,8 +207,8 @@
    "division": "NFC East",
    "wins_now": 3.5,
    "proj_wins": 7.0,
-   "playoff": 0.0618,
-   "division_title": 0.0569,
+   "playoff": 0.0614,
+   "division_title": 0.0566,
    "top_seed": 0.0
   },
   {
@@ -234,8 +234,8 @@
    "division": "NFC East",
    "wins_now": 3.0,
    "proj_wins": 5.8,
-   "playoff": 0.0118,
-   "division_title": 0.0114,
+   "playoff": 0.0119,
+   "division_title": 0.0115,
    "top_seed": 0.0
   },
   {

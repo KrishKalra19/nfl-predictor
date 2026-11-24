@@ -2,7 +2,7 @@
  "id": "2026-11",
  "season": 2026,
  "week": 11,
- "generated_at": "2026-11-23T23:50:10Z",
+ "generated_at": "2026-11-24T00:26:37Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -69,14 +69,14 @@
       }
      ],
      "off_rank": 31,
-     "def_rank": 19,
+     "def_rank": 20,
      "ppg": 20.8,
      "papg": 27.1,
      "rest_days": 4,
      "travel_miles": 871,
      "qb": {
       "name": "Daniel Jones",
-      "epa_per_play": -0.179,
+      "epa_per_play": -0.177,
       "recent_plays": 297,
       "changed": false,
       "last_starter": "Daniel Jones"
@@ -179,7 +179,7 @@
        "result": "W"
       }
      ],
-     "off_rank": 8,
+     "off_rank": 9,
      "def_rank": 17,
      "ppg": 25.9,
      "papg": 24.3,
@@ -187,7 +187,7 @@
      "travel_miles": 0,
      "qb": {
       "name": "C.J. Stroud",
-      "epa_per_play": 0.155,
+      "epa_per_play": 0.148,
       "recent_plays": 300,
       "changed": false,
       "last_starter": "C.J. Stroud"
@@ -390,15 +390,15 @@
        "result": "W"
       }
      ],
-     "off_rank": 6,
-     "def_rank": 6,
+     "off_rank": 7,
+     "def_rank": 5,
      "ppg": 26.3,
      "papg": 17.3,
      "rest_days": 7,
      "travel_miles": 0,
      "qb": {
       "name": "Patrick Mahomes",
-      "epa_per_play": 0.177,
+      "epa_per_play": 0.173,
       "recent_plays": 284,
       "changed": false,
       "last_starter": "Patrick Mahomes"
@@ -510,7 +510,7 @@
      "travel_miles": 364,
      "qb": {
       "name": "Jacoby Brissett",
-      "epa_per_play": -0.045,
+      "epa_per_play": -0.054,
       "recent_plays": 351,
       "changed": false,
       "last_starter": "Jacoby Brissett"
@@ -582,7 +582,7 @@
        "result": "W"
       }
      ],
-     "off_rank": 14,
+     "off_rank": 12,
      "def_rank": 18,
      "ppg": 24.3,
      "papg": 26.2,
@@ -699,7 +699,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 25,
+     "off_rank": 24,
      "def_rank": 27,
      "ppg": 16.4,
      "papg": 24.9,
@@ -707,7 +707,7 @@
      "travel_miles": 1165,
      "qb": {
       "name": "Kyle McCord",
-      "epa_per_play": -0.283,
+      "epa_per_play": -0.287,
       "recent_plays": 37,
       "changed": false,
       "last_starter": "Kyle McCord"
@@ -818,7 +818,7 @@
      "travel_miles": 0,
      "qb": {
       "name": "Josh Allen",
-      "epa_per_play": 0.197,
+      "epa_per_play": 0.198,
       "recent_plays": 279,
       "changed": false,
       "last_starter": "Josh Allen"
@@ -934,15 +934,15 @@
        "result": "L"
       }
      ],
-     "off_rank": 23,
-     "def_rank": 24,
+     "off_rank": 22,
+     "def_rank": 25,
      "ppg": 22.4,
      "papg": 26.2,
      "rest_days": 7,
      "travel_miles": 834,
      "qb": {
       "name": "Tyler Shough",
-      "epa_per_play": 0.001,
+      "epa_per_play": 0.006,
       "recent_plays": 321,
       "changed": false,
       "last_starter": "Tyler Shough"
@@ -1053,7 +1053,7 @@
      "travel_miles": 0,
      "qb": {
       "name": "Caleb Williams",
-      "epa_per_play": 0.146,
+      "epa_per_play": 0.14,
       "recent_plays": 312,
       "changed": false,
       "last_starter": "Caleb Williams"
@@ -1145,7 +1145,7 @@
        "result": "W"
       }
      ],
-     "off_rank": 15,
+     "off_rank": 14,
      "def_rank": 13,
      "ppg": 22.0,
      "papg": 20.2,
@@ -1153,7 +1153,7 @@
      "travel_miles": 259,
      "qb": {
       "name": "Aaron Rodgers",
-      "epa_per_play": -0.038,
+      "epa_per_play": -0.026,
       "recent_plays": 301,
       "changed": false,
       "last_starter": "Aaron Rodgers"
@@ -1263,14 +1263,14 @@
       }
      ],
      "off_rank": 29,
-     "def_rank": 28,
+     "def_rank": 26,
      "ppg": 16.4,
      "papg": 24.6,
      "rest_days": 14,
      "travel_miles": 0,
      "qb": {
       "name": "Joe Milton III",
-      "epa_per_play": -0.009,
+      "epa_per_play": -0.007,
       "recent_plays": 104,
       "changed": false,
       "last_starter": "Joe Milton III"
@@ -1280,7 +1280,7 @@
        "name": "Zack Baun",
        "pos": "LB",
        "snap_share": 0.87,
-       "why": "Out (Back)"
+       "why": "Injured reserve"
       },
       {
        "name": "Jordan Davis",
@@ -1376,7 +1376,7 @@
      "travel_miles": 993,
      "qb": {
       "name": "Baker Mayfield",
-      "epa_per_play": -0.113,
+      "epa_per_play": -0.116,
       "recent_plays": 237,
       "changed": false,
       "last_starter": "Baker Mayfield"
@@ -1448,7 +1448,7 @@
        "result": "W"
       }
      ],
-     "off_rank": 7,
+     "off_rank": 6,
      "def_rank": 23,
      "ppg": 28.6,
      "papg": 22.1,
@@ -1456,7 +1456,7 @@
      "travel_miles": 0,
      "qb": {
       "name": "Jared Goff",
-      "epa_per_play": 0.198,
+      "epa_per_play": 0.205,
       "recent_plays": 291,
       "changed": false,
       "last_starter": "Jared Goff"
@@ -1578,7 +1578,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 24,
+     "off_rank": 25,
      "def_rank": 29,
      "ppg": 18.6,
      "papg": 26.6,
@@ -1586,7 +1586,7 @@
      "travel_miles": 633,
      "qb": {
       "name": "Cam Ward",
-      "epa_per_play": -0.035,
+      "epa_per_play": -0.044,
       "recent_plays": 277,
       "changed": false,
       "last_starter": "Cam Ward"
@@ -1695,7 +1695,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 4,
+     "off_rank": 5,
      "def_rank": 32,
      "ppg": 28.6,
      "papg": 28.2,
@@ -1703,7 +1703,7 @@
      "travel_miles": 0,
      "qb": {
       "name": "Dak Prescott",
-      "epa_per_play": 0.134,
+      "epa_per_play": 0.122,
       "recent_plays": 346,
       "changed": false,
       "last_starter": "Dak Prescott"
@@ -1719,7 +1719,7 @@
        "name": "DaRon Bland",
        "pos": "CB",
        "snap_share": 0.76,
-       "why": "Out (Ankle)"
+       "why": "Injured reserve"
       }
      ],
      "questionable": [
@@ -1827,7 +1827,7 @@
      "travel_miles": 2449,
      "qb": {
       "name": "Geno Smith",
-      "epa_per_play": 0.021,
+      "epa_per_play": 0.001,
       "recent_plays": 258,
       "changed": true,
       "last_starter": null
@@ -1919,14 +1919,14 @@
       }
      ],
      "off_rank": 32,
-     "def_rank": 15,
+     "def_rank": 17,
      "ppg": 16.0,
      "papg": 26.6,
      "rest_days": 6,
      "travel_miles": 0,
      "qb": {
       "name": "Justin Herbert",
-      "epa_per_play": -0.199,
+      "epa_per_play": -0.202,
       "recent_plays": 266,
       "changed": false,
       "last_starter": "Justin Herbert"
@@ -2042,7 +2042,7 @@
        "result": "W"
       }
      ],
-     "off_rank": 5,
+     "off_rank": 4,
      "def_rank": 4,
      "ppg": 29.9,
      "papg": 16.0,
@@ -2050,7 +2050,7 @@
      "travel_miles": 839,
      "qb": {
       "name": "Trevor Lawrence",
-      "epa_per_play": 0.273,
+      "epa_per_play": 0.259,
       "recent_plays": 256,
       "changed": false,
       "last_starter": "Trevor Lawrence"
@@ -2129,15 +2129,15 @@
        "result": "T"
       }
      ],
-     "off_rank": 11,
-     "def_rank": 17,
+     "off_rank": 13,
+     "def_rank": 15,
      "ppg": 22.6,
      "papg": 21.8,
      "rest_days": 10,
      "travel_miles": 0,
      "qb": {
       "name": "J.J. McCarthy",
-      "epa_per_play": 0.166,
+      "epa_per_play": 0.162,
       "recent_plays": 209,
       "changed": false,
       "last_starter": "J.J. McCarthy"
@@ -2215,15 +2215,15 @@
        "result": "L"
       }
      ],
-     "off_rank": 18,
-     "def_rank": 26,
+     "off_rank": 17,
+     "def_rank": 28,
      "ppg": 25.1,
      "papg": 28.9,
      "rest_days": 7,
      "travel_miles": 608,
      "qb": {
       "name": "Fernando Mendoza",
-      "epa_per_play": -0.098,
+      "epa_per_play": -0.073,
       "recent_plays": 45,
       "changed": false,
       "last_starter": "Fernando Mendoza"
@@ -2316,19 +2316,12 @@
      "travel_miles": 0,
      "qb": {
       "name": "Bo Nix",
-      "epa_per_play": 0.056,
+      "epa_per_play": 0.054,
       "recent_plays": 289,
       "changed": false,
       "last_starter": "Bo Nix"
      },
-     "missing": [
-      {
-       "name": "Taylor Rapp",
-       "pos": "S",
-       "snap_share": 0.72,
-       "why": "Practice squad"
-      }
-     ],
+     "missing": [],
      "questionable": [
       {
        "name": "Brandon Jones",
@@ -2509,7 +2502,7 @@
      "travel_miles": 1858,
      "qb": {
       "name": "Brock Purdy",
-      "epa_per_play": 0.311,
+      "epa_per_play": 0.3,
       "recent_plays": 255,
       "changed": false,
       "last_starter": "Brock Purdy"
@@ -2650,7 +2643,7 @@
      "travel_miles": 411,
      "qb": {
       "name": "Joe Burrow",
-      "epa_per_play": 0.303,
+      "epa_per_play": 0.296,
       "recent_plays": 324,
       "changed": false,
       "last_starter": "Joe Burrow"
@@ -2747,15 +2740,15 @@
        "result": "T"
       }
      ],
-     "off_rank": 18,
-     "def_rank": 22,
+     "off_rank": 19,
+     "def_rank": 21,
      "ppg": 21.8,
      "papg": 24.8,
      "rest_days": 11,
      "travel_miles": 0,
      "qb": {
       "name": "Jayden Daniels",
-      "epa_per_play": -0.033,
+      "epa_per_play": -0.044,
       "recent_plays": 258,
       "changed": false,
       "last_starter": "Jayden Daniels"
@@ -2790,8 +2783,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.3113,
-    "vegas_home": 0.2818,
+    "model_home": 0.3091,
+    "vegas_home": 0.2852,
     "spread_home": -6.0
    }
   }
