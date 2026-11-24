@@ -2,7 +2,7 @@
  "id": "2026-12",
  "season": 2026,
  "week": 12,
- "generated_at": "2026-11-24T05:06:32Z",
+ "generated_at": "2026-11-24T19:24:16Z",
  "injury_report_posted": false,
  "games": [
   {
@@ -159,7 +159,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.7064,
+    "vegas_home": 0.5534,
+    "spread_home": 2.5
+   }
   },
   {
    "game_id": "2026_12_CHI_DET",
@@ -308,7 +312,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.5976,
+    "vegas_home": 0.4365,
+    "spread_home": -2.5
+   }
   },
   {
    "game_id": "2026_12_PHI_DAL",
@@ -471,7 +479,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.7839,
+    "vegas_home": 0.7924,
+    "spread_home": 8.5
+   }
   },
   {
    "game_id": "2026_12_KC_BUF",
@@ -627,7 +639,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.5896,
+    "vegas_home": 0.5773,
+    "spread_home": 3.0
+   }
   },
   {
    "game_id": "2026_12_DEN_PIT",
@@ -783,7 +799,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.4338,
+    "vegas_home": 0.4143,
+    "spread_home": -3.0
+   }
   },
   {
    "game_id": "2026_12_ATL_MIN",
@@ -945,7 +965,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.6814,
+    "vegas_home": 0.7478,
+    "spread_home": 7.0
+   }
   },
   {
    "game_id": "2026_12_BAL_HOU",
@@ -1094,7 +1118,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.7157,
+    "vegas_home": 0.7231,
+    "spread_home": 6.5
+   }
   },
   {
    "game_id": "2026_12_NO_CIN",
@@ -1185,8 +1213,17 @@
     "home": {
      "abbr": "CIN",
      "name": "Bengals",
-     "record": "7-2",
+     "record": "7-3",
      "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "WAS",
+       "home": false,
+       "pf": 20,
+       "pa": 22,
+       "result": "L"
+      },
       {
        "season": 2026,
        "week": 10,
@@ -1222,27 +1259,18 @@
        "pf": 35,
        "pa": 13,
        "result": "W"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "MIA",
-       "home": false,
-       "pf": 31,
-       "pa": 24,
-       "result": "W"
       }
      ],
      "off_rank": 2,
      "def_rank": 16,
-     "ppg": 30.9,
-     "papg": 21.4,
+     "ppg": 29.8,
+     "papg": 21.5,
      "rest_days": 6,
      "travel_miles": 0,
      "qb": {
       "name": "Joe Burrow",
-      "epa_per_play": 0.296,
-      "recent_plays": 324,
+      "epa_per_play": 0.305,
+      "recent_plays": 332,
       "changed": false,
       "last_starter": "Joe Burrow"
      },
@@ -1250,7 +1278,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.7783,
+    "vegas_home": 0.8248,
+    "spread_home": 9.5
+   }
   },
   {
    "game_id": "2026_12_NYG_IND",
@@ -1406,7 +1438,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.3251,
+    "vegas_home": 0.2676,
+    "spread_home": -6.5
+   }
   },
   {
    "game_id": "2026_12_NYJ_MIA",
@@ -1562,7 +1598,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.332,
+    "vegas_home": 0.347,
+    "spread_home": -3.5
+   }
   },
   {
    "game_id": "2026_12_TEN_JAX",
@@ -1718,7 +1758,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.8263,
+    "vegas_home": 0.8896,
+    "spread_home": 14.5
+   }
   },
   {
    "game_id": "2026_12_NE_LAC",
@@ -1851,7 +1895,7 @@
       }
      ],
      "off_rank": 31,
-     "def_rank": 22,
+     "def_rank": 21,
      "ppg": 16.8,
      "papg": 26.6,
      "rest_days": 7,
@@ -1867,7 +1911,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.3909,
+    "vegas_home": 0.5122,
+    "spread_home": 1.5
+   }
   },
   {
    "game_id": "2026_12_SEA_SF",
@@ -2016,7 +2064,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.6287,
+    "vegas_home": 0.6126,
+    "spread_home": 3.0
+   }
   },
   {
    "game_id": "2026_12_WAS_ARI",
@@ -2033,8 +2085,17 @@
     "away": {
      "abbr": "WAS",
      "name": "Commanders",
-     "record": "3-5-1",
+     "record": "4-5-1",
      "last5": [
+      {
+       "season": 2026,
+       "week": 11,
+       "opp": "CIN",
+       "home": true,
+       "pf": 22,
+       "pa": 20,
+       "result": "W"
+      },
       {
        "season": 2026,
        "week": 10,
@@ -2070,27 +2131,18 @@
        "pf": 17,
        "pa": 23,
        "result": "L"
-      },
-      {
-       "season": 2026,
-       "week": 5,
-       "opp": "NYG",
-       "home": true,
-       "pf": 27,
-       "pa": 27,
-       "result": "T"
       }
      ],
-     "off_rank": 19,
-     "def_rank": 21,
+     "off_rank": 18,
+     "def_rank": 22,
      "ppg": 21.8,
-     "papg": 24.8,
+     "papg": 24.3,
      "rest_days": 6,
      "travel_miles": 1995,
      "qb": {
       "name": "Jayden Daniels",
-      "epa_per_play": -0.044,
-      "recent_plays": 258,
+      "epa_per_play": -0.002,
+      "recent_plays": 275,
       "changed": false,
       "last_starter": "Jayden Daniels"
      },
@@ -2172,7 +2224,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.2778,
+    "vegas_home": 0.2262,
+    "spread_home": -7.5
+   }
   },
   {
    "game_id": "2026_12_LV_CLE",
@@ -2237,7 +2293,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 18,
+     "off_rank": 19,
      "def_rank": 28,
      "ppg": 25.0,
      "papg": 29.7,
@@ -2328,7 +2384,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.69,
+    "vegas_home": 0.6605,
+    "spread_home": 4.5
+   }
   },
   {
    "game_id": "2026_12_CAR_TB",
@@ -2477,7 +2537,11 @@
      "questionable": []
     }
    },
-   "reveal": null
+   "reveal": {
+    "model_home": 0.5415,
+    "vegas_home": 0.5824,
+    "spread_home": 3.0
+   }
   }
  ]
 }
