@@ -2,8 +2,8 @@
  "id": "2026-12",
  "season": 2026,
  "week": 12,
- "generated_at": "2026-11-24T19:24:16Z",
- "injury_report_posted": false,
+ "generated_at": "2026-11-27T00:37:10Z",
+ "injury_report_posted": true,
  "games": [
   {
    "game_id": "2026_12_GB_LA",
@@ -82,7 +82,56 @@
       "last_starter": "Jordan Love"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Travis Glover",
+       "pos": "G",
+       "starter": true,
+       "injury": "Shoulder"
+      },
+      {
+       "name": "Kevin Zeitler",
+       "pos": "G",
+       "starter": false,
+       "injury": "Triceps"
+      },
+      {
+       "name": "Zaire Franklin",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Shin"
+      },
+      {
+       "name": "Josh Jacobs",
+       "pos": "RB",
+       "starter": false,
+       "injury": "Finger"
+      },
+      {
+       "name": "Micah Parsons",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Knee"
+      },
+      {
+       "name": "Sean Rhyan",
+       "pos": "C",
+       "starter": false,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Bo Melton",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Thigh"
+      },
+      {
+       "name": "Skyy Moore",
+       "pos": "WR",
+       "starter": false,
+       "injury": "Ankle"
+      }
+     ]
     },
     "home": {
      "abbr": "LA",
@@ -150,10 +199,22 @@
      },
      "missing": [
       {
+       "name": "Coleman Shelton",
+       "pos": "OL",
+       "snap_share": 0.81,
+       "why": "Out (Hamstring)"
+      },
+      {
        "name": "Puka Nacua",
        "pos": "WR",
        "snap_share": 0.69,
        "why": "Injured reserve"
+      },
+      {
+       "name": "Steve Avila",
+       "pos": "OL",
+       "snap_share": 0.55,
+       "why": "Out (Hamstring)"
       }
      ],
      "questionable": []
@@ -242,7 +303,20 @@
       "last_starter": "Caleb Williams"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Tyrique Stevenson",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "D'Marco Jackson",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Elbow"
+      }
+     ]
     },
     "home": {
      "abbr": "DET",
@@ -309,7 +383,20 @@
       "last_starter": "Jared Goff"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Chuck Clark",
+       "pos": "S",
+       "starter": true,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "DJ Wonnum",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Back"
+      }
+     ]
     }
    },
    "reveal": {
@@ -470,13 +557,32 @@
      },
      "missing": [
       {
+       "name": "Tyler Booker",
+       "pos": "G",
+       "snap_share": 0.6,
+       "why": "Out (Ankle)"
+      },
+      {
        "name": "DaRon Bland",
        "pos": "CB",
        "snap_share": 0.54,
        "why": "Injured reserve"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Jalen Thompson",
+       "pos": "S",
+       "starter": false,
+       "injury": "Hamstring"
+      },
+      {
+       "name": "Devin Moore",
+       "pos": "CB",
+       "starter": false,
+       "injury": "Hip"
+      }
+     ]
     }
    },
    "reveal": {
@@ -562,7 +668,20 @@
       "last_starter": "Patrick Mahomes"
      },
      "missing": [],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Noah Gray",
+       "pos": "TE",
+       "starter": true,
+       "injury": "Rib"
+      },
+      {
+       "name": "Peter Woods",
+       "pos": "DT",
+       "starter": false,
+       "injury": "Neck"
+      }
+     ]
     },
     "home": {
      "abbr": "BUF",
@@ -636,12 +755,43 @@
        "why": "No longer on roster"
       }
      ],
-     "questionable": []
+     "questionable": [
+      {
+       "name": "Christian Benford",
+       "pos": "CB",
+       "starter": true,
+       "injury": "Groin"
+      },
+      {
+       "name": "O'Cyrus Torrence",
+       "pos": "G",
+       "starter": true,
+       "injury": "Ankle"
+      },
+      {
+       "name": "Dorian Williams",
+       "pos": "LB",
+       "starter": false,
+       "injury": "Calf"
+      },
+      {
+       "name": "Dalton Kincaid",
+       "pos": "TE",
+       "starter": false,
+       "injury": "Thumb"
+      },
+      {
+       "name": "T.J. Sanders",
+       "pos": "DE",
+       "starter": false,
+       "injury": "Shoulder"
+      }
+     ]
     }
    },
    "reveal": {
-    "model_home": 0.5896,
-    "vegas_home": 0.5773,
+    "model_home": 0.6051,
+    "vegas_home": 0.5824,
     "spread_home": 3.0
    }
   },
@@ -721,7 +871,14 @@
       "changed": false,
       "last_starter": "Bo Nix"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Taylor Rapp",
+       "pos": "S",
+       "snap_share": 0.65,
+       "why": "Out (Quadricep)"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -775,20 +932,26 @@
        "result": "W"
       }
      ],
-     "off_rank": 17,
-     "def_rank": 11,
+     "off_rank": 16,
+     "def_rank": 10,
      "ppg": 21.4,
      "papg": 20.1,
      "rest_days": 5,
      "travel_miles": 0,
      "qb": {
-      "name": "Aaron Rodgers",
-      "epa_per_play": 0.011,
-      "recent_plays": 309,
-      "changed": false,
+      "name": "Mason Rudolph",
+      "epa_per_play": 0.014,
+      "recent_plays": 71,
+      "changed": true,
       "last_starter": "Aaron Rodgers"
      },
      "missing": [
+      {
+       "name": "Aaron Rodgers",
+       "pos": "QB",
+       "snap_share": 0.94,
+       "why": "Released"
+      },
       {
        "name": "Mason McCormick",
        "pos": "G",
@@ -800,9 +963,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.4338,
-    "vegas_home": 0.4143,
-    "spread_home": -3.0
+    "model_home": 0.3745,
+    "vegas_home": 0.3088,
+    "spread_home": -4.5
    }
   },
   {
@@ -966,8 +1129,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.6814,
-    "vegas_home": 0.7478,
+    "model_home": 0.6815,
+    "vegas_home": 0.7276,
     "spread_home": 7.0
    }
   },
@@ -1119,8 +1282,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.7157,
-    "vegas_home": 0.7231,
+    "model_home": 0.7172,
+    "vegas_home": 0.7383,
     "spread_home": 6.5
    }
   },
@@ -1279,9 +1442,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.7783,
-    "vegas_home": 0.8248,
-    "spread_home": 9.5
+    "model_home": 0.7799,
+    "vegas_home": 0.8162,
+    "spread_home": 10.0
    }
   },
   {
@@ -1347,7 +1510,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 16,
+     "off_rank": 15,
      "def_rank": 14,
      "ppg": 22.6,
      "papg": 21.4,
@@ -1360,7 +1523,14 @@
       "changed": false,
       "last_starter": "J.J. McCarthy"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Greg Newsome II",
+       "pos": "CB",
+       "snap_share": 0.51,
+       "why": "Injured reserve"
+      }
+     ],
      "questionable": []
     },
     "home": {
@@ -1439,9 +1609,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.3251,
-    "vegas_home": 0.2676,
-    "spread_home": -6.5
+    "model_home": 0.3333,
+    "vegas_home": 0.2872,
+    "spread_home": -6.0
    }
   },
   {
@@ -1507,7 +1677,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 15,
+     "off_rank": 14,
      "def_rank": 29,
      "ppg": 20.1,
      "papg": 25.3,
@@ -1599,9 +1769,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.332,
-    "vegas_home": 0.347,
-    "spread_home": -3.5
+    "model_home": 0.3329,
+    "vegas_home": 0.3212,
+    "spread_home": -4.5
    }
   },
   {
@@ -1759,8 +1929,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.8263,
-    "vegas_home": 0.8896,
+    "model_home": 0.8252,
+    "vegas_home": 0.8907,
     "spread_home": 14.5
    }
   },
@@ -1912,9 +2082,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.3909,
-    "vegas_home": 0.5122,
-    "spread_home": 1.5
+    "model_home": 0.3911,
+    "vegas_home": 0.4447,
+    "spread_home": -2.5
    }
   },
   {
@@ -2048,7 +2218,7 @@
       }
      ],
      "off_rank": 1,
-     "def_rank": 9,
+     "def_rank": 8,
      "ppg": 31.6,
      "papg": 20.6,
      "rest_days": 7,
@@ -2060,13 +2230,20 @@
       "changed": false,
       "last_starter": "Brock Purdy"
      },
-     "missing": [],
+     "missing": [
+      {
+       "name": "Colton McKivitz",
+       "pos": "OL",
+       "snap_share": 0.82,
+       "why": "Injured reserve"
+      }
+     ],
      "questionable": []
     }
    },
    "reveal": {
-    "model_home": 0.6287,
-    "vegas_home": 0.6126,
+    "model_home": 0.6198,
+    "vegas_home": 0.5801,
     "spread_home": 3.0
    }
   },
@@ -2133,7 +2310,7 @@
        "result": "L"
       }
      ],
-     "off_rank": 18,
+     "off_rank": 17,
      "def_rank": 22,
      "ppg": 21.8,
      "papg": 24.3,
@@ -2225,9 +2402,9 @@
     }
    },
    "reveal": {
-    "model_home": 0.2778,
-    "vegas_home": 0.2262,
-    "spread_home": -7.5
+    "model_home": 0.2764,
+    "vegas_home": 0.2517,
+    "spread_home": -6.5
    }
   },
   {
@@ -2385,8 +2562,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.69,
-    "vegas_home": 0.6605,
+    "model_home": 0.6898,
+    "vegas_home": 0.681,
     "spread_home": 4.5
    }
   },
@@ -2538,8 +2715,8 @@
     }
    },
    "reveal": {
-    "model_home": 0.5415,
-    "vegas_home": 0.5824,
+    "model_home": 0.5427,
+    "vegas_home": 0.5863,
     "spread_home": 3.0
    }
   }
