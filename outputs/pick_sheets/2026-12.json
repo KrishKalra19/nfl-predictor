@@ -2,7 +2,7 @@
  "id": "2026-12",
  "season": 2026,
  "week": 12,
- "generated_at": "2026-11-27T00:37:10Z",
+ "generated_at": "2026-11-27T05:15:33Z",
  "injury_report_posted": true,
  "games": [
   {
@@ -412,7 +412,7 @@
    "away": "PHI",
    "home": "DAL",
    "venue": "AT&T Stadium",
-   "roof": "",
+   "roof": "closed",
    "division_game": true,
    "neutral": false,
    "link": "https://www.espn.com/nfl/game/_/gameId/401873080",
